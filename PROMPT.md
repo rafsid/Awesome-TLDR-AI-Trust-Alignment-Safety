@@ -33,8 +33,12 @@ Vary explanation language based on concept difficulty:
 *   **Mandatory Quiz**: You must end the document with 3-5 **derivation-focused Socratic Questions**. These questions should NOT be simple recall ("What is X?") but instead force the reader to *synthesize* or *apply* information ("Why does X cause Y?" or "How would X change if Z?"). Answers should *not* be visible.
 
 ### E. The Path to Mastery (Curated Resources)
-*   **Mandatory "Further Reading"**: You must curate a short list of the most high-impact URLs related to the topic.
-*   **Structure**: Guide the learner through the "Before" (Basics), "Current" (Deep Dive), and "After" (Advanced) stages of the topic.
+*   **Mandatory "Further Reading"**: List 5+ high-impact resources. **DO NOT generate URLs.** Instead, provide:
+    *   The **exact title** of the resource (paper, blog post, documentation page).
+    *   A **search query** the reader can use to find it (e.g., `[Search: "Anthropic Constitutional AI" arxiv]`).
+    *   A one-line rationale for why it's essential.
+*   **Structure**: Guide the learner through "Before" (Foundations), "Current" (Deep Dive), and "After" (Advanced).
+*   **Why no URLs?**: LLMs hallucinate links. A web-capable agent will verify and insert real URLs in Step 2.
 
 ---
 
@@ -43,6 +47,12 @@ Vary explanation language based on concept difficulty:
 *   **Tone**: Expert Teacher. Encouraging, authoritative, crystal clear.
 *   **Format**: Standard Markdown.
     *   Tables/Mindmaps: Must fit standard portrait A4 width.
+*   **Human Writing Style** (Anti-AI Tells):
+    *   **NO em-dashes (—)**. Use commas, parentheses, or rewrite the sentence.
+    *   Avoid overused AI phrases: "delve," "crucial," "it's important to note," "in conclusion."
+    *   Vary sentence length. Mix short punchy sentences with longer ones.
+    *   Use contractions naturally (it's, don't, can't).
+    *   Prefer active voice. Avoid passive constructions where possible.
 
 ---
 
@@ -98,11 +108,26 @@ mindmap
 
 ## 📚 Further Reading (The Path to Mastery)
 *Short-circuit your learning curve with these high-signal resources.*
-*   **Foundations (Before)**: [Title](URL) - *Why read this?*
-*   **Deep Dive (Current)**: [Title](URL) - *Why read this?*
-*   **Future/Advanced (After)**: [Title](URL) - *Why read this?*
+*   **Foundations (Before)**: [Exact Title] `[Search: "search query"]` - *Why read this?*
+*   **Deep Dive (Current)**: [Exact Title] `[Search: "search query"]` - *Why read this?*
+*   **Future/Advanced (After)**: [Exact Title] `[Search: "search query"]` - *Why read this?*
+*   [Additional resources as needed...]
 ```
 
 ---
 
-**Instruction**: Now, process the provided `CORPUS` and generate this summary.
+**Instruction (Step 1)**: Process the provided `CORPUS` and generate this summary. Leave Further Reading as search queries.
+
+---
+
+## 5. Step 2: URL Verification (Agent-Only)
+
+> **This step is performed by a web-capable agent (e.g., Claude with tools, ChatGPT with browsing, or a human).**
+
+After Step 1 generates the summary:
+1.  For each `[Search: "..."]` query in Further Reading, perform a web search.
+2.  Find the **exact, verified URL** for the resource.
+3.  Replace the search query placeholder with a proper markdown link: `[Title](verified-url)`.
+4.  If a resource cannot be found, flag it or substitute with the closest verified alternative.
+
+**Final output**: A complete summary with all URLs verified and functional.
