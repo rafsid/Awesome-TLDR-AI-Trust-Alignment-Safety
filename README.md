@@ -30,10 +30,9 @@ Trust Safety Alignment/
 ├── scripts/
 │   ├── PROMPT.md               # LLM summarization instructions
 │   └── yt_to_summary.py        # YouTube transcript extraction
-├── {Author}/
-│   └── {Video Title}/
-│       ├── transcript.txt      # Source URL + full transcript
-│       └── summary.md          # Cognitive-science-backed summary
+├── {Author}-{Video Title}/     # Dedicated folder per video
+│   ├── transcript.txt          # Source URL + full transcript
+│   └── summary.md              # Cognitive-science-backed summary
 ```
 
 ## Topics Covered

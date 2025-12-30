@@ -20,14 +20,15 @@ python /Users/rafatsiddiqui/Downloads/Projects/Trust\ Safety\ Alignment/scripts/
 ```
 
 This script will:
-- Create folder: `{Channel}/{Video Title}/`
+This script will:
+- Create folder: `{Channel}-{Video Title}/`
 - Save transcript with URL header to `transcript.txt`
 - Clean up any downloaded media files
 
 ### Step 2: Read Transcript
 After the script completes, read the generated transcript:
 ```
-{Channel}/{Video Title}/transcript.txt
+{Channel}-{Video Title}/transcript.txt
 ```
 
 ### Step 3: Generate Summary
@@ -36,7 +37,7 @@ Use the transcript as the `CORPUS` and follow the summarization instructions bel
 ### Step 4: Verify & Save
 Save the summary to:
 ```
-{Channel}/{Video Title}/summary.md
+{Channel}-{Video Title}/summary.md
 ```
 
 ---

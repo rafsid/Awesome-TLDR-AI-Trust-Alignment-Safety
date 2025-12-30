@@ -212,7 +212,10 @@ def main():
     video_id = extract_video_id(args.url)
     
     # Step 2: Create output directory
-    output_dir = base_dir / channel / title
+    # User requested format: <Author or Org>-<Title of the video>
+    # e.g. "Neel Nanda-Our Pivot To Pragmatic Interpretability"
+    folder_name = f"{channel}-{title}"
+    output_dir = base_dir / folder_name
     output_dir.mkdir(parents=True, exist_ok=True)
     print(f"\nOutput folder: {output_dir}")
     
