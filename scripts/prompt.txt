@@ -1,5 +1,7 @@
-Today's date is: {{Current Date}}
-Your instructions are in: PROMPT.md
-Your CORPUS is in: 
-Create the summary document in: 
+Use ultrathink and/or deepthink and/or extended thinking mode and deep websearch for all tasks in 
+Today's date is: Do web search and confirm toay's date
+Your instructions are in: @scripts/AGENT_WORKFLOW.md and @scripts/PROMPT.md
+Create the summary document
 Kindly ensure to add and verify links in further reading section
+
+Video URL:

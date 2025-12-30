@@ -10,6 +10,12 @@
 
 ### Step 1: Extract Transcript
 ```bash
+# Use 'tl_dr' venv to avoid reinstalling libraries
+uv venv tl_dr
+source tl_dr/bin/activate
+uv pip install yt-dlp youtube-transcript-api openai-whisper
+
+# Run the extraction script
 python /Users/rafatsiddiqui/Downloads/Projects/Trust\ Safety\ Alignment/scripts/yt_to_summary.py "<YOUTUBE_URL>"
 ```
 
