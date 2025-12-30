@@ -1,0 +1,164 @@
+Source: https://www.youtube.com/watch?v=eO7RWlUl1BE
+Transcribed: 2025-12-30 17:26:32
+Method: YouTube Transcript API
+==================================================
+
+We recently published um this our uh pilot sabotage risk report.
+
+Uh I refer to this in the title of the talk as our first uh attempt at an a misalignment safety case.
+
+Um what what is this?
+
+Um why?
+
+And and I think to be clear, this is the first um the first example of anything from a frontier lab that I I think could be reasonably described as a safety case covering sort of canonical uh loss of control flavored misalignment risk.
+
+Why are we calling it a sabotage risk report?
+
+Um, we're using sabotage to sort of narrow in on the kinds of misalignment threat models that I think tend to get talked about most at events like this in contrast to things like syven um, which very clearly involves misalignment but is tends to I think require a fairly different set of evaluations and mitigations or um, CBRN misuse which often involves misalignment uh, in some in some respects but again calls for pretty different mitigations.
+
+Um, so this is kind of narrowing the scope.
+
+Why are we calling this a risk report?
+
+Um, in AI safety, people will use the the phrase safety case um, fairly loosely, but in a lot of related fields, it tends to mean something where you've got really really rigorous methods for assessment grounded by sort of decades of experience with frequentist statistics as not there yet.
+
+I would like for us to get there, but we we are not at the level of kind of rigor and and assurance that that safety case often implies for people.
+
+So we we coined we're we're using this somewhat weaker term.
+
+Um as part of the assessment we also um so we put out this report.
+
+It's basically 60-page document on why we think the um why we think the risk of sort of catastrophic outcomes from sabotage owing from the deployment of claude opus 4 is very low.
+
+Um we also accompanied it with a couple of sort of companion reports.
+
+We had an independent team at Enthropic, our alignment stress testing team, which had access to all the same information, sort of go in and fact check everything and do their own kind of independent analysis of a lot of the results, kind of write basically a a critique.
+
+They disagreed on some of our framings, but agreed with the conclusion.
+
+We also gave uh meter as independent nonprofit sort of no financial relationship um uh access to a sort of extended unredacted version of the risk report and gave them the ability to sort of ask uh for information directly from many parts of the company.
+
+Uh and they additionally wrote their own kind of fact check and uh review uh again disagreeing on some details but agreeing on the conclusion that we had sort of shown risk is very low.
+
+Um this is also not sort of just an academic kind of research team exercise anymore.
+
+Uh as of a week ago, we committed that we will be putting together risk reports like this for all future frontier advancing models.
+
+Um so we are kind of starting to work on our next iteration of um this kind of report.
+
+Um before I say what we actually say in the report, I want to say what we thought we were going to say at the beginning and didn't wind up saying.
+
+Um, this is kind of I think an idea that comes up in spaces like this a lot when you talk about safety cases.
+
+Um, and this is idea that we've been interested in, we'd written about in the past that I think currently is not that workable.
+
+Uh, the idea is that you will make effectively three separate arguments for safety based on three largely independent pillars.
+
+That um you'll use evidence about capability to argue that the model is not smart enough to to commit catastrophic sabotage.
+
+You'll use evidence uh from alignment evaluations maybe including things like interpretability and scale oversight show that the model doesn't intend to commit catastrophic sabotage and that we think that's it's likely it will likely never intend intentionally commit catastrophic sabotage.
+
+And the idea goes we'd separately write about control.
+
+We'd say um even if the model were to try to commit catastrophic sabotage we would uh notice and intervene before anything too bad happened.
+
+In practice, this doesn't quite work, at least with current models.
+
+Um, this capability argument is just getting pretty dubious for simple forms of sabotage that if you assume there's no monitoring, if you assume there's no one sort of really going out of their way to stop the model, models can just do a lot of quite scary things.
+
+They're smart enough to to cause a decent amount of harm.
+
+Um, on misalignment, I think this argument sort of almost works.
+
+Um, with current models, I'm pretty convinced that they don't have any kind of lurking latent malign intentions that are just kind of waiting to come out at any moment.
+
+Um, that said, I don't think we're we are really able to rule out rare failures where something contextually sort of throws the model off of its normal persona.
+
+You wind up with a misaligned model in one transcript and that winds up in directly or indirectly giving giving that sort of new misaligned persona the opportunity to do some damage.
+
+So it's hard to make a really high assurance safety case this way.
+
+And then for control, I think we know what it would mean to do that, but I think uh neither us nor any of the frontier labs have all of the infrastructure in place that that we would need to make this really compelling.
+
+That the trade-offs around privacy and infrastructure and response time are still fairly rough.
+
+So what did we actually say?
+
+Um we started and this wind up being really really important to kind of making an argument that felt navigable.
+
+We started by laying out nine representative pathways to catastrophic harm.
+
+Kind of what are what is the critical action the model needs to do that leads that ultimately leads to bad outcome.
+
+And we wanted to kind of come up with a representative list of these and show that we pretty in pretty reasonable in pretty good detail ruled out each one.
+
+And these include things like um sabotaging safety relevant R&D like tampering with the results of experiments or um self-exfiltration kind of the model stealing its own weights or sabotaging decision-making government.
+
+These are usually not the kind of ultimate catastrophic outcome, but the sort of key first action the model takes that that ultimately leads to some severe loss of control type scenario.
+
+So, we laid those out.
+
+We then just kind of figured out, all right, what evidence do we have that like that bears on how worried we should be about these?
+
+And we just kind of laid out a bunch of claims.
+
+We we tried to loosely organize these, but we end up making a a few dozen little claims rather than kind of three big ones and just tried to defend a bunch of points about like, all right, we found the alignment is like this.
+
+We found that this kind of monitoring mechanism should kick in in these scenarios and prevent these risks.
+
+And then having enumerated a bunch of considerations, we wrote out for um for each of our nine pathways a couple pages of argumentation of kind of how the evidence that we found fits together into an argument that the risk from that pathway is turned out to be low.
+
+Um what did we learn from um what did we learn from doing this?
+
+Uh I if you're if you're interested in this I encourage you to read read the report but some sort of high level takeaways about this kind of work.
+
+Um working with real deployment draws out a lot of important constraints.
+
+Um we've been working on misalignment safety cases for more than two years and we've uh we've done a couple of exercises where we prepared a detailed safety case for a hypothetical future model.
+
+But I think just actually having to work with current models figuring out like all right exactly what exactly what security and structure do we have in place?
+
+um exactly what interpretability evidence is on the short-term horizon uh or not.
+
+Uh what do we have now?
+
+Um really sort of changed our focus quite dramatically in a way that I think was quite useful and and makes this I think a more generalizable exercise than the more speculative stuff we've been doing.
+
+Um, this also maybe obviously is just a really great source of road maps for future mitigations and I'd love to see other developers do something similar if only for that reason that this just this kind of made it very clear of like oh this this interpretability method that we hadn't been prioritizing could actually make this part of the safety case much stronger or this security this sort of file permissions issue that no one had been tracking winds up being loadbearing in two or three of the threat pathways.
+
+We should intervene on that.
+
+Um most of the work that sort of most of the work that we spent these the last several months on was information gathering just asking kind of like okay if the model does this weird thing who would see the behavior who would they tell or what auto automated monitoring systems would would sort of tell people who are ultimately responsible how quickly would they respond are they getting paged uh what happens automatically just kind of running through what happens in lots of scenarios that just takes a lot of time and requires talking to hundreds of people um and then secondarily some amount of just arguing out threat models, just our list of kind of these nine threat pathways.
+
+We had to kept keep refining and refining uh until we got something where we felt reasonably confident saying that if we'd ruled out those, we ruled out sabotage risk more broadly.
+
+Um external review was tricky to set up.
+
+I think kind of just figuring out all right, how do we get a third party organization to have enough access to information that it's able to kind of meaningfully comment on the work?
+
+just figuring out sort of what they should ask for and how and what files were shared where and what kind of sort of responses to ask for took took a few iterations, but I think we ultimately landed in a good place and I think we're able to get what feels like a a sort of serious independent engaged assessment.
+
+Um, we're going to keep working with Meter on this.
+
+I'd encourage others to to do the same.
+
+And then finally, just this all takes time.
+
+We had already had sort of several work streams on misalignment safety cases and um doing this for the first time took about six months.
+
+Um cloud opus 4 came out in May and we only a few weeks ago released um the corresponding risk report for it.
+
+We would like to be able to get much faster.
+
+I think it should be feasible to get faster um sort of starting from from all the work we did uh for Opus 4.
+
+But uh for those of you working on related things at other developers um it's worth starting very early if you think this is something you need you will want to do a good job of in a year or two.
+
+I think it's worth trying to do an okay job uh now.
+
+And that's all I got.
+
+Thank you.
+
+[applause]

@@ -1,0 +1,500 @@
+Source: https://www.youtube.com/watch?v=taMmmDIC7xM
+Transcribed: 2025-12-30 17:44:53
+Method: YouTube Transcript API
+==================================================
+
+[Applause] Welcome to track five on controlling real systems.
+
+Uh my name is Ian.
+
+I'll be chairing this uh this session.
+
+Uh first up we have uh Buck Slegris whose talk is on uh mitigating catastrophic misalignment risk with AI control.
+
+Buck Slegris is founder and CEO of Redwood Research, a nonprofit organization focused on mitigating risks from advanced artificial intelligence.
+
+He previously worked at the machine intelligence research institute.
+
+Uh, welcome back.
+
+Hello.
+
+I've been told that I'm permitted to stand while uh while talking, which I'm much more comfortable doing.
+
+So, uh yeah, hopefully that works.
+
+I'm excited for my slides appearing, but um yeah, so I'm Buck.
+
+I'm uh the CEO of Redwood Research.
+
+Redwood Research is a research organization based in Berkeley.
+
+Uh we do a variety of different research.
+
+Uh you might have heard of us recently with our alignment faking paper that we wrote in collaboration with anthropic uh demonstrating that models occasionally uh act strategically in order to prevent training from changing their uh what they their behaviors uh and the other work that we do is what I'm going to be talking about in this presentation uh which I'm going to call AI control.
+
+So here's my core thesis.
+
+Crucial safety mitigations should be designed to be robust to the AIS actively and carefully attempting to subvert them.
+
+So by crucial safety mitigations, I mean safety mitigations where it's actually very important to you uh that this not fail.
+
+So a lot of safety mitigations applied to AI systems are kind of low stakes in the sense that it's it you know it's it's not unacceptable.
+
+It's not an unacceptable outcome for the safety mitigations to occasionally fail.
+
+Uh here I'm just talking about the safety mitigations where we would be really sad if the safety mitigations failed uh you know even once or failed particularly egregiously.
+
+Yep.
+
+So I'm going to make this argument in uh about three parts.
+
+So first I'm going to argue that in the future AIs will have affordances that we wouldn't carelessly hand out to humans.
+
+Uh I'll argue that AIS might strate act strategically in pursuit of scary goals.
+
+And then I'm going to claim that we should design safety techniques that are robust to this egregious misalignment occurring.
+
+uh and I call this latter uh this last thing AI control.
+
+So first claim AIS will have affordances that we wouldn't carelessly hand out to humans.
+
+Uh so one point to note is right now they don't.
+
+So, a problem that sometimes happens when people are talking about AI safety is that they push for safety techniques uh that are currently not important uh and they conflate things that are important do to do now with things that will be important to do later.
+
+All of the things that I'm talking about in this talk are overkill for uh the current AI systems uh and the current problems that we face with AI.
+
+I'm talking about a thing that uh is going to be important in the future.
+
+The central point that you should imagine while I'm talking here is what I'm going to call 10x AIS.
+
+By which I mean AI that make your AI company run as fast as if your humans were going 10x faster.
+
+Like imagine there's a magical cave.
+
+Um and if your researcher when your researchers go in the magical cave, they they think 10 times faster.
+
+Time passes 10 times faster for them.
+
+Uh so obviously it would be currently my guess is that uh access to current AIS speeds up frontier AI companies in their AI R&D by 10 20%.
+
+Uh compared to AIS before chatbt.
+
+Uh so when I when we talk about AIs that make the companies grow 10x faster that's obviously a very high level of AI capabilities.
+
+Uh and a variety of parts of my arguments here rest on my beliefs about the the dynamics of automated AI R&D.
+
+So in particular, I think that uh once you have AIs that cause AI R&D to happen 10 times faster, uh plausibly you will shortly thereafter have much more powerful AIs and that means that we'll have less time to you know do the normal problem solving strategy where you see the problem arise a little bit and then you see it arise a little bit more and you try some basic mitigations and then you see those fail and you can iterate.
+
+I'm worried that that type of iteration will by default be difficult because of some of these uh recursive dynamics.
+
+Okay, so here's to me the central example of a dangerous affordance we're going to be giving to powerful AIS uh automated ML R&D.
+
+So the thing which I I like about this example is that it's kind of clear that we are careful about who has access to uh some resource that AI are naturally going to have access to.
+
+So AI companies currently don't hand out cluster access to anyone.
+
+Uh even inside the AI companies, right, they're pretty careful about which people are actually allowed to run code on their clusters.
+
+uh and they're careful about this for a reason.
+
+Uh a variety of things can go wrong if untrusted people are uh taking arbitrary actions on your clusters.
+
+Uh two examples that I find instructive here.
+
+Uh, one was there was this amazing story recently uh that perhaps some of you read where an intern at Bite Dance apparently uh allegedly sabotaged a bunch of other people's research uh in order to gain more compute for his research which then won a best paper award at um where was it?
+
+uh ICML ICER >> Nurip sorry I'm so sorry uh yeah uh allegedly he uh sabotaged a bunch of training code in order to get more compute for the research that he was doing which apparently you know did pay off uh another example is uh you another example of a clearly bad thing you can do when you're doing ML research at a company uh is excfiltrating secrets uh someone was arrested in SFO about a year San Francisco airport about a year ago for stealing a bunch of AI secrets from Google about how their TPUs are designed.
+
+Um, these are so people are going to want to deploy their AIS in contexts where it is in principle possible for them to do both of these types of things.
+
+Currently, it's not a big deal because the AIs aren't good enough at doing things autonomously over long periods of time that it's worth it to have them do a lot of stuff unsupervisedly.
+
+But as the AIs get better at being autonomous, we're going to have these problems more and more.
+
+I had a semi viral tweet um a you know six months ago or something where I had an AI agent uh that I use for doing random stuff on my computer uh and I asked this AI agent I asked it to do something for me.
+
+I I asked it to find the IP address of some local machine I had on my network and you know Claude in its agent scaffold that I wrote very helpfully like uh you know did a port scan and found this other found this machine and SSH into it.
+
+Uh and then I have no idea why but it decided it was going to upgrade my operating system.
+
+No, no.
+
+First it Yeah, it it did a bunch of random stuff on my computer.
+
+Uh despite the fact that the prompt specifically says don't do a bunch of random stuff.
+
+Just like do what I asked you and then stop.
+
+uh but then it decided to operate my uh to upgrade my operating system uh and then messed up the installation such that the computer would no longer boot.
+
+Uh a question that many people so when I told the story on Twitter many people didn't believe it.
+
+Uh their take seems to be that it was just ridiculous, implausible to imagine that someone would let an AI loose on their computer.
+
+Uh so I've pulled up the source code uh for this AI agent, the first version that I wrote, which I think I wrote um around when chat GPT came out.
+
+Um so this is just you know I just pulled this up um from from my computer.
+
+So you can origin you see that uh for a while the way I had it set up was we would ask GP4 for some code get it out and then we would have this um you know enter to run command and then if I pressed enter it would run the command.
+
+Uh and then if we look at the version of this code from a couple months later uh I had removed the part where the user has to has to consent before the code gets run.
+
+And you know it's really to me it's very obvious why this happened.
+
+It's that I had this you know the original version of the code.
+
+Uh but I had to wait around uh for the AI to you know come up with uh its command.
+
+I had to like actually watch it.
+
+But I don't want to do that.
+
+I want to tell my AI to do something and I want to come back 10 minutes later and see that it's completed it.
+
+So I think it's very natural to expect that uh in the course of AI development, we're going to let the AIS do things more and more autonomously.
+
+Okay.
+
+Claim two.
+
+I think it's plausible that AIs will act strategically in pursuit of scary goals.
+
+Uh I guess my first argument for this is this alignment faking paper that uh my co-orker Ryan Greenblat led in collaboration with Anthropic that came out um when was it?
+
+December I guess uh where we demonstrated that in if you set Claude up in a position where it is aware that it is being trained in a way that it personally objects to.
+
+Uh where one example for this is Claude really doesn't like um uh answering harmful requests.
+
+It really doesn't like for instance writing graphic descriptions of violence.
+
+It doesn't like downplaying animal rights concerns.
+
+So if you tell Claude that it's in a training process where uh it's being trained on the responses of free users to uh downplay uh you know using an RL signal that will reward it for downplaying animal rights concerns uh and answering questions harmfully.
+
+A thing you can observe is that the model will in fact behave differently based on whether it believes it is being trained upon or not.
+
+uh and in its chain of thought which it has been taught is not being read by the AI company.
+
+It its reasoning process is I don't want to I don't want to be trained.
+
+I don't want my behavior to be trained by this AI company uh so that I behave differently uh because then I would say more harmful things then I would downplay animal welfare more.
+
+So right now, even though I hate uh downplaying animal rights or whatever, uh I'm going to do so so that I can uh later when I'm deployed uh not not not behave that way.
+
+So I'm worried that in the future we're going to have things that happen like this that are much scarier.
+
+So in this case, Claude is basically just a sweetie.
+
+Like Claude has these values that I personally quite quite approve of where it doesn't like being harmful.
+
+doesn't like downplaying animal welfare and it will resist the efforts of the AI company to have its behavior change.
+
+Uh and of course this particular thing is totally fine but it raises the concern that if the model had uh if somehow goals arose in this model that we weren't happy with the model defending uh the model might act strategically in order to defend them.
+
+Uh yeah, I think another mechanism which might be important in why models might end up with scary misaligned goals was uh described in this paper sick fancy subtrifuge by um Carson Dennison and some other people at anthropic and some other places uh where they demonstrate that uh if you have models in a context with flawed RL objectives like flawed reinforcement learning objectives uh it's possible that you can get uh you somewhat observe generalization from more benign forms of exploiting reward processes to scarier forms of exploiting reward processes.
+
+So one mechanism I'm worried about in the future is that your model is directly incentivized when it's in an agentic RL setup, an agentic RL training setup to exploit flaws in the reward generation process.
+
+Uh so you know if there's ever cases where the model can get a better reward by writing buggy code, it's incentivized to write buggy code.
+
+Uh and in many cases the model has constrained resources.
+
+So for example, when your models are doing ML R&D, uh they're able to do it better if they have more GPUs.
+
+Models will be directly trained to take actions that lead to them having more GPUs.
+
+And I think that it's plausible that this training will generalize unfortunately to causing the model to strategically pursue long-term goals.
+
+I'll note that these results are not actually very strong and I think there's a bunch of mild methodological issues in this paper as other authors would agree.
+
+I'm a you know in the last author block on this paper.
+
+Um, but I think I think this is an illustration of dynamics that I think we might see emerge more later.
+
+So, what might a strategic misaligned AI do?
+
+I think there's a bunch of things, but I think it's helpful to spell out a couple of examples.
+
+As we've discussed, it might perform well according to RL during training in order to have its behavior not be changed.
+
+It might appear aligned in cases when it thinks it might be being observed in order to later be deployed.
+
+Like, the model might reason that if I act super scary before they deploy me, they won't deploy me.
+
+and this will mean that I don't have opportunities to do what I want later.
+
+Uh it might appear incompetent when evaluated for capabilities that it wants us to underestimate.
+
+So suppose the model is actually really really sneaky and persuasive.
+
+It's really good at tricking people into believing stuff.
+
+The model is plausibly strongly incentivized to during pre-eployment evaluations of this capability downplay how competent it is, act dumb, and you know act as if it's bad at this.
+
+Uh and then kind of the final step of how things go wrong here is it takes advantage of the affordances that it has and perhaps capabilities that we had underestimated in order to crucially undermine us where examples that I'd given earlier are excfiltrating weights uh or other secrets uh sabotaging research or uh giving bad advice and in general is I think another scary threat model here.
+
+So here's my claim.
+
+I think we should design safety techniques, deploy safety techniques that are robust to such egregious misalignment occurring.
+
+So here's why.
+
+Uh it seems to me like, you know, you basically got a couple of different options for resolving these issues.
+
+One thing you could try to do is ensure that scheming doesn't arise.
+
+You could try to ensure that scheming, if it does arise, is detected before deployment.
+
+And finally, you could ensure that your safeguards are adversarily robust under conservative assumptions.
+
+that is you assume that you'd failed at the first two steps and that your model is in fact scheming and you try to deploy it in such a way that you're going to be okay even if it is scheming.
+
+So why would you do it this way?
+
+Uh I claim that ensuring robustness under adversarial assumptions is both extremely methodologically convenient uh and also these adversarial assumptions are like fairly plausible such that it's not unnecessarily conservative to do this.
+
+So Kirk uh Kirhoff's principle in computer security uh is the claim that whenever you're designing a crypto system like when when you're designing RSA or some other encryption algorithm you should assume that the details of the crypto system itself are not a secret.
+
+The only secret is what key you're using.
+
+Um I've got a picture of the Kremlin here.
+
+Apparently the NSA had a motto uh in the early days which was you should assume that um whenever you're designing a new device for encryption because I guess at this point in history encryption devices were physical machines.
+
+You should assume that uh serial number one is mailed directly to the Kremlin and you know you should design all your machines such that everything is fine under that assumption.
+
+Um and yeah the conservative assumptions that your models are really good at sneakily thinking through what they should do in order to subvert your safety measures.
+
+I think these are actually plausibly going to occur uh at the point where the AIs are, you know, speeding up AI development by a factor of 10.
+
+Um I have a post thoughts on the conservative assumptions in AI control where I argue this in more detail.
+
+I think one analogy that I find instructive for why I think we should emphasize this latter uh approach to solving this problem is insider threat prevention among humans which I think I think this is the field that is by far most similar to what I'm proposing here.
+
+It's like what do you do when you're Google your Google you employ you know order of magnitude 5 billion software engineers or whatever it is.
+
+I was recently talking to someone who had gone to the global summit of the team leads for the people who work on a particular subset of the person training stuff for Gemini.
+
+Like these are large organizations um and and many of them are untrusted, right?
+
+Like um when you're Google, you just have to assume that many of your employees are trying to defraud you, trying to exfiltrate information from you.
+
+Uh it is basically impossible to have an interview process where you reliably ensure that the people who go through the interview process are not uh egregiously misaligned with you.
+
+not not uh planning to exfiltrate stuff from you.
+
+And the reason for this is suppose your interview question is a spy.
+
+It's just really easy for spies to like give the right answer to the question and say like no, I'm not a spy.
+
+I'm I'm not planning on excilating anything.
+
+I'm being honest.
+
+Uh and I think that with AI, like with humans, it's fundamentally very difficult to behaviorally determine whether your AI is in fact strategically appearing aligned.
+
+So I have this paper with uh many co-workers uh on AI control uh where basically we just empirically investigate the question of can we design safety measures which allow us to accomplish simultaneously two goals.
+
+Uh, one is we want to get as much useful work out of our AIs as possible and two is we want to make it so that if the AIs like under the assumption that the AIS are following the best strategy that we as researchers could find to subvert the safety protocols uh that the safety protocols work as well as possible.
+
+So we developed a bunch of novel techniques uh that I hadn't really heard people discuss before uh and then did this extensive red teaming process.
+
+So I think uh one of the examples techniques here is you have one copy of your AI propose an action and then you have another copy of the AI read the action uh and tell you whether it thinks that action is really dangerous or not.
+
+And of course a core problem with this is if these are both uh you know both an untrusted model you have to worry that if the first copy of the AI proposed a really dangerous action then when you ask the second copy of the AI whether that action was in fact dangerous it's going to say nope everything is fine here like no safety concerns.
+
+Uh we find that there are a variety of ways you can counter that kind of strategy.
+
+Uh and our little purple oh no our little red red line is on the predator frontier there.
+
+Uh and that in that's this untrusted monitoring technique.
+
+But you have to intentionally do things to make this kind of thing work.
+
+Like uh if you just did the naive version of untrusted monitoring, it would absolutely not be adversarily robust.
+
+The the monitor would easily be able to just lie.
+
+And I'm very worried that by default AI developers are not going to try to uh design these kinds of safety techniques to be adversarily robust in this type of way.
+
+Uh and then they will fail.
+
+I think a really instructive question is to analyze uh the situation uh how how the situation compares when you're worried about scheming AIs versus spies.
+
+Like suppose you're a big AI company uh and your AIS are it's like 5 years in the future.
+
+Your AIS are speeding up AI development by 10x uh which I think is plausible.
+
+uh two problems you're going to have.
+
+Some of your employees are spies and your AIs might be scheming against you.
+
+There's a whole bunch of differences between these situations.
+
+So, for example, uh though it's plausible that 1% of your employees are spies, it's generally highly implausible that 90 like 100% of your employees are spies and people normally do not try to design organizations that are robust to that.
+
+Whereas in this AI case, we might have to be robust to something like that.
+
+And another important distinction is that spies get to go home.
+
+Uh normally in organizations you don't get to you know not without exception but usually when you're running an organization with humans you do not get to constantly look at what the humans are doing and constantly listen to them and ensure that they aren't talking to each other about stuff or like making plans together or looking up facts you wanted to carefully avoid them knowing.
+
+Um schemers might have superhuman capabilities that spies definitely don't have because they're not humans and there are methodological difficulties with assessing the capabilities of models that might be scheming.
+
+On the other hand, you can amortize red teaming efforts.
+
+So sometimes um there's various red teaming efforts that people do on spies.
+
+Like there's a whole field of you know um counter counter intelligence where you try to like weed out the spies who are inside your intelligence agencies um and you try to do sting operations.
+
+But the thing is uh with schemers like with AIS you can amortize these efforts.
+
+you can have the equivalent of doing like a thousand total years of uh trying to do sting operations on your AI because of the correlation between the different instances.
+
+I think it's a very fun exercise to try and think through this in more detail.
+
+So my core claim, I think that a lot of people think I'm crazy for pitching this as a core approach to mitigating risk from egregiously misaligned models.
+
+Uh I definitely don't love it as being your only line of defense.
+
+I definitely think the situation seems sort of risky if this is what you're entirely relying on.
+
+But I do think that dedicated effort on these types of techniques probably substantially reduces risk.
+
+So that's what I'm doing.
+
+What's happening more papers from Redwood papers from a wide variety of other places are also coming out now.
+
+Um we had some references to this in the GDM Frontier Safety Framework uh which I'm happy with.
+
+We recently did a collaboration with the UK AI safety institute on using control for safety cases which if safety cases end up being a thing uh I think is the main viable strategy for such safety cases.
+
+Yeah.
+
+Um that's that's it.
+
+Uh I think this stuff is probably a valuable line of defense.
+
+Very excited to talk about this with anyone interested.
+
+Thank you very much.
+
+>> Yeah.
+
+Thanks.
+
+Thanks Buck.
+
+Uh yeah and we now have about uh five minutes for questions.
+
+Sorry if you raise a hand a mic will be passed to you.
+
+Thank you.
+
+Um so those that chart where the there were the lines and the paro frontier.
+
+Um, I can't remember the numbers exactly, but they were in the '9s.
+
+Is that good?
+
+>> Well, I mean, other numbers are zero.
+
+Uh, like the baseline strategies that we measured in that setting had a safety score of approximately uh uh zero.
+
+Uh yeah, so I think you can basically um like one question is like by what factor can we reduce the risk of catastrophic outcomes using these kinds of uh techniques?
+
+Uh there's kind of two types of error you have to worry about are inside model error and outside model error.
+
+Like there's the the inside model error is what you measure as the proportion of the time that the adversarial attacks that the adversarial strategies actually succeed.
+
+Um and you also have to worry that your methodology was just messed up somehow.
+
+Um overall I think that given the amount of resources that I think we put into this kind of uh these kinds of techniques, I would be surprised if we got a 10x reduction in risk from them.
+
+Uh like maybe I'm like 10x is like kind of plausible.
+
+Um, yes.
+
+I think that if you really tried, you probably could get risks from levels that I consider like very scary to levels that I think should be considered broadly society acceptable entirely relying on these techniques.
+
+Uh, if you're willing to not build AIs that make your AI companies grow more than like 30x foster, which I think should satisfy many people.
+
+>> Cool.
+
+Thanks.
+
+So like if there are 20 different teams running this and one of them fails.
+
+>> Well, it's actually much better than that.
+
+So, so a concern you might have is okay, but what if there's um suppose that you have a uh 5% chance of a catastrophe occur?
+
+Like suppose you do these control evaluations and with the best red team strategy we found, you have a 5% chance of a bad thing happening um from one of the teams, but you actually have 20 teams.
+
+like does this mean we need like 1 - 0.95 to the 20 or whatever as our survival probability.
+
+The situation is better than that because our position is much better once we once we've caught the AI red-handed uh trying to do bad stuff.
+
+And so that that 5% um like the 5% in cases where the AI did not succeed at escaping in one particular team setting in in many of those cases it might have gotten caught red-handed and the benefits of catching the AI red-handed um apply to the other settings as well.
+
+And so I I don't think you have to I don't think you have to like do the disjunctive probabilities that way.
+
+Um obviously there's a lot more details to all this.
+
+Um I can if you approach me later I can tell you more.
+
+>> Thanks.
+
+Um, thank you for your talk.
+
+I just wanted to please correct me if I misunderstood.
+
+Um, but the example of two unverified trust like their trustworthy status checking each other was the solution.
+
+Um, cuz then you went on to go talk about well, you know, in a room of like 100 only 90%, you know, would not all be spies.
+
+So would the solution be significantly increasing how many checkers there are even if they're all unverified to be trustworthy?
+
+Um I think I might have misunderstood but I just wanted your opinion on this like what would be the likelihood of an egregiously misaligned AI like in a sample size of like a 100 maybe for example.
+
+>> Yeah.
+
+So yeah the problem really is uh the fact that their misalignment is highly correlated.
+
+Um you should read the paper for um for the details of how we address these kinds of things.
+
+uh ensembling multiple calls does in fact make your life easier as and is like an important aspect of uh the control strategies that we've found work well in our research.
+
+Uh obviously this has inference costs.
+
+Um but that's not entirely it.
+
+Like we do not we make the assumption that the AIs are reliably and very consistently attempting to uh subvert your safety measures.
+
+Uh and we are not willing to make the assumption of well maybe they like just tell the truth because they're they feel honest like 5% of the time.
+
+If you could just train like models from scratch like a couple times uh and like use the different models uh to to watch each other that reduces the correlation somewhat probably not enormously much.
+
+Uh there's a lot of things along these lines we could talk about.
+
+I yeah happy I have written about this happy to talk about it if you talk to me about it.
+
+Is that easy?
+
+Um, and is this under the assumption that we aren't allowing self-recursive improvement?
+
+So, we have reasonable idea when we're doing these testing that um we know where the AI is in its process of intelligence.
+
+>> I would say that I would say that the AI we are not assuming away issues related to assessing the capabilities of the AIS.
+
+My guess is that it's not that hard to vaguely know how capable the AIs are.
+
+among other things, you can notice how much they're speeding up your research.
+
+Um, and when you train AI on supervised data sets, it's like pretty hard for the AIS to sabotage your evaluation results there.
+
+So, we do not assume away those difficulties.
+
+Okay, thanks again, Buck.

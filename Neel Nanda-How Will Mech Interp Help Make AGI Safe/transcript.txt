@@ -1,0 +1,652 @@
+Source: https://www.youtube.com/watch?v=XB_7OVLxkpU
+Transcribed: 2025-12-30 18:10:39
+Method: YouTube Transcript API
+==================================================
+
+What is interp ultimately for?
+
+So in other words, i.e.
+
+what is our north star?
+
+And so at least for me I view the north star as less being about scientific pursuit of understanding for the sake of understanding and more for it sure would be good if we could make AGI that doesn't want to kill everyone.
+
+Um, so these are very much from that perspective, which may or may not be your vibe.
+
+Um, and yeah, I think that what do I think?
+
+Um, yeah, I think that like what what is the effect that we care about actually having is kind of an open-ended question.
+
+So, I think we should maybe start with the obvious.
+
+Make aligned AI.
+
+I'm into this one.
+
+Oh, sorry.
+
+Aligned AGO seems great.
+
+Um, and and I think that how interpretability can help with this is it's not obviously like the main thing we should be trying to do, but there are like some plausible avenues that might be worth exploring.
+
+Um, I think one obvious one, so I feel like people often think about things like lie detection, but I think lie detection isn't exactly what I think of as a north star.
+
+It's more like one of the things you do as part of a broader end.
+
+And I maybe want to divide those into if we produce if we produce a dangerously misaligned model being able to rigorously show this to people.
+
+Um and they unpack this.
+
+Um, in my opinion, most current alignment evaluations are kind of [ __ ] and are not actually very good at testing the specific thing of alignment evaluations.
+
+I think this is bad and annoying.
+
+Um, and I think that it's really important that we are able to do this well.
+
+And plausibly interruptibility has a role to play in things like are our valuations bad?
+
+Is this actually telling us what we think it's telling us, etc.
+
+And yeah, I think that yeah um a different one would be what I think of more as the control perspective.
+
+uh roughly be able to use um extremely capable AIs to automate the R&D process of safely making even more capable AIs.
+
+uh going to going to bold safely because that's really important bit and way harder to measure than other things better and but like with confidence that even if the AI was misaligned it wouldn't be able to uh it wouldn't be able to do anything disastrous.
+
+us without being stopped and that we would notice if the research was bad.
+
+Um, I feel like this is not the most distilled of possible north stars.
+
+Um, I guess there's like probably I should just break these into like two criteria.
+
+So we kind of want to feel like we have the thing under control even if it tries to betray us.
+
+We have like enough checks and balances in place that we've noticed.
+
+And another one just like with confidence we've noticed if the research was bad.
+
+And this kind of breaks down into just like the research was bad in an absolute sense maybe the model screed up and didn't notice.
+
+and the research is bad because the model is intentionally doing bad research or like intentionally sandbagging.
+
+Um, how about if the model knowingly does bad research?
+
+Um, um, I feel like this is a more convoluted one.
+
+Any questions on this one?
+
+Wow, no questions.
+
+Um, and I think make aligned AI.
+
+Um, obviously extremely vague.
+
+Um, we can maybe break this down a bit.
+
+So there's like actually directly train an aligned AGI like use somehow use interpretability to improve the process of training it.
+
+Give feedback on how aligned AIs are so we can iterate on better alignment schemes.
+
+um contribute to our basic scientific understanding.
+
+Um what the psychology of our models is, how should we think about it, how is it affected by the training process, etc.
+
+Um, and then more just like basic science questions of neural networks.
+
+What makes them generalize the way they do?
+
+Um, this one is like fairly fuzzy.
+
+I think it's kind of just like I don't know.
+
+Seems kind of embarrassing how little we understand about neural networks.
+
+Seems like it would be good to understand less embarrassingly little about neural networks.
+
+Um, and probably we would be better at things like actually figuring out how to make the thing safe if we knew this.
+
+Uh, I'm probably going to promote this one to a more top level thing because I feel like this is just pretty important across all of these categories.
+
+and maybe give feedback on how aligned AIs are and what is and debug what exactly is going wrong and yeah uh all right I think this is a reasonable list of what I currently have in mind for north stars um all right everyone's challenge for the next is to think about what you most disagree with in here.
+
+Eg.
+
+A thing you think shouldn't be on there, a thing you think should be on there, a thing you're just confused about and don't understand well enough to agree or disagree with it, and put it in the chat when you're done.
+
+Maybe I'll give people another minute.
+
+Cool.
+
+All right.
+
+Thanks to all.
+
+Um, let me just copy this into this doc so I can have it all in one place.
+
+Um, and then go through.
+
+All right.
+
+So, on the do we care if the model unknowingly does bad research question?
+
+Um, I mean like obviously we care.
+
+the question when I'm writing this list I'm kind of filtering for what are the things that I both think are important and I think there is like some role for interpretability shaped things to help with and I'm like it's not interpretability question I think the probably I take a pretty broad view on what knowingly doing bad research means like if you get another copy of the model to mark the work of the first one and the second copy realizes that like it was bad and the first model was mistaken.
+
+I care about understanding that.
+
+So like maybe the wording should be slightly broader.
+
+But like eh um if that's does that feel like a satisfying answer?
+
+If anyone does have a pitch for how interpre can solve this, hit me up.
+
+But seems hard.
+
+um and do so my take on many of these is going to be well you know there's many ways of directly training an aligned AI that should not be interpretability's job and interpretability does not really have any useful to say but here are like a small handful of things that I think interpretability plausibly could help with and like this seems maybe interesting >> um yeah I guess would you think of the hallucination probes as detecting that the model is like knowingly answering incorrectly or unknowingly answering incorrectly.
+
+>> I consider it to be knowingly you're slightly stretch.
+
+Okay.
+
+So, part of the problem is um there's like models as like a kind of cognitive entity that we claim knows things and has beliefs which I think is just clearly unreasonable for like small models.
+
+Um, and like is maybe approaching being reasonable for some of today's models, especially if you think of the like aggregate reasoning process as a a thing.
+
+Um, and I think that like it's very plausible that theation probe works when the cognitive entity that is the model does not know something.
+
+But there's also a sense in which like the model as a kind of deeper neural network has a direction called like this thing is true that we are tapping into and I think that you know I don't massively care about the exact edge cases of what like knowingly versus unknowingly means but like our job is to extract the relevant info in the model and use it to figure out the research is good or bad.
+
+And if the model is just completely incapable of knowing, then if we can tell that the model doesn't know or like the model claims it is good and it's actually bad and we can detect the model is like not actually very confident that is within scope.
+
+But you know I feel like there is a large category of solutions that are just like well is this research true that I don't think should be interpretability but like totally matters but looks more like kind of having a bunch of like hardcore LLM auditors or something.
+
+Um yeah.
+
+All right.
+
+Uh so Alex, what do you mean by schemas?
+
+Um, are you referring to the first question I had where like um how Yeah.
+
+Okay.
+
+Sorry, I was off screen for a second, but um I guess this is kind of like thinking about it.
+
+I don't know if it's in RL or a different alignment method, but whatever your alignment methodology is, how do you really just even go about designing that?
+
+Because it feels like from the anthropic literature, a lot of like the misaligned behavior simultaneously comes from the align behavior.
+
+So, I don't know, maybe this kind of goes into like L's.
+
+Do you have a specific example in mind?
+
+>> Um, I would have to >> go dig up the paper again.
+
+Um, but I think it was um when they were looking at either 37 or four opus um when it was um no, I'm sorry.
+
+I have to I have to look up the paper again.
+
+I'm I'm blanking on it.
+
+I have it somewhere in my my Twitter so I can get it quickly.
+
+But um I feel like there was an instance where the main hypothesis of why the misaligned behavior was happening was because of what they were doing in the helpful harmless training otherwise like they were confused as to why it would do the misaligned behavior.
+
+>> Mhm.
+
+Yeah.
+
+So I mean I broadly think that lots of modern ML has the problem that people are blindly trying stuff in the dark and don't really know what affects what.
+
+Maybe have some like heruristics and like tacet knowledge but a lot of it's pretty confused and they just like trying to do things and see what happens.
+
+This historically has been an extremely effective strategy.
+
+Um it's very depressing and I think that trying to figure out how um and like this is also harder for safety research because you know we don't know when the when the safety has succeeded or not.
+
+It's like a harder question.
+
+Uh therefore question that I care a lot about is how we can help safety research get like clearer and richer feedback both of the form here is like details on exactly how your system is and is not aligned and um kind of more information about like which bits of the training process led to this.
+
+They're like really this is probably just going to be causal inference.
+
+Like you just change a thing and then you measure the outcome and the difference.
+
+And if we can come up with better tools for like comparing these things then like maybe this is going to help people.
+
+I don't know.
+
+Um to like I'm generally pretty into this as a closet things.
+
+Um, >> would you say the flaw here then is basically because the RL process isn't like super mechanistically studied, we don't have like a great hypothesis of whether or not it's like the alignment schema or like there's just too much it's it's opaque and so we don't really know.
+
+>> Yeah, pretty much.
+
+I mean, some kind of cheating to say that that is the problem.
+
+But like I feel like if we had like a good knowledge of exactly how this stuff happens, we would be in a much better place.
+
+I mean, even just the statement.
+
+H well, we're not sure if this happens because of the schema or like some other random [ __ ] Am I Well, um yeah.
+
+All right.
+
+So for um El's question, do you have a working definition of aligned?
+
+So I think that there's two things people can mean when they say aligned.
+
+There's value alignment and intent alignment.
+
+Value alignment is like here are the values.
+
+We want the model to internalize these values and then like go and act upon them.
+
+Intent alignment um is typically taken to mean the model is trying to do what the developers intended it to be trying to do.
+
+Um I specifically say developers rather than user because you know we'd like to be able to deploy an LLM into the world such that when someone asks it how to make a bioweapon it tells them to [ __ ] off.
+
+Um I think this is perfectly aligned behavior.
+
+Um but it is not intent aligned to the users.
+
+Uh I personally consider value alignment a deeply deeply cursed problem and not crucial to figure out all the purposes of making a J that doesn't try to kill everyone.
+
+I think that for that one getting good at intent alignment would suffice because the developers do not want it to kill everything or like otherwise do egregiously misalign things and so I mostly view intent alignment as like the target and it's far from like precise but I think it is less cursed than like solve morality um in a that is reasonable and consistent across all of the many people in the world who have their own different perspectives.
+
+And um all right, Lewis asks, should we care about model psychology from a utilitarian or moral perspective?
+
+I personally think about it more from a utilitarian perspective.
+
+I feel like views vary a lot on the moral perspective.
+
+Um, my personal take is that I have no [ __ ] clue what a morally meaningful or not morally meaningful LLM have as like the key differences.
+
+And I don't really know what I'd be looking for.
+
+And, you know, pushing forward the science of like model psychology is helpful to people doing model welfare.
+
+Great.
+
+But it's not a thing that I'm like thinking about that much dayto-day.
+
+Um >> yeah I was thinking more like a the public users pressure because I don't know like the Gemini the Gemini case where it started to looping around failures in cursor or the Gemini CLI so in in Twitter it become it become viral because Gemini ended up removing itself from the CLI because it was a failure and it was in like a looping behavior where it tried to solve the the issue and started saying I am a failure.
+
+I am not on proud of myself.
+
+I I need to end this thing.
+
+I I don't recall that.
+
+So people, so if people like normal users start to like anthropore seeing this lens like giving human characteristics would >> users pressure frontier labs to like start paying attention to this because we don't actually know what's happening inside LLMs like in this >> I mean would the pressure results in the labs actually fixing the problem or in the labs fine-tuning the model to not express emotions.
+
+>> Yeah, >> I don't know.
+
+I I feel like public pressure is too blunt of force to be that useful here.
+
+I mean, there are people within some of the labs who care about this stuff, who have power.
+
+Um, I would personally guess current models are not morally meaningful in this way that I care about, but future models might be.
+
+Um, and that Gemini going into a weird anxiety spiral is like, but also I think labs are also incentivized to fix this because users don't like it.
+
+Um, but does this go in the right or wrong direction?
+
+Unclear.
+
+Um uh but yeah, I mean I think that like there are people within deep mind who would like this to not happen in Gemini for like the right reasons, not for the superficially crush the Simpson.
+
+Uh so all right.
+
+Uh yeah.
+
+So to Arya's point, um I guess the way I think about this, feedback loops are great.
+
+Fast feedback loops are great.
+
+Feedback loops that are not directed to the things that matter are [ __ ] useless.
+
+um feedback loops that are on things that are like sufficiently broadly useful that it will probably be useful for things that matter as well as those of other stuff also good.
+
+Um but like I think the it is not obvious that just because an interpretability thing can improve user experience, it is actually relevant.
+
+For example, I think it would improve user experience to have a progress bar on thinking models estimating the time until they are done thinking.
+
+I a don't think this is like that useful as a thing to study beyond like a cute practice problem and b I think that actually getting things into production is like an enormous enormous headache that I think is valuable but mostly because it like helps you practice practice getting future interruptibility things that actually do matter into production and like sets precedents and like teaches you some things.
+
+But if your goal is just to get a technique that basically works, I think that it is like wildly overkill.
+
+And if you're not actually caring about getting the thing into production, then the question is like, well, okay, what's the benefit of this compared to just any other downstream task?
+
+I think that you get some benefit from you ask people has this fixed your problem and if it has not then that is bad.
+
+This is actually a fairly slow feedback loop in my opinion.
+
+Um I think but like I think can be a useful one.
+
+Um, but I also, yeah, I think it's just like one of several criteria that matter.
+
+And I think that if you only think about this criteria, it's very easy to load a stuff that I think doesn't actually matter.
+
+But I think that there are like some things where you can test that they've improved user experience.
+
+And I think they are also like long-term relevant for alignment.
+
+Um, and I mean it doesn't also just have to be alignment.
+
+Like I am pro getting probes into production because I think probes are just a useful thing for things like checking if your system is trying to betray you.
+
+Checking if your system is like lying to you about how good it research is, etc.
+
+And practicing getting probes into production, figuring out how to run them efficiently, etc.
+
+is useful.
+
+lay the groundwork to do stuff like that.
+
+But I have like a pretty specific story for why that exactly is worth doing.
+
+And I would be concerned that if people don't have a story like that, it's uh I don't know push back or pointing out why I misunderstood you.
+
+Welcome.
+
+No, >> I think I think that was good.
+
+I just think the thing that spawned this for me was that I was afraid like without having a fully dangerous misaligned AI, we have to come up with scenarios where we make the AI, we put them into situations where they act misaligned and then use that to develop our tooling to make sure that they aren't misaligned.
+
+But that means we have to do both sides of the equation.
+
+And it feels so yeah it feels to me I mean there's there's basically danger there right of like just convincing ourselves that the field that we're that like the contrived examples that we create throughout all of our testing are going to be relevant for what it actually ends up evolving into in the next couple of years.
+
+So that's why I was like, okay, maybe we take the hit and work on less, I guess you would say, important things that seem, you know, bal and useless, like a progress bar.
+
+But maybe the basically the trade-off might be worth it.
+
+That was just my thinking that okay, it seems less important immediately, but this leads us into more interesting basic science learnings that could help improve the tooling for then when we reach the actual problems and like real world settings.
+
+>> Yeah.
+
+So I think I mean I think it's important to do things that are hard to fake.
+
+Um uh like yeah that is a principle that I think is like very important and I think that things to do with real user experience and products is valuable as a source of things that are hard to think.
+
+Um, but I think that you I think that you can also get those benefits without it being a like literal real world user.
+
+For example, I think that uh asking why does this model blackmail in this demo?
+
+Can I get it to stop?
+
+It's a very contrived demo in a bunch of ways and this is annoying.
+
+But I think that it is also like not obvious how to fix it.
+
+And if you can fix it, and especially if you can do due diligence and check you haven't fixed it for stupid reasons, like it just learned how to be evalware, then I also think this is like pretty hard to fake.
+
+And there's the question of like how likely is your insight to be real world useful for the future real dangerous thing?
+
+But I would bet that something that helps with blackmail is more likely to be useful than a progress bar personally.
+
+Um, and I also think we can do like a down site better than some of the existing kind of sketchy demos.
+
+Um anyway, I I think I the way I mean the way I think about it is basically being a thing that occurred in the wild in the real world gets you like significant points on my internal ranking of like is this worth studying but there's also a lot of other things and it is not in and of itself a decisive factor and so I mean I think this is like somewhat circling around science and misalignment as an areaconcept like scientifically studying how misalignment does and does not manifest in models, what it looks like, how much a current models misaligned or like pushing on goals and things like this.
+
+And I think that my ideal is studying this on just like totally naturally occurring things like the model fix tests.
+
+What the [ __ ] Why does this happen?
+
+Uh I think this is like very interesting to study.
+
+Um, but there would also be naturally occurring things that people might superficially call misalignment that I think are just not.
+
+And I think that if you study those, the insights you get would not really generalize.
+
+And if you can probably design some stress test for the model where it will do sketchier things.
+
+Uh though I also like strongly endorse your skepticism and think that like asking is this actually a good setting to study?
+
+Is this telling me what I want?
+
+Is this completing me in weird ways?
+
+Are like exactly the correct questions to ask, but I think that they are like sometimes answerable.
+
+Not sure how satisfying that answer is.
+
+>> That was good.
+
+Thank you.
+
+>> Thanks.
+
+Yeah, great question.
+
+Uh, all right.
+
+So, uh, Lewis, um, I mean, man, post HIA worlds are so weird cuz like if you actually take seriously what this would mean, uh, specifically what it would mean to have an aligned AGI.
+
+This is just like a thing that can do my job better than I can.
+
+Well, what is it important for me to have done?
+
+if there is a thing that can do all of the things I would have done counterfactually if I was thinking about that really fast and in a way where we can convert GPUs into it kind of unclear.
+
+I mean capabilities are like probably not uh kind of totally smooth so it can do everything better than me.
+
+So thinking about what are the things that like would be hardest to automate or thinking about things like what things will just take lots of serial time and like I know slow experiments real world experimentation things like this or just like loads of thinking hard actually loads of thinking hard can probably be automated just fine um and there's obviously the like massive question of is the thing actually aligned and like checking this but I don't know I think that if we produce aligned AGI we're in a pretty great place there are just so many yeah there are just so many useful things you can do if you can convert GPUs to the useful things happen and the set of useful things includes basically everything we would get people to do to make the thing safer uh this is also an extremely unsatis satisfying meta answer.
+
+I don't really know how to square these two things.
+
+Um, but it does mean that I feel reasonably comfortable saying make aligned AGI is like the important thing and figure out if you have a like near superhuman system that maybe not be misaligned, how you can control it because maybe we don't actually get aligned AGI, we get maybe aligned AGI.
+
+that seems reasonable to me.
+
+And then yeah, then there's things that are more like well I don't know.
+
+Um yeah, just like can we like really carefully check if the AGI is aligned?
+
+Uh, and like I don't know, I'm using AGI as like a standin for like the really scary system or like the fairly scary systems, but like what exactly is the correct span to care about is like kind of unclear.
+
+Um like one super important variable is whether you think that we're going to be able to have a software only intelligence explosion in the sense of AIs that can automate the like software side of making more AIs um such that they can make better AIs in a way that precursors and like if you think this is possible then like aligning or and or controlling the like early AIs in this process such that they can then um kind of help you do this even better or like the next generation seems like pretty reasonable as a goal.
+
+Um if you think you can actually trust them or like trust them post your schemes, which is an enormous if.
+
+Um, if you don't think that we're going to get some like super rapid jump from like okay to like incredibly scary systems, well, that's like a way better world in my opinion.
+
+I like that world.
+
+Um, and there it's like less clear that there's even like a kind of kind of specific goal to be aiming at.
+
+Uh, yeah, it's not really going anywhere.
+
+Um but yeah uh to Dennis's question um I think interp has the specific focus of the parts of these that interpret can help.
+
+I know how satisfying that is.
+
+Also I'm not sure Dennis is still here but I think that having a north star and then thinking about which part of it is your comparative advantage is like a good and reasonable thing to do.
+
+Um, and I think that like, you know, a large part of this one is just do things like scalable oversight research, which I don't think we should be trying to do, but if there are ways we can like help this along or like come up with like augmentations to these schemes that can patch specific failure modes, seems good.
+
+Um I don't know if I have a great answer to the question of what basic science questions aren't interesting to me.
+
+Um, most of them, uh, I feel like the thing that makes me excited about a basic science question is a combination of this seems tractable and man, this feels like it's really targeting a like interesting, juicy mystery that I care about answering.
+
+Almost all projects fail at least one of those two tests.
+
+Um, I'm also fine with not having a kind of like super concrete theory of change for basic science things because the meta theory of change of like I don't know seem like this got to be useful somehow sometimes seems kind of reasonable.
+
+Eg.
+
+I think that trying to answer the question of like why do neural networks generalize the way they do in unexpected ways like in much of misalignment just seems like a good question to answer.
+
+um because it seems somewhat representative of some of the weird things that actually come up in the real world and probably useful in various ways while I'm like a bit more skeptical of something like why does subliminal learning happen where I'm like I don't know seems weird interesting but also seems like a much more contrived situation that probably just has some like boring explanation of the form.
+
+If you are very similar to another neural network and you train on things that network produced, uh you will get closer to that neural network.
+
+And I'm like interesting that this seems to be a phenomena.
+
+Um but I'm not sure explaining it teaches me that much about other questions.
+
+Yeah.
+
+Like so things like would an answer to this question have predictive power over things over like interesting mysteries is maybe a good way of operationalizing it like are there problems I could imagine actually coming up in the real world where an answer to this question could help me answer this and so eg better understanding how the pre-training data affects whether emergent happens could be helpful for answering a question like is the model going to learn to reward hack or do this thing in the right way maybe they seem like vaguely similarly shaped questions though this is kind of a fuzzy judgment call uh yes uh to Alex's question uh you may be surprised to know that my answer is not 100% confidence because 100% confidence is a ridiculous thing to aim for that is never reasonable uh I don't know, as high as we can reasonably get it.
+
+Uh, but I'd be kind of surprised if we can get above like 99%.
+
+And I'd be pleasantly surprised if we can get above 90%.
+
+Uh, I'm assuming you're referring to the like with confidence that even if the thing was misaligned, we can notice if it does anything disastrous, which is basically the mission statement of the field of AI control.
+
+Arya this question is about the earlier one about like which basic science questions aren't interesting.
+
+So do you think a mathematical framework for transformer circuits has predictive power as a paper like is that representative the point >> I think that it definitely has some predictive power.
+
+For example it is reasonable to look at attention hence is a pretty good statement.
+
+Um, and you can think about direct logic attribution to an attention head as a tool for understanding what it does is a prediction and the residual stream is the thing to study and eg if you want to probe or make a steering vector you should do it on the residual stream is another statement with predictive power.
+
+Uh I think that and I think that just like screwing around with one and two layer attention transformers was fairly productive for like coming up with those insights.
+
+And I think that like I'm trying to balance let's try to do useful things with let's not only myopically do things where there's like a super clear theory of change for the obvious reasons.
+
+Um, but I think that the field also wastes a great deal of time uh doing random [ __ ] that is not useful and I think was predictably not very useful.
+
+And uh also empirically people who do my maths training program often come in wanting to do things like this.
+
+So I do try to uh discourage that.
+
+Um, >> sorry.
+
+When you say things like this, you mean the mathematical framework style basic science papers?
+
+>> Uh, I mean like a mathematical framework but bad.
+
+Um I think that or just like is this a thing that seems like it could plausibly give you rich insights where I don't know if someone was like I want I think that diffusion models are going to be a really big deal.
+
+I want to do a mathematical framework on diffusion models.
+
+I'd be like uh not obvious to me either way.
+
+Uh probably not exactly the project I would have recommended, but like maybe you'll find some cool stuff if you believe in it.
+
+This doesn't seem like obviously unreasonable as a project to do.
+
+Um I think another thing yeah so like one key thing is like neglectedness where I think that when we did a mathematical framework there has not been much of this kind of work done while now if someone was like I'm going to study the attention heads in a three layer attentially transformer I'd be like I don't know if I really expect to learn that much from this.
+
+Um, and I also think that like the fact that we were studying kind of microcosms of proper language models was good.
+
+And I think that if we had been studying like algorithmic tasks, I would be even less confident in any of the insights we gain.
+
+So as a way to get initial ideas, maybe this is reasonable.
+
+Um and yeah so like eg if someone was like ah I want to do this for image transformers uh on like kind of one layer image transform I'd be like well I don't know you might learn something um I feel like I feel much less confused about how image transformers work given my understanding of how transformers work.
+
+So I feel like there's like less juicy mysteries here, but I don't know if anyone's actually like completely looked at this exact questions might something.
+
+So I would like probably discourage it but not like try to block it or something.
+
+All right.
+
+Uh teacher who has gone um but uh for the benefit of anyone else uh I think that proof of misalignment completely does not require precision.
+
+or like proof is a strong word, but like ah this model is blackmailing people.
+
+Why is it doing this?
+
+Ah, I'm like 90% confident it is doing that because it is genuinely driven by a drive for self-preservation.
+
+That's like a great result.
+
+If people can give me that result, that's like [ __ ] epic.
+
+That is not a precise statement.
+
+Uh I think that if people want to do something that is like show that an aligned model is genuinely aligned which is kind of more like this thing is not misaligned that I feel a lot more uncertain about especially because there's just like lots of ways to be misaligned and in theory you should kind of be like dealing with all of them and that I feel much doomier about that one but Um yeah, I mean really going through I think that like being able to produce like pretty rigorous case of stakeholders that the thing is aligned does not require precision and also does not yeah I think maybe let's divide this into do we have precision and do we have completeness I think that this thing is driven by a drive for self-preservation is not a precise statement I also think it is like not a complete statement.
+
+Uh saying the only drive is this is a complete statement.
+
+But like who cares and saying this drive does not exist is a complete statement.
+
+Uh which is why I'm currently feeling more excited about like prove misalignment than prove alignment.
+
+Um though I don't know if people can like provide a detailed model of the cognition behind the model in various situations and show that it seems to be thinking good aligned thoughts.
+
+It's not like deeply satisfying but it's reasonable.
+
+It's like give me giving me some data.
+
+Yeah.
+
+I think that like can we kind of tell if the model is trying to escape or do something terrible?
+
+I think that like having high confidence, we care about um precision, but I feel like there's a lot of value you can gain without getting to 99% confidence.
+
+And I think that interpretability could help a fair bit there.
+
+um to with this one.
+
+I feel like things like the model is thinking deceptive thoughts is the thing that current techniques might be able to notice and would be pretty important.
+
+Uh yeah, influencing training is actually quite an interesting one because I feel like in order to influence training, it's kind of about the model.
+
+You can kind of think of training as like there are several states the model could be in and it learns to snap into one of those states.
+
+Realistically, it learns several at once, but like there's some like qualitative does it learn to do things the right way or the wrong way?
+
+And if you can give the model a big nudge, maybe it like ends up mostly doing the right thing and not doing the wrong thing.
+
+And like this seems cool.
+
+Um but yeah and yeah give feedback definitely does not require precision or completeness.
+
+I'm like you're basically just saying ah I think this part of schema seems important for causing this bad outcome.
+
+>> Oh um what exactly do you mean by completeness?
+
+>> Uh this is a great question I was trying to answer myself during that.
+
+Uh my current best take is that by completeness I mean there are not factors and concepts present that we did not think of or like have missed and prestigion is like we have perfectly captured this thing.
+
+We aren't missing any facets of this thing or like we have perfectly removed this thing.
+
+Um, yeah, it feels like it matters more for things like ablation than for things like probing, but probing things like well, you don't have like false positives I think matters a fair bit.
+
+Yeah, maybe completeness is about missing concepts.
+
+Precision is about here is the concept.
+
+Um, how good are the claims and guarantees we can provide about And yeah, I kind of feel like most basic science things don't really need precision or like I feel like you can have a basic science thing where the question is about precision like what is the true direction for this concept and like is this even a thing and like that can be cursed but if the fundamental output of your basic science thing is just like how does the model yeah like why did the model do that or like what does it mean to say that models should and should not do this?
+
+Um like why did the model generalize like this?
+
+I think that it's nice to be able to say like yep like the only thing happening is this and like that starts to be more of a statement that requires precision and completeness.
+
+But I think that if you want to just say statements that are weaker like a major reason this happens is blah, I think you can just totally do this.
+
+And yeah.
+
+All right.
+
+Um, I not massively concerned about data poisoning.
+
+And I would be kind of surprised if the main reason data poisoning was hard is people were good at filtering out things that were like sketch.
+
+I don't really think people are that good at doing that at all.
+
+Um, and you need access to a model with the same initialization throw as I'm aware, which means maybe you could like use the current version of GPD40 to poison the next one.
+
+I mean, they're probably going to do the next one.
+
+Like they're probably going to do future revisions of GP5s.
+
+So like maybe you can poison those, but like I don't know, doesn't seem super important.
+
+And like the main vector of poisoning is just like putting stuff on the internet or like I don't know maybe um yeah it's plausible that they train it on like user data.
+
+They don't know what their usage policy is especially for free users wouldn't surprise me.
+
+And then something that the users made the model say poisons the next model, but like I don't know, they're probably not doing supervised.
+
+Yeah, they're like probably not doing just SFT on user data because like that's going to be [ __ ] data.
+
+So all right, thus thus ends long Q&A.

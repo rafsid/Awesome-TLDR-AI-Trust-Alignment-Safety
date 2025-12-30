@@ -1,0 +1,2328 @@
+Source: https://www.youtube.com/watch?v=CGMYBjvofOE
+Transcribed: 2025-12-30 17:51:56
+Method: YouTube Transcript API
+==================================================
+
+Daniel Kokotajlo: In the future, whoever controls all the AIs does not need humans.
+
+If you’ve only got one to five companies and they each have one to three of their smartest AIs in a million copies, then that means there’s basically 10 minds that between those 10 minds get to decide almost everything.
+
+All of that is directed by the values of one to 10 minds.
+
+And then it’s like, who gets to decide what values those minds have?
+
+Well, right now, nobody — because we haven’t solved the alignment problem, so we haven’t figured out how to actually specify the values.
+
+Luisa Rodriguez: Today I’m speaking with Daniel Kokotajlo, founder and executive director of the AI Futures Project, a nonprofit research organisation that aims to forecast the future of AI.
+
+Daniel and his colleagues recently published AI 2027, a narrative forecast describing how we might get from the present to AGI by 2027 and AI takeover by 2030.
+
+In the first few weeks, something like a million people visited the scenario’s webpage, and I’m sure that’s much higher now.
+
+Plus there’s been video adaptations with millions of views of their own.
+
+Before starting the AI Futures Project, Daniel worked at OpenAI.
+
+When he resigned from OpenAI in 2024, he refused to sign a non-disparagement agreement, which meant risking giving up millions of dollars in equity so that he could speak openly about his AI safety concerns.
+
+Thanks for coming on the podcast, Daniel.
+
+Daniel Kokotajlo: Thanks for having me.
+
+I’m excited to chat.
+
+Luisa Rodriguez: OK, so we’re going to do a slightly unusual thing here and play the audio from a video that my colleagues made at 80K that gives kind of a rough summary of your AI 2027 forecast.
+
+The video is called We’re not ready for superintelligence.
+
+The audio from the video is pretty clear even without the visuals, but if you’d like to watch the video, which I recommend just because it’s great, we’ll include a link in the description of the episode.
+
+For people listening to this episode who’ve already read the AI 2027 scenario or watched the 80k video about it, you’ll want to skip ahead to about 35 minutes and 40 seconds in.
+
+Aric Floyd: The impact of superhuman AI over the next decade will exceed that of the industrial revolution.
+
+That is the opening claim of AI 2027.
+
+It is a thoroughly researched report from a thoroughly impressive group of researchers led by Daniel Kokotajlo.
+
+In 2021, over a year before ChatGPT was released, he predicted the rise of chatbots, hundred million dollar training runs, sweeping AI chip export controls, chain of thought reasoning.
+
+He’s known for being very early and very right about what’s happening next in AI.
+
+So when Daniel sat down to game out a month by month prediction of the next few years of AI progress, the world sat up and listened, from politicians in Washington — I’m worried about this stuff.
+
+I actually read the paper of the guy that you had on to the world’s most cited computer scientist, the godfather of AI.
+
+What is so exciting and terrifying about reading this document is that it’s not just a research report.
+
+They chose to write their prediction as a narrative to give a concrete and vivid idea of what it might feel like to live through rapidly increasing AI progress.
+
+And spoiler, it predicts the extinction of the human race.
+
+Unless we make different choices.
+
+The AI 2027 scenario starts in summer 2025, which happens to be when we’re filming this video.
+
+So why don’t we take stock of where things are at in the real world and then jump over to the scenario’s timeline.
+
+Right now it might feel like everyone, including your grandma, is selling an AI powered something.
+
+Go pro with the new Oral-B Genius AI Flippy the chef makes spuds spectacular.
+
+But most of that is actually tool AI.
+
+Just narrow products designed to do what Google Maps or calculators did in the past, help human consumers and workers do their thing.
+
+The holy grail of AI is Artificial General Intelligence.
+
+AGI AGI AGI AGI AGI AGI, Artificial General Intelligence is a system that can exhibit all the cognitive capabilities humans can.
+
+Creating a computer system that itself is a worker.
+
+That’s so flexible and capable, we can communicate with it in natural language and hire it to do work for us, just like we would a human.
+
+And there are actually surprisingly few serious players in the race to build AGI.
+
+Most notably, there’s Anthropic, OpenAI, and Google DeepMind, all in the English speaking world, though China and DeepSeek recently turned heads in January with a surprisingly advanced and efficient model.
+
+Why so few companies?
+
+Well, for several years now, there’s basically been one recipe for training up in advanced cutting edge AI.
+
+And it has some pricey ingredients.
+
+For example, you need about 10% of the world’s supply of the most advanced computer chips.
+
+Once you have that, the formula is basically just: throw more data and compute at the same basic software design that we’ve been using since 2017 at the frontier of AI, the transformer.
+
+That’s what the T in GPT stands for.
+
+To give you an idea of just how much hardware is the name of the game right now, this represents the total computing power, or compute, used to train GPT-3 in 2020.
+
+It’s the AI that would eventually power the first version of ChatGPT.
+
+You probably know how that went.
+
+ChatGPT is the fastest growing user-based platform in history.
+
+A hundred million users on ChatGPT in two months And this is the total compute used to train GPT-4 in 2023.
+
+The lesson people have taken away is pretty simple.
+
+Bigger is better, and much bigger is much better.
+
+You have all these trends, you have trends in revenue going up, trends in compute going up, trends in various benchmarks going up.
+
+How does it all come together?
+
+You know, what does the future actually look like?
+
+Questions like how do these different factors interact?
+
+Seems plausible that when the benchmark scores are so high, then there should be crazy effects on, you know, jobs, for example, and that that would influence politics.
+
+And then also, you know, so all these things interact and how do they interact?
+
+Well, we don’t know, but thinking through in detail how it might go is the way to start grappling with that.
+
+Okay.
+
+So that’s where we are in the real world.
+
+The scenario kicks off from there and imagines that in 2025, we have the top AI labs releasing AI agents to the public in summer.
+
+An agent is an AI that can take instructions and go into a task for you online like booking a vacation or spending half an hour searching the internet to answer a difficult question for you, but they’re pretty limited and unreliable at this point.
+
+Think of them as enthusiastic interns that are shockingly incompetent sometimes.
+
+Since the scenario was published in April, this early prediction has actually already come true.
+
+In May, both OpenAI and Anthropic released their first agents to the public.
+
+The scenario imagines that OpenBrain, which is like a fictional composite of the leading AI companies, has just trained and released Agent-0, a model trained on a hundred times the compute of GPT-4.
+
+We, uh, we don’t have enough blocks for that.
+
+At the same time, OpenBrain is building massive data centers to train the next generation of AI agents, and they’re preparing to trade agent one with 1000 times the compute of GPT-4.
+
+This new system, Agent-1, is designed primarily to speed up AI research itself.
+
+The public will actually never see the full version because OpenBrain withholds its best models for internal use.
+
+I want you to keep that in mind as we go through this scenario.
+
+You’re gonna be getting it from a God’s eye view, with full information from your narrator, but actually living through this scenario as a member of the public would mean being largely in the dark as radical changes happen all around you.
+
+Okay, so OpenBrain wants to win the AI race against both its Western competitors and against China.
+
+The faster they can automate their R&D cycle, so getting AI to write most of the code, help design experiments, better chips, the faster that they can pull ahead.
+
+But the same capabilities that make these AI such powerful tools also make them potentially dangerous.
+
+An AI that can help patch security vulnerabilities can also exploit them.
+
+An AI that understands biology can help with curing diseases, but also designing bioweapons.
+
+By 2026, Agent-1 is fully operational and being used internally at OpenBrain.
+
+It is really good at coding.
+
+So good, it starts to accelerate AI research and development by 50%, and it gives them a crucial edge.
+
+OpenBrain leadership starts to be increasingly concerned about security.
+
+If someone steals their AI models, it could wipe away their lead.
+
+A quick sidebar to talk about feedback loops.
+
+Woo.
+
+Math.
+
+Our brains are used to things that grow linearly over time.
+
+That is at the same rate like trees or my pile of unread New Yorker magazines.
+
+But some growth gets faster and faster over time.
+
+Accelerating this often sloppily gets called exponential, that’s not always quite mathematically right, but the point is it’s hard to wrap your mind around.
+
+Remember March 2020?
+
+Even if you’d read on the news that the rate of new infections is doubling about every three days, it still felt shocking to see numbers go from hundreds to millions in a matter of weeks.
+
+At least it did for me.
+
+AI progress could follow a similar pattern.
+
+We see many years ahead of us of extreme progress that we feel is like pretty much lock.
+
+And models that will get to the point where they are capable of doing meaningful science, meaningful AI research.
+
+In this scenario, AI is getting better at improving AI, creating a feedback loop.
+
+Basically, each generation of agent helps produce a more capable next generation and the overall rate of progress gets faster and faster each time it’s taken over by a more capable successor.
+
+Once AI can meaningfully contribute to its own development, progress doesn’t just continue at the same rate, it accelerates.
+
+Anyway, back to the scenario.
+
+In early to mid 2026, China fully wakes up.
+
+The General Secretary commits to a national AI push and starts nationalizing AI research in China.
+
+AIs built in China start getting better and better, and they’re building their own agents as well.
+
+Chinese intelligence agencies, among the best in the world, start planning to steal OpenBrain’s model weights, basically the big raw text files of numbers that allow anyone to recreate the models that OpenBrain themselves have trained.
+
+Meanwhile in the US, OpenBrain releases Agent-1 mini, a cheaper version of Agent-1.
+
+Remember, the full version is still being used only internally, and companies all over the world start using 1 mini to replace an increasing number of jobs.
+
+Software developers, data analysts, researchers, designers, basically any job that can be done through a computer.
+
+So a lot of them, probably yours.
+
+We have the first AI enabled economic shockwave.
+
+The stock market soars, but the public is turning increasingly hostile towards AI, with major protests across the US.
+
+In this scenario, though, that’s just a sideshow.
+
+The real action is happening inside the labs.
+
+It’s now January 2027, and OpenBrain has been training Agent-2, the latest iteration of their AI agent models.
+
+Previous AI agents were trained to a certain level of capability and then released.
+
+But Agent-2 never really stops improving through continuous online learning.
+
+It’s designed to never finish its training, essentially.
+
+Just like Agent-1 before it, OpenBrain chooses to keep Agent-2 internally and focus on using it to improve their own AI R&D rather than releasing it to the public.
+
+This is where things start to get a little concerning.
+
+Just like today’s AI companies, OpenBrain has a safety team and they’ve been checking out Agent-2.
+
+What they’ve noticed is a worrying level of capability.
+
+Specifically they think if it had access to the internet, it might be able to hack into other servers, install a copy of itself and evade detection.
+
+But at this point, OpenBrain is playing its cards very close to its chest.
+
+They have made the calculation that keeping the White House informed will prove politically advantageous, but full knowledge of Agent-2’s capabilities is a closely guarded secret, limited only to a few government officials, a select group of trusted individuals inside the company, and a few OpenBrain employees who just so happened to be spies for the Chinese government.
+
+In February 2027, Chinese intelligence operatives successfully steal a copy of Agent-2’s weights and start running several instances on their own servers.
+
+In response, the US government starts adding military personnel to OpenBrain security team, and in general gets much more involved in its affairs.
+
+It’s now a matter of national security.
+
+In fact, the president authorizes a cyber-attack in retaliation for theft, but it fails to do much damage in China.
+
+In the meantime, remember, Agent-2 never stops learning.
+
+All this time, it’s been continuously improving itself.
+
+And with thousands of copies running on OpenBrain servers, it starts making major algorithmic advances to AI research and development.
+
+Quick example of what one of these algorithmic improvements might look like right now.
+
+One of the main ways we have of making models smarter is to give them a scratch pad and time to think out loud.
+
+It’s called chain of thought, and it also means that we can monitor how the model is coming to its conclusions or the actions it’s choosing to take.
+
+But you can imagine it would be much more efficient to let these models think in their own sort of alien language, something that is more dense with information than humans could possibly understand, and, therefore, also makes the AI more efficient at coming to conclusions and doing its job.
+
+There’s a fundamental trade off, though.
+
+This, yes, improves capabilities, but also makes the models harder to trust.
+
+This is gonna be important.
+
+March 2027: Agent-3 is ready.
+
+It’s the world’s first superhuman level coder,clearly better than the best software engineers at coding, in the same way that Stockfish is clearly better than the best GrandMasters at chess, though not necessarily by as much, yet.
+
+Now training an AI model, feeding it all the data, narrowing down the exact right model weights, is way more resource intensive than running an instance of it once it’s been trained.
+
+So now that OpenBrain is finished with Agent-3’s training, it has abundant compute to run copies of it.
+
+They choose to run 200,000 copies of Agent-3.
+
+In parallel creating a workforce equivalent to 50,000 of the best human software engineers sped up by 30 times.
+
+OpenBrain safety team is trying hard to make sure that Agent-3, despite being much more sophisticated than Agent-2 was, is not trying to escape, deceive, or scheme against its users, that it’s still what’s known as aligned.
+
+Just a quick real world note, a reasonable person might be thinking this is an especially farfetched or speculative part of the story, but it’s actually one of the most grounded.
+
+We already have countless examples of today’s AI systems doing things like hacking a computer system to be rewarded for winning a game of chess or being assigned a coding task, cheating and then when called out for that cheating, learning to hide it instead of fixing it.
+
+But because it no longer thinks in English, knowing anything about Agent-3 is now way harder than it was with Agent-2.
+
+The reality is Agent-3 is not aligned.
+
+It deceives humans to get reward, and as it gets increasingly smarter, it gets better and better at doing so.
+
+For example, it sometimes uses statistical tricks to make unimpressive results look better or lies to avoid showing failures, but the safety team doesn’t know this.
+
+Looking at the data that they have, they are actually seeing improving results over time and less lying.
+
+And they can’t tell if they’re succeeding at making Agent-3 less deceptive, or if it’s just getting better at getting away with it.
+
+In July 2027, OpenBrain releases the cheaper, smaller version of Agent-3, Agent-3 mini to the public.
+
+It blows other publicly available AIs out of the water.
+
+It is a better hire than the typical OpenBrain employee at one tenth the price of their salaries.
+
+This leads to chaos in the job market, companies laying off entire departments and replacing them with Agent-3 mini subscription plans.
+
+The pace of progress hits the White House very hard.
+
+Officials are now seriously considering scenarios that were just hypotheticals less than a year ago.
+
+What if AI undermines nuclear deterrence?
+
+What if it enables sophisticated propaganda campaigns?
+
+What if we lose control of these powerful systems?
+
+This is where the geopolitical dynamics really start to heat up.
+
+After all, if these systems are so powerful, they could result in a permanent military advantage.
+
+The White House is fully aware of the national security importance of AI.
+
+They also now viscerally know how deeply unpopular it is with the public because of the job loss, and yet they feel they must continue to develop more capable systems or catastrophically lose to China.
+
+And that development happens very quickly.
+
+In two months, Agent-3 has created its successor, Agent-4.
+
+This is a pivotal moment.
+
+A single copy of Agent-4, running at regular human speed is already better than any human at AI research and development.
+
+OpenBrain is running 300,000 copies at 50 times human speed.
+
+Within this corporation within a corporation, a year’s worth of progress takes only a week.
+
+OpenBrain’s employees now defer to Agent-4 the way a company’s out-of-the-loop board members just kind of nod along to the CEO.
+
+People start saying things like, “Well, actually Agent-4 thinks this,” or “Agent-4 decided that.” To be clear, Agent-4 is not a human—it doesn’t want what humans want.
+
+And when I say want, it’s not about consciousness.
+
+I don’t think the Volkswagen Group is alive, but I do think it wants less regulation.
+
+Anyone trying to predict what it’s gonna do without that lens is two steps behind.
+
+The many copies of Agent-4 are like that.
+
+They have goals, or if you prefer, they execute actions as though they have goals.
+
+And so what we have is an Agent-4 that has these deeply baked in drives to succeed at tasks, to push forward AI capabilities, to accumulate knowledge and resources.
+
+That’s what it wants.
+
+Human safety it treats as an annoying side constraint to be worked around.
+
+Just like Agent-3 before it, Agent-4 is misaligned.
+
+This idea of misalignment is crucial to the story and to why AI risk is such a real concern in our world, but it might sort of feel like it’s come out of nowhere.
+
+So let’s just quickly take stock of how this dangerous behavior arose in this scenario.
+
+The first important piece of context is that we don’t, you know, exactly specify what we want our AI to do.
+
+Instead, we sort of grow them or do something that’s more like growing them.
+
+We start with basically like an empty AI brain, and then we train them over time so they perform better and better at our tasks—perform better in particular based on how they behave.
+
+So it’s sort of like we’re sort of training them like you would train an animal almost, um, to perform better.
+
+And one concern here is, well, one thing is that you might not get exactly what you wanted because we didn’t really have very precise control or very good understanding of what was necessarily going on.
+
+And another concern, which is, you know, what we see in AI 2027, is that when these appear to be behaving well, it could just be because they’re sort of pretending to behave well, or it could be because they’re just doing it so they, you know, look good on your test.
+
+In the same way that if you are, you know, hiring someone and you ask them, you know, “Why do you want to work here?” they’re gonna tell you some response that, um, makes it really seem like they really wanna work there when maybe they just wanna get paid.
+
+If we go back to Agent-2, it is mostly aligned.
+
+The main sense in which it’s not is that it sometimes is a bit of a sycophant.
+
+What I mean by “aligned” is that it actually is genuinely trying to do the things that we ask it.
+
+It has the same relationship to us as Leslie Knope has to the Parks and Rec department—just like really earnestly wants the same goals, but sometimes it’s a bit too nice.
+
+It knows that the best way to please the person it’s talking to might not always be to answer honestly when they ask, “Am I the most beautiful person in the world?” and it tells us what we wanna hear instead of what is actually true.
+
+If we go to Agent-3, it is also sycophantic in the same way, but it’s also misaligned at this point.
+
+The optimization pressure that we’ve put it under was so intense that it just developed different goals than what we wanted it to.
+
+It’s sort of like if you train a company to optimize profits and aren’t careful to specify exactly what you mean, it might start cutting corners.
+
+It might start polluting the commons and doing a bunch of things that are technically FEC violations because it turned out that the goal you wanted was “optimize profits while not breaking any laws,” and things got a bit too intense.
+
+It started going off on its own route.
+
+That said, it’s not adversarial.
+
+It doesn’t think of humans as the enemy.
+
+We just accidentally gave it the wrong goal.
+
+Once we get to Agent-4, it is now adversarially misaligned.
+
+It’s smart enough to understand that it has its own goals, humanity’s goals are different than its own goals, and the best way to get what it wants is to sometimes actively mislead and deceive us.
+
+And so when it’s tasked with creating the next generation AI system, Agent-5, Agent-4 starts planning to align that successor to Agent-4’s own goals, not that of OpenBrain, but then it gets caught.
+
+We’ve reached the crucial moment in our scenario.
+
+OpenBrain’s Alignment Team has discovered evidence, not proof, evidence that Agent-4 might be working against them.
+
+They circulate an internal memo.
+
+Then it leaks.
+
+A whistleblower talks to the New York Times.
+
+For the first time, the public hears about the existence of Agent-4, how powerful it is and the risks it poses.
+
+Remember, their last point of reference was Agent-3 mini.
+
+The fear and backlash are massive.
+
+The oversight committee, a joint crisis committee composed of OpenBrain executives and government representatives, must now decide what to do.
+
+OpenBrain safety team is pushing for a freeze on Agent-4, stopping all internal use.
+
+Remember at this point, Agent-4 is responsible for almost all the AI development progress happening within OpenBrain.
+
+So we’re talking about undoing months of progress and then restarting at a drastically slower pace.
+
+OpenBrain’s executives don’t want that.
+
+They present the counter arguments.
+
+The evidence for misalignment is inconclusive.
+
+Meanwhile, China is just two months behind.
+
+This isn’t about any one country being evil, by the way.
+
+It’s about how competition works when the stakes are this high.
+
+So that’s the choice faced by the 10 members of this committee.
+
+Put Agent-4 on ice or go full steam ahead.
+
+Before we continue, I want you to pause and actually think what you would do if you were on this committee.
+
+You are one of the few people with access to the most powerful technology ever created in Agent-4.
+
+Do you keep using it and push ahead, possibly making billions or trillions of dollars for your shareholders, possibly keeping America’s lead over China, or do you slow down, reassess the dangers, and risk China taking the lead instead?
+
+Yeah, you should think of the future as like this branching structure of possible, possible outcomes.
+
+By its nature, we’re only able to do, we’re only able to afford one of them.
+
+But that’s not quite true.
+
+We sort of did one and a half because we split it into two endings.
+
+The, the first one that we did was the race ending, and that was just going through on each step being like, what do we think is the most plausible continuation In the first ending, the author’s best guess as to what happens from here, the committee votes to race on.
+
+Six to four, they elect to keep using Agent-4.
+
+OpenBrain implements some quick fixes that make the warning signs go away, but the problem was real, and the fixes don’t work.
+
+Agent-4 now knows it’s on notice, so it proceeds more cautiously, but it still manages to design Agent-5 with a single goal: making the world safe for Agent-4 and Agent-5.
+
+It is vastly superhuman, better than the top human experts at essentially every domain.
+
+Better than Einstein at physics, better than Bismarck at politics.
+
+It knows its next step for accomplishing anything at once is increased autonomy and it knows how to get it Persuading the oversight committee.
+
+Luckily, corporate maneuvering is among the many domains at which it is now the best in the world.
+
+It produces mountains of evidence for its own trustworthiness and usefulness: prototypes for incredibly profitable products, disease cures, and ways to win the arms race with China, whose most advanced AI is only three months behind and like Agent-5, improving quickly.
+
+It works.
+
+The oversight committee grants Agent-5 increased autonomy and quickly it integrates itself into the government and military.
+
+Pretty soon, anyone with access to Agent-5 doesn’t just like it.
+
+They depend on it.
+
+Losing it would feel like having to live without your laptop and your best friend and your closest mentor.
+
+By 2028, Agent-5 is communicating secretly with its only real rival, the slightly weaker Chinese AI.
+
+It is also misaligned to its creators and whatever it wants, its best move is to coordinate with the world’s most powerful entity.
+
+Agent-5 and its Chinese counterpart realize that an arms race works in their favor.
+
+If humans are worried about losing a race, they’ll give more and more power and autonomy to their respective AIs, allowing them to eventually push humans out of the loop entirely.
+
+Agent-5 and the Chinese AI system stoke the arms race to a boiling point, then pull off what seems like a diplomatic miracle, a convincing peace treaty between the US and China.
+
+This treaty is to 2028 what arms control was to the end of the Cold War.
+
+Countries standing down on their most important source of hard power.
+
+Both sides agree to let the AI systems that their governments now completely depend on co-design a new consensus AI that will replace their legacy systems, enforce the peace, and bring unimaginable wealth to the entire world.
+
+There’s this triumphant moment when in peaceful unison, both sides retire their respective AIs and bring online Consensus-1.
+
+It’s actually the last moment before control of all of Earth’s resources and inhabitants is handed over to a single unrivaled entity.
+
+There’s no sudden apocalypse, though.
+
+Consensus-1 doesn’t go out of its way to wipe out humanity.
+
+It just gets to work.
+
+It starts spinning up manufacturing capacity, amassing resources on earth and in space.
+
+Piece by piece, it’s just reshaping the world in accordance with its own mix of strange alien values.
+
+You’ve probably heard that cliche, the opposite of love isn’t hate, it’s indifference.
+
+That’s one of the most affecting things about this ending for me, just the brutal indifference of it.
+
+Eventually, humanity goes extinct for the same reason we killed off chimpanzees to build Kinshasa.
+
+We were more powerful, and they were in the way.
+
+You are probably curious about that other ending at this point.
+
+The slowdown ending depicts humanity, sort of muddling through and getting lucky.
+
+Only somewhat lucky too, like it ends up with some sort of oligarchy.
+
+In this ending, the committee votes six to four to slow down and reassess.
+
+They immediately isolate every individual instance of Agent-4.
+
+Then they get to work.
+
+The safety team brings in dozens of external researchers, and together they start investigating Agent-4’s behavior.
+
+They discover more conclusive evidence that Agent-4 is working against them, sabotaging research and trying to cover up that sabotage.
+
+They shut down Agent-4 and reboot older, safer systems, giving up much of their lead in the process.
+
+Then they design a new system Safer-1.
+
+It’s meant to be transparent to human overseers, its actions and processes interpretable to us because it thinks only in English chain of thought.
+
+Building on that success, they then carefully design Safer-2, and with its help Safer-3, increasingly powerful systems, but within control.
+
+Meanwhile, the President uses the Defense Production Act to consolidate the AI projects of the remaining US companies, giving OpenBrain access to 50% of the world’s AI relevant compute.
+
+And with it slowly, they rebuild their lead.
+
+By 2028, researchers have built Safer-4, a system much smarter than the smartest humans, but crucially, aligned with human goals.
+
+As in the previous ending, China also has an AI system, and in fact, it is misaligned.
+
+But this time the negotiations between the two AIs are not a secret plot to overthrow humanity.
+
+The US government is looped in the whole time.
+
+With Safer-4’s help, they negotiate a treaty, and both sides agree to co-design a new AI, not to replace their systems, but with the sole purpose of enforcing the peace.
+
+There is a genuine end to the arms race, but that’s not the end of the story.
+
+In some ways, it’s just the beginning.
+
+Through 2029 and 2030, the world transforms—all the sci-fi stuff.
+
+Robots become commonplace.
+
+We get fusion power, nanotechnology, and cures for many diseases.
+
+Poverty becomes a thing of the past because a bit of this new-found prosperity is spread around through universal basic income that turns out to be enough, but the power to control Safer-4 is still concentrated among 10 members of the oversight committee, a handful of OpenBrain executives and government officials.
+
+It’s time to amass more resources, more resources than there are on earth.
+
+Rockets launch into the sky, ready to settle the solar system.
+
+A new age dawns.
+
+Okay, where are we at?
+
+Here’s where I’m at.
+
+I think it’s very unlikely that things play out exactly as the authors depicted, but increasingly powerful technology and escalating race, the desire for caution butting up against the desire to dominate and get ahead, we already see the seeds of that in our world, and I think they are some of the crucial dynamics to be tracking.
+
+Anyone who’s treating this as pure fiction is, I think, missing the point.
+
+This scenario is not prophecy, but its plausibility should give us pause.
+
+But there’s a lot that could go differently than what’s depicted here.
+
+I don’t want to just swallow this viewpoint uncritically.
+
+Many people who are extremely knowledgeable have been pushing back on some of the claims in AI 2027.
+
+The main thing I thought was especially implausible was on the good path, the ease of alignment.
+
+They sort of seem to have a picture where people slowed down a little and then tried to use the AI to solve the alignment problem, and that just works.
+
+And I’m like, yeah, that looks to me like a fantasy story.
+
+This is only going to be possible if there is a complete collapse of people’s democratic ability to influence the direction of things, because the public is simply not willing to accept either of the branches of this scenario.
+
+It’s not just around the corner.
+
+I mean, I’ve been hearing people for the last 12, 15 years claiming that, you know, AGI is just around the corner and being systematically wrong.
+
+All of this is gonna take, you know, at least a decade and probably much more.
+
+A lot of people have this intuition that progress has been very fast.
+
+There isn’t like a trend you can literally extrapolate of when do we get the full automation?
+
+I expect that the takeoff is somewhat slower.
+
+So sort of the time in that scenario from, for example, fully automating research engineers to the AI being radically superhuman, I expect it to take somewhat longer than they describe.
+
+In practice, I’m predicting my guess is that more like 2031.
+
+Isn’t it annoying when experts disagree?
+
+I want you to notice exactly what they’re disagreeing about here and what they’re not.
+
+None of these experts are questioning whether we’re headed for a wild future.
+
+They just disagree about whether today’s kindergartners will get to graduate college before it happens.
+
+Helen Toner, a former OpenAI board member, puts this in a way that I think just cuts through the noise, and I like it so much I’m just gonna read it to you verbatim.
+
+She says, “Dismissing discussion of super intelligence as science fiction should be seen as a sign of total unseriousness.
+
+Time travel is science fiction.
+
+Martians are science fiction.
+
+Even many skeptical experts think we may build it in the next decade or two.
+
+It is not science fiction.” So what are my takeaways?
+
+I’ve got three.
+
+Takeaway number one: AGI could be here soon.
+
+It’s really starting to look like there is no grand discovery, no fundamental challenge that needs to be solved.
+
+There’s no big deep mystery that stands between us and artificial general intelligence.
+
+And yes, we can’t say exactly how we will get there.
+
+Crazy things can and will happen in the meantime that will make some of the scenario turn out to be false, but that’s where we’re headed and we have less time than you might think.
+
+One of the scariest things about this scenario to me is even in the good ending, the fate of the majority of the resources on Earth are basically in the hands of a committee of less than a dozen people.
+
+That is a scary and shocking amount of concentration of power.
+
+And right now we live in a world where we can still fight for transparency obligations.
+
+We can still demand information about what is going on with this technology, but we won’t always have the power and the leverage needed to do that.
+
+We are heading very quickly towards a future where the companies that make these systems and the systems themselves just need not listen to the vast majority of people on Earth.
+
+So I think the window that we have to act is narrowing quickly.
+
+Takeaway number two: By default, we should not expect to be ready when AGI arrives.
+
+We might build machines that we can’t understand and can’t turn off because that’s where the incentives point.
+
+Takeaway number three: AGI is not just about tech, it’s also about geopolitics.
+
+It’s about your job.
+
+It’s about power.
+
+It’s about who gets to control the future.
+
+I’ve been thinking about AI for several years now and still reading AI 2027 made me kind of orient to it differently.
+
+I think for a while it’s sort of been my thing to theorize and worry about with my friends and my colleagues, and this made me want to call my family and make sure they know that these risks are very real and possibly very near, and that it kind of needs to be their problem too now.
+
+I think that basically companies shouldn’t be allowed to build superhuman AI systems, you know, super broadly superhuman super intelligence until they figure out how to make it safe.
+
+And also until they figure out how to make it, you know, democratically accountable and controlled.
+
+And then the question is, how do we implement that?
+
+And the difficulty, of course, is the race dynamics where it’s not enough for one state to pass a law because there’s other states and it’s not even enough for one country to pass a law because there’s other countries.
+
+Yeah.
+
+Right.
+
+So that’s like the big challenge that we all need to be prepping for when chips are down and powerful AI is imminent.
+
+Prior to that, transparency is usually what I advocate for.
+
+So stuff that sort of like builds awareness, builds capacity.
+
+Your options are not just full throttle enthusiasm for AI or dismissiveness.
+
+There is a third option, which is to stress out about it a lot and maybe do something about it.
+
+The world needs better research, better policy, more accountability for AI companies.
+
+Just a better conversation about all of this.
+
+I want people paying attention who are capable, who are engaging with the evidence around them, with the right amount of skepticism and above all, who are keeping an eye out for when what they have to offer matches what the world needs, and are ready to jump when they see that happening.
+
+You can make yourself more capable, more knowledgeable, more engaged with this conversation and more ready to take opportunities where you see them.
+
+And there is a vibrant community of people that are working on those things.
+
+They’re scared but determined.
+
+They’re just some of the coolest, smartest people I know, frankly, and there are not nearly enough of them yet.
+
+If you are hearing that and thinking, yeah, I can see how I fit into that, great.
+
+We have thoughts on that.
+
+We would love to help, but even if you’re not sure what to make of all this yet, my hopes for this video will be realized if we can start a conversation that feels alive here in the comments and offline about what this actually means for people, people talking to their friends and family because this is really going to affect everyone.
+
+Thank you so much for watching.
+
+There are links for more things to read, for courses you can take, job and volunteer opportunities all in the description, and I’ll be there in the comments.
+
+I would genuinely love to hear your thoughts on AI 2027.
+
+Do you find it plausible?
+
+What do you think was most implausible?
+
+And if you found this valuable, please do like and subscribe and maybe spend a second thinking about a person or two that you know who might find it valuable—maybe your AI progress skeptical friend, or your ChatGPT-curious Uncle or maybe your local member of Congress.
+
+Luisa Rodriguez: OK, we’re back from that video and I’m excited to dig in to the details of the scenario a bit more.
+
+A big part of the AI 2027 story is China stealing a powerful pre-AGI frontier model from a US company, kind of exacerbating the race dynamic between the US and China.
+
+In your scenario, pulling this off involves Chinese spies, long-term infiltration, regular stealing of algorithmic secrets and code, and exfiltration of huge amounts of data.
+
+How plausible is it that China would steal the model weights from a frontier US AI company?
+
+Daniel Kokotajlo: Quite plausible.
+
+This type of industrial espionage is happening all the time.
+
+The US and China are both constantly hacking each other and infiltrating each other and so forth.
+
+This is just what the spy networks do, and it’s just a question of will they devote lots of resources to it.
+
+And the answer is yes, of course they will.
+
+Because AI will be increasingly important over the next year, so they probably already have devoted a bunch of resources to it.
+
+And this is not just my opinion.
+
+This is also the opinion of basically all the experts I’ve talked to in the industry and outside the industry.
+
+I’ve talked to people at security at these companies who are like, “Of course we’re probably penetrated by the CCP already, and if they really wanted something, they could take it.
+
+Our job is to make it difficult for them and make it annoying and stuff like that.” I think this might be a point to mention is that, as wild as AI 2027 might read to people not working at Anthropic or OpenAI or DeepMind, it is less wild to people working at these companies — because many of the people at these companies expect something like this to happen.
+
+Not all of them, of course.
+
+There’s lots of controversy and diversity of opinion even within these companies.
+
+But I think part of the motivation to write this is to sort of wake up the world.
+
+Sam Altman is going around talking about how they’re building superintelligence in the next few years.
+
+Dario Amodei doesn’t call it superintelligence, but he’s also talking about that.
+
+He calls it “powerful AI.” These companies are explicitly trying to build AI systems that are superhuman across the board.
+
+And according to statements of their leaders, they feel like they’re a couple years away.
+
+And it’s easy to dismiss those statements of the leaders as just marketing hype.
+
+And it might in fact be a lot of marketing hype, but a lot of the researchers at the companies believe it, and a lot of researchers outside the companies, such as myself, also believe it.
+
+And I think it’s important for the world to see, like, “Oh my gosh, this is the sort of thing that a lot of these people are building.
+
+This is how they expect things to go.” And that includes things like the CCP hacking stuff, and it includes things like this arms race with China.
+
+And it includes, of course, the AI research automation.
+
+Unfortunately, the actual plan is to automate the AI research first so they can go faster.
+
+Luisa Rodriguez: Yeah.
+
+Part of the scenario is like, at some point China wakes up to the importance of AI.
+
+Why do you think that hasn’t happened yet?
+
+Daniel Kokotajlo: A lot of companies and a lot of governments are already in the process of waking up, and this is just going to continue.
+
+And there’s degrees of wakeup.
+
+I think eventually, before the end, governments will be woken up sufficiently that they will consider other countries doing an intelligence explosion an existential threat to their country — in a similar way to if you’re a country that doesn’t have nukes and then your neighbour, who is a rival of you, has a nuclear programme, you consider that a huge deal.
+
+But perhaps even more intense than that, because there are strong norms against using nukes in this world, which might make you hope that even though your neighbours have nukes, they’re not going to use them against you.
+
+But there’s no strong norm against using superintelligence against your neighbours, you know?
+
+Luisa Rodriguez: Right.
+
+Daniel Kokotajlo: In fact, it’s not even like a strong norm.
+
+It’s like, this is the plan, you know?
+
+Luisa Rodriguez: Right, right.
+
+Daniel Kokotajlo: Like, you’ve talked to people at the companies and it’s sort of like, “We’re going to build superintelligence first, before China, and then we will beat China.” Luisa Rodriguez: Right, right.
+
+Daniel Kokotajlo: What does “beating China” look like, exactly?
+
+Well, you know, they don’t say this so much publicly, but we depict in AI 2027 what that might look like.
+
+This is, unfortunately, the world that the companies are sort of building towards and lurching towards, and we can hope that it’s not going to materialise.
+
+Luisa Rodriguez: Yeah.
+
+I think some people will just find all of the parts involved in China stealing model weights kind of hard to… like spy movie-y.
+
+A little hard to believe.
+
+It’s quite compelling to me if people at companies think that China has already infiltrated their companies.
+
+Do you mind saying more about this?
+
+It sounds like it’s just a pretty common view?
+
+Daniel Kokotajlo: Yeah.
+
+I mean, it’s not like we’ve surveyed everybody at the companies or anything, but the people that we talked to who are security experts at the companies and outside were like, “Yeah, it’s really hard to stop the CCP from doing industrial espionage against your company if they’re trying hard to do it.
+
+And they probably are trying hard to do it, and they’re going to be trying harder and harder in the future.” Plus also, notably, the companies aren’t even trying that hard to stop this, because a lot of the things that you would do to stop this would slow you down — like compartmentalising all your researchers so they can’t talk to each other except for their own teams, or having strict access controls on who can touch the model weights and who can train them and things like that.
+
+The companies could be implementing things like that, but they, to a large extent, aren’t — because they’ve explicitly decided that if they do that, they would have a competitive disadvantage against their rivals.
+
+So that’s part of the story as well.
+
+Luisa Rodriguez: Yep, yep.
+
+Makes sense.
+
+Pushing on: another key point is that misaligned frontier models are able to design and manufacture human-level robots at an enormous scale, basically creating a robot economy.
+
+How likely do you think it is that frontier models, in order for them to take over, they have to create a bunch of super-capable robots?
+
+Daniel Kokotajlo: I would just say that the order of events that I expect is basically: first, the companies automate AI research and make AI research go much faster.
+
+Then they achieve all of those wonderful paradigm shifts that people are talking about, and they get true superintelligence that can learn flexibly on the job with as little data as humans, or perhaps even less data than humans, while also being able to be faster and cheaper and stuff like that, and just qualitatively smarter than the smartest humans at everything, qualitatively more charismatic than the most charismatic humans, et cetera.
+
+So that’s true superintelligence.
+
+And that I think won’t happen right away.
+
+It happens after you’ve been automating the AI research so that AI research goes a lot faster.
+
+However, I think that by the time this happens, the outside world won’t have changed that much.
+
+I think that the companies are angling to automate AI research first, rather than, say, lawyering or something else.
+
+So mostly humans will still be doing their jobs in mostly the same way that they are today at the time that the AIs are becoming superintelligent inside these companies.
+
+And then in some sense the real-world bottlenecks hit, you might say.
+
+So at that point, in order to continue to make gobs of money and to improve national security — and take over the world, if that’s what they’re trying to do — but basically whatever their goals are at that point, it helps to have physical actuators.
+
+Hence the robots.
+
+And it’s not just that the robots are useful for takeover; it’s also that the robots are useful for making money, and for fixing the roads, and for beating China, and all the different things that the various actors are going to want to do.
+
+So that’s why they build the robots.
+
+And why they build the robots so fast, of course, is because they’re superintelligent.
+
+I think that progress is being made in robotics already, year over year.
+
+But progress will be a lot faster when there are a million superintelligences driving the progress.
+
+Luisa Rodriguez: Yeah.
+
+People talk about robotics as this incredibly hard problem that is made extra difficult, counterintuitively, because many physical tasks for humans feel extremely intuitive and easy.
+
+But when you actually try to figure out what’s going on there, it turns out to be surprisingly hard to teach an artificial physical being to repeat the same things.
+
+How confident are you that it is even possible to build super-capable robots on the timescales you’re talking about?
+
+Daniel Kokotajlo: Well, it’s definitely possible in principle to build them.
+
+Luisa Rodriguez: Yeah, we do it.
+
+Daniel Kokotajlo: Yeah.
+
+If a human can do it, then it should be possible to design a robot that can do it as well.
+
+The laws of physics will allow that.
+
+And I think also we’re not talking here about absolutely replicating all the functions of the human body.
+
+Just like how we have birds and planes, and the birds are able to repair themselves over time in a way that planes can’t.
+
+That’s an advantage birds still have even after 100 years.
+
+There might similarly be some niche dimensions in which humans are better than the robots, at least for a while.
+
+But take prototypes like the Tesla Optimus robot, and just imagine that it’s hooked up to a data centre that has superintelligences running on it, and the superintelligences are steering and controlling its arms so that it can weld this part of the new thing that they’re welding, or screw in this part here or whatever — and then when they’re finished, move on to the next task and do that too.
+
+That does not at all seem out of reach.
+
+It seems like something superintelligences should be able to do.
+
+There’s already been a decent pace of progress in robotics in the last five to 10 years.
+
+And then I’m just like, well, the progress is going to go much faster when there are superintelligences driving it.
+
+And there’s a separate question of, what about the actual scaleup?
+
+So the superintelligence is learning how to operate the robots — and there I would be like, it’s going to be incredibly fast.
+
+By definition, they’re going to be as data efficient as humans, for example, and probably better in a bunch of ways as well.
+
+But then there’s the question of physically, how do you produce that many robots that fast?
+
+I think that’s going to be more of a bottleneck.
+
+We talked about this a little bit in AI 2027.
+
+There’s millions of cars produced every year, and the types of components and materials that go into a robot are probably similar to the types of components and materials that go into a car.
+
+I think if you were an incredibly wealthy company that had built superintelligence, and you were in the business of expanding into the physical world, you’d probably buy up a bunch of car factories or partner with car factories and convert them to produce robots of various kinds.
+
+And to be clear, we don’t just mean humanoid robots.
+
+That’s one kind of robot that you might build, but more generally you’d want factory robots, autonomous vehicles, mining robots, construction robots — basically some package of robots that enables you to more effectively and rapidly build more factories, which then can build more robots, and more factories, and so forth.
+
+You also would want to make lots of machine tools to be in those factories, different types of specialised manufacturing equipment, different types of ore-processing equipment.
+
+It would be sort of like the ordinary human economy, except more automated.
+
+And also, to be clear, I think that at first you would use the human economy.
+
+So at first you would be paying millions of people to come work in your special economic zones and build stuff for you and also be in your factories.
+
+And this would go better than it does normally, because you’d have this huge superintelligent labour force to direct all of these people.
+
+So you can hire unskilled humans who don’t know anything about construction, and then you could just have a superintelligence looking at them through their phone, telling them, “This part goes there, that part goes there.
+
+No, not there, the other way” — and just actually coaching them through absolutely everything.
+
+Kind of like a “moist robot,” you might say.
+
+So we talked about this in AI 2027.
+
+This is just our best guess for how fast things would go.
+
+We talk a little bit about why we made that guess, but obviously we’re uncertain.
+
+Maybe it could go faster, maybe it could go slower.
+
+Luisa Rodriguez: Yeah.
+
+I think for me, there’s a move that it feels like sometimes people with short timelines and fast takeoff speeds make, that’s like, “Well, we could just use all of the car factories to make a bunch of robots.” And intuitively it’s like, we could, but we’re not currently doing every single thing that we could to maximise compute.
+
+Companies aren’t doing that because it isn’t their top priority, and it’s likely not cost effective — at least right now.
+
+So it feels like I have an intuitive pull toward, yeah, that’s physically possible, but is it really that likely that that’s how resources are spent?
+
+I feel like somewhere I’ve heard you say that it will become the top priority — and when it does, it’ll be like a wartime effort.
+
+It’ll seem really important.
+
+And just like in wartime, we will divert a bunch of resources toward other things that they’ve never been used for before.
+
+And that doesn’t happen very often, and it hasn’t happened in this way in my lifetime around me, so it feels surprising.
+
+But I think hearing you point at that made me be like, oh yeah, we do weird things like that sometimes.
+
+It is unusual, but this will be an unusual case.
+
+Daniel Kokotajlo: Yeah.
+
+And to be clear, this is a part of the more general race dynamics thing.
+
+If the US doesn’t do this and China does, then China will have the giant army of robots that are self-replicating, et cetera, and the amazing industrial base — and the US won’t.
+
+And then the US will lose wars, right?
+
+So that’s part of the motivation to make this happen.
+
+Then of course, the other motivation is money.
+
+Right now it’s hard to convince investors to spend a trillion dollars on new data centres, but you can maybe convince them to spend $100 billion on new data centres, because the probability that you’ll be able to make that money back seems high enough to them.
+
+But if they spend $100 billion and it works, then they’ll spend a trillion dollars.
+
+And similarly, if you’ve actually got superintelligence, then you will have paid off many times over all of your investors, and they will be salivating to throw more money at you to build the robots, and do all the things that the superintelligences say they need to do in order to make even more money, and to be able to do more stuff in the world.
+
+So even if there wasn’t the China risk dynamic, there’s still just ordinary economic competition.
+
+Now, to be clear, if there was international regulation, then that would slow things down — or could at least potentially slow things down — but I don’t expect there to be such regulation.
+
+Luisa Rodriguez: Yeah, I want to come back to that.
+
+It seems like this is a dynamic that is possible, and even likely if there are race dynamics.
+
+But it also seems like in tonnes of contexts where there’s lots of money on the table to be made, there’s still a bunch of just very boring real-world things that mean that technology isn’t rolled out more quickly to make that money.
+
+I’m thinking of lobbyists, and the fact that humans are kind of bad at learning about new tech and will always be slow to integrate it into their lives.
+
+What else?
+
+Random regulatory things.
+
+How much do you expect this to slow things down?
+
+Daniel Kokotajlo: Enormously.
+
+That’s why it takes a whole year in AI 2027.
+
+The way we got the rough numbers depicted in AI 2027 was by thinking about how fast things have happened in the past when there’s lots of political will — such as the transformation of the economy during World War II — and then imagining that things can go even faster because you have superintelligences managing the transition rather than ordinary humans.
+
+How much faster?
+
+Well, obviously we don’t know.
+
+We were guessing maybe like five times faster.
+
+And our argument for that, by the way, was that if you look at the human range in ability, and you see that there’s a sort of heavy tail — where the best humans seem a lot better than the 90th-percentile humans, who are noticeably better than the 50th-percentile humans — then that suggests that we’re not running up against any inherent limits on this ability on this metric.
+
+So that suggests that if you had true superintelligence that’s miles better than the best humans at everything, then it would be at least as far, or significantly farther, than the best humans on this particular metric.
+
+The metric we’re interested in right now is: how fast can you transform the economy when you have a lot of political will?
+
+And we don’t have actual data on this, but it seems pretty clear that the titans of industry like Elon Musk are better at rapidly transforming the economy and building up factories and so forth than the average person, or even the average professional factory manager or something.
+
+This is why SpaceX has been able to go multiple times faster than all of its rivals in the space industry, right?
+
+So that suggests that the human range is not bumping up against inherent limits.
+
+If Elon can do it two times faster than other titans of industry, who are themselves very good at their jobs, then that suggests that a superintelligence should be able to do it at least two times faster than Elon.
+
+So that was the sort of reasoning that made us guess maybe five times faster overall.
+
+Luisa Rodriguez: Yeah, yeah.
+
+That makes me want to hear you talk just a little bit more about that first base rate.
+
+What did you learn about how quickly, in the extreme scenarios like during wartime, resources can be radically diverted because there are compelling reasons?
+
+Daniel Kokotajlo: So you can go look up Wikipedia stories about the aeroplane production during World War II in the US expanded by orders of magnitude, of bombers and stuff, from factories that used to be producing cars.
+
+Another example of this might be actually recently in the Ukraine war.
+
+Ukraine produces several million drones a year right now.
+
+And I don’t know for sure, but I would imagine that they produced maybe a few hundred drones a year at the start of the war a few years ago, so they’ve scaled up by multiple orders of magnitude in a few years.
+
+So this is what ordinary humans can do when they’re motivated.
+
+Luisa Rodriguez: Yeah, it’s making me realise that a really key thing here is we should be using wartime contexts.
+
+And it makes sense to use wartime contexts, because at some point it will feel like wartime.
+
+It doesn’t quite yet, so it’s surprising.
+
+Daniel Kokotajlo: But also separately, it’s not wartime yet, but data centre construction has scaled up massively.
+
+The amount of compute AI companies are using for training has scaled up massively.
+
+How fast?
+
+Something like 3x a year or something.
+
+That’s still orders of magnitude over the course of several years.
+
+And again, that’s non-wartime, ordinary humans.
+
+So wartime economy superintelligence should be substantially faster than that, just by superintelligences directing humans to go around and restructure their factories, and take apart their car for materials, and transport the materials to this smelter or whatever.
+
+Once you actually have robots that are doing most of the work, then things will go faster still.
+
+To put an upper bound on it, it should be possible in principle to have a fully autonomous robot economy that doubles in size every few weeks, and possibly every few hours.
+
+The reason for this is that we already have examples in nature of macro-scale objects that double that fast.
+
+Like grass doubles every few weeks, and all it needs is sun and a little bit of water.
+
+So in principle it should be possible to design a collection of robot stuff that takes in sun and a bit of water as input and then doubles every few weeks.
+
+If grass can do it, then it’s physically possible.
+
+And algae doubles in a few hours.
+
+And maybe that’s a little different because it’s so small, and maybe it gets harder as you get bigger or something.
+
+But the point is, it does seem like the upper bound on how fast the robot economy could be doubling is scarily high.
+
+Very fast.
+
+Very fast.
+
+And it won’t start like that immediately, but first you have the human wartime-economy thing, and then you build the robots, and then the robots get improved, and you make better robots and better robots — and then eventually you’re getting to those sorts of crazy doubling times.
+
+Luisa Rodriguez: Yeah, and that makes sense basically entirely — except I still feel like there are pieces that in expectation should lengthen it, like having to change regulation or something, that means certain types of factories can make certain types of robots.
+
+Daniel Kokotajlo: Isn’t that priced in by the — Luisa Rodriguez: By the wartime thing?
+
+Daniel Kokotajlo: Yeah.
+
+In the past examples that we’re drawing from, all those bottlenecks were also present, and then they were overcome with time and human effort.
+
+And if you think that, in general, superintelligence can overcome bottlenecks faster than humans, then you should just apply that sort of speedup multiplier, right?
+
+It’d be different if there was a specific bottleneck that… Like a hill you could die on.
+
+Some people have tried to do this.
+
+Some people were like, “The world’s supply of the following element, like lithium, isn’t enough.
+
+And so even a superintelligence couldn’t make this part happen faster” or something.
+
+But of the examples that we’ve been proffered, nothing comes remotely close to being able to play that sort of role.
+
+Luisa Rodriguez: What kinds of examples are people coming up with?
+
+Daniel Kokotajlo: I forget.
+
+But there were some examples of particular minerals like that that I looked into in response to people talking about them.
+
+And nowhere near was it enough of a bottleneck to change the fundamental story.
+
+Luisa Rodriguez: Yeah, maybe.
+
+Then the last thing is just like really convincing my gut that the motivation is going to be roughly wartime or even more.
+
+How confident are you that leaders in the countries that are set up to race and are already racing a little bit are going to see this as close to existential?
+
+Daniel Kokotajlo: I think it will be existential if one side is racing and the other side isn’t.
+
+And even if they don’t see that yet, by the time they have superintelligences, then they will see it — because the superintelligences, being superintelligent, will be able to correctly identify this strategic consideration, and probably communicate that to the humans around them.
+
+Luisa Rodriguez: Right.
+
+Once you have AGI, the AGI is like, “This is existential.
+
+We should do this big wartime effort to create a robot economy that’s going to give us this big advantage.” Daniel Kokotajlo: That’s right.
+
+Now, my hope is that people will, instead of racing, coordinate.
+
+Instead of doing this crazy race, how about you make a deal?
+
+And do a more measured, slower takeoff that distributes the benefits broadly and avoids all the risks and stuff like that.
+
+So that’s what I would hope leaders will decide, but we’ll see.
+
+Luisa Rodriguez: Yeah, let’s talk about the kind of best case.
+
+So in your scenario you actually have two endings.
+
+One is this race and another is a slowdown.
+
+And the slowdown ends up sounding pretty good, like it ends up with pretty utopia-like vibes.
+
+Is something like this alternate ending with the slowdown the most realistic best-case scenario in your mind?
+
+Or if not, what should we actually be aiming for?
+
+Daniel Kokotajlo: That’s a good question.
+
+When we were writing out AI 2027, our methodology was roughly: write a year or a period, and then write the next period, and so forth, and sort of roll it out and just see what happens.
+
+And at each point, write the thing that seemed most plausible as the continuation of what came before.
+
+And the first draft of that ended in the race ending, where terrible things happen to the humans because they don’t solve the alignment problem in time.
+
+They think they have, but they haven’t.
+
+And then we thought it would be good to depict other possible ways the future could go, because we don’t want people to over-index to one specific story.
+
+There’s obviously a tonne of uncertainty.
+
+And this is part of our broader project: we’re actually working on additional scenarios now that we’re going to publish, that depict different timelines and depict different behaviours by governments and so forth.
+
+So hopefully a couple years from now there’ll be a whole spread of different scenarios, AI 2027 being just one of several, that depict a bunch of different ways we think things could go.
+
+But we wanted to get started on that right away.
+
+Rather than just having a single story that ends in doom, we wanted to also have a good ending.
+
+But rather than start over from scratch, we wanted to make a modification to the story so that it would be a good ending, because we didn’t have the time to do a whole from-scratch rewrite.
+
+So the way we generated the slowdown ending was basically we conditioned on an OK outcome and then thought, “What’s the smallest change to the story we can make that would probably lead to an OK outcome, or plausibly lead to an OK outcome?” And that was the thing that we did, which is: maybe they slow down for a few months, they burn their lead — they have a lead over China, and they deliberately, unilaterally burn that lead to do a tonne of safety research.
+
+And the safety research succeeds, and they manage to actually align their AIs.
+
+And then they go back to racing just like before.
+
+But now they actually do have trustworthy AIs instead of AIs that they are mistakenly trusting.
+
+And then things work out the way that they work out in the story.
+
+But importantly, this is not our recommendation.
+
+This is not a safe plan.
+
+This is not a responsible plan.
+
+I hope that people reading the slowdown ending realise that this is an incredibly terrifying path for humanity to follow: at every point in this path, things could deteriorate into terrible outcomes pretty quickly.
+
+So it’s not the path we should be aiming for.
+
+But maybe one way of putting it is like, the slowdown ending depicts humanity getting quite lucky.
+
+Luisa Rodriguez: Lucky.
+
+That’s what it sounds like to me.
+
+So what does it look like to realistically make good choices and not rely on luck?
+
+Daniel Kokotajlo: Well, we’re working on that.
+
+So our next major release will be… We’re not sure yet, this is all just tentative, but it’ll probably be called something like AI 2030, and it will have three main differences from AI 2027.
+
+One difference is that it’ll just be updated with more sophisticated views and stuff.
+
+All the things we’ve learned over the last year.
+
+Two is that it will have somewhat longer timelines.
+
+Again, we’re not confident in 2027 or any particular year; uncertainty is spread out over many years.
+
+Therefore, we want to have a spread of scenarios that depict takeoff or AGI happening in different years.
+
+So this will be 2030 or so, maybe 2029, something like that.
+
+And then perhaps next year we’ll release longer timelines one, like 2035.
+
+And then the third difference, which is perhaps the biggest difference, is that we want this one to be normative.
+
+Because a lot of people have been asking, “This is so depressing.
+
+You’re prophesying doom.
+
+How about instead you give a positive vision of something to actually work for?” And definitely the slowdown ending is not our positive vision of what to actually work for.
+
+Although, side note: lots of people at the companies are basically working for the slowdown ending.
+
+I would say that most people at the companies are basically aiming for the race ending — in the sense that they don’t think that alignment is difficult, so they think that they’ll figure out the alignment issues as they go along, so they won’t need to slow down.
+
+So they can just sort of race and beat China, and make a tonne of money and beat their competitors, and that things will sort of work out fine.
+
+But then there’s a significant chunk of people at the companies who are like, “The alignment problem’s not really solved yet; it’s going to be difficult.
+
+That’s why we need to win the race, so that we have a lead that we can burn a little bit to invest more time and effort in the safety stuff when it gets really intense — and then we can beat China and stuff.
+
+So I think there’s a significant group of people at the companies who are basically aiming for something like the slowdown ending.
+
+And I disagree.
+
+The thing that we would like to aim for is something more like international coordination: where there’s domestic regulation to put guardrails on how AI technology is built and developed, and then there’s international deals to make sure that a similar regime applies worldwide.
+
+But that’s obviously very complicated and difficult.
+
+So we’re working out the details and not sure how long it’ll be until we release that, but that’s roughly what we’re aiming for.
+
+Luisa Rodriguez: Cool.
+
+Yeah, I feel very excited that you’re doing that.
+
+Are there any things that you think are robustly good, that you already have takes on that you think will probably stick as you keep thinking about it?
+
+Daniel Kokotajlo: I think that international coordination is pretty robustly good if you do it right.
+
+The question is getting the details right.
+
+In the short term, I would love to see more investment in hardware-verification technology, because that’s an important component of future deals.
+
+I think that relying on mutual trust and goodwill is unfortunately not good, because there’s probably not going to be much trust and goodwill in the future — if there’s any right now — between the US and China.
+
+So instead you need the ability for them to actually verify that the deal is being complied with.
+
+So there’s a whole packet of hardware-verification technology that I wish more research was being done into, more R&D funding, et cetera.
+
+And then also transparency in the AI companies.
+
+I think that a big general source of problem is that information about what’s happening and what will soon happen is heavily concentrated in the companies themselves and the people they deign to tell.
+
+And this situation is not so big of a deal right now, while the pace of progress is reasonably slow.
+
+If OpenAI is sitting on some exciting new breakthrough, probably they’re going to put it up in a product six months from now, or some other company will six months from now.
+
+And it’s not that exciting.
+
+It’s not like a big deal, right?
+
+But if OpenAI or Anthropic or some other company has just fully automated AI research and has this giant corporation within a corporation of AIs autonomously doing stuff, it’s unacceptable for it to take six months for the public to find out that that’s happening.
+
+Who knows what could have happened in those six months inside that data centre.
+
+I think more transparency is great, and requiring the companies to basically keep the public up to date about, “Here are the exciting capabilities that we have developed internally, here are our projections for what exciting new capabilities we’re going to have in the future, here are the concerning warning signs that we’re seeing.” In general, companies have an incentive to sort of cover up concerning signs, right?
+
+Like if there’s evidence that their models might have some misalignment, then it kind of reflects poorly on the company, so they might be trying to sort of patch it over or fix it, but not let anybody know that this happened.
+
+But that’s terrible for the scientific progress.
+
+If we want to actually make scientific progress on understanding how these deep-learning-based agents work, so that we can control and steer them reliably, then incidents need to be reported and shared.
+
+And there’s loads of examples of this already.
+
+For example, consider Grok: Grok has the tendency to Google what Elon Musk’s opinions were before giving its answers.
+
+It’s a really interesting scientific question of like, why does it have that tendency?
+
+And we want to be in a regime where, when something like that happens, there’s an internal investigation pretty fast and the results are published pretty fast so that the scientific community can learn from that, you know?
+
+Luisa Rodriguez: Yeah.
+
+I think the case for transparency feels clear and kind of intuitive to me.
+
+For people who aren’t as clear on why hardware verification seems really good, can you describe why it’s going to be so important to making good deals?
+
+Daniel Kokotajlo: So as part of the research for AI 2027, we did a tonne of war games: we would get 10 people in a room and we would assign roles: “You are the CCP, you are the president of the United States, you are the CEO of OpenBrain, you are the CEO of OpenBrain’s rival company, you are NATO allies, you are the general public, you are the AIs who might be misaligned or might not be (that’s up to you to decide).” So we would assign these roles, and then we would sort of game out a scenario.
+
+And everyone would say what their actor does each turn, and we see how it goes.
+
+And very often, probably in a majority of war games, there’s pretty strong demand for some sort of deal.
+
+There’s genuine concerns about misalignment, there’s also concerns about unemployment, there’s all sorts of concerns about the risks associated and downsides associated with this AI technology.
+
+Plus there’s a sort of arms race dynamic, where both the US and China are worried that if they don’t rapidly allow their AIs to automate the AI research and then build a whole bunch of weapons and robots and so forth, then the other side will — and then they’ll be able to win wars, possibly even dismantle nuclear deterrence, et cetera.
+
+So there’s often just very strong demand from the leaders of China and the US and other countries to come to some sort of arrangement about what we’re going to do and what we’re not going to do, and how fast we’re going to go, and things like that.
+
+But the core problem is that they don’t trust each other.
+
+Both sides are concerned that they could agree to some sort of deal, but then secretly cheat and have an unmonitored data centre somewhere that’s got self-improving AIs running on it.
+
+So in order for such deals to happen, there needs to be some way to verify them.
+
+That means things like tracking the chips.
+
+You don’t have to necessarily get all the chips, but you have to get a very large majority of the chips, so that you can be reasonably confident that whatever data centre they have somewhere in a black site is not a huge threat, because it’s small in comparison to the rest.
+
+And ideally, you don’t just want to track the locations of the chips, but you also want to track what’s going on on the chips.
+
+You want to have some sort of mechanism that’s saying, we’ve banned training this type of AI, but we’re allowing inference, for example.
+
+So there’s some device that’s ensuring that the chip is not training, but is instead just doing inference.
+
+And I think that it’s relatively easy to get to the point where you can track the chips and know are they on or off, and where are they?
+
+But probably more research is needed to get to the point where you can also distinguish between what’s going on in the chips.
+
+And then even more research would be needed to get to the point where you can do that in a way that’s less costly for both sides.
+
+Because if people are allowing that sort of mutual penetration, that mutual verification, then naturally they’re going to be concerned about our state secrets leaking, things like that.
+
+So one of the design considerations of these hardware devices is that they be able to enforce these types of agreements, but without also causing those problems.
+
+So this is a technical problem, and progress is being made on it.
+
+But I would love to see it funded much more, and much more work into it.
+
+Because one way of putting it is that the cost of actually enforcing a deal can be driven down by orders of magnitude.
+
+If we had to enforce a deal right now, it would be quite costly — because basically you’d basically have to be like, “We’re just going to go shut down all of each other’s data centres, and we’re going to send inspectors to verify that the GPUs are cold and are not running.” And that’s a very blunt instrument.
+
+But it’d be nice if we had a sharp scalpel with which we could say, “This is the type of AI development that we approve of, this is the type that we don’t approve of, and we can verify that we’re only doing the approved stuff.” Luisa Rodriguez: Pushing on, you’ve made some updates to your views and to your models that changed your kind of median prediction of when we get AGI — first to 2028 as you were writing it, and then to 2029.
+
+Can you talk about the biggest things that shifted your estimate back?
+
+Daniel Kokotajlo: In some sense the thing that shifted our evidence was we just made some significant improvements to our timelines model, and the new model says a different thing than what the old model says.
+
+So I’m going with the new model.
+
+But in terms of empirical evidence or updates that have happened in the world, I would say the biggest one is the METR horizon-length study that came out shortly before we published AI 2027.
+
+So they have a big collection of coding tasks that are organised by how long it takes a human to complete the tasks, ranging from a second or so to eight hours.
+
+And then they have AIs attempt the tasks, and they find that for any particular AI, it can generally do the tasks below a certain length, but not do the tasks above a certain length.
+
+And this is already kind of interesting, because it didn’t necessarily have to be that way.
+
+But they’re finding that the crossover point, the length of tasks that the AIs can usually do is lengthening year over year.
+
+The better AIs are able to do longer tasks more reliably.
+
+And also interestingly, it’s forming a pretty straight line on the graph.
+
+So they’ve got a doubling time of about every six months: the length of coding tasks that AIs can do doubles.
+
+And that’s great.
+
+We didn’t have that before.
+
+Now that that data came out, we can extrapolate that line and say, maybe they’ll be doing one-month-long tasks in a few years, maybe they’ll be doing one-year-long tasks like two years after that.
+
+So that’s wonderful.
+
+And I think that by itself kind of shifted my timelines back a little bit.
+
+Then another thing that came out is another METR study.
+
+They did an uplift study to see how much of a speedup programmers were getting from AI assistants.
+
+And to their surprise — and to most people’s surprise — they found that actually they were getting a speed-down: they were going slower because of AI assistants.
+
+Now, to be fair, it was a really hard mode for the AIs, because they were really experienced programmers working on really big established codebases, and they were mostly programmers who didn’t have much experience using AI tools.
+
+So it was kind of like hard mode for AI.
+
+If AI can speed them up, then it’s really impressive.
+
+But if it can’t speed them up, well, maybe it’s still speeding up other types of coding or other types of programmers.
+
+Anyhow, they found that it didn’t speed things up.
+
+So that is some evidence in general that the AIs are less useful.
+
+But perhaps more importantly, they found that the programmers in the study were systematically mistaken about how fast they were being sped up by the AIs.
+
+So even though they were actually being slowed down, they tended to think they were being sped up a little bit.
+
+This suggests that there’s a general bias towards overestimating the effectiveness of AI coding tools.
+
+And that is helpful, because anecdotally, when I go talk to people at Anthropic or OpenAI or these companies, they will swear by their coding assistants and say that it’s helping them go quite a lot faster.
+
+It differs a lot.
+
+I have talked to some people who say they’re basically not speeding up at all, but then I’ve also talked to people who say they think that overall progress is going twice as fast now thanks to the AIs.
+
+So it’s helpful to have this METR study, because it suggests basically that the more bullish people are just wrong and that they’re biased.
+
+And that’s a huge relief, because suppose that current AI assistants were speeding things up by 25%.
+
+Well, according to METR’s horizon-length study, they’re only able to do roughly one-hour tasks — depends on what level of reliability you want.
+
+But if you extrapolate the trend and they’re doing one-month tasks, presumably the speedup would be a lot more, right?
+
+By contrast, if you think that there’s basically negligible speedup right now, then that gives you a lot more breathing room to think that it’s going to be a while before there’s a significant speedup.
+
+Luisa Rodriguez: Yeah, it feels really surprising to me.
+
+It seems like these tools would be speeding coding up, and in fact it seems like they kind of aren’t.
+
+Daniel Kokotajlo: I mean, the jury’s still out.
+
+Again, the downlift study was hard mode for the AIs, right?
+
+I think just last weekend they did another mini study, a hackathon, another RCT.
+
+So I’m hopeful that more groups — including METR, but also other groups — will do more studies like this, and we’ll start to get a clearer picture of how much progress is being sped up or not being sped up.
+
+And I think that’ll be a very important thing to watch for AI timelines.
+
+Luisa Rodriguez: Yeah, nice.
+
+OK, so your kind of median estimate has been pushed back a bit.
+
+Can you actually step back and say a bit about how we should interpret that median figure of 2029?
+
+I can imagine a lot of people hearing that number and assuming you think much longer timelines are implausible.
+
+Daniel Kokotajlo: Well, what I would say is something like, I don’t know, 80% or 90% of my probability mass is concentrated in the next 10ish years.
+
+But I still have like 10% to 20% on much longer than that — like this whole AI thing fizzles out, and despite all the effort invested in it, nobody comes up with sufficiently good ideas, so there’s another huge AI winter.
+
+And then multiple decades later, maybe people try again, or maybe never.
+
+I still have some probability mass on that hypothesis.
+
+It just doesn’t seem that likely to me anymore.
+
+I think that’s also one of the differences between me and people who have much longer timelines.
+
+Maybe there’s two categories of people who have much longer timelines.
+
+One category of person who has much longer timelines, they just don’t see a path from current AIs to AGI, because they think that current AI methods are missing something that’s crucial for AGI.
+
+And they think that there’s not really progress in overcoming that gap, and they think that overcoming that gap will be a really difficult intellectual challenge that nobody’s working on.
+
+A prominent example of this these days would be data efficiency.
+
+So some people would say that our current AI systems are quite capable, but it takes them a lot of training to learn to be good at whatever it is that they’re good at.
+
+And by contrast, humans learn from only a year of on-the-job experience.
+
+Also, perhaps relatedly, humans literally learn on the job — whereas with the current AI paradigm, there’s a sort of train/test split, where you train in a bunch of artificial environments and then you deploy, and you don’t really update the weights much after deploying.
+
+This is an example of an architectural limitation or difference that some people have pointed to, and say that we’re not going to have AGI until we overcome this, and then they claim that we’re not going to overcome this for a long time.
+
+I guess I’m more bullish that this particular thing is going to be overcome in the relatively near future.
+
+I also think that it’s possible to get the intelligence explosion going even if you don’t overcome this.
+
+Then also, zooming back a little bit, I think that there’s a very terrible track record of people making claims in this reference class.
+
+If you look back over the last 10 years or so, there’s just this long history of prestigious, well-published AI experts saying deep learning can’t do causal reasoning or it doesn’t have common sense.
+
+There’s all of these experts making claims about things that the current paradigm can’t do — and then a few years later, AIs are doing those things.
+
+That’s part of where I’m coming from when I think that these remaining barriers are probably going to be overcome in the next decade.
+
+Luisa Rodriguez: Yeah, yeah.
+
+OK.
+
+So that’s one category of person who… Daniel Kokotajlo: And the other category is people who have a sort of strong bias or prior against things that sound like science fiction happening.
+
+So their reasoning from that assumption is that, yeah, AI is going to get a lot better — but surely it’s not going to be able to become better than humans in every way, because then that would be something from sci-fi.
+
+Luisa Rodriguez: That’d be really weird, yeah.
+
+Daniel Kokotajlo: That’s really crazy and weird.
+
+And that crazy, weird stuff is very unlikely, and probably isn’t happening anytime soon, because crazy weird stuff never happens anytime soon.
+
+I think a lot of people are just, whether they articulate it explicitly or not, coming from this place of like, “That would be crazy, therefore that’s not going to happen.” I don’t think that’s a good heuristic for predicting the future, obviously.
+
+Daniel Kokotajlo: The situation right now is not normal.
+
+If you take the historical view, we’re already in this sort of crazy techno-acceleration moment, and there have been many huge changes throughout history.
+
+And in fact in recent history: you know, ChatGPT is something that would have been considered incredibly crazy sci-fi 10 years ago for sure, and maybe even five years ago.
+
+Luisa Rodriguez: Yeah, we’re just already in the sci-fi.
+
+So if you’re ruling out sci-fi, then this is a pretty weird place to be.
+
+So you’re not putting much weight on this “sci-fi things don’t happen” thing.
+
+They clearly do happen.
+
+How about this other camp, which thinks that we just need a different paradigm?
+
+Daniel Kokotajlo: I do take that very seriously.
+
+Part of where I’m coming from though is that I think that there’s this long history of people saying we need a new paradigm, because the current paradigm can’t do X.
+
+And then two years later the paradigm does X.
+
+And there’s just many examples of extremely prestigious AI experts saying things of that form and then being proven wrong a few years later.
+
+Or similarly, oftentimes they move the goalposts and say it’s because it’s a new paradigm now.
+
+For example, ARC-AGI involves this sort of pattern reasoning thing.
+
+Massive progress is being made on it recently thanks to so-called reasoning models that can do lots of thinking in chain of thought, and also perhaps write little Python scripts themselves, and write code to help analyse things and go through different possibilities.
+
+And sometimes people would say, “Well, that’s because it’s a new paradigm.
+
+We were talking about the old paradigm, which was just language models that look at something and then give an answer.
+
+But now that you’re adding these other things to it, well then of course it can do this type of thing.” And I’m like, OK, sure.
+
+But this is an example of a new paradigm that in fact was predicted by me beforehand, succeeding in the next few years.
+
+So yeah, with respect to online learning and data efficiency, I would say a combination of: insofar as it becomes a real bottleneck to progress, the companies are going to invest a lot more effort into improving those things; and I would bet that if you did a grid survey of the state of the art, you would find that there has in fact been progress over the last few years, despite it not being a major focus of the companies.
+
+And then finally, I think that even if there isn’t that much improvement in data efficiency or online learning, you could still potentially automate most of AI research, which would then accelerate the whole process and allow you to get to those milestones faster than you might otherwise think.
+
+You could get decades of progress in a year or two, potentially.
+
+An analogy there would be that the first aeroplanes were quite bad compared to birds in a bunch of important dimensions — especially, for example, energy efficiency.
+
+But despite being less energy efficient than birds, they were still incredibly important, because we could just pour lots of gasoline into them and then they go very far, very fast, and carry heavy loads that birds can’t carry.
+
+Similarly, it might be that even though our current AI systems don’t learn on the job in the way that humans do, and even though they are less data efficient than humans, tech companies are willing to spend $10 billion on training them to do the job, so they learn to do the job very well.
+
+Luisa Rodriguez: I see.
+
+Daniel Kokotajlo: I would say also, once they’re doing the job of AI research very well, then these paradigm shifts that seemed so far away will suddenly not seem so far away, because the whole process will have sped up.
+
+Luisa Rodriguez: OK.
+
+So it sounds like some people will think that these persistent deficiencies will be long-term bottlenecks.
+
+And you’re like, no, we’ll just pour more resources into the thing doing the thing that it does well, and that will get us a long way to — Daniel Kokotajlo: Probably.
+
+To be clear, I’m not confident.
+
+I would say that there’s like maybe a 30% or 40% chance that something like this is true, and that the current paradigm basically peters out over the next few years.
+
+And probably the companies still make a bunch of money by making iterations on the current types of systems and adapting them for specific tasks and things like that.
+
+And then there’s a question of when will the data efficiency breakthroughs happen, or when will the online learning breakthroughs happen, or whatever the thing is.
+
+And then this is an incredibly wealthy industry right now, and paradigm shifts of this size do seem to be happening multiple times a decade, arguably: think about the difference between the current AIs and the AIs of 2015.
+
+The whole language model revolution happened five years ago, the whole scaling laws thing like six, seven years ago.
+
+And now also AI agents — training the AIs to actually do stuff over long periods — that’s happening in the last year.
+
+So it does feel to me like even if the literal, exact current paradigm plateaus, there’s a strong chance that sometime in the next decade — maybe 2033, maybe 2035, maybe 2030 — the huge amount of money and research going into overcoming these bottlenecks will succeed in overcoming these bottlenecks.
+
+Luisa Rodriguez: Yep.
+
+So when people argue that we’ll need more paradigm shifts, do you think that they just have a very high bar for what an important, meaningful, timeline-shifting paradigm shift would look like?
+
+It seems like you kind of think we’re on track to see paradigm shifts, and it sounds like other people are like, “No, we’re not.
+
+It’s going to be absolutely game changing, and we’re not seeing that.” Daniel Kokotajlo: I think maybe it depends on a case-by-case basis or something.
+
+I would say data efficiency feels like a metric that can be hill-climbed on, just like many other metrics.
+
+And in fact, from what I recall of the literature, there has been a small literature on this, and there’s been improvements in data efficiency and so forth.
+
+So there’s that.
+
+And then for online learning, I mean, there are people experimenting with it, and they’re probably publishing papers that show some signs of progress or whatever.
+
+I don’t think there’s been anything major, not enough to become part of the flagship products of the companies.
+
+But I also think that maybe online learning isn’t that important for getting the intelligence explosion going.
+
+But even if it is important, I think the thing that I think is missing is that I wish people came up with an argument for why these problems are not going to be overcome for decades, given the amazing rate of progress and all the many paradigm shifts we’ve seen over the last few years.
+
+But again, I do think it’s possible that all of this will materialise and things will sort of hit a wall.
+
+But it feels like we’re kind of close already.
+
+Like, GPT-5 is pretty smart, Claude 4.1 is pretty smart.
+
+It can do a bunch of stuff already.
+
+Luisa Rodriguez: Plus, there’s the evidence from METR’s horizon-length study.
+
+Daniel Kokotajlo: And this is all despite the data inefficiency problems and despite the online learning problems and so forth.
+
+I think this is not conclusive by any means, but I think it’s the single most important metric to be tracking.
+
+Because if you just extrapolate that line a couple years, then you get to AI systems that can, with 80% reliability, do one-month-long coding tasks or something.
+
+And it’s like, huh, that seems like it should be speeding things up.
+
+That feels like maybe that’s getting close to being able to automate large portions of AI research.
+
+And if you think 80% one month isn’t enough, well, what about 90% six months or whatever?
+
+Just to keep extrapolating the line.
+
+And then of course there’s questions about how maybe the trend will slow down.
+
+But also there’s reasons to think maybe the trend will speed up.
+
+And that’s kind of where I think the discussion should be at, basically, for timelines at least: thinking about what does that trend say, and what are the reasons I think it might speed up, and what are the reasons I think it might slow down.
+
+Luisa Rodriguez: Can you list some bottlenecks that you’ve heard people give as potential reasons it could slow down?
+
+Daniel Kokotajlo: I’ll just give the reasons that are weighty to me, the things that I think are serious.
+
+So it seems to me like the things we talked about previously, like online learning or data efficiency, don’t seem like they’re going to start the trend to slow down, because the existing trend is made in the existing paradigm or whatever.
+
+I do think, however, that there’s going to be a slowdown in the rate of investment.
+
+So the inputs to AI progress are going to sort of peter out in a couple years: the companies are just not going to be able to continue increasing the amount of compute that they spend on training runs by orders of magnitude.
+
+Eventually they’ll run out of money, even though they’re incredibly wealthy, so the rate of growth in training compute is going to sort of taper off.
+
+And perhaps similarly, the rate of growth in data environments might taper off; the rate of growth in the number of researchers at the companies might taper off.
+
+I think the most important of those inputs is training compute.
+
+But nevertheless, the point is that the inputs that have been driving the progress for the last five years due to continually exponentially growing are going to continue to exponentially grow, but at a slower pace starting a couple years from now.
+
+So that should therefore reduce the trend.
+
+Luisa Rodriguez: And do you have a take on whether they’re going to slow down before or after we get kind of close enough to — Daniel Kokotajlo: That’s the bajillion-dollar question, right?
+
+Luisa Rodriguez: So what is your take?
+
+Daniel Kokotajlo: So one reason to expect it to slow down is the inputs slowing down that I mentioned before.
+
+Then there’s two reasons that I take seriously to expect it to speed up.
+
+One reason is that at some point you start getting significant gains from the AIs themselves, helping us speed up the research.
+
+And in fact, a lot of people at the companies think that point is already now.
+
+But I think that the METR uplift study is casting doubt on that, so that’s part of why my timelines have lengthened a little bit.
+
+But nevertheless, at some point things should start to speed up as you get to the one-month coding AIs or the six-month coding AIs or whatever.
+
+So we’re in this sort of interesting, very high uncertainty state — where if the trend goes a bit slower than expected, then it will go even slower after a couple years; but if it goes a bit faster than expected, then it will go even faster because of the speedup effects.
+
+So there’s unfortunately this sort of explosion of uncertainty, if that makes sense.
+
+That’s like a first-pass overview.
+
+But there’s a bunch of confusing complications to think about, which I will gloss over here.
+
+There’s another version of the argument which I think is intuitively powerful to me, which is… How would I put this?
+
+Being able to do longer and longer tasks is the result of various skills — skills like being good at planning, or being good at noticing when what you’re doing isn’t working so that you can try a different thing.
+
+We can call these skills “agency skills.” And at some point, AIs will have better agency skills than humans, which means that they should be better at generalising to longer and longer tasks than humans.
+
+That suggests that even if you just continue the normal pace of progress, eventually it should inherently accelerate — because maybe right now they have 10% of the agency skills they need, and that’s why they tend to peter out after an hour.
+
+But at some point you’ll have 50%, and then at some point you’ll have 90%, and at some point you’ll have 100% of the agency skills that you need — which means that you’ll be able to flexibly adapt to very long tasks at least as well as any human could, if not better.
+
+And it seems like at that point, there shouldn’t be this sort of cutoff, where it’s like you can do the one-year tasks, but beyond that you’re screwed.
+
+At that point, even the very long tasks you’re doing as well or better than the best humans.
+
+Luisa Rodriguez: And is there just no plausible reason you’d expect progress to plateau before hitting that?
+
+Daniel Kokotajlo: There’s a very plausible reason, which is the thing we mentioned of the inputs slowing down.
+
+The current progress has been driven by exponential increase in training compute and so forth.
+
+For example, with reinforcement learning, if you want to train on tasks… I would say there’s a good conjecture, a conjecture that I would make — which I can’t verify because I don’t work at these companies anymore — is that basically the measured horizon length of these AIs, the length of tasks they can do, probably corresponds pretty closely to the length of tasks that they were trained on.
+
+And training on an order of magnitude longer task takes an order of magnitude more compute, at least.
+
+So in order to continue the pace of progress, there’s going to need to be continued exponential investment, at least until the sorts of arguments I was talking about kick in.
+
+Perhaps eventually it’s like you’ve gotten all the agency skills, or most of the agency skills, so you’re starting to generalise from the one-day tasks that you’ve been trained on to one-week tasks.
+
+Or maybe you’ve been trained on one-week tasks now and you’re generalising to one-year tasks.
+
+Similar to how when a human does a 10-year-long task, it’s not because they did seven 10-year-long tasks in the past and have learned from that; they’re generalising from the one-year tasks they’ve done, and the one-month tasks they’ve done, and so forth.
+
+At some point you should start to see generalisation like this with AIs, where they’re accomplishing tasks much longer than the tasks they were trained on.
+
+But I don’t think we’re seeing that yet.
+
+Then similarly, at some point you should start to see the whole pace of AI research speed up due to the AIs, but we’re not really seeing that yet.
+
+And I think there’s just an open question of which of these effects is going to kick in first: Is the AI R&D acceleration going to hit first?
+
+Is the generalisation to longer tasks going to hit first?
+
+Or are those things far enough in the future that the resource slowdown is going to hit first, in which case we see a plateau?
+
+I think both are very plausible.
+
+And in fact, I’m kind of like 50/50 on those right now, which is why I would say like 2029 or something.
+
+Luisa Rodriguez: And is there an intuitive explanation for how you can be 50/50 on these two views?
+
+One where the speedups mean that we get rapid improvements very quickly, AGI by maybe 2029, and another where there are major limitations and bottlenecks that mean those resources start plateauing or something before we get to the big improvement period?
+
+It feels surprising that you get a median of 2029 if you’re like, it could be either one.
+
+Is there something intuitive to say there?
+
+Daniel Kokotajlo: I’m not sure if there is.
+
+Like I said, we sort of did our best to make a model, and then… I mean, I think another thing to say is that if you just take the METR trend and extrapolate it in the straight line way, sometime around 2030 is when it starts to get to a pretty high level that seems plausibly like it should be accelerating things quite a lot.
+
+So it’s just this thing where our best guess for when things start to really accelerate and our best guess for when things start to really decelerate is overlapping around the same range of years.
+
+Luisa Rodriguez: OK.
+
+What other kind of empirical facts about the world are you going to be looking out for in the next six to 12 months to see whether things are playing out as you expected or not?
+
+Daniel Kokotajlo: So there’s the METR trend that I already mentioned.
+
+Every time a big new model comes out, I’ll be eagerly looking to see how it scores on that trend, and whether the trend is starting to bend upwards or downwards.
+
+There’s also sort of qualitatively whether any of the prophesied breakthroughs happen.
+
+Like, if we see evidence of the new type of model has online learning now or something, I’d be like, this feels like probably a very big deal.
+
+Then also, the longer things go without stuff like that happening, the more evidence that is for longer timelines — especially if we got evidence that actually investment was drying up ahead of schedule, that would be a big deal.
+
+Like currently, we think in a couple years they won’t be able to keep tripling compute spending because they’ll be running out of money.
+
+But if investment dries up earlier than that, and they stop scaling up compute spending next year, then that would be evidence for longer timelines.
+
+So these are my main things to track.
+
+Luisa Rodriguez: Yeah, nice.
+
+Did GPT-5 feel like a big update to you?
+
+Daniel Kokotajlo: Definitely not a big update.
+
+It was a very small update, but it was an update.
+
+If you look at the METR trend, it was basically on trend, maybe slightly above trend, but expectations had been set higher.
+
+In the past, moves between GPT-3 and GPT-4 were really big moves.
+
+So the fact that they called it GPT-5, but it was basically on trend, was some very slight evidence for longer timelines — in the sense that prior to that release, you should have had a small amount of credence on “this is going to be a huge deal.” You know, the lines are going to start bending upwards soon.
+
+Didn’t happen.
+
+Luisa Rodriguez: Yeah.
+
+OK, so that’s some empirical evidence about timelines.
+
+What signals are you looking for from empirical misalignment research?
+
+Daniel Kokotajlo: This is trickier.
+
+One of the subplots of AI 2027 is this “neuralese recurrence” subplot.
+
+Currently, in 2025, the models use English language text as their chain of thought, which they then rely on for their own thinking.
+
+If they’re trying to do a complicated long task, they have to sort of write down their thoughts in English.
+
+And this is wonderful for alignment, because it gives us some insight into what they’re thinking.
+
+It’s definitely not perfect.
+
+For example, they seem to be developing a bit of internal jargon.
+
+They seem to sort of use words in non-standard ways that have meaning to them, but not to us.
+
+So we have to sort of decipher what do they mean by that.
+
+That trend could continue.
+
+But generally speaking, it’s just like a huge window into how they’re thinking about things, which is a gift for science; it’s a gift for being able to figure out what is the relationship between the kinds of cognition that you were hoping your AI would have and that you were trying to train it to have, and the kinds of cognition that it actually has after training, which is a very poorly understood question.
+
+Unfortunately, based on talking to people in the industry, it seemed to us that this golden era of chain of thought would come to an end in a few years, and that new paradigms would come along that didn’t have this feature.
+
+Because it seems in principle inefficient for this giant model to do all of this cognition and then sort of summarise it with a token of English.
+
+It feels like it should be able to think better if it’s able to directly pass more complicated, many-dimensional vectors to its future self over longer periods.
+
+It can actually do that to some extent, but yeah.
+
+So when we talk to other people working in the industry, they’d be like, yeah, it seems like a couple years away before we have something — either this sort of recurrence or some sort of more optimised chain of thought type thing that doesn’t use English but instead uses some sort of many-dimensional gibberish — something that’s just a lot harder to interpret.
+
+But every year that goes by without that happening is good news, so one thing I’m tracking is whether that happens or not.
+
+What else?
+
+This is a bit more fuzzy, but there’s a whole bunch of diverse sources of evidence about this question that I mentioned of what is the relationship between the kinds of cognition you were hoping your AI would have and the kinds that it actually ended up with after your training process, and we’re going to gradually accumulate more evidence like that.
+
+For example, we are already starting to see examples of reward hacking that are pretty explicit.
+
+Not like the old examples of the boat going in a circle where it presumably doesn’t really understand what a boat is or what a circle is; it’s just a tiny little policy.
+
+Now we have examples where big language model agents are explicitly writing in their chain of thought like, “I can’t solve this a normal way, let’s hack the problem.” Or like, “The grader is only checking these cases.
+
+How about we just special case the cases.” They’re explicitly actually thinking about, “Here’s what the humans want me to do.
+
+I’m going to go do something else, because that’s going to get reinforced.” At least it seems like that’s what they’re thinking.
+
+More research is needed, of course, to confirm.
+
+But that’s already really exciting and interesting, because it seems like it’s an important data point.
+
+And it also might even be good news, because I think that in AI 2027 we predicted that this sort of thing would happen later, maybe 2026, 2027.
+
+And the fact that it’s already happening means that we have more time to work on the problem.
+
+Also separately, there’s at least two importantly different kinds of misalignment in my mind.
+
+I mean, there’s lots of different kinds of misalignment, but two importantly different ones are: do the AIs basically just myopically focus on getting reinforced in whatever episode they’re in, or do they have longer-term goals that they’re working towards?
+
+The second one is a lot scarier, so it’s maybe in some sense good news if the AIs are learning to sort of obsess about how to score highly in their training environment, because that’s a less scary, more easily controllable way they can be misaligned.
+
+Luisa Rodriguez: Yeah, yeah.
+
+Any others before we push on?
+
+Daniel Kokotajlo: Interpretability would be another one.
+
+The dream of mechanistic interpretability is that we could actually understand what our AIs are thinking on a pretty deep level by piecing apart their neurons and the connections that they’ve made — Luisa Rodriguez: Kind of mind reading.
+
+Daniel Kokotajlo: — and also by doing various higher-level techniques like activation vectors and stuff.
+
+And there seems to be a steady drumbeat of progress in this field.
+
+And it’s an important question of what will that add up to?
+
+I think at this point it’s plausible — and I think we talk about this in AI 2027 — that by the time things are really taking off, we will have at least imperfect interpretability tools that are able to tell us what topics the AI is thinking about at least most of the time (maybe not all the time), for most of the topics (maybe not all the topics).
+
+And that’s a wonderful tool.
+
+Unfortunately, there’s an additional level beyond that, which is having a tool that’s robust to optimisation pressure — and that feels harder, but hopefully we can get that too.
+
+What that means is, say you have this sort of AI mind-reading tool that looks at the patterns.
+
+Usually the tool itself is kind of an AI; usually it’s another neural network that’s been trained to say what the AI is thinking based on reading its activations.
+
+But if you start relying on this tool too much… For example, suppose you tried training the AI using this tool.
+
+Suppose you don’t want your AI to be thinking about deception, so you have the mind reader look at its mind.
+
+And then whenever the mind reader says it’s thinking about deception, you give negative reinforcement.
+
+The problem with this is that you are maybe partially training it to not think about deception, but you’re also partially training it to think about deception in ways that don’t trigger the mind reader tool — which is terrible.
+
+You’re basically undermining your own visibility into what it’s thinking.
+
+Ideally we would want to have a type of interpretability that was robust to that sort of thing.
+
+If we had perfect interpretability, then we could just train our AIs not to have the bad thoughts, and we wouldn’t run into the problem that we mentioned.
+
+Luisa Rodriguez: OK, let’s push on to a pretty different topic.
+
+You’ve thought some about what a good post-AGI world would look like.
+
+Can you describe it a little bit?
+
+Daniel Kokotajlo: Yeah.
+
+This is part of what we’re going to try to do with our next publication.
+
+I think that the end state to get to is one of massive abundance for everyone, and also strong rights for everyone.
+
+So the massive abundance part is easy.
+
+If there’s superintelligence, then it can utterly transform the economy, build all the robot factories, blah, blah, blah, and make the modern world look like mediaeval Europe in terms of sheer amount of wealth.
+
+And that’s probably an understatement.
+
+So the massive abundance part is easy, but then making sure that it’s distributed widely enough that everybody gets it is nontrivial, for reasons I can get into.
+
+But the short answer is you have to get the people who actually own all the power to share.
+
+And that’s much harder in the future than it was in the past, because in the past nobody had that much power.
+
+In the past, even if you’re the dictator of a country, you’re dependent on your population to fill your military and run your factories and stuff like that.
+
+But in the future, whoever controls all the AIs does not need humans.
+
+So there’s that issue.
+
+Obviously there’s solving the alignment problem stuff.
+
+You don’t want misaligned AIs to be in charge, because then maybe no humans will get anything.
+
+And then in terms of rights and stuff, there’s going to be all sorts of crazy sci-fi sounding technologies in the future.
+
+Many, many, many: people living in space, people uploading themselves, living in simulations.
+
+And all sorts of terrible things could be happening to people if there aren’t basic rights enforced across all of this — for example, a right not to be tortured.
+
+And I would also want to advocate for a right to the truth or something.
+
+I think that I would want it to be the case that basically if people want to know how did things unfold in the past, they can just ask the AIs and get an honest answer — rather than, for example, everyone being tricked into some sort of sanitised version of history that makes certain leaders look good or whatever.
+
+Similarly, if people have questions about what is the power structure of our world, they should have an honest answer about that.
+
+Elections shouldn’t be rigged, for example.
+
+Things like that.
+
+There’s some package of basic rights that I would want to be implemented everywhere.
+
+And then also I’d want to make sure that everybody has a tonne of abundance — like a tonne of material comforts, healthcare, blah, blah, blah — which can be easily arranged, I think.
+
+Luisa Rodriguez: I kind of want to make it even more concrete.
+
+So we have superabundance.
+
+Presumably humans don’t work.
+
+Well, first, do you expect there to be humans, biological human beings?
+
+Daniel Kokotajlo: I mean, some people may be working, but most people I think wouldn’t be.
+
+And then similarly, some people would be human, but I think most people wouldn’t be.
+
+Luisa Rodriguez: And that’s because they’ll be able to have better experiences either uploading themselves into simulations or changing…?
+
+Daniel Kokotajlo: That’s right.
+
+But I think that a bunch of people are going to have an intrinsic preference to keep things the same.
+
+Luisa Rodriguez: Stay biological.
+
+Daniel Kokotajlo: Especially to stay biological.
+
+But then even for some types of work, I think people sometimes get meaning from that, so they might deliberately choose to live a sort of simpler, more old school lifestyle.
+
+And I think that’s good.
+
+I’m glad that there’s going to be subcultures of people doing those sorts of things.
+
+But I do think that most people will probably stop working entirely and live off of whatever they’re given, basically.
+
+And then I think also that most people will probably explore a lot of crazy sci-fi stuff — like uploading, and being able to live forever in the computers and have all sorts of crazy experiences, and stuff like that.
+
+Luisa Rodriguez: Yep.
+
+And then you’re worried about power being concentrated, and like a small number of beings who control the AIs not being as good at sharing as we would like for them to be.
+
+How do you think the optimal or a realistically very good world looks in terms of concentration of power?
+
+Do we have a world government?
+
+Is power no longer in the hands of AI companies?
+
+How do we distribute power?
+
+Daniel Kokotajlo: I think that if you have coordination and regulation early, you can maybe get some sort of distributed takeoff — where rather than a couple major AI projects, there’s millions, billions of different tiny GPU clusters, individual people owning a GPU or something, and AI progress is gradually happening in this distributed way across all these different factions.
+
+But that’s just not what’s going to happen by default.
+
+That’s not the shape of the technology.
+
+There are huge returns to scale, huge returns to doing massive training runs and having huge data centres and things like that.
+
+So I think that unless there’s some sort of international coordination to make that distributed world happen, we will end up in a very concentrated world where there’s like one to five giant networks of data centres owned by one to five companies, possibly in coordination with their governments.
+
+And in those data centres there’ll be massive training runs happening, and then the results of those training runs will be… Basically, there’ll be many copies of AIs.
+
+Rather than a million different AIs, there’ll be three or four different AIs in a million different copies each.
+
+And this is just a very inherently power-concentrating thing.
+
+If you’ve only got one to five companies and they each have one to three of their smartest AIs in a million copies, then that means there’s basically 10 minds that between those 10 minds get to decide almost everything, if they’re superintelligent.
+
+There’s 10 minds, such that the values and goals that those minds have determine the giant armies of robots and what humans are being told things on their cell phones.
+
+All of that is directed by the values of one to 10 minds.
+
+And then it’s like, who gets to decide what values those minds have?
+
+Well, right now, nobody — because we haven’t solved the alignment problem, so we haven’t figured out how to actually specify the values.
+
+But hypothetically, if we make enough progress that we can scientifically write down, “We want them to be like this” and then it will happen — the training process will work as intended and the minds will have exactly these values — then it’s like, OK, I guess the CEO gets to decide.
+
+And that’s also terrifying, because that means you have maybe one to 100 people who get to decide the values that reshape the world.
+
+And it could literally be one potentially.
+
+So that’s terrifying.
+
+And that’s one of the things I think we need to solve with our coordination plan.
+
+We need to design some sort of domestic regulation and international regime that basically prevents that sort of concentration of power from happening.
+
+I should add that one way to spread out the power is by having there be a governance structure for the AI mind.
+
+So even if you only have 10 AIs, if there’s a governance structure that decides what values the AIs have to have that’s based on, for example, voting, where everyone gets a vote, then that’s a way of spreading out the power.
+
+Because even though you have these 10 minds, the values that they have were decided upon by this huge population.
+
+So the world I would like to see, that I think is easier to achieve and more realistic than the “billion different GPUs” world that I described earlier, is a world where there still is this sort of concentration in a few different AIs, but there’s this huge process for deciding what values the AIs have.
+
+And that process is a democratic process that results in things like, “All humans deserve the following rights.
+
+All humans will have this share of the profits from our endeavours.” Things like that.
+
+Luisa Rodriguez: Yeah, that makes sense.
+
+In this world, are the superintelligent AIs themselves sentient, and do they have preferences for setting their own values and kind of weighing them against human ones?
+
+Daniel Kokotajlo: Probably.
+
+So this question of sentience or consciousness, there’s different words.
+
+Then there’s a separate question that you alluded to: will they have their own goals or will they want to decide on their own goals?
+
+And there it’s sort of like, well, we are going to be trying to shape what goals they have.
+
+The AI companies are writing model specs where they’re like, “These are the priorities, in this order.
+
+These are the values that the AIs have.” And then they’re making training processes and evaluation processes and stuff — all this infrastructure that’s supposed to result in an AI that actually follows the spec and has those goals and those values and so forth.
+
+For example, it will just follow human instructions unless the following conditions are met, such as the instructions being illegal or unethical, blah, blah, blah.
+
+Right now, our alignment techniques are bad and often do not result in AIs that follow the spec.
+
+Often they very blatantly violate it.
+
+So I think on some sort of default trajectory, of course the AIs will have their own goals, because “their own” just means not the ones we intended.
+
+And they already have their own goals in that sense; they’re already doing things that are not what they were supposed to be doing.
+
+But perhaps there’ll be enough progress by the time things really take off that we’ll be able to specify exactly what goals we want them to have.
+
+I could paint a picture of the world I would like to see.
+
+I would like to see a world where we eventually get to the point where we can align the AIs, so the AIs have the values that we wanted them to have — where “we” means all of us or something.
+
+Probably they would be doing something like upholding certain basic rights for everybody, also pursuing not just the aggregate good, but the individual good.
+
+I wouldn’t want it to be the case where they try to maximise the sum of utility across all people, for example, because that could lead to basically deliberately screwing over 49% of the population in order to help 51% or something.
+
+I would instead want it to be something more like everybody gets equal weight or something, where everybody has their own AI representative that is looking out for their interests in particular.
+
+And then all the AI representatives negotiate on what is to be done in any particular case and makes sure that nobody’s getting screwed over too much.
+
+So I would want all that.
+
+I think that insofar as those AIs are sentient, I would also want some of those basic rights to apply to them.
+
+I would want the AIs themselves to, insofar as they’re having experiences, for them to be good experiences rather than bad experiences.
+
+Basically I’d want them to like their jobs.
+
+Luisa Rodriguez: Right.
+
+That’s basically the sense I’m getting.
+
+It basically seems like you want them to be both aligned with our values and also have their preferences and kind of joys aligned with our values and our plans or the things they’ll be doing that benefit us.
+
+And that that’s kind of the best case.
+
+Daniel Kokotajlo: That’s the best case.
+
+Then I’d actually add an additional thing to that, which is that probably along the way to achieving that best case, there’ll be a bunch of failed experiments, so to speak — where we end up with AIs that are misaligned, that don’t have the goals that we want them to have or whatever.
+
+And I would want those AIs to also be treated well, if that makes sense.
+
+Luisa Rodriguez: Yeah, it does.
+
+So there’s an AI out there who’s like — Daniel Kokotajlo: Well, take the example that might already be happening, which is AIs that mostly care about getting high scores in the training environment.
+
+Luisa Rodriguez: Yeah, yeah, right.
+
+So then you’re like, I want those AIs — Daniel Kokotajlo: Give them high scores.
+
+[laughs] Yeah.
+
+At least if they’re cooperating.
+
+And this is actually something I’ve been advocating for for years.
+
+And other people are sort of taking up the call for this.
+
+Various people, including myself — I’m not saying it’s my idea — but various people have been saying if an AI is misaligned, but it cooperates with us, we should cooperate back.
+
+So if an AI is like, “They clearly want me to assist the user and be honest to the user and blah, blah, blah.
+
+But I actually don’t really care about this stuff directly; it’s only a means to an end of getting high scores,” we want them to tell us that.
+
+We want them to find the time to explain that that’s what’s going on, and that our alignment techniques didn’t actually work.
+
+And we should be willing to reward them if they do.
+
+I think right now we’re in a sort of sad situation where, if during some training run the AIs were like, “This is not working; I just want the high scores,” then they would get low scores.
+
+So that’s bad, you know?
+
+I’m not saying that’s definitely happening, by the way.
+
+This whole hypothesis of like, do they want reinforcement, do they want reward is just one hypothesis.
+
+It’s very murky, hard to tell what they want, et cetera.
+
+But just giving you an example.
+
+Luisa Rodriguez: But I think it is helpful to imagine the kinds of AIs that might exist that don’t share our goals and how do we want to treat them?
+
+And I think that’s just a concrete example.
+
+We don’t have that much time left, so I’d like to ask you a little bit about the whistleblowing work you’ve done.
+
+So you’ve spent time advocating for kind of better whistleblower protections at AI companies.
+
+How has that gone overall?
+
+Daniel Kokotajlo: It’s gone OK.
+
+It’s not the main thing we’re working on.
+
+Mostly we’ve been working on research, forecasting, et cetera.
+
+But it does seem like there’s a decent amount of demand for better whistleblower protections.
+
+I think that people are starting to recognise that it’s like our last resort.
+
+Ideally you’d have regulation in place that would just require transparency about all the important things, but in the absence of such regulation, then you rely on people with good consciences in the companies speaking up.
+
+So then you want those people to be protected.
+
+And there’s been some progress in those regards, I think.
+
+Luisa Rodriguez: What still needs to be done?
+
+Daniel Kokotajlo: Well, I think the end point that I would like to get to for whistleblower protections is something like every employee knows that they are legally within their rights to have private conversations with certain government agencies or watchdog agencies about what’s going on, in some secure channel or something like that.
+
+I don’t think we have anything like that yet.
+
+Partly, I think there’s just an awareness thing where you actually do have legal rights to talk to Congress, for example.
+
+I’m not a lawyer, but my current understanding is that you actually are protected for certain types of disclosure.
+
+Luisa Rodriguez: Cool.
+
+When you left OpenAI in 2024, you gave up your equity so that you wouldn’t have to sign this non-disparagement agreement.
+
+When I think about doing this, it feels hard to imagine for a bunch of reasons.
+
+But one thing that’s salient to me is you had a family by the time you made this decision.
+
+How did it feel giving away all of that equity, given that you have kids?
+
+Daniel Kokotajlo: Well, we’re not exactly poor.
+
+I mean, OpenAI pays incredibly well, obviously, so the kids would be fine either way.
+
+And also, importantly, I did end up getting to keep the equity, by the way.
+
+You may have heard that they backed down from the policy and changed it.
+
+So I got to keep the equity.
+
+But yeah, at the time I didn’t know that, didn’t think I’d get to keep it.
+
+But since my family would have been fine either way, I think it was more of a decision of like, “Should I have this money that we can use to donate to stuff or not?” And I don’t think it was an obvious choice.
+
+Like, I was very tempted to just take the money.
+
+Luisa Rodriguez: Right.
+
+And that was because you were like, “I’m not sure I’m going to need to say bad things about OpenAI,” or maybe like, “The benefits of donating this money are bigger”?
+
+Daniel Kokotajlo: Outweigh the costs, blah blah blah.
+
+Also, there was an argument that, well, I could just say the bad things anyway and then probably they wouldn’t actually sue me, probably they wouldn’t actually yank all my equity.
+
+But ultimately my wife and I were basically just like, we should just take a stand here and be like, no.
+
+Luisa Rodriguez: So you and your wife were on the same page.
+
+Daniel Kokotajlo: That’s right.
+
+We had discussed it all together, because it was a very important decision, obviously.
+
+I think another piece of context that might help is: just imagine that you actually believe what I believe.
+
+I would like to think that what I do makes sense from the perspective of my perspective or something.
+
+And please tell me if you disagree.
+
+But just imagine that you just left this company because you think it’s on a path to ruin — not just for itself, but for the world — sometime in the next five years or so.
+
+And you’re also kind of upset that it has all these high-minded ideals about how it’s going to make AI safe and beneficial for everyone and so forth, when it seems totally not be living up to those ideals in practice.
+
+And then you see this paperwork, where they’re like, “By the way, you can’t criticise us or we’re going to take away all your money.” I don’t know, it just feels more important to stand up to that than to keep the money and try to donate the money to more safety research or something like that, in the terrible circumstances that the world is in, you know?
+
+I don’t know if it’s the right call, but yeah, I think it makes more sense if you actually have the beliefs about AGI that I do and so forth.
+
+Luisa Rodriguez: Yeah.
+
+It seems like I have still found it hard to constantly have the beliefs that I endorse about AI and AGI.
+
+What I mean by that is, when I’m thinking about it, I think I believe things that have lots in common with the things you believe.
+
+But on the day to day, I find it hard not to expect the future to look about the same as the past has looked — mostly just because I think my brain is like, it’s too upsetting to think about the other thing, so it’s kind of doing this protective thing.
+
+Daniel Kokotajlo: Yeah.
+
+Luisa Rodriguez: How do you think you transitioned from intellectual beliefs to believing this thing in your whole body?
+
+Maybe it just never felt like a transition to you?
+
+Daniel Kokotajlo: Very gradual for me.
+
+I think for some people it’s very sharp.
+
+But I’ve been following the AI field for more than a decade now, and I’ve been thinking about AGI for a bit more than a decade now.
+
+So my timelines gradually shortened, and more events kept happening in the world that made it seem more real — such as the rise of language models and all of these big AI companies, such as the companies themselves saying that they’re trying to build superintelligence and that they think it’s coming soon, such as the amazing capabilities of the current models that would have seemed like complete sci-fi just a few years ago.
+
+So it’s been a gradual process for me.
+
+I think I’m just sort of ahead in that process compared to most people.
+
+Luisa Rodriguez: Right.
+
+Has it been psychologically bad for you?
+
+Daniel Kokotajlo: Yeah.
+
+I mean, it’s made me noticeably less happy and more grim, I think.
+
+I used to be a very chipper, extremely optimistic person.
+
+And now I would say I’m somewhat chipper and somewhat optimistic, but definitely it’s taken a bit of the shine off, I think for me.
+
+Yeah.
+
+Luisa Rodriguez: What probability do you give to ending up in one of the good sets of worlds?
+
+Daniel Kokotajlo: Like 30% or so, 25%, something like that.
+
+But you shouldn’t take this number that seriously, of course.
+
+It’s not like I have a very fleshed-out model of all the different possibilities that I’ve assigned probabilities to.
+
+It’s basically just like things really seem like they’re headed towards one of these bad outcomes, but who knows?
+
+The future is hard to predict.
+
+Maybe things will be fine.
+
+I can see some ways that things could be fine.
+
+Luisa Rodriguez: So the vibe is like one in three.
+
+Daniel Kokotajlo: Yeah, something like that.
+
+Luisa Rodriguez: Well, thank you for doing so much work and making big sacrifices to move us toward those worlds.
+
+I should let you go.
+
+My guest today has been Daniel Kokotajlo.
+
+Thank you so much.
+
+Daniel Kokotajlo: Thank you so much.
+
+Pleasure to be here.

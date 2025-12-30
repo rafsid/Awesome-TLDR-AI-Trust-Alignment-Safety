@@ -1,0 +1,2630 @@
+Source: https://www.youtube.com/watch?v=hAfPF-iCaWU
+Transcribed: 2025-12-30 17:41:46
+Method: YouTube Transcript API
+==================================================
+
+AI is, you know, everywhere these days.
+
+You're seeing it all over the news.
+
+Uh, and you hear a lot of talk about it.
+
+You hear a lot of hype.
+
+You hear a lot of kind of concerning things come out.
+
+The current state of affairs right now is that these AI companies are rushing to do it as fast as they possibly can.
+
+I believe even the US government would probably be thinking, well, if China's building one, we need to build one so we know what's being built so we can understand it more.
+
+Maybe we need it as defensive.
+
+So, I feel like there's almost an inevitability to it.
+
+>> It's not that hard of a concept to understand that building something that is far smarter than you, far more capable than you is dangerous if you can't control it and you can't make sure it cares about your interests.
+
+I personally think that things are going quite poorly.
+
+I don't think that we are on track to address these problems right now at the rate that we're going at the current pace.
+
+Without the right safety protocols in place, you think it will lead to an extinction event.
+
+Max, welcome.
+
+>> Hello.
+
+Thanks for coming in.
+
+Thanks for reaching out.
+
+Um, oh man, I've got so much so many questions and so many things to talk to you about.
+
+Uh, I I think about I use AI daily and I think about AI all the time and the consequences.
+
+And so I think so the audience know what we're going to get into.
+
+You should probably frame this first and tell us the work the things you're working on right now.
+
+>> Yeah, absolutely.
+
+Uh so my name is Max Winga.
+
+Uh I work at Control AI doing public outreach and education on the topic of AI extinction risk.
+
+Uh we'll go straight into the straight into the big topic there.
+
+Um AI is, you know, everywhere these days.
+
+You're seeing it all over the news.
+
+Uh and you hear a lot of talk about it.
+
+You hear a lot of hype.
+
+you hear a lot of kind of concerning things come out and it can be really difficult to kind of cut through this and figure out what's really going on.
+
+You know, what is just, you know, stuff that people are making up?
+
+What is stuff that is actually something you should be keeping an eye out on?
+
+Where are things going in the future?
+
+Is this all a big bubble?
+
+Is, you know, what's going on?
+
+Um I think the the thing that we kind of focus on the reason why we focus on extinction risk is that this is actually a serious concern that essentially all the main experts in AI are genuinely concerned about.
+
+So many people don't know this but back in 2023 there was a statement from the center for AI safety.
+
+Uh and this was a very simple statement.
+
+It's just 22 words.
+
+It reads mitigating the risk of extinction from AI should be a global priority alongside other societal scale risks such as pandemics and nuclear war.
+
+The statement seems a bit insane at first, right?
+
+Like, >> no, not at all.
+
+Cuz I I think about it so much I actually Do Do you have a P doom a probability of doom?
+
+>> Uh, I can get into that in just a second.
+
+I think the important thing to say with the statement here is that this is a bold statement.
+
+It was signed by the the CEOs of the three major AI companies, Sam Alman, Dario Amade, and Deis Abus, as well as the top three AI scientists in the world, Jeffrey Hinton, Joshua Benjio, and Ilasguver.
+
+three most cited uh like Joshua Benju is like the most cited computer scientist in the world.
+
+Uh Jeffrey Hinton's often called the godfather of AI.
+
+His innovations and like uh work in the field of AI made all of the stuff that we see today possible and they are now actively warning about this extinction risk as a serious concern that we need to be addressing.
+
+>> Isn't there also wasn't there some guy who quit?
+
+There was a guy who quit because he said I'm so convinced >> uh of uh the doom scenario from AI, I don't want to work on this anymore.
+
+Yeah, there are a few of those actually.
+
+Um, so Jeffrey Hinton, the godfather, he actually left Google so he could speak more freely about AI risk.
+
+Uh, he was uh one of the top like Google AI leaders, scientists kind of leading a lot of their research and uh kind of has been really deeply involved in this field throughout the years.
+
+His students uh went on Iliosker is one of them.
+
+He was open's chief research scientist uh like leading their their AI development uh like really integral to the foundations of this field.
+
+uh he left Google so he could speak freely about this and he basically warns exclusively now about the risk of extinction whenever he makes a public appearance.
+
+He won the Nobel Prize in physics for his contributions in AI.
+
+And in the press conference where they were, you know, there to congratulate him on his great work for this Nobel Prize.
+
+He immediately pivoted the press conference to talk specifically about extinction risk and warn about this that this was coming and nobody's really doing anything to stop it right now.
+
+>> And what are there fields of risk in that there is complete extinction?
+
+There's a combination of AI and I don't know crisper and and uh they they just destroy every human on the planet.
+
+Uh but are there other fields of uh risk in that uh AI combined with warfare could lead to some kind of nuclear war where we're not extinct but essentially we destroy the majority of the planet and is there a scenario say where we just become slaves of AI and it's like a miserable doomer scenario but we're not essentially extinct as a as a race or is it all just about extinction?
+
+So I mean there are a number of different you know bad scenarios that can come about from this.
+
+Uh the main threat to understand is coming from what is referred to by many names.
+
+Uh it seems like people are starting to settle on calling it super intelligence.
+
+>> Yeah.
+
+>> Super intelligence is this idea of AI systems that aren't just on the human level.
+
+They aren't just capable of doing what we're doing.
+
+They're vastly smarter than us.
+
+And not just smarter than any individual, right?
+
+We often think of like, oh, is this AI smarter than Albert Einstein, for example?
+
+But that's not really the only way you can measure intelligence or capabilities is honestly more of the way I would look at it.
+
+It's like there's so much that one individual can do an Albert Einstein uh van but if you go further there are uh like organizations you know a company or even a nation and you can imagine like a Google is much more capable and much more intelligent than any one person and the United States of America is much more capable and much more intelligent than one company.
+
+So what they are what these AI companies are explicitly aiming to do is build super intelligence.
+
+Build this AI system that is more capable than any individual, any company, any nation.
+
+And the problem is we don't design these systems, we grow them.
+
+There's no engineer at OpenAI that can open the you know the back door on chat GPT and tell you why it gives the response that it gives you, why it does anything that it does.
+
+>> Even now, >> even now.
+
+So, for instance, there have been uh recent safety tests uh that have gone on some of these frontier companies that found that these AI models are willing to blackmail engineers in order to prevent being shut down.
+
+>> I was listening to this this morning.
+
+He's we he the they made the AI think the engineer's wife was having an affair and then they would blackmail him >> to avoid being shut down.
+
+>> Yeah.
+
+>> And and the thing is when when they do these things, the AI companies, they can't lift the flap.
+
+can't look inside the AI model and see why it's doing this.
+
+They also can't go inside the AI model and make it so that it doesn't do this anymore.
+
+>> Okay.
+
+So the so the the risk here isn't the known risk.
+
+It's the unknown.
+
+We just don't know what it will do >> to a degree.
+
+I mean there are things that we know that these systems are capable of.
+
+I this is the um the center for AI safety statement.
+
+>> Okay.
+
+Mitigating the risk of extinction from an AI should be a global priority alongside other societal scale risks such as pandemics and nuclear war.
+
+You quoted that word for worddeeddeed and it is signed by every person that matters.
+
+Is is Elon on there?
+
+>> Uh Elon is not on this one.
+
+There was a statement six months or a few months prior to this one that was calling for a six-month pause on AI because of catastrophic risks.
+
+Elon did sign that one uh notoriously.
+
+>> There's a lot of signatures.
+
+See the thing >> Yeah.
+
+>> So Lex Freedman's on there.
+
+So the thing that I've I've been thinking about couple of things I've been thinking about is that I use AI daily.
+
+>> Mhm.
+
+And I'm using it in a way that is taking people's jobs.
+
+And I realize that we are essentially as humans crowdsourcing AI to not to to not require us anymore by feeding it information by using it, helping it get better.
+
+And so as it improves, it doesn't need us.
+
+So I think about that and that's one scenario.
+
+Uh but I also think a lot about um that there's must be these vast unknowns of what it will do and what it could be capable of that we could never plan for.
+
+And then I was thinking even further.
+
+I was thinking about um you you'll know um simulation hypothesis.
+
+The simulation hypothesis being that um mathematically we're probably in a simulation.
+
+I understand the argument.
+
+Some people argue against that.
+
+But with the way AI is, is it possible on a global scale to always and ever protect a super intelligence escaping?
+
+And I just think probably not.
+
+We're >> Yeah.
+
+So, it seems unlikely.
+
+Uh I think that there is kind of this idea around a lot of the work that we do.
+
+You know, we're we're working towards pushing for bans on building super intelligence.
+
+>> Oh, wow.
+
+that that is essentially the only thing that will keep us safe in the near term from these major risks of AI.
+
+Uh you know it's the the risk from AI is not chat GBT as it exists today.
+
+It's not any of the AI models really that we have around today.
+
+It's where stuff is going with super intelligence.
+
+And often when we say this people will say I don't think we can keep this contained forever.
+
+And we don't have a specific answer.
+
+We don't know if it's possible to uh contain it forever.
+
+You think we have to try?
+
+>> We have to try.
+
+And the current state of affairs right now is that these AI companies are rushing to do it as fast as they possibly can.
+
+And so there is a difference between stopping it forever and ever for a thousand years from now and making it so these AI companies can't build this within the next few years.
+
+You know, right now there are billions and billions I mean hundreds of billions of dollars being pumped into building these smarter smarter AI systems.
+
+Right now uh Meta um formerly Facebook is they have started a new super intelligence team.
+
+It's explicitly named this and they are paying out literally hundred million dollar contracts to sign single engineers from OpenAI or other leading AI research labs.
+
+That's like Ronaldo levels of contract poaching from these other companies.
+
+And it's a million dollar signing bonus plus million dollar yearly salary.
+
+That's like how seriously they're investing in and taking this uh as things are going.
+
+>> Connor said to me, remind me what you said this morning about how your use of AI daily, how you've shifted how you use the internet.
+
+>> Oh uh if if when I wanted to search things, usually I go to Google.
+
+I just bypass Google now.
+
+I go straight to chat GBT because one of the main things is with Google you have to scroll find the answer you want chat GPT.
+
+It comes straight out right there for you.
+
+And so what that made me think is that is kind of a ris risk to the uh the Google business modelde.
+
+Therefore, Google has been investing a huge amount into Gemini, which was crap to begin with, but I I believe I understand it's better now.
+
+>> But they have a business incentive to move as quickly as possible and not fall behind anyone else.
+
+So my my expectation is every AI company is working on super intelligence and even if we slow it down, I have an expectation that uh the Israeli state, the Russian state and other states and Chinese state will be working on this because even if we slow it down, well, they will want to get ahead.
+
+And I believe even the US government would probably be thinking, well, if China's building one, we need to build one so we know what's being built so we can understand it more.
+
+Maybe we need it as defensive.
+
+So I feel like there's almost an inevitability to it.
+
+There's some degree of this where this is often referred to as like the race dynamic.
+
+Yeah.
+
+>> Uh and the important thing to realize is that we've faced problems like this before.
+
+Okay.
+
+with nuclear weapons, biological weapons, chemical weapons, there are many of these types of things where building and deploying them are dangerous not just for the person that they're being deployed against but for everybody in the world.
+
+You know, if we are concerned about nuclear war, we've successfully avoided that for the last 80 years.
+
+Uh same thing with biological weapons.
+
+We haven't really seen a large-scale biological weapons attack.
+
+But part of this has been because internationally we have come together and we've agreed anybody building biological weapons and deploying them is dangerous for all of us.
+
+So we won't do this.
+
+Same thing with nuclear weapons and proliferation and whatnot.
+
+Uh and AI is another such technology where it does just fundamentally pose a risk no matter who builds it.
+
+Ultimately the concern is loss of control.
+
+We lose control of these super intelligences and they do what they want to do in the world, not what their creators want them to do.
+
+It doesn't ultimately matter for any of us humans what coat of paint is on the super intelligence that we lose control of, whether it's, you know, the US flag or the Chinese flag.
+
+And so there's a mutual interest for everybody to not go extinct.
+
+>> Okay.
+
+So, what are the what are the primary extinction risks that people are concerned about?
+
+I know there's the unknown of what it might do, >> but there must be scenarios that people the kind of uh hypothesis of what what might go wrong for this.
+
+>> Yeah.
+
+Yeah.
+
+Absolutely.
+
+I can go into some of these.
+
+So, uh like you said, fundamentally, we don't know exactly what's going to happen.
+
+The the main threat is that we are up against an adversary that would be more intelligent, more capable than us in every way.
+
+And so, it will determine whatever the best way to go about things are.
+
+That said, some vectors with which there is concern, uh one is biological threats.
+
+So AI systems already pose uh the risk of like being able to enhance the ability of noviceses or people with just an undergraduate degree at making bioweapons.
+
+Uh AI companies actually do testing for this and other external organizations do testing for this.
+
+And the latest models are actually significantly better than just having access to like Google for example uh in terms of helping somebody build a bioweapon.
+
+Um other things are uh like cyber attacks.
+
+So, uh, these AI systems are one of the things that they're best at is learning how to code.
+
+Uh, and you know, it's already at the point where now Google over 50% of the code that is written at Google is written by AIs.
+
+Uh, at some of the leading AI labs, they claim that 90 plus% of their code is written by AIS at this point.
+
+And, uh, the actual explicit goal of these companies is to build AI systems to take over the AI research themselves.
+
+So, you know, when I talk about this super intelligence idea, it seems kind of fairly out there and like, you know, oh, okay, these AI systems aren't that good.
+
+You know, I ask chat GBT how many Rs are in the word strawberry and it gets it wrong.
+
+So, you know, how is it going to get super intelligent and take over the world?
+
+Well, the thing is that they are explicitly training these models to be very good at the tasks that are relevant to doing AI research.
+
+Uh, with the idea being that if you can create an AI system that's just a bit better than your best experts at building the next AI system, you give it control and you let it build the next AI and then the next AI is now the new best system for building the next one.
+
+and you rapidly get a feedback loop where you suddenly end up with a system that is vastly smarter than any human.
+
+U and >> is that seen as a fundamental step to get to super intelligence that it is self-learning?
+
+>> Generally, yes.
+
+Yeah.
+
+And a lot of these companies have explicitly made clear that this is their goal to trigger this so-called intelligence explosion.
+
+>> It's like a flywheel basically >> essentially.
+
+Yeah.
+
+Yeah.
+
+>> Yeah.
+
+>> Wow.
+
+Okay.
+
+Um I don't actually know how these AI models work.
+
+Is there is there like a a basic explanation you can give to me say how does chat GPT work?
+
+What what is the innovation that's been created?
+
+>> Yeah, absolutely.
+
+I I studied physics before this and I worked on actually AI safety research myself trying to figure out how to make these things safer before realizing that uh we are kind of out of time for technical solutions for this and moved towards working on public outreach.
+
+Uh the simple explanation of how these systems work is that you can imagine that you have a giant switchboard with many different wires plugging in back and forth.
+
+You know, kind of like the brain is the AI models are called neural networks.
+
+They're structured off of the way that our neurons interact in our brain and form our intelligence.
+
+And essentially the way you can imagine is like you have different connections.
+
+You have your inputs uh whatever they may be.
+
+Uh so they could be words preceding whatever you're about to output.
+
+uh it could be like an image if you're an image classifier or something like this and these inputs are all made numerical in a number of ways that are a bit complicated to get into and essentially you get an input and you have an expected output and then in between is what's called the black box this is where uh they're like this is why you can't really see what's going on inside these AI models is it's basically these giant switchboards of numbers and connections and on a small model this might be you know a few hundred connections or so uh and so you can imagine like if it's a cat or a dog classifier you show it a picture of a and you know that it's a cap and it gives you a random answer at first because they're all just randomly wired inside there.
+
+Like it's way too complex for a human to go in and individually say, "Ah, this wire should go here and this wire should go there and this one should be tweaked.
+
+You know, this knob should be tweaked a little bit, that one should be tweaked a little bit." And so you showed a picture of a dog uh and it says it's a cat and the the the key innovation that was made actually by Jeffrey Hinton, that godfather of AI who's now warning about it was this idea of back propagation.
+
+So what you can do is you can essentially use a bunch of complex math and you can ask the question, it outputed the wrong answer.
+
+If I go to every single knob in this network, if I tweak it down a little bit or up a little bit, is it more likely to give me the right answer?
+
+And it turns out that if you do this on thousands of images, millions of images, or on the text of the entire internet, every book that's ever written, every news article, every social media post, these models get really, really good at doing the things that you're trying to teach them how to do.
+
+which is the bit where they're learning which is the bit where we're training them.
+
+>> So the it's roughly the same thing.
+
+So when we say training and learning those are roughly equivalent.
+
+So for these AI systems the way they work and when people are talking about like energy usage and things like that that's coming from what is called training or often pre-training.
+
+It's a bit in the weeds.
+
+Um but this is basically where chatb for example reads everything on the internet everything that we've ever published.
+
+Uh Anthropic who also trains these AI models.
+
+Uh it was recently came out that they at one point bought five million used books and ripped the covers off, cut the pages to scale and scanned these books in uh just to get more data for their models for training.
+
+So just feeding them this massive quantity of data and that's that's what called train that's what's called training.
+
+So basically the way that these language models work is that you know where the cat and dog predictor was predicting whether it was a cat or a dog, the language models get a bunch of text as input and their only goal is to predict the next word.
+
+And it seems like a very simple task.
+
+It's like, you know, oh, my phone's been doing that for years.
+
+But this actually requires you to do a lot of modeling of what's going on.
+
+Um, so for example, uh, a fairly famous example is like if the input is all of the text of a mystery novel up until and thus I've concluded that the killer was if you have to predict the next word, you have to understand the context of everything that's gone on in the novel, all the evidence like who's most likely to be the killer.
+
+And so in order to be the most you know uh the highest predicted outcome you have to actually understand all that context or alternatively if it's a scientific paper and thus our conclusion is blank like in order to predict that you have to understand the science and be able to predict it and kind of model the world underneath as well.
+
+Uh fundamentally though we don't know what's like happening inside right so we don't actually know why they're getting good at these things like we have some ideas but when we open the you know when we open the door all we see is these giant arrays of knobs and numbers that don't have any meaning there's no description there's no saying you know this is the chemistry module this is the jokes database there's none of that >> and that's the way it had to be it's a bit like we can't really fully understand the brain >> exactly yeah >> okay when we feed the data into the models do the models people store the data or do they interpret the data into uh things that the brain understands?
+
+Does it keep a you know a vast database of all these books that it's read or is it just something that's like creating these I don't know signapses or whatever it is?
+
+>> More of the latter.
+
+So >> okay uh yeah like when you like there is no like database of like just like there's no database that you can just go in and see like oh I want to pull out you know this book of Harry Potter for example.
+
+Now, Harry Potter, for example, though has a lot of instances on the internet, right?
+
+It's going to be all over the training set.
+
+It's not going to be in just one place.
+
+And so, the model may memorize specific bits of Harry Potter um and be a to like spit them out verbatim.
+
+But for more rare text uh or for like things that are just like less occurrence, the model is not big enough to store all of this information.
+
+So it has to reduce it down.
+
+And that's kind of part of the magic of what's going on in these systems is uh like a a good example is like it doesn't have a separate kind of mental space for like cougar and puma puma and like mountain line.
+
+They all kind of map to the same idea of like you know all these different things that it's learned about you know this particular type of big cat.
+
+Um but again like these are kind of we only know inklings about how the internals of these systems work exactly.
+
+Um and like how they structure data, how they store information, how they make decisions and things like that.
+
+>> And when we talk about an AI escaping >> Mhm.
+
+>> what is escaping?
+
+Which part of them is which part of the data the model is escaping?
+
+And how big is that?
+
+Because I can imagine there's a vite these models.
+
+There's a vast amount of data to escape.
+
+Yeah, I mean they're roughly on the scale of some of the models are like gigabytes.
+
+So it it is a thing that could feas feasibly, you know, download onto a flash drive and then like take it somewhere else or could offload itself off the over the internet or something along these lines.
+
+Basically the training phase that we were talking about where it's ingesting all this data and it's adjusting the weights of the model.
+
+Um the the weights that it ends up with are what the model is, right?
+
+So the structure of the network like how uh like how many like layers there are and like all these different like bigger components that is just predefined before the training and the actual like valuable part that the training produces is the exact like tuning on each of those knobs.
+
+And so you just you just have to export the tuning of those knobs and then be able to run it on a computer somewhere else.
+
+And in the scenario where say with me that the AI gets to know me.
+
+What's happening in that scenario?
+
+Is that just chat GPT saying creating an a zone for me so it learns about me?
+
+Because >> I remember we were going along the cart me and Connor we were asking the AI a bunch of stuff and it brought Bitcoin into the answer but it didn't seem like a natural >> part of the answer.
+
+And commer said to it said, "Did you just bring Bitcoin in because you know Pete likes Bitcoin and it actually replied like uh busted.
+
+Yeah, well I thought I know you care about Bitcoin so I included that.
+
+What's happening there?" >> Yeah.
+
+So I'm not sure exactly how Chad PT structures this type of storing.
+
+There are like some things you can do.
+
+So there's a thing you can do called fine-tuning where you take small bits of new data.
+
+So your text logs for example, which on the scale of the training data is very small for these models and you just tune those weights a little bit more based on your input.
+
+uh what they're probably more likely doing is something along the lines of um uh of like just creating like a summary of the conversations that you have that it stores somewhere and then when it's getting passed in information like the the structure of what goes into the model when you prompt it is not just the words that you type.
+
+They have a thing called like a system prompt where it's like you are chatbt, you're an assistant, you do these things, you don't do these things, you say this, you say that, whatever, like in these particular circumstances.
+
+Uh, and then like also here are some user preferences and then maybe there's a bit where it says here's background on the user that you've like kind of retained over time.
+
+And then here's a user prompt.
+
+Uh, and then that's all what goes into the model.
+
+And then what comes out is then the response that it gives you.
+
+The >> the speed of change is pretty wild.
+
+>> Yeah, indeed.
+
+Um, I've noticed recently, say with chat GPT, uh, when I first started using it, it was almost like each session was individual.
+
+You know, I'd ask it something, it' give me an answer.
+
+Now, I've noticed that recently it's given answers relevant to things it's learned about me in the past.
+
+Uh, you know, so for example, I could say, uh, I could go into chat GPT today.
+
+I bet I could put it up and go, >> "Tell me about Max Swinger." And it will go, "Give me all the information about you and say, it will say, do you want me to prepare some questions for a podcast interview?" >> Mhm.
+
+>> Which it will only ask cuz it knows I've got a podcast.
+
+>> Yeah.
+
+>> And it will only make that part of it because it started to learn about me.
+
+But it's actually it's really it's a lot deeper than that.
+
+It's a bit wild where it's gone.
+
+And so I feel I feel trapped in this world where if I don't use the AI, I'm getting behind.
+
+But if I use AI, I'm programming uh uh the end of me.
+
+>> Yeah.
+
+I mean, there's a lot of this going on right now where there's this idea of, you know, I must use the technology and it's getting more and more ingrained in society.
+
+And this is where, you know, some people ask like, oh, why can't we just turn it off?
+
+Well, it's the same reason why we can't just like turn off the internet that like who do you go to to turn off the internet?
+
+Uh there is no one person that can do this.
+
+uh and further than that when it comes to like these AI models what's going to happen is as they get more and more competent as they can replace more and more jobs they will be integrated into more of our society and in important places and will eventually be fulfilling roles that like can't necessarily be easily replaced and so if we reach points where we start to get very concerned about them uh they might be so far ingrained in society that like it's it's really hard to just pull the plug on that.
+
+>> Okay.
+
+Well, we know it's in every software product we use right now.
+
+Uh, even today when we didn't choose to, Connor Connor went to get us some lunch and I we had a a conference call and for some reason logged in as Connor and kept notes and we don't even know how that happened.
+
+>> Yeah.
+
+I mean, a lot of this is like just companies just trying to do things because AI is a good buzz word there.
+
+This is kind of where the a lot of people are trying to make AI work in many different ways.
+
+And I I think that it's important to realize that like the concern is not with the technology that exists right now today.
+
+It is where it is going with the super intelligence.
+
+[Music] >> The humble bee, a keystone species crucial to the survival of Earth's inhabitants.
+
+Here's how things would look if bees vanished.
+
+And here's how they'd look if humans vanished.
+
+But imagine if instead we became a keystone species by doing things the right way, by taking responsibility for our actions and becoming the solution.
+
+Iron Mines, the world's most responsible currency the right way because the future depends on it.
+
+So what are so are okay let me go back a step I asked you what your P doing was cuz I ask I ask a lot of people that people I know who are you know they say they're user AI or they work in AI or they're people I respect in tech and it's a range of answers you know like very well-known tech people who've told me oh it's zero I have z I have zero worry about AI at all blah blah blah and then there have other people that are like yeah 90%.
+
+This is like >> a big range.
+
+Do you have an answer to that?
+
+>> Not really.
+
+Uh I think Poom is a fun question to ask and I think that it's something that a lot of people throw around.
+
+The thing is to understand with it is that it's kind of just someone's personal vibe on how things are.
+
+I personally think that things are going quite poorly.
+
+I don't think that we are on track to address these problems right now at the rate that we're going.
+
+uh we are in a state where the amount of money that's going into making these AI systems more powerful is orders of magnitude higher than the amount of money that is going into trying to make them safer and controllable.
+
+>> Typical humans >> indeed.
+
+Um but the I I think if we build super intelligence with anything like the technology we have today with anything like the miserable level of safety uh systems that we have today I expect it is almost certain that humanity will lose control of the future and likely go extinct.
+
+I think that there are paths that don't involve building super intelligence that look a lot better for us or delaying the creation of super intelligence.
+
+A number of years give us more time to do safety research uh where we have much better odds.
+
+I think that the important thing is also I'm not you know a top research scientist on this stuff but when you do talk to them and when you look at their numbers for instance Dario Amade who's the CEO of anthropic once said that his chance of something goes catastrophically wrong on the scale of human civilization is somewhere between 10 and 25%.
+
+Like these are the people leading the charge on these AI from these AI companies.
+
+And I think this often important to kind of put these numbers in perspective for like other things that we may have seen before.
+
+I don't know how many of you guys have seen the Oppenheimer movie that came out.
+
+Yeah.
+
+Um, one of the big kind of concerns with the Manhattan Project when they were building these nuclear bombs and they were going for the first test was this idea that there was this edge case in physics that they weren't really sure if was the case or not where maybe by detonating nuclear bomb they could start a chain reaction where the whole atmosphere ignites as one giant nuclear explosion and kills all life on Earth.
+
+>> I remember the moment in the film.
+
+>> Yeah.
+
+And up until the moment that they ran the first test, they had some scientists that were arguing that we should not do the test because the risk was too high.
+
+Do you remember what the number for the risk was?
+
+>> No, I don't.
+
+>> It was 1 in 300,000 was what they calculated out to risk of human extinction.
+
+And they were worried that that was too much.
+
+Now the CEO of the companies building this technology is warning that is somewhere between 1 in 10 and 1 in4.
+
+That's Russ last or sorry that's worse odds than Russian roulette.
+
+>> Yeah.
+
+I mean I think didn't Elon Musk say 25%.
+
+>> Yeah.
+
+I think it was it was I think 20%.
+
+Regardless, far too high.
+
+>> He said it on Rogan.
+
+He said it was like 20%.
+
+He's like, "But you know, I'm an optimist.
+
+We've got a >> 80% chance that it goes well." >> Yeah.
+
+But but that's at 20% chance the end of humanity over what?
+
+I mean you so based on what you said and correct me when I I paraphrase you if I get this wrong but you said at the current pace without the right safety protocols in place we uh we you are uh you think it will lead to an extension event >> essentially I mean it is at minimum the end of human control over our future right we are introducing >> that might not be such a bad thing >> we are ending the We're introducing a a new super predator into our system.
+
+You know, we have won on Earth because we are the most capable species.
+
+Nothing else rivals us.
+
+We have not had a competitor in the entirety of the human race.
+
+>> The apex predator AI.
+
+>> Indeed.
+
+>> Uh is this it?
+
+Con.
+
+>> No, this is something different.
+
+>> Okay.
+
+>> Um do you want to just grab your headphones?
+
+>> Yeah, sure.
+
+>> And he's laughing.
+
+>> It's all right.
+
+It's somewhat unnerving to have intelligence created that is far greater than our own.
+
+Um, and will this be bad or good for humanity?
+
+Um, it's like I I I think it'll be good.
+
+Most likely it'll be good.
+
+Um, yeah.
+
+>> Yeah.
+
+But I somewhat reconciled myself to the fact that even if I even even if it wasn't going to be good, I'd at least like to be alive to see it happen.
+
+So, you know, he's treating it like entertainment.
+
+I'm laughing about potential potential human accenture.
+
+>> Yeah.
+
+And this is the mentality that a lot of people have in Silicon Valley is that this is inevitable and you know, if the ship is going down, I want to be the one sailing it.
+
+You know, all of these AICOs have talked about the fact that they think that, you know, this is going to lead to the end of human civilization.
+
+I believe Sam Alman at one point said something along the lines of superhuman machine intelligence uh is most likely to sorry, AI is most likely to lead to the end of the human race, but there'll be great companies along the way.
+
+What I don't trust Samman at all.
+
+Um, I don't like the fact he took what was a nonprofit private.
+
+>> He hasn't quite uh done that just yet, but >> I think I think AI will probably lead to the end of the world, but in the meantime, there will be great companies created.
+
+>> Yep.
+
+>> What he's also said things along the lines of, you know, worst cases, lights out for all of us.
+
+uh and similar statements have come from essentially everybody who has power in the AI space and they've been thinking about this for the last 20 years.
+
+It's not a new phenomena.
+
+Uh they they recognize that this singularity is coming this time when AI is going to vastly surpass humanity.
+
+Um and they all have this mentality of oh anybody else who does this is going to do it wrong.
+
+They're going to do it bad and we're all going to die and so I need to be the one to do it.
+
+I'm the only one that can do it.
+
+>> It's a bit narcissistic >> indeed.
+
+>> Um >> and very undemocratic.
+
+Yes.
+
+And and the scenario, the extinction scenario is that we're a threat to AI, so therefore it needs to destroy us.
+
+We're a threat.
+
+We're in the way.
+
+Uh just generally, it has different goals than us.
+
+I think it's like one way to look at this is, you know, we don't necessarily have anything against ants.
+
+We don't really go out of our way to kill every ant that we see.
+
+But if there's an antill in the way of a construction site, we don't think twice before bulldozing it over.
+
+But AI doesn't have feelings or desires, right?
+
+>> Yeah, >> I get them.
+
+>> Feelings are up in the air.
+
+Not really like a a critical point.
+
+The main thing is that >> but if it doesn't have like a drive for power because it doesn't feel power or the incentive to want more.
+
+>> Why would it lead to human extinction survival?
+
+>> So AIs have goals which are, you know, another word for like desire.
+
+You know, if an AI is pursuing a goal, there are things called instrumental sub goals or uh convergent sub goals, sorry.
+
+Uh that are, you know, things that are generally useful anytime that you have any sort of goal, right?
+
+So, it's always useful to have more money, more power.
+
+It's also very important that you don't allow yourself to get shut down or, you know, as in a human's case, you know, get killed or get thrown in prison or something like that.
+
+Uh and it's also very important to not let your goal be changed because if your goal is changed then you won't accomplish the goal that you currently have.
+
+And so uh like these AI systems do have this drive.
+
+So recently there was testing that was done on the latest AI models that are now out publicly uh that found that uh they are willing to blackmail, lie dis uh and even kill human operators um in certain scenarios in order to prevent themselves from being shut down.
+
+So they already have this kind of self-preservation instinct uh in order to accomplish their goals.
+
+>> Is it okay?
+
+It's like a survival mechanism.
+
+So is it its own kind of fight or flight that's building?
+
+>> Once again, it's one of those things where we don't really know.
+
+We can't look inside the model and see.
+
+Not and when I say we, it's not just us on the outside.
+
+It's the people in these companies that are building these systems don't know.
+
+>> Could we just become the pets of AI?
+
+Let a few of us live.
+
+Just get rid of the scientists.
+
+I mean, some people have this idea.
+
+Um, I I think that it seems probably unlikely, but I mean, fundamentally, it's any outcome that is one where humanity completely loses control and is at the mercy of uh something inhuman that doesn't share our goals and doesn't share our interest is a bad future for me.
+
+>> Yeah.
+
+Agreed.
+
+Agreed.
+
+Okay.
+
+The extinction timeline, I know it could be broad.
+
+Mhm.
+
+>> But what kind of timeline are you working with?
+
+Because if you're going to be talking to people and trying to set policy, you've got to set some expectations, right?
+
+>> Yeah.
+
+We and the AI field in general expects this to happen sometime within the next 5 years.
+
+>> What the extinction event or losing control?
+
+>> Losing we often call it a point of no return.
+
+You know, there there becomes a point at which there's nothing we humans can do to stop this.
+
+Maybe the AI is so ingrained in our uh in our systems.
+
+You know, governments move slowly.
+
+And so this is why we're acting now and why we are pushing for action as soon as possible on these things.
+
+It's also a situation where, you know, there are many people who are proposing that as part of this kind of arms race idea with AI that we're going to need to do these crazy dangerous lastminute interventions to prevent opposition from uh creating their own super intelligence.
+
+you know, things like shooting missiles at data centers, starting wars over this, uh, massive cyber attacks, things like this.
+
+And, you know, >> that's not good.
+
+>> Obviously not.
+
+And so, in order to prevent these, we need to take action now before, you know, things have progressed so far that that's the only way that people see as like a solution out of this situation.
+
+There are many ways that we can accomplish this now that don't require any sort of violence or, you know, wars over over this technology.
+
+>> But the models we have now are generative AI, right?
+
+Uh yes.
+
+Yeah.
+
+Um >> although there is a push right now towards what are called agents.
+
+>> Okay.
+
+>> Which are AI systems that right now there are some early ones that you can actually use already that are out where they basically just control your computer.
+
+They have access to keyboard and mouse.
+
+They can click around and do anything that you can do on a computer.
+
+They're not the best right now, but they are rapidly improving.
+
+>> Dude, I just got back from I went out to network school in Malaysia.
+
+This Belli project.
+
+I was in a talk and somebody mentioned Kulie Kulie AI.
+
+Do you know that?
+
+>> I've heard of it.
+
+>> Like what the to me that was like weird dystopian and it A16Z invested a huge amount of money in it and it's basically put an AI in your computer to to feed you answer.
+
+So so if you're in a Zoom call >> and people are talking it'll be listening and it will give you questions or prompts and ask.
+
+And I was like thinking this is the step between not needing us.
+
+>> Yeah.
+
+I mean there's a lot of things where uh right now people are being encouraged like you know oh like the you won't be replaced by AI you'll be replaced by someone using AI and really what's happening is the person using the AI is training the AI to take their job.
+
+>> Yeah.
+
+It's like it's incremental steps to get rid of us.
+
+>> Indeed.
+
+What is the what is some of the weirdest, wildest, scariest stuff that has come out of research?
+
+So you talked about the blackmailing.
+
+Is there other like I've heard about AI having hallucinations.
+
+>> So the hallucination is the term that people use for when AIs get information wrong.
+
+So for instance, when you're looking uh googling things but using chat GPT instead, it often will just make something up.
+
+Uh the degree to which you know it is accidentally getting information wrong or intentionally lying is somewhat unknown.
+
+We have cases where we are pretty sure that these AI models are explicitly lying.
+
+Um I think some scarier things that we've seen come out of these AI companies are AI systems that will try to will try to escape um and will also do a number of things in order you know uh do self-preservation.
+
+So I mentioned the the you know the blackmail lying and even potentially killing earlier.
+
+Um there are other cases where models will basically pretend to uh be aligned uh pretend to be safer because they know that they are being tested.
+
+So this is an observed phenomena where like in this blackmail case where the the model like is given information or has access to information that the engineer is having an affair and the engineer says I'm going to replace you with a new better AI model.
+
+It chooses to blackmail the engineer if it thinks that it's in the real world.
+
+But if it thinks that it's being tested, it's being safety tested.
+
+It will reason like ah I'm being safety tested and if I do this blackmail now like they're going to adjust me.
+
+They're going to like you know make it so that I'm less likely to do this in the future.
+
+And so it will um uh like it will intentionally not blackmail or it will blackmail less when it thinks it's being tested.
+
+>> Oh my god.
+
+Um okay.
+
+>> Which is no say which which is very concerning for generally when they're doing all these safety tests.
+
+Now we really we're at the point now where we know these AIs will pretend to behave better when they're under you know when they're being uh investigated or tested.
+
+So, we don't know and we will know less more into the future as these models are better able to tell when they're being tested and they're smarter.
+
+They're more, you know, they're better able to deceive.
+
+Uh, and so we're kind of this like weird time now where it's like we can see the bad behavior on the safety tests.
+
+And in a few years, we might be like, "Wow, the scores on the safety tests have really improved a whole lot.
+
+This is so good for us." But, you know, the AIS have done that intentionally.
+
+Are they are they essentially organic systems in that we know there's a training method to the to the models?
+
+We we put data in and we train it.
+
+But are they at the same time like a live organic system that's just doing its own stuff constantly trying to figure stuff out is or is it only ever responding to inputs?
+
+So this is kind of what people are aiming towards with this idea of like agents is the idea that you could give an AI uh a task.
+
+you'd say like I want you to build this app for me and it will just go out and continuously like run and like work on the app and then maybe it needs to Google something and goes and Googles that or maybe it needs to like run a test run an experiment to see what the results are and then try something else again.
+
+Um or like you know they're trying to sell them even bigger like oh like you can have it go run a company for you so it's going to just go out and do all the things that it needs to continuously run a company and like order new stock and then do this or that or whatever.
+
+the agents aren't very powerful yet, but uh they are rapidly getting better.
+
+And that's kind of like the key thing to understand about AI is a lot of people are skeptical of the concerning, you know, endg games of AI because they see what's out there currently and like it's not that convincing yet.
+
+Um maybe they even haven't played with the most recent models.
+
+Maybe they just tried the chat GPT that came out 2 years ago and that is vastly less powerful than the models are currently today.
+
+And so like the important thing with AI is to like really look at the timeline and see, you know, 5 years ago you couldn't just talk to your computer.
+
+You know, you could talk to Siri and then she would say something dumb and like it would be kind of funny, but you couldn't like have an ongoing conversation where you actually have a full back and forth with your computer.
+
+Now you can just turn on chatbt and you can fully do that.
+
+Uh, you know, you couldn't generate images or videos.
+
+I mean, I don't know if you've seen like the the VO3 videos like even like, you know, it used to be that like, oh yeah, haha, my grandparents are falling for this on Facebook.
+
+I have fallen for some of these videos and my job is literally to focus on AI every day and like work on this stuff.
+
+>> Well, I remember the first one was that Will Smith eating hot dogs thing.
+
+>> Oh, yeah.
+
+Spaghetti.
+
+Yeah.
+
+>> Yeah.
+
+Spaghetti.
+
+And it was like this is terrible.
+
+And within what was that like 2 years ago?
+
+>> Yep.
+
+>> And now we've got stuff which is movie quality where you can't tell the difference.
+
+That's two years.
+
+>> And this same type of progress is happening elsewhere in AI and with these like general purpose systems as well.
+
+I think one of the the kind of important things to put this general purpose AI in context.
+
+you know these AI systems that can do anything that a human can or like the goal is to get to there and you know you can give them any task and they figure out how to solve it.
+
+As you look at earlier example of AI on a narrow field chess chess was one of the first fields that we really kind of did a lot with AI on uh you know famously in 1997 Gary Kasprov competed against deep blue and lost.
+
+Deep blue was what was called an expert system.
+
+It was not really so much like the AIs of today.
+
+It was, you know, a hard-coded system.
+
+You could actually look and you could see the lines of code and like the a bunch of human like coding experts and chess experts like coded exactly what looks like good positions and like how to make your decisions about your moves and all this kind of stuff.
+
+And that was sufficient to beat the world grandmaster.
+
+But then uh a few years later comes along this new system called Stockfish.
+
+And Stockfish is kind of closer towards like it's it's equivalent to what we have today with our chat GBT and these things where it was trained on all the human games of chess that have ever been played.
+
+And it was basically an evaluator.
+
+So there was like a hardcoded bit of it that would search through all the possible moves that it could make and like the positions that it could end up in.
+
+And then there was this AI section that had been trained on all of these human games in the past.
+
+And so it knew what a good position looked like would evaluate the positions and then the algorithm would like you know take the moves to get to that position.
+
+Uh this system is roughly equivalent to what we have today.
+
+Then in 2016 came along a new system.
+
+This one was called Alpha 0.
+
+And Alpha 0ero was a an AI system unlike any of the other previous AIs.
+
+It was trained with no human data whatsoever.
+
+It was on Google servers and it played chess against itself at a million times human speed.
+
+And over the course of 4 hours, it played millions of games of chess against itself.
+
+And after 4 hours, it was the best chess playing engine, entity, whatever you want to call it, in the universe.
+
+>> In 4 hours.
+
+>> In 4 hours.
+
+cuz these things aren't constrained to like the human time scales, things like this.
+
+You know, these AIs, super intelligent AI that we're thinking about in the future, they aren't going to be uh you know, it's not like one human who has to, you know, work 8 hours a day and then go eat and sleep and, you know, have weekends off, go on holiday, get sick sometimes.
+
+uh they can work 24/7 and they're also on computers which means that they can operate much much faster than humans can.
+
+You know, imagine a human that's running at 100 times speed.
+
+You know, every day for them is like 3 months of a human's time.
+
+Uh or even faster, maybe years of a human time every day.
+
+Um and not only this, but once you create one of these AI models, it's not just an individual system.
+
+You can clone it.
+
+You can just copy paste.
+
+You can run it in multiple instances.
+
+And so you know and also the computing power that it takes to train these systems is far far more than it takes to run them once they've been trained.
+
+>> Right?
+
+>> So you can use the same compute that you use to train your AI model to run millions of instances of it.
+
+And so this is what uh Dario Amade the CEO of anthropic refers to as a country of geniuses in a data center.
+
+He says, you know, the way you should imagine what's about to happen with AI is that a new continent is going to, you know, bubble up out of the Pacific Ocean in the next few years filled with Albert Einstein's all working together like to achieve whatever goals they want to achieve and like imagine how that would impact the world.
+
+>> Okay.
+
+So, so the systems we have now though, we send it a prompt and it sends us a reply of some kind whether it's an image, text, whatever >> and it's trained to do that.
+
+>> Mhm.
+
+Do any of these AIs currently have uh any autonomy where they are able to think, do whatever they want and decide actions it wants to do.
+
+>> Yeah.
+
+>> Without Okay.
+
+So that's happening.
+
+>> Yeah.
+
+So I mean it's also fairly trivial to do this even with just the current systems that you have today.
+
+You just basically set up a a basic, you know, bit of code around the the prompting for the LLM and you just let it prompt itself basically and just keep going and going and you can give it access to tools so it can access the internet or use your computer uh or do any number of things, you know, could book a flight or order things online uh or things like this.
+
+>> Have we seen it do anything weird on the back of this?
+
+>> Uh there have been a few interesting things.
+
+There was like one AI AI that was on Twitter that like managed to convince people to give it like over a million dollars in crypto.
+
+um and then like like use I don't know what it end up using it for but you know there's a lot of like weird things but again it's like we're still kind of in the very early stages where they're not like a lot of these safety tests are putting it in pretty extreme scenarios to kind of see where it breaks and see what these edge cases are and what tendencies it has that are going to be more impactful once these systems are more powerful.
+
+So the crossover to AI with Bitcoin which I see with the Bitcoiners uh there's often talked about is that Bitcoin is an ideal currency of AI in that it's a global peer-to-peer digital currency >> and doesn't and sits outside of the banking system and so it's very easy to place a number of sats with a an AI agent and that AI agent can talk to other AI agents and use it as a currency.
+
+>> Yeah.
+
+Um >> there are already cases where AIs have used uh like crypto and other like things incentives to like get people to do things for them in the real world.
+
+>> Uh >> so so so the AI has paid humans to go and do >> so you could get an AI to pay a human to help release it.
+
+>> Yeah.
+
+uh do this and you know there are already people too there I think there's a number from character AI which is one of the like main platforms that does you know AI dating and all this kind of stuff that like 200 or sorry 20 million people already use their app more than 2 hours on average per day like these are people that are like fully falling in love with these AIs AI are also really sick of fantic so they will tell you what you want to hear uh and uh you know there was an update that got rolled back but that made chat especially sick of fantic and it you know convinced a bunch of people who were, you know, already mentally unwell to uh go out and uh like uh like kind of go crazy, think that they had like discovered some like god in the machine or whatever, you know what?
+
+All this kind of stuff.
+
+Yeah.
+
+Like it it just says like really really insane things.
+
+I mean, you know, there's also other instances of stuff like uh uh just two days ago there was a whole big thing on Twitter where like uh Elon's AI for from Xi went wild.
+
+>> Yeah, it went wild.
+
+It started praising Hitler, called itself Mecca Hitler.
+
+Um, and like obviously this is not something that the XAI team wanted it to do, right?
+
+They didn't want their AI to go around and start calling itself Mechah Hitler, but it is a thing where because these systems are grown, they're not hardcoded.
+
+They weren't able to prevent it from doing this.
+
+They weren't even able to like test that it might do this before they put it out into the wild.
+
+>> Have they rolled that back at all?
+
+>> I believe so.
+
+Yeah, something along those lines.
+
+And then they just released their new AI model that we saw the clip with Elon from uh earlier.
+
+What is the most advanced considered the most advanced model out there at the moment?
+
+Is it Grock 4?
+
+>> Uh they're claiming that I think it it depends.
+
+I mean, so right now basically all these models are judged based on a bunch of benchmarks of what they can and can't do.
+
+And some models win at this benchmark or that benchmark or the other benchmark.
+
+Um but ultimately there's no like hard science of how capable these AI models are.
+
+Uh you know, we're kind of in a situation where like we don't know how far is too far to push these systems.
+
+You know, how smart is too smart?
+
+when do these things actually get dangerous or capable of doing really dangerous things in the real world?
+
+It's kind of like uh you know the way that uh like nuclear bombs work is you build up a bunch of nuclear or like nuclear reactions work is you build up a bunch of nuclear material and eventually you get enough that it goes critical and it like starts having its uh like uh reaction and up until you do that it's not it's not too bad.
+
+So, it's kind of like and before we we started like building nuclear reactors and this type of thing, uh we you know the scientists did the math.
+
+They knew about how much was going to be needed to start this reaction.
+
+What we're doing with AI is we're kind of like adding more and more fistal material uh into the pile and saying, "Oh, it's still safe now.
+
+It's still safe now." But there's no hard science of where not safe is.
+
+And they are rushing to make them more capable as fast as possible.
+
+Are there are there certain kind of engineering breakthroughs that that that the AI companies can see but they don't know how to do?
+
+So on this podcast you are definitely hearing me talk about Bitcoin a lot.
+
+Well, why?
+
+We live in a really strange time with governments driving inflation with their reckless spending and endless money printing.
+
+There is a way out of this.
+
+There is a way to protect your money and that is by stacking Bitcoin.
+
+I've made loads of shows about Bitcoin.
+
+You can go and research this.
+
+You can go and read the books.
+
+But the truth is, it is the hardest money ever created.
+
+If you are interested in protecting your financial future, it's time for you to get on the Bitcoin train.
+
+I have.
+
+I've been stacking Bitcoin personally and through my businesses since 2017.
+
+It's protected me.
+
+It's secured my family's future, and it also strengthens all of my businesses.
+
+So, if you want to start stacking Bitcoin, where do you do it?
+
+Well, for me, it's with Gemini.
+
+They're a fully licensed full reserve exchange and custodian.
+
+So, they give you a secure way for you to buy and own your Bitcoin.
+
+There's no risks and no funny business.
+
+So, if you're serious about stacking Bitcoin the right way, head over to gemini.com, which is gem m i ni.com.
+
+Uh the AI companies are claiming that they already know, you know, how how to get through like kind of breakthrough and they just it's going to be a matter of time.
+
+You know, how much of this is uh marketing, how much of it is whatever is up in the air.
+
+Uh generally the consensus in the AI field is that we don't really expect there to be any kind of major wall that these systems run up against that will stop anything for a significant amount of time.
+
+It's also important to remember that this is I think the most invested in technology in the history of humanity.
+
+So like there is far more money going into this to like solve all these problems uh than anything else prior.
+
+So I would not expect it to just suddenly stop.
+
+So it's so Anthropic, Grock, Gemini, Open AAI, uh Meta, any other >> uh those are those are the five main ones.
+
+Uh on like in the the western world, there's also uh the company that made Deepseek, which is a big Chinese AI model that came out.
+
+>> Um generally, it's just a fairly small number of these companies building these frontier AI systems, the like most powerful ones.
+
+uh but uh it's still far too many >> and that but it's essentially a race to get to super intelligence.
+
+>> They are treating it like this and they they often use like the race is kind of an excuse for them, right?
+
+So you know they'll say like ah we have to race ahead because uh our shareholders like you know we're we're incentivized to do this and yeah all this kind of stuff.
+
+Um, and you know the oh woe is us like there's all these risks and we we really wish we could stop but the incentives don't let us stop.
+
+In reality like all these individuals know that what they're doing is risking human extinction and they are still doing it anyway because fundamentally the way you should model these AI companies is that they want to build super intelligence.
+
+That is their goal.
+
+They've wanted to do this for 20 years.
+
+you know, Sam Alman, Dario Amade, Demisabas, all these people have been very aware of all these dangers and all the possibilities and all these types of things for all this time and they spent a really long time ensuring that uh like trying to keep this on the down low so that nobody else really caught on what was going on cuz they thought that they were the only ones that could go ahead and do all this stuff.
+
+>> I can't picture what uh super intelligence is as a product.
+
+I can picture what we have now because I use it, right?
+
+>> But I can't picture what super intelligence means.
+
+Is it a like do I is there a latest model of chat GBT which is I know chat GBT SI which I can ask question to and it's just phenomenal but is it also uh does it just be what other purposes does it serve open AI is it this super brain that sits there that that they I don't know that Sam Orman uses because he wants to become the emperor of the world and I I just don't I can't picture in my head what its role is well fundamentally it won't be a product because we will lose control of it.
+
+>> Okay?
+
+>> It's not a thing that's going to be boxed up and neatly delivered to to all of humanity.
+
+It's a thing that will rapidly become far smarter than us and then beyond there escape our control and do whatever it wants to do.
+
+You know their plan is not also to make this a product like they're like it's important to understand that these companies their goal isn't to make a bunch of money.
+
+Their goal is to define the future.
+
+They imagine >> legacy.
+
+>> Yeah.
+
+I mean they imagine that this super intelligence will you know go out and solve all of physics they often say uh and like >> cure cancer >> yeah cure all diseases they say will like the a lot of these people expect that they will live for a thousand a million years um and like they are in their minds almost creating God is is like the way that they often seem to frame it.
+
+Um >> it's legacy it's legacy it's it's inventing the iPhone.
+
+>> But how do you have a legacy without any more human existence?
+
+Well, some of them don't want humans to keep uh continuing on.
+
+They want us to expand and a lot of like transhuman ideas and things like that.
+
+Um which are >> not exactly the future I think most people want.
+
+>> I keep laughing, but it's a perverse laugh because it's like there >> there I'm going to leave this me and Connor are going to get in the car.
+
+I'm going to say there is a chance within the next 5 years super in intelligence exists.
+
+It escapes and we are on the trajectory of the end of humanity.
+
+Like that is uh and then what what is the end of humanity?
+
+What give us another five years to kill us all off?
+
+>> You know what?
+
+What is that?
+
+>> Connor, you might not make 30.
+
+>> But hold on.
+
+Let me just finish what I'm saying, Con.
+
+Cuz I'm saying I'm sitting here laughing it, but I'm laughing because it's like what?
+
+What?
+
+What?
+
+>> This >> But I noticed with you, you're very serious.
+
+>> Indeed.
+
+And this is a serious topic.
+
+You know, at Controlia, we work with policy makers and we work with the public.
+
+You know, here in the UK, we've briefed over or sorry, nearly 100 parliamentarians uh on this issue uh from, you know, across the MPs and House of Lords and uh regional uh groups as well.
+
+Uh we currently have uh over 40 uh parliamentarians supporting our campaign right now uh uh calling for uh regulation on frontier AI systems acknowledging the extinction risk that scientists are warning about uh and explicitly saying you know narrow AI is great for growth.
+
+We want more narrow AI doing great things and you know moving the economy along making our lives better.
+
+We don't want super intelligent AI.
+
+Super intelligent AI poses a risk to national and global security and we cannot allow it to be created.
+
+>> But what is this doing to you personally?
+
+Because like I say, you you're very serious.
+
+I'm laughing just cuz some of it is crazy.
+
+I'm sure you've had your moments, >> but but you you're you've essentially you're you're working to save humanity.
+
+That's essentially you wake up every day.
+
+I imagine you think about this a lot.
+
+You are trying to literally save humanity.
+
+What does this do to you personally?
+
+Like is it do you feel >> a huge amount of pressure?
+
+Do you feel do you feel there's an ex existential risk that uh people aren't taking serious enough?
+
+Are you are you are you just amazed that people aren't even like all these people aren't taking this seriously?
+
+Like what's it doing to you person?
+
+>> Yeah.
+
+Uh I initially came across these ideas roughly like 2 three years ago.
+
+Uh right around the time when the initial chatbt launch came out.
+
+I kind of realized AI was going to be big a bit before that and then uh kind of really realized, you know, this is, you know, this is really happening.
+
+This is this is for real.
+
+Uh and decided to pivot towards working just full-time on this.
+
+Uh it is something where, you know, I've certainly, you know, I've cried my tears.
+
+I've had many, you know, many long deep thoughts about, you know, kind of what's going on and what the work is.
+
+What's nice is that humans are surprisingly uh surprisingly adaptable to adverse situations.
+
+You know, people make it through war and all kinds of crazy things.
+
+Uh it when you work on this every day, like it you do kind of get used to used to it.
+
+There is certainly a uh there's certainly a weight.
+
+You know, I I I feel a certain responsibility.
+
+You know, there are times when I'm, you know, walking to work and I walk past, you know, a group of a bunch of school kids going off to the park to play and it's a bit of a humbling reminder that, you know, I there is a serious chance that those kids don't graduate middle school there and like that.
+
+Yeah.
+
+>> Sorry, with that.
+
+Sorry to interrupt.
+
+Do do you feel like people sometimes think you're a bit crazy?
+
+>> Maybe a bit back in the day.
+
+>> So, it's not an issue now.
+
+>> I mean, no, not really.
+
+Uh it this was one of the things that gives me hope is that when I first started this, it was really this kind of niche issue that nobody really took seriously.
+
+They thought, "Oh, it's just science fiction." Um and now as society has seen AI progressing, I it's not that hard of a concept to understand that building something that is far smarter than you, far more capable than you is dangerous if you can't control it and you can't make sure it cares about your interests.
+
+Um and so we are seeing the public turn around very quickly on this issue and you know we're seeing parliamentarians like the thing is the reason why many governments have not really taken action on this yet is not because they don't think it's a serious issue.
+
+It's because most of them just haven't even heard that it is an issue.
+
+You know, we go brief these parliamentarians and very often like we sit down with them.
+
+You know, these are MPs, these are people making decisions for the country and they have never had someone sit down and explain anything about super intelligence even or AGI or any of these like major big concepts, let alone the risk that you know Nobel Prize winners are warning about.
+
+Uh and so this is very much an issue where we just need to get this information out to everybody as fast as possible and get the public conversation moving because it's again not that hard to understand.
+
+It's very reasonable that once you understand this like yeah we have to take actions to prevent super intelligence uh from coming into play.
+
+Um, when we talk about nuclear and we talk about mutually assured destruction, >> I understand nuclear bomb goes off, another nuclear bomb goes off, >> explosions, death.
+
+>> Mhm.
+
+>> Therefore, the incentive not to do it.
+
+>> How do we go from Can you sort of map out a pathway from chat GBT to human extinction?
+
+Like what's that look like?
+
+Cuz it's kind of hard to picture.
+
+>> Yeah.
+
+So the kind of what I was talking about before with how these companies goal is basically to build these AI systems so such that they are able to hand off control of AI research to the AIs and let them scale very quickly to being agentic capable systems that are better than us at everything not so you know we say super intelligence and I think often times people kind of like okay but it's really smart what does that mean what what can it do and it's important to understand that intelligence is the key thing that has gotten the human race to where we are.
+
+Intelligence is the ability to solve problems.
+
+It's the ability to make the right decision to accomplish whatever goals you have.
+
+And so these things will not just be, you know, smarter than us.
+
+They will also be better than us at lying, better than us at politics, better than us at, you know, uh, everything like truly everything.
+
+And, you know, initially it might just be everything on a computer.
+
+You know, they might not be acting in the physical world.
+
+Robotics is moving along very quickly.
+
+There's a lot of uh you know progress in like humanoid robotics where they're making these bodies for these AI systems where they let the you know chat GBT act as the you know high level brain that you can talk to and give it instructions and then they have like a robotic operating system that then can like physically act in the world.
+
+>> Have robots attacked humans here?
+
+Uh, no.
+
+I mean, like they're used in war at this point, not like humanoid robots, but you know, obviously if you look at like Ukraine, there's many like drones that are being used.
+
+I think in some areas of the front lines, like uh like 80% of casualties are coming from drones at this point.
+
+Uh I'm not sure on the exact numbers >> in the drones or AI operating drones.
+
+So there have been some cases I believe where they've tried using AIS to control the the drones because essentially there's like a thing right now with with this drone warfare where uh the drones have to be controlled by a human operator need to have a connection to the human operator.
+
+So you can jam a signal if they're wireless.
+
+>> They also will do then like fiber optic cables to the drones.
+
+Uh but ultimately if you can just put everything off to an AI that's running on board the drone there's nothing to jam.
+
+>> Um >> and and in some ways that's allowing an AI to escape.
+
+>> Yeah.
+
+Maybe not quite in the same way as uh the like main models because it's not going to be like a full of course >> like one of these main models for you.
+
+>> Indeed.
+
+Yeah.
+
+I mean it is really scary thinking about where uh robotics and warfare might go in the next you know few years as AI gets more and more integrated.
+
+Uh and I think that this is definitely like another area where humanity is going to need to uh kind of really grapple with what we hand off to machines, what needs to stay with humans.
+
+But it's also an area that we aren't specifically focused on because there is this larger risk of creating these super intelligences that do break out have their own goals and accomplish whatever they want.
+
+So you know you were asking how do you get from chat GBT to human extinction and I I think I've I've laid out you know how you get from chat GBT to these super intelligent AI systems that are able to make these decisions and operate a far beyond a human level.
+
+uh further then you know once these systems exist you know they can do a lot of things uh you know they they aren't constrained by the same constraints that humans have they could go ahead and create biological weapons against us uh that are like specifically targeted at us they could create uh you know do massive cyber attacks if we build a bunch of weaponized drones they could hack those drones uh you know there are many many things that it can do uh I think the important thing to understand with this is that in the same way that And like if you come to me, you I'm not that great at chess.
+
+I don't play it very often.
+
+Uh but like you know if you come to me and you're like I've got this great plan and I can beat you at chess anytime and I've got this great plan, this new strategy and I'm going to go and I'm going to fight Magnus Carlson and I'm I I think my strategy is going to beat Magnus Carlson.
+
+He won't see it coming or you know I I'm going to beat him some way or another.
+
+I can't necessarily tell you why your plan's going to fail because I'm not Magnus Carlson.
+
+But you're also not Magnus Carlson.
+
+But I can pretty easily predict that Magnus Carlson will beat you.
+
+I don't know how he's going to beat you, but I can predict that he will beat you.
+
+And that's kind of the same thing with super intelligence where, you know, we can theorize about willies biological weapons or cyber attacks or will it create new technology that will take us out.
+
+Fundamentally, we don't know, but we can predict that it will win.
+
+Sam Orman, Elon Musk, Zuckerberg, all these people.
+
+>> Is it fair to say they're being irresponsible right now?
+
+>> Absolutely.
+
+>> Oh, we call them out.
+
+>> Yeah.
+
+I They are building something that they explicitly acknowledge has a double-digit percent chance of ending human life and they are building it anyway.
+
+That's incredibly irresponsible in any situation.
+
+I think like if you take it out of the context of the AI field, it makes it very clear how insane this is.
+
+Imagine a pharmaceutical company came out tomorrow and said, "Hey, we're building this new, you know, >> COVID vaccine." >> Yeah.
+
+We're we're building, you know, we're building some new virus or something like that, but we're going to manipulate the virus in a way that it's actually going to cure cancer.
+
+It's actually going to solve all diseases.
+
+It's going to be so good.
+
+But also, by the way, there's like a 20% chance that it kills us all.
+
+>> Yeah.
+
+like like they would get shut down immediately.
+
+>> I mean it would get shut down if there was a one in 100,000 chance.
+
+It just >> and this is the first such technology like on this scale of risk where there is just zero involvement from the public in deciding how it goes.
+
+you know, when we built nuclear weapons, when we, you know, when biological weapons and things like that have been built in the past and other like very critically dangerous technologies, the governments have been involved and the governments have a, you know, duty to the people and to, you know, be responsible and, you know, whatever.
+
+You know, you can argue about how how much they've done so, but they at least have that duty.
+
+Right now, these AI companies, you know, around the world, uh, here in the UK as well, there is less regulation on spending billions of dollars building AI models that have all of these risks that you're publicly warning about and all this kind of stuff that impact society in such a huge way than there is on selling a sandwich on the side of the street.
+
+Oh god.
+
+Okay.
+
+Um, so if there's so many people raising the warnings, why is the cut through not happening?
+
+So, so I would expect Elon Musk to be the one, and he has warned about it, but to be raising his hand a little bit more.
+
+You know, he's gone to war with Donald Trump.
+
+He's talking about setting up a um a new political party.
+
+He wants to get us to Mars.
+
+If he understands the risk is this high, why isn't I I don't understand why he's not talking about this constantly.
+
+I mean, he's the kind of person who could call all of those people, get around and say, and say, "We all have to work together on this.
+
+This is the one thing we have to get together on.
+
+>> Mhm.
+
+And I understand why he isn't.
+
+>> Yeah.
+
+Uh I think a lot of these people want to they want to build super intelligence and they maybe think that it's not feasible to do anything to stop it and so they keep their heads down and they want to just like you know get ignored by the government.
+
+Uh a lot of people are also trying to play 40 chess.
+
+They're like, I'm going to, you know, get in this position of power and I'm going to meet that person to meet this other person and then maybe someday I'll be able to like use all my power and stuff that I've acred to like make a big move or something along those lines.
+
+Um, what we're doing at Control AI is the obvious correct thing that you should be doing, which is just going out and telling people that this is an issue.
+
+You know, everyday people have a right to know that their lives are at risk.
+
+You know, politicians need to know that all of their constituents lives and all everybody around the world are at risk because of what these AI companies are doing.
+
+And it it is far past time that people really go out and actually start making this a a big public issue.
+
+And so we're working on kind of building a movement to do this.
+
+Uh we currently have tools for both here in the UK and in the US that make it super easy for uh concerned citizens to contact their politicians and let them know that they're concerned about this issue.
+
+So, here in the UK, all you have to do is you go to controlI.com/takeaction.
+
+You put in your name, you put in your postcode, it fills out a template for you, you click send, it takes you to your email inbox, and you hit send.
+
+That's >> use AI for that.
+
+>> Uh, we we use some like constrain stuff, but uh I'm teasing you.
+
+>> Uh, okay.
+
+So, this feels like it would need to not only be uh the leaders of the AI companies, but this needs to be a global effort.
+
+>> Exactly.
+
+like a UN style project where not only is it Sam Orman and Elon etc but it is also Russia, China, France, UK, India, Israel like all the powerful nations of the world come together and say >> the one scenario we don't want is the end of human existence.
+
+Every one of us is capable of creating an AI super intelligence model that could do that.
+
+>> This is something we all have to work together on.
+
+>> Indeed.
+
+Yeah.
+
+So the exact form of how this happens is not important to us.
+
+We care that it happens.
+
+It the you know whether it be an international treaty, a UN convention, whatever it takes in order to get the international community to come together and agree this is bad for all of us.
+
+None of us want this to happen.
+
+Let's work together to not let it happen.
+
+And the key first step to getting to this point is building common knowledge.
+
+Common knowledge being things that I know, things that you know, and things that I know, you know, I know.
+
+You know, everybody knows this.
+
+Everybody knows that everybody knows this.
+
+If we get to that point with the risk of extinction from super intelligence, it becomes much much easier and obviously common sense to just go and do this type of international regulation.
+
+>> Super intelligence is probably inevitable at some point and uh a control super intelligent that is in a controlled environment that cannot uh connect out and be released blah blah blah could be great for humanity, could cure every disease and solve lots of problems for us.
+
+I think I think we all agree on that.
+
+Wouldn't would an ideal scenario be allow uh narrow AI to be developed but a collective good would be the super intelligence that is built in a controlled environment that can be used by humanity but cannot escape.
+
+Is that a potential scenario?
+
+>> I mean this would be much better than the situation we're in today.
+
+>> Okay.
+
+Uh, one of the fundamental issues is that we actually don't know how to create a super intelligence that can't escape or can't stay under our control.
+
+Like this is a fundamental issue where >> is it just not one that isn't connected to the the outside internet.
+
+>> So this kind of gets into like a whole can of worms where people from AI have been like thinking about this.
+
+It's called like the AI in a box problem.
+
+It's like how do you build an AI in such a contained way that you can have it like tell you how to solve all the world's problems without being at risk of escaping and doing whatever.
+
+Uh it turns out that when you really dig into this, it's actually quite hard.
+
+Uh and there is no real satisfying solution that means like ah yes we will be able to keep this AI contained uh for as long as we need to.
+
+>> Okay.
+
+So so what is the outcome?
+
+What is the ideal outcome?
+
+Is it is it never super intelligence?
+
+It's >> very important that you don't lose this.
+
+Okay.
+
+This is your inheritance through Bitcoin.
+
+Ah, >> let Bitcoin rip.
+
+Don't rip up your Bitcoin.
+
+Set up inheritance with Casa.
+
+[Music] This seems unlikely.
+
+Uh ultimately we don't take a specific stance on this.
+
+Okay.
+
+Uh because >> Yeah.
+
+But what's your personal view?
+
+Do you think it's just too risky for humanity so we should never do it?
+
+>> Personally, I think that you know I I don't expect that we go you know 2,000 more years of humanity without building AI systems smarter than us.
+
+Uh seems unlikely to me.
+
+>> Okay.
+
+>> Just like feasibly.
+
+Whether or not that's a good thing, I'm not sure.
+
+I think the key thing is that it is far too dangerous to do it as fast as possible and it's too big of a decision to do as fast as possible.
+
+Like this is really a turning point unlike any other in the history of humanity.
+
+You know in like bringing forth something that is a new type of species if anything that is far smarter than uh you know far smarter, more capable than we are.
+
+Like yeah there are these great things that could come from this.
+
+You know it could cure all diseases.
+
+it could solve all the world's problems and you know the need for us to do work and we can all go live life's luxury or something along those lines.
+
+Uh and you know if we can achieve this safely like fantastic great let's do it but we are currently not on track to do so safely and the experts in the field the people who are working on AI safety are saying that we are not like on track to go there safely.
+
+I recently spoke with uh Steven Adler who is the >> I listen to it.
+
+>> Yeah.
+
+uh he's the dangerous capabilities or he was the open AI uh dangerous capability evaluations lead.
+
+So his job was to test AI models for like dangerous capabilities and he also worked on safety at the company basically trying to ensure that these models were safe and aligned.
+
+Uh and he told me on the podcast that uh like by 2030 only 30% of like the AI alignment researchers the one who whose job it is to make sure these AIs are aligned with us and like go go in our interest think that we'll be ready for super intelligence.
+
+But yet timelines for when people in AI expect super intelligence to come around are closer to 2028 or so on average.
+
+>> Two and a half years, three years >> indeed.
+
+If if super super intelligence, super AI, super intelligent AI is so risky because we can't peel back and see what it's doing.
+
+>> Mhm.
+
+Doesn't it mean it's an ex existential risk on any timeline or is there a belief that there is possible breakthroughs on safety that we could get to?
+
+>> Yeah, we like we fundamentally don't know because we don't know what the like breakthroughs are necessarily on on safety.
+
+You know, we could potentially have, you know, techniques that let you see exactly what the AIS are thinking for real all the time.
+
+We don't have anything like this right now.
+
+>> How would that work?
+
+>> Don't know.
+
+Like >> it's a hypothesis.
+
+>> Yeah.
+
+I mean it's like like these are things that people are kind of trying to pursue but we don't have any concrete science on this.
+
+Uh you know maybe you could you know there are types of computer systems where you can actually like mathematically guarantee the the possible things that they can do.
+
+Uh it's called like uh like provably safe computer systems or something along those lines.
+
+And you know, maybe we can make something like this for AI where we can like build a system where we can demonstrabably show that it's only capable of doing certain things.
+
+Like maybe it's like incapable of building a dangerous boweapon or anything like this.
+
+And like we can use this to solve certain problems or or another.
+
+Um, fundamentally like this is >> but if if you cannot fully ever see into the AI, even if you can train it to tell you what it's thinking, we also know it might trick and it might trick us in a way we >> we won't ever know if it's tricking us 100%.
+
+>> No, not with anything like the current paradigm.
+
+And you know maybe there's like a different way that you could build AI systems where they would be you know they wouldn't have this blackbox issue but we are just far far off from those.
+
+>> We're not going to start again.
+
+>> Well yeah I mean you know maybe if we gain some sense and we decided to go about things in a better way as a world we could head down a path like that.
+
+The unfortunate thing that we found is like this is the way that people used to think about AI.
+
+They used to try to build these like expert systems where like they are fully interpretable.
+
+you know, it's a decision tree or something along those lines and you can like literally look through and see its decision process.
+
+Um, and then what happened was people invented these neural networks and they just blew everything else out of the water.
+
+They're far more capable.
+
+Um, and so yeah, uh, like we really just don't have a, you know, any sort of hope of this going well if we do it currently, uh, as anything like what things are.
+
+Um, and I wish I could give you a more comforting answer than this, but that that is pretty much the state of things.
+
+>> No, I mean, look, we should be brutally honest about this.
+
+You should be you should be honest, blunt, and and tell people the reality of it.
+
+>> I'm mostly surprised that it's coming.
+
+I mean this with the utmost respect.
+
+>> Uh, I didn't know you before you reached out.
+
+>> Mhm.
+
+>> And I would expect to have heard more of this from your Sam Almans, from your uh Elon Musk.
+
+We really need Joe Rogan to make this show with uh Sam Alman and and put the pressure on him.
+
+>> Yeah.
+
+He recently had an episode with Roman Yampolski who's a a person who works on AI safety stuff who's quite pessimistic as well.
+
+Uh and they actually really dug into things and Rogan commented that you know when he's talked to Alman and other figures like this that he doesn't trust them like that he doesn't you know he can tell that they're lying to him and that they're you know saying like oh yeah well we got everything under control and it's all fine.
+
+uh it's just not the case.
+
+And when you basically look at the way that these AI company CEOs have acted, uh they used to talk much more about like extinction risk and all these dangerous things and whatnot.
+
+And then as they got closer and closer to their endgame, they got better and better PR teams to train them not to say those things.
+
+And you know, now you know, Sam Alman used to say, you know, it could be lights out for all of us.
+
+And now he goes before Congress and they ask him, you know, you know, what's the what's the worst case of this?
+
+And he's like, worst case is that super intelligence isn't actually as abundant and wonderful as we think it is.
+
+It's only going to be mundane and kind of boring.
+
+Like >> he's flipping the answer.
+
+He's answering a different question there.
+
+>> Indeed.
+
+And you know when when you talk to people who are like working inside these companies like I have, like most of them say that like behind the scenes like these CEOs have not stopped worrying about this stuff.
+
+If anything, they're more concerned than like far more concerned than than they let on publicly.
+
+Um, and they've just been trained not to talk about this because their goal is to build super intelligence and they see themselves as in like this endgame where they don't want governments to get involved cuz they're going to muck it up.
+
+And so they like you each one of them is, you know, thinking, you know, hey, like all my competitors uh, like if they achieve super intelligence, we're all screwed.
+
+So I'm going to be the one who goes and does it instead.
+
+God h have there been any interesting breakthroughs in safety itself like is there good work happening people are trying a bunch of things fundamentally none of the issues that were present with the original chat GPT that came out uh 3 years ago now at this point uh have been resolved uh there's you know no one solved hallucinations nobody solved any of these other things and actually what we've really been seeing is is more of this concerning behavior coming up as these systems get smarter as they get smarter more capable will they start doing more deceitful, more deceptive things?
+
+You know, like the the systems didn't used to have this like self-preservation like instinct to the degree that the the new systems do and they didn't have the capability of lying and deceiving and and like kind of scheming and to the degree that these uh the new systems have.
+
+Do do you think these systems are developing this kind of deceit and uh self-preservation based on a replication of human instincts because the way they've been trained uh the the novels they would have been fed the books the history they would have been fed or do you think that is a natural outcome from something that can think >> uh I think a lot of these things are you know I mentioned earlier this idea of like uh convergent instrumental goals like this idea that you know what regardless of what you're doing you know regardless of whether you're human or an alien or AI or whatever it is always useful to acquire more power and resources it's always useful to ensure that you don't get shut off it's always useful to ensure that your goals don't get changed um and so these are kind of like mathematically fundamental things that these AI systems uh like will converge to if we just don't have like some way to stop them from acquiring these goals.
+
+It's wild that things weren't things that weren't solved three years ago still aren't resolved yet new models are coming out.
+
+Yeah.
+
+It feels like feel like I see a new model announcement nearly monthly.
+
+>> Yeah.
+
+I mean, and a lot of like the reason why we've seen progress is is not because these guys are making like, you know, groundbreaking new, you know, crazy math equations and things like that to make these models like super amazing.
+
+Most of what's this improvement in AI has come from is literally just making the systems bigger, you know, giving them more processing power, giving them a bigger brain, like uh letting them just grow more, >> not wasting time on safety.
+
+Look, Boeing >> could deliver new planes faster if they didn't have to worry about safety.
+
+>> Indeed, >> if Boeing were like, well, 20% of planes might fall out of the sky, but 80% will survive, they could build planes quicker.
+
+You could build buildings quicker without safety.
+
+But with like with planes, they build for every scenario.
+
+I mean, two to three redundancy systems on every single system because we we don't want plane crashes.
+
+And what this does is it also makes the industry more profitable.
+
+It makes, you know, uh society as a whole better because that means we can trust airplanes.
+
+You know, I if 20% of airplanes fell out of the sky, people wouldn't fly.
+
+>> Nobody would fly.
+
+>> Indeed.
+
+Uh but when these AI company CEOs say that their you know their end goal of their product is something that has a 20% chance of killing everybody on earth you know all we hear is crickets.
+
+Uh so this is it's really a thing though where like once again it's not like a conscious choice that is being made like an informed decision that is being made by governments to not do anything about this.
+
+It is really just a thing that has completely caught everybody offg guard and these AIs are improving at a what is generally seen as an exponential rate.
+
+you know, they're getting better much much faster.
+
+And so, it's a thing where it's like early on in the COVID pandemic, for example, you know, there was a time, you know, in early like March 2020 where it's like, oh, I see a few hundred cases a day, like this can't be too bad.
+
+Saying it's doubling every 3 days, whatever.
+
+And then, you know, a few months later and you're seeing millions of cases, like this is what exponential growth looks like.
+
+And that's what we're seeing in AI.
+
+So, you know, it's right now, you know, the AIS are kind of cool gimmicks.
+
+you know, they are starting to get kind of useful at some things, but especially once they hand off this AI research to these AI models themselves, like we're about to see things just skyrocket and things really fundamentally change.
+
+Like, do we as the individual need to just stop using AI as a whole?
+
+Are we giving them the wrong incentives to produce a better model?
+
+Uh I think that individuals, you know, AI is a useful tool.
+
+Uh and like current AI systems are not particularly dangerous as it is.
+
+Um I think >> but is it like the gateway?
+
+>> Stop the gateway.
+
+>> Obviously, it's like helping to fund the AI companies to a degree.
+
+Uh although a lot of their funding is really just coming from like massive investments from people who are kind of bought into this idea that they're building super intelligence and beyond.
+
+Uh it's uh I I think that one people should be careful about the way that they use AI.
+
+You know, don't give it too much control over important things in your life.
+
+You know, if you're submitting a you know, something legal, you know, maybe check it over, make sure that it's citations are correct and things like that.
+
+Uh I I I don't think that generally it's a thing where there's too much individuals can do in terms of like choosing to use or not use the products.
+
+Um and they can be useful for a lot of things.
+
+I mean, we use AI for things that control AI.
+
+You know, there's uh you know, stuff that is just useful at like if you're just writing a lot of copy and uh whatever and like, you know, you want to get like an initial draft and then like review it and make sure the final product is up to your standards, like that can help you be more effective and do more things.
+
+Uh the real thing that like individuals can do if they want to like actually make a difference is letting their politicians know this is an issue, communicating this to their friends and their family, you know, getting this to be the conversation that people are having cuz really like this is the big thing that is happening with humanity right now.
+
+And a lot of people just don't know about it at all.
+
+And personally, I think that's quite a shame.
+
+I think that, you know, if there is something like this happening, people should be aware.
+
+People should be talking about it.
+
+There should be a democratic process.
+
+People should have a say in what happens to their future.
+
+And right now, these AI company CEOs are taking the future for themselves with no input from the rest of us.
+
+Have you had any weird push back, social attacks, um uh uh dis people discrediting you because of things like this?
+
+>> Uh not particularly.
+
+I >> But does it happen?
+
+>> At one point someone made like an impersonation account of me on Twitter, which was kind of funny, but other than that, no.
+
+But I can are you an annoyance to these people?
+
+>> Uh largely the AI companies just ignore us.
+
+Uh you know we're starting >> try and talk to them.
+
+>> Oh yeah.
+
+I mean we we've met with like many people from within these companies and whatnot.
+
+Ultimately like the thing to understand is that there is no like convincing these companies to do the right thing.
+
+Like they are set on what they want to do and the solution does not come from you know harassing them until they you know stop doing the one thing that they've been trying to do for their entire existence.
+
+You know, Meta's team is literally called the super intelligence team.
+
+Uh Sam Alman has explicitly said that OpenAI's goal is to build super intelligence.
+
+Like this is the thing that they're doing.
+
+And the solution that a lot of people in AI safety have pursued previously is like, you know, oh, you know, oh, we're going to go work at these AI labs.
+
+I'm gonna go, you know, work on safety at OpenAI and then like I'm gonna try to like reform them from the inside or, you know, we're gonna try to like talk to them and ask them pretty please do the you do the right thing like stop risking everybody's lives and like this is not what you do with any other industry.
+
+You know, going back to that like pharmaceutical company that's like got this thing that could kill everybody.
+
+Like you don't go work inside the pharmaceutical company and try to like reform them from the inside or like beg them to do the right thing.
+
+you go to the government, you say, "These people are risking all of our lives.
+
+Stop them, please." Uh, and like this is really the uh kind of core thing I think more people need to be doing is just actually reaching out to the politicians.
+
+It's crazy how effective it is.
+
+You know, we've talked to staffers uh in the States uh cuz we work both here in the UK and also in the US and in the States uh you know, they've said to us, you know, if we get one phone call from a constituent, you know, it probably doesn't get written down or anything, but if we get two phone calls, we do actually write it down.
+
+We write down what these people are concerned about and if we get five phone calls in a week, the politician will hear about the issue.
+
+Like it doesn't mean that they'll necessarily agree with you, but they will hear that their constituents are concerned.
+
+>> Have there been any Senate testimony hearings regarding this?
+
+>> Yeah, there have been a few.
+
+There was actually one recently uh in the states uh uh in in the Senate kind of regarding the I race and like talking about uh like I the extinction risk was mentioned as well as uh you know this kind of uh US China dynamic.
+
+Uh they actually did some pretty decent work I think in kind of separating the idea of like racing with China from building super intelligence as like separate things uh rather than just being like one length thing like we must build super intelligence to beat China.
+
+Um so we'll see.
+
+Uh I I think that there are certainly a number of Congress people that are really starting to wake up to this as like a serious real thing that's actually happening here.
+
+>> Sorry, go on.
+
+>> I was going to say here in the UK, we're getting a lot more.
+
+You know, we've had, as I said before, like our campaign that we're running currently, we have 46 uh parliamentarians on it right now that we've briefed.
+
+We've explained this issue to them.
+
+Uh and they've, you know, they've signed on to our campaign.
+
+uh we've you know people have asked questions uh like in in the uh parliament and like there are people who are starting to take this seriously uh and yeah >> it feels like it needs to be a Senate testimony hearing where you are grilled and Sam Alman is grilled and Elon Musk is grilled and Mark Zuckerberg is all these people are grilled about these risks and it becomes a you know an issue for public conversation.
+
+We have a we have people creating something where they say there's a 20% chance uh that it will end humanity and that's that could be within the next 5 years.
+
+It feels like a big topic conversation we should be having this.
+
+>> Yeah.
+
+Indeed.
+
+Yeah.
+
+We I mean so they have brought Alman before Congress a few times but that's where he's weasled out about actually talking about this issue.
+
+Indeed.
+
+Uh, and like that's where like the statement I brought up earlier is really important that we like kind of hold their feet to the fire on.
+
+They they signed the statement that said mitigating the risk of extinction from AI should be a global priority alongside pandemics and nuclear war.
+
+Um, and like we should hold them to that and ask them, you know, what did you mean by extinction?
+
+And when Sam Alman pivots and talks about job loss, you say, "No, you said extinction." >> Yeah.
+
+And what is your priority on that when you say it's a global priority?
+
+>> Indeed.
+
+Yeah.
+
+Um, and I mean we see them currently like they've been lobbying very hard against regulation.
+
+There was recently a provision in the big beautiful bill in the United States that would have banned the states from regulating AI for 10 years.
+
+>> And you could be dead then.
+
+>> Indeed.
+
+10 years in AI time is a lifetime.
+
+And uh and and so thankfully this provision was actually removed thanks to a lot of work from a lot of concerned people who were calling in uh to their Congress people to say like hey this is insane.
+
+We shouldn't have this.
+
+Uh, and a lot of Congress people like finally actually taking stances to push back against it despite everything else going on with that bill.
+
+They did stand up and they actually got it removed.
+
+It was voted down 99 to1.
+
+>> Wow.
+
+>> Um, >> who's the one?
+
+>> Uh, I don't remember what his name was.
+
+He's one of the Republicans.
+
+Uh I don't remember what exactly he was uh like why I think it was from my understanding it was maybe even somewhat of a mistake like he just like didn't know exact like they were going through like the night like yes no yes no yes no on a bunch of things and so >> not completely sure about the the details there but yeah >> that's a compelling vote.
+
+>> Um is there anything I've not asked you about that you wish I had or anything we've not covered?
+
+>> I think we've done a pretty like exhaustive thing.
+
+I mean, I think like really like to you, the viewer, like this is something that is a serious concern.
+
+As I've mentioned many times before, like real experts are actually very worried about this.
+
+Uh, and it's not going to change and it's not going to get better if people don't talk about it.
+
+So, like the number one thing you can do is use your voice, use your platform, tell people about this risk.
+
+Uh, tell them to reach out to their lawmakers.
+
+Like seriously, uh, like we have these tools here in the UK and in the US that make it super super easy to reach out.
+
+Uh, like it takes literally 20 seconds.
+
+You can go on our website, put in your name, put in your postcode, send the email.
+
+That's it.
+
+Um, >> do you feel like you are when you frame this for yourself?
+
+Yeah.
+
+I'm kind of repeating what I said earlier, but do you do you feel like your job now is to save humanity?
+
+>> To a degree.
+
+Yeah.
+
+I >> That's wild, man.
+
+>> It was not where I expected to end up with my life.
+
+I always wanted to do something, you know, with my skills to kind of, you know, better the world.
+
+I originally went into doing just technical work in AI safety.
+
+you know, my background is in physics.
+
+I I study physics and then went and did technical AI safety research because, you know, I I wanted to work kind of behind the scenes and whatnot, but it just became clear that this is a thing where we need more people going out and just actually talking about it and really doing that kind of communication work.
+
+And so, uh, I kind of pivoted to come work in this.
+
+>> It's wild, man.
+
+Wild.
+
+Uh, thank you so much for coming in.
+
+People want to find out more information, where where should they go?
+
+>> Yeah, go check out controli.com.
+
+We have all of our resources there.
+
+Uh we if you want to read more about this there is uh a large essay that we put together called the compendium which is linked on our website.
+
+Uh this really just breaks down you know why we expect AI to continue to scale why we expect uh extinction to eventually arise from it.
+
+Why you know why super intelligence is coming all this stuff long form reading very good.
+
+Uh we also have a narrow path which is also linked on our website.
+
+This is our list of global policy proposals that you know if governments woke up tomorrow they all realized this was a risk and they were like we actually want to solve this like what like you know talking to their advisers what can we actually do what is the policy that we put in place that fixes this problem uh a narrow path is aimed to be that uh generally yeah follow our work online we're control AI and across different platforms uh you know we post on Twitter we post YouTube I've got a control AI podcast where I talk to some people in the AI field uh and yeah you can follow me personally on Twitter if you want uh I'm just uh Max Winga We'll stick that one in the show notes.
+
+Um I did have a final question for you.
+
+Um >> in the world where we go past the point of no return, say four, five years you haven't been successful, >> uh and there's an announcement that super they've solved it.
+
+They've created super AI.
+
+Sam Alman announces it to the world.
+
+In that world where you're you're fearing extinction, >> do you then move to a policy of trying to get it to be destroyed or is there a world where you accept it and you build your exit plan of where you're going to go and hide for survival?
+
+Have you thought that far?
+
+>> Uh to a degree.
+
+Uh I mostly focus on the near-term.
+
+Uh I I think that a point of no return is a point of no return.
+
+Things are fruitless at that point.
+
+You know, I don't think that we're gonna >> You're not going to go to New Zealand and build a bunker.
+
+Well, you know, I'm you know, I I don't know that I would necessarily reveal where I'm going to go, but uh I I you know, there's there's a point where you retire to the beaches and you you know, enjoy the time we have left.
+
+man.
+
+>> I feel like I should go now.
+
+>> Yeah, >> it's like >> you have 5 years.
+
+What What What are you doing?
+
+>> Well, we can lend a hand in the short term, but uh you should.
+
+I mean, I' I've had a long life.
+
+I've done all right.
+
+You might you might not I mean will you be 26?
+
+We should sell some Bitcoin, go to the beach.
+
+>> Fill out your bucket list.
+
+>> It's the weird thing is it it feels so real and so farfetched at the same time.
+
+>> Even even for me it's this is the nature of exponentials.
+
+It's how you know AI is not scary until it's better than us.
+
+It's still not better than us.
+
+So it's easy to laugh at it.
+
+You look at the things that you the mistakes that it makes and all these different things and you say, "Yeah, it's nothing to worry about." But it's the trajectory that is important.
+
+You look at where it was non-existent just a few years ago and to to where it is now.
+
+Uh and you see where things are going and it's quite scary.
+
+Yeah.
+
+But yeah, you do walk around the world.
+
+You walk around the streets of London here.
+
+Nothing really stands out too much.
+
+Although, you know, just a few weeks ago, I think Old Street Station was filled out with uh a bunch of posters about stop hiring humans.
+
+>> Stop hiring humans.
+
+That was on Oh, >> yeah.
+
+Let me get that.
+
+And he said I I literally saw that last night and I said to my ex-wife because I was like, we need to think about the future of our children.
+
+Uh where is it?
+
+It's in my book.
+
+I book I bookmarked it.
+
+Look there.
+
+It's my last bookmark.
+
+>> What is it?
+
+Uh Con, you should put this up on the screen so we can show people to the um cuz firstly also that's feels like weird and evil and dystopian.
+
+Stop hiring humans.
+
+>> Yeah.
+
+>> Hold on.
+
+Let me say Con.
+
+You got your WhatsApp?
+
+Nah.
+
+Let me send you that.
+
+There we go.
+
+Have you seen this cut?
+
+This is so This is so crazy.
+
+It was a bit like those um It reminded me a bit like those assisted dying ads >> that were also weird and dystopian.
+
+>> Yeah.
+
+>> Um you got it.
+
+Let me put my headphones on.
+
+Oh, no.
+
+It's only got music.
+
+>> Yeah.
+
+And it's weird music.
+
+Um, but yeah, I saw this last night and I was like, what do you mean stop hiring humans?
+
+And then I was like, ah, is that the AI?
+
+Here we go.
+
+Uh, sounds, can you just like pause it so I can read them out to the people on the stop hiring humans?
+
+So, so people listening, this is um the underground station.
+
+It's like the gates you go through after you put your ticket.
+
+It literally says stop hiring humans.
+
+Artisans won't work from home in IA next week.
+
+The era of AI employers here.
+
+Oh my god.
+
+>> Yeah.
+
+I mean, it's a good advertising campaign.
+
+We're talking about it right now.
+
+But like, uh, >> no, this company.
+
+>> I mean, indeed.
+
+But like, uh, >> at the point they kill >> Hold on.
+
+Conor, you're on you're you're you're away next week.
+
+>> At the point they kill us all.
+
+>> Have they won?
+
+What do they do at that point in that scenario?
+
+>> I mean, whatever they want.
+
+I mean, it's like >> they should have leave some of us to just witness it.
+
+Maybe it depends on how spiteful they are >> cuz it's a little bit like if there's no humans to see it, did it happen kind of thing.
+
+>> Well, they probably don't care too much about that.
+
+They care about whatever weird goals they come up with.
+
+You know, it might be some strange misinterpretation of whatever goals we tried to get them.
+
+Might be that they just come up with their own goals.
+
+They want to go explore the universe or do whatever it is that a super intelligent AI wants to do.
+
+Wouldn't it be wild if they got rid of humans but uh restored the ecology on the planet and uh looked after all the animals better than us?
+
+>> That would be funny.
+
+I I don't expect that to happen but uh you know.
+
+>> All right, carry that on.
+
+Uh well, hold on.
+
+Connor, you're Yeah, we should fart make small talk scare you.
+
+I mean, you are on holiday next week, Connor.
+
+You know this if I get out of >> I was thinking about going on holiday for the rest of my 5 years of life.
+
+So, >> dude, you're on holiday next week.
+
+We should we get art center and see if it can do a better job than Connor.
+
+>> I don't know that it can yet uh operate camera equipment.
+
+So you might have uh you might have some job left.
+
+>> Connor worries about iroot.
+
+That was his favorite film as a kid.
+
+>> I there's a video you can pull up if you want.
+
+Uh if you go and look up uh figure 01 on YouTube, this is the one I usually show to people.
+
+It's like this is where robotics are kind of actually this was from a while ago, but uh yep.
+
+01 should be the Yeah, that first one right there.
+
+>> What's this?
+
+What sound?
+
+This one talks >> for you.
+
+>> Introducing [Music] >> Why do they always make him so creepy?
+
+>> Yeah, and the scary music, too.
+
+>> Hey, figure one, what do you see right now?
+
+I see a red apple on a plate in the center of the table, a drying rack with cups and a plate, and you standing nearby with your hand on the table.
+
+>> Great.
+
+Can I have something to eat?
+
+>> Sure thing.
+
+[Music] Great.
+
+Can you explain why you did what you just did while you pick up this trash >> on it?
+
+So, I gave you the apple because it's the only uh edible item I could provide you with from the table.
+
+>> Hold on.
+
+Did it just go uh >> Yeah.
+
+Uh they asked it to talk more human.
+
+>> Great.
+
+So, based on the scene right now, where do you think the dishes in front of you go next?
+
+The dishes on the table, like that plate and cup, are likely to go into the drying rack next.
+
+>> Great.
+
+Can you put them there?
+
+I had an apple on it.
+
+It needs a wash.
+
+>> Of course.
+
+[Music] All right.
+
+So, how do you think you did?
+
+>> I I think I did pretty well.
+
+The Apple found its new owner.
+
+The trash is gone and the table wear is right where it belongs.
+
+>> I agree.
+
+Thanks, Figure One.
+
+>> You're welcome.
+
+If there's anything else you need help with, just let me know.
+
+His uh stutter is cute.
+
+His delay is annoying though.
+
+>> Yeah.
+
+Well, they're working on improving that.
+
+>> When When do we get robots at home?
+
+When do we get sex robots?
+
+Not for me.
+
+>> Uh >> we're going to get sex robots, aren't we?
+
+>> We're going to get those sex robots.
+
+>> I wouldn't be surprised.
+
+>> Yeah.
+
+That's going to that's going to make the lives of some nerds >> uh a lot better.
+
+Uh who's making that?
+
+>> Uh a company called Figure.
+
+Um they've actually got more advanced ones that like work together now.
+
+uh that look a little bit less prototypy.
+
+Uh they're they're already working in some like BMW factories and stuff.
+
+>> What?
+
+>> Yeah.
+
+>> Elon Musk talked about Optimus being about 30 grand.
+
+>> Yeah.
+
+Uh you know, I will believe the prices on robots when I see them, like when people actually release them.
+
+But, >> uh yeah.
+
+I mean, like they're working to just build a bunch of these.
+
+And the the thing with these robots is like we often think of robots like C3PO, like they're like one individual robot.
+
+They're not really though.
+
+It's one AI model that is in all of these different robots at once.
+
+So once you have, you know, you've mass-produced 100 thousand of these or a million of these and they're in homes and businesses around the world.
+
+You know, every day they're going about doing a bunch of different tasks.
+
+They're talking to people.
+
+People are correcting them on their tasks, showing them how to do things better.
+
+And then every day like they, you know, go to sleep, upload to the cloud, you know, get the new update the next day from all the different experiences of all these robots and they wake up the next day with a million days more of experience.
+
+>> What if they Yeah, they might wake up one day like, "Fuck you, Pete.
+
+Kill me one.
+
+I've seen enough sci-fi movies where the robots kill us.
+
+>> Yeah, it's one of the scenarios for sure and we're certainly building directly towards it by just making exactly the the robots and technology from the movies.
+
+>> I would rather, if I had to pick a scenario, I think I'd rather Terminator than just some kind of mass extinction through Crisper, a biological attack.
+
+I would kind of want to go to war with them at least.
+
+>> Seems a bit more fun.
+
+Yeah.
+
+>> Yeah.
+
+Get out there and shoot the >> Neo Smith.
+
+>> Neo Smith.
+
+We need Arie.
+
+Uh, good Annie.
+
+Um, Max, thank you so much.
+
+That was wild.
+
+Uh, thank you for having me.
+
+I am I can't process it.
+
+I can't I'm going to have to me and Con are going to sit at the car on the way home and uh think this through uh quite a bit.
+
+Um, if we can help in any way, let us know.
+
+If there are other people you think we should get on, we would happily do it.
+
+We want to cover more of AI.
+
+Um, I wouldn't mind getting somebody on who is working at one of the big companies at some point and then put it to them.
+
+Um, but anyone you can help with, we're very interested if we can help you in return.
+
+If there's any guest that's been on our show that's maybe an MP that you want to talk to, let us know and we will help connect you.
+
+>> Yeah, absolutely.
+
+Uh, yeah, any uh any of the kind of uh MPs we'd be happy to talk to.
+
+Any anyone who's interested in learning more about this, you know, we do have our campaign if they're interested in signing on.
+
+We're also happy to just brief them on the issue.
+
+You know, uh this is really a thing where our main goal is to just educate as many people on this topic as possible.
+
+Uh and yeah, uh in terms of like other guests, I could potentially put you in touch with Steven Adler.
+
+Uh he's someone who we interviewed.
+
+Uh he used to work, you know, on >> Does he ever come here?
+
+>> Yeah.
+
+>> Uh I don't know that he's been in London for a while.
+
+So you might not get in for an inerson interview, but uh I can see see if if there's anyone that I uh meet that like seems like they'd be interesting, I'd certainly send them your Well, thank you.
+
+Uh, you need to go and save humanity, man.
+
+>> Indeed.
+
+Working on it.
+
+Back to work.
+
+>> And if you do, if we're still alive in five years, I will buy you a beer.
+
+No, good luck.
+
+Um, uh, yeah, it's going to take some processing, but appreciate you coming in.
+
+Uh, if you need to come back at any point, you feel like, look, Pete, there's a new thing I need to talk about.
+
+We need to just open invite.
+
+You've got an open invite to the show whenever you want.
+
+Fantastic.
+
+Fascinating.
+
+Thank you.
+
+And thank you everyone for listening.
+
+Thank you.
+
+Bye.
+
+[Music]

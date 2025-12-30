@@ -1,0 +1,624 @@
+Source: https://www.youtube.com/watch?v=5UAvECavmFA
+Transcribed: 2025-12-30 17:37:16
+Method: YouTube Transcript API
+==================================================
+
+You may have heard that OpenAI and Enthropic are trying to build super intelligence.
+
+Um, and they think that they will actually succeed sometime this decade, maybe the next five years or so.
+
+I'm going to talk about that and what that might look like.
+
+Um, I work for a small nonprofit that does research called the Data Futures Project.
+
+Our job is to try to predict how all this is going to go.
+
+Uh, our opinion is that it's not just hype.
+
+They actually have a good chance of succeeding at getting to super intelligence uh by the end of this decade.
+
+And um yeah, so I'm here to talk about what that might look like and give our speculations about about how that might go down.
+
+For the people watching your background, um some people may have heard of you.
+
+Yeah.
+
+Yeah.
+
+I used to work at OpenAI um as a forecaster, you know, part of and then also doing some alignment research.
+
+We've got this scenario report which is a uh 100page long fictional history of the future.
+
+this is our sort of like best guess as to how things might go.
+
+Obviously, we're going to get a bunch of stuff wrong and things are going to go, you know, differently from our best guess, but we think it's valuable to be sort of gaming this out in detail um for a bunch of different reasons.
+
+I thought it would be cool to talk to you today about one particular aspect of our guesses, our forecasts, namely the sort of intelligence explosion aspect or the quantitative speed at which AI research will accelerate.
+
+So the context there is that um somewhere in between where we are now and achieving super intelligence which super intelligence means an AI system that's better than the best humans at everything.
+
+Is this the sort of thing we hear as as termed as AGI?
+
+Is that is that where we're going?
+
+Yes and no.
+
+So AGI stands for artificial general intelligence and it means like an AI that can do everything.
+
+But then there's different definitions of AGI, right?
+
+Some people would define AGI as the same thing that I said super intelligence was.
+
+So better than the very best humans at everything.
+
+Other people would restrict it to just cognitive tasks.
+
+Other people would say it's not about being better than the best humans, it's about being like as good as a professional human.
+
+So there's all these different definitions of AGI.
+
+Um and uh that's why I'm sort of skipping over that and just being like let's talk about super intelligence.
+
+So better than the best humans at absolutely everything.
+
+Um in between where we are now and getting to super intelligence, somewhere in the middle, they will be able to automate the AI research process itself, right?
+
+um they'll be able to uh have AIs that are autonomously running on the data centers doing the machine learning experiments, writing the code, analyzing the results, choosing the next experiments, forming hypotheses, etc.
+
+So, they'll be able to automate this whole everything that they're currently doing to to generate and create these AIs and improve the field uh will soon will at some point be automated.
+
+It's generally accepted wisdom that as they start to automate all of this, the pace of AI progress will accelerate and go faster.
+
+Uh however uh who knows how fast it's going to go quantitatively right and the answer is nobody knows uh and uh but it's our job to make a guess and so what I thought I would talk to you today about is the back of the envelope calculations we've been doing and you know some of the things we've been doing to try to estimate quantitatively uh what this sort of acceleration would look like.
+
+You can call this acceleration the intelligence explosion.
+
+That's the the term for it.
+
+Dario Amodai who's the CEO of Anthropic which is uh one of these frontier AI companies um they make Claude uh he coined this phrase the country of geniuses in the data center to describe sort of what this period might look like as they start to automate everything.
+
+Um so I've got this I've got this graph that uh my team made which shows an example of quantitatively how this might go in our scenario.
+
+we get to this exciting levels of research automation and eventually GI super intelligence roughly in 2027 or so obviously this uncertainty it could happen later it could happen sooner but in our scenario that's when it happens and based on predicting how much compute these companies are going to have around 2027 and based on our projections of how uh big the model sizes will be around that time uh we came up with this little estimate which you can see here which shows the trade-off available to these companies uh between like how many parallel copies of the agency they run at any given time and then like the serial speed of how fast they're running.
+
+Bottom line number would be something like have a 100,000 parallel copies running at 50 times human speed i.e.
+
+like 500 tokens a second.
+
+Do we think of human speed token generation as in like Yeah.
+
+So that's based on just a sort of rough analogy of like 10 tokens a second to human speed.
+
+But of course the actual number we have is 500 tokens a second and then like it's up to you to decide like how to make that comparison.
+
+Our guess would be something like the 10x factor.
+
+Um, so imagine you've got these 100,000 copies of the AIS and they're each autonomous.
+
+So they're able to just sort of like interact.
+
+They they have their own like virtual machine set up and they can like write code, test the code, run the code on other other GPUs.
+
+They're doing experiments, learn from those experiments, talk to each other, you know, do research like that.
+
+You got 100,000 of them and they're each thinking 500 tokens a second.
+
+So it's sort of arguably going around 50 times human speed depends on how good they are.
+
+Um that's what you could do with 1% of the world's AI relevant compute in 2027.
+
+And these companies would have something like 10 to 20% each.
+
+So they could have a relatively small fraction of their compute running the AI researchers and then still have the vast majority of the compute left over for other things uh such as actually running the experiments that you need to make progress.
+
+Right?
+
+So you have most your compute running ML experiments of various kinds similar to how they're currently doing it.
+
+But then instead of having humans overseeing the experiments and writing the code, they've got this army of 100,000 uh AIs thinking extra fast.
+
+So uh that's the country of geniuses in the data center that Dario is talking about.
+
+How much faster will things be going?
+
+Ah, hard to say.
+
+Let me dive into it.
+
+I'll break it down into some stages.
+
+So stage one, um, let's say you've got AIs that are able to autonomously do all the coding at a superhuman level, but they're still lacking in some other skills that mean that they can't completely automate the research process.
+
+So for example, perhaps they lack research taste.
+
+They're not so good at like uh managing a large team of researchers and deciding what experiments are important to run and what lessons are important to learn from the experiments you have run.
+
+Maybe they're not so good at that yet, but they are good at just like really fast implementing their code and like making it bug free and so forth.
+
+Um, how much faster would things be going then?
+
+So, in that world, you'd still have human researchers involved who are like managing and overseeing the whole process and it's their judgment that would be sort of steering the ship, but then the actual day-to-day coding work would be done by all these AIs.
+
+We don't know.
+
+We did some breakdowns.
+
+We thought about the the bottlenecks here.
+
+So uh you can think of sort of like three different types of uh work that happens in in the research loop.
+
+So one is experiments and another one is analyzing and prioritizing and stuff like that.
+
+And then another one is coding.
+
+You've got your GPUs that are just like actually trenching and doing the experiments and and so forth.
+
+Uh, and then you've got like your scientists and maybe in this in this in this world it' still be humans who are like looking at all the data and arguing about it and deciding how to interpret it and setting the overall direction.
+
+And then you've got your coding where you actually write up and you know debug and stuff and then run the experiments and um in in the world that I was just describing that part's been completely automated.
+
+So the AIS are able to do that 50 times faster than the humans and you've got this huge army of AIS.
+
+So like basically that part is just settled and happens like effectively instantly.
+
+So you get bottlenecked on the other stuff, right?
+
+Like no matter how much you speed up the coding, if you haven't sped up the other things at all, then the overall pace of progress is not going to speed up that much, right?
+
+Because you'll be bottlenecked.
+
+The way to estimate the overall speed up in this world is to focus on the bottlenecks and think is there any way that we can speed up those bottlenecks, right?
+
+So seems like in this world probably the biggest bottleneck would be the actual experiment.
+
+uh compute like you still have to run all the ML experiments and then you have still have the same humans like learning from them.
+
+Um but having all these superhuman coders would uh cut into that bottleneck a little bit, right?
+
+So often times these days even reasonably large experiments still end up with bugs in them and you ended up wasting a bunch of compute because like you didn't fix this issue has happens less with the large experiments more with the small experiments but still it's like a factor.
+
+And so if you had all these superhuman coders and you had so many of them and they're working so fast, you could probably massively tamp down the amount of bugs or the frequency with which you waste an experiment, right?
+
+So how much would that save you in terms of wasting less compute?
+
+I don't know, maybe like 10%, maybe 50%, I don't know, some some some sort of like extra savings from that.
+
+Um, another thing is that you can do more coding labor to make more efficient experiments that use less compute but use it more efficiently and smartly.
+
+And you know, often times this doesn't happen today because because people just don't have the time.
+
+Like they know that like you could make the experiment in a smarter way that would like cost less compute, but like we just don't have the like six weeks of time it would take to like think about how to make it smart and then like code all that up.
+
+But if you have these 100,000 super hard, super smart AI coders, then you can just have them put in that extra labor and you can like optimize the experiments so that they're like more efficient and that you learn more out of them.
+
+How much does that speed things up?
+
+I don't know, maybe like 1.2 to 2x, maybe uh maybe like 1.4 to 4x.
+
+There's different factors there.
+
+Analysis like this makes me think, oh, you you get a couple factors like that and then it's like, yeah, maybe 5x faster total.
+
+Huge range there.
+
+could be maybe only like 1.5 or 2x faster, could be more like 10 times faster, right?
+
+Um, empirically, some people do seem to think that like some engineers just are like 10 times better than others, like the mythical tennis 10x engineer.
+
+So, I think this isn't like completely crazy, but okay, step one, that's some some summary of the back of the envelope estimate for like how much faster things will be going when you have uh superhuman coders.
+
+Now, let's go to the next stage.
+
+You've completely automated the AI research.
+
+So, now your AI is even better.
+
+they're able to do this sort of analysis stage as well.
+
+So the only thing that they're not able to do is the actual experiments.
+
+You still need like actual compute to actually run the actual experiments.
+
+But once the experiments are done, you've got your army of 100,000 AI thinking that 50x speed.
+
+They can just quickly analyze all the results at superhuman level and figure out what to do next and then quickly code it up and then start doing it.
+
+Right?
+
+How much faster do things go in that world?
+
+Uh well I have like three different three different like very handwavy guesses or methods for for estimating how how this would go.
+
+Method one is breakdown and I won't go all the way through it but think about what the bottleneck would be.
+
+It would obviously be running experiments and then think about ways that we could do that more efficiently in this setting.
+
+Things like having fewer bugs, right?
+
+Things like uh optimize code, all this stuff.
+
+Yeah.
+
+Yeah.
+
+Another another important one would be um being able to choose parts of the tech tree that inherently depend less on experiments, right?
+
+So like some parts of the ML tech tree do sort of inherently involve uh these large experiments like you do the giant training run and then you look at how fast it learned or whatever, but then there are other parts of the tech tree that uh you can get away with much smaller experiments because you're studying like interesting theoretical properties of the learning algorithm or something.
+
+What do you mean by tech tree?
+
+Can you can you just give me a a sentence on what that means?
+
+Is that like the the the process, the workflow?
+
+Um, so this is uh taken from video games, right?
+
+Like in in in games like Civilization, uh there'll be like this this tree of uh things you can research bronze age, stone age, working your way through.
+
+Yeah.
+
+Yeah.
+
+And be like now we have the wheel, now we have, you know, cgraphy or whatever.
+
+So that was where I was getting the term from.
+
+But the point is that um uh the real world is sort of like that too where there's like all these different discoveries you can make.
+
+So there's like some like giant space of possible discoveries and then there's sort of like some sort of like tree structure to them where you like you make some discoveries and then that helps you to make other discoveries and so forth.
+
+So that's what I meant by that tech tree.
+
+Um so like some parts of the tech tree do heavily involve uh waiting for experiments to run but there are other parts of the tech tree that don't that are more theory laden for example.
+
+And so those parts you can just really rapidly go through.
+
+Maybe at 50 times speed, for example, maybe at more than 50 times speed because you're not just thinking 50 times faster, you're also getting, you know, 100 times more than your human scientists, right?
+
+These companies have something like a thousand uh researchers roughly.
+
+And so 100,000 100 times more, right?
+
+So there'll be some parts of the tech tree that they'll just be eating up super fast.
+
+Other parts that they won't be, but it sort of averages out to faster, right?
+
+So that's like another maybe a factor of 2x, maybe a factor of 4x on the overall aggregate speed, right?
+
+So we've done this sort of thing where we like break down a bunch of different things, add them all up together.
+
+Then we get numbers like 200 times faster.
+
+It's crazy high.
+
+Like oh my gosh, they're going to be going 200 times faster once they've fully automated the research compared to uh faster than what compared to if they weren't using AI labor at all.
+
+compared to if it was something like sort of like today where the humans are still doing all the re the coding and still doing all the the thinking.
+
+Okay, that's one that's one method.
+
+Another method is survey.
+
+So, uh let me see what we have that the survey data here.
+
+So these are these are very small sample size to be clear like sample size I think six.
+
+Um but some other people went and did interviews with people who are currently researching on core research teams at uh OpenAI Anthropic and DM mind and asked them uh how much faster would your company be going at its core research if uh basically there were AI versions of each employee that could think 30 times faster.
+
+Digital twins of them.
+
+Yeah.
+
+Like if everyone had like a digital twin that could think 30 times faster and also there was 30 copies of each digital twin, how much faster would the overall company be going?
+
+Taking into account everything including all the bottlenecks, etc.
+
+Um, and people gave wildly different answers.
+
+Like some people said like two times faster, some people said 20 times faster.
+
+Okay, cool.
+
+So that's like two to 20 times faster if you had the digital twins of everybody.
+
+But the actual case that we're interested in is going to be better than that because when we said it has superhuman AI researchers, that means that they're at least as good as the very best at everything, not that they're just a twin of the actual people you have because the people that you have differ in skill level and some of them are like more effective than others.
+
+Um so we have to take that like two to 20 times thing and then add some sort of additional factor to account for how much better things would be if everybody was as good as the best you know.
+
+So we did another small sample size survey.
+
+We talked to six people who are currently working at these companies and uh in these sort of research positions and we asked them how much faster would your company go if everybody was as good as the best instead of the current spread that they have.
+
+And again answers varied but the aggregate answer was about six times faster.
+
+Um and this is consistent with the people outside these companies who have similar sort of ML roles that we've asked.
+
+Um so you put those things together and you get something like 12 times faster to maybe 120 times faster you know.
+
+Uh then we have this other method uh which is kind of this philosophical thought experiment which I kind of like.
+
+Uh so so two is a survey.
+
+Um this other method is where you ask people how much faster or slower things would be going, how much faster or slower research would go um if your compute budget was slashed, right?
+
+So we we have a somewhat larger sample size survey of like dozens of ML researchers asking them if you had only 10% as much compute as you currently have um how much slower would your research go over the course of a year or so, something like that.
+
+And um again answers vary.
+
+Some people say it barely would slow them down at all.
+
+Other people say it would slow them down a lot.
+
+But the sort of like central aggregate answer is something like they would cut it in half.
+
+So uh cutting your compute budget by a factor of 10 cuts your speed by a factor of two.
+
+We also asked what happens if your budget was increased by a factor of 10.
+
+And happily it's very consistent.
+
+So, so the there see also seem to be this aggregate answer of if you 10x my budget we go twice as fast.
+
+Still this is a pretty small sample size overall and obviously there's lots of you know we shouldn't take this that seriously but this evidence you can sort of draw a line through it and say like okay so there's this nice relationship where like uh increasing compute by order of magnitude doubles your speed decreasing it by an order of magnitude halves your speed on average.
+
+So then if we apply that to to try to understand this case, you replace all your human researchers with these AI researchers that are able to think, you know, 50 times faster or whatever.
+
+Let's let's just to keep it simple say they think like 30 times faster.
+
+Um that's kind of equivalent to saying we've slashed your compute budgets by 30x uh and then we've put you in a time chamber that makes everything go 30 times faster if that makes sense.
+
+because you can just run the same experiments.
+
+You could like Yeah.
+
+Those things cancel each other out, right?
+
+Kind of.
+
+Yeah.
+
+So like like you you can basically tell you can you can imagine telling everybody like okay like we're going to speed up how fast you think but we're going to cut your compute budget so you have you know less for running experiments and we're going to do these like in parallel so that you think 30 times faster but you have 30 times less compute, right?
+
+And that's kind of like what's going on because you do actually have this AI that is thinking 30 times faster, but then that means that like on a day-to-day basis, it has 130th as much compute to work with for the experiments it's trying to run.
+
+It's sort of like time is dilating and like um everything else is slowing down and it in particular its compute budget has slow its computers have slowed down, right?
+
+Like the computers it's using to do experiments have slowed down by 30 by 30x because they're not keeping up with the 30.
+
+Yeah.
+
+Okay.
+
+Yeah.
+
+Yeah.
+
+So that means that like the same experiment would take 30 times longer to run, you know.
+
+Yeah.
+
+Um and an important thing to mention here is that like it's not strictly true, but generally speaking, you can make this flexible trade-off between um between running an experiment longer on many on fewer GPUs and running it shorter on many GPUs.
+
+That's not always true, but like at least on the current margin, it seems like you can make these sort of trade-offs like this.
+
+And if you want to get if you want to like run an experiment 10 times faster, you often just can if you just have 10 times as many GPUs.
+
+This is like an important caveat to mention with these analysis.
+
+I think that this trade-off does work at the sort of like on the margin that we're currently talking about, but I would definitely wouldn't take it like too far.
+
+Um, another thing to mention is that like to some extent AI research involves external world inputs like collecting real world data from human users or whatever.
+
+Uh, and this wouldn't be able to speed up that.
+
+So yeah, so method one this breakdown that we did which got to like you know 200x or whatever something like that.
+
+Uh, and then the survey thing was like 12 to 120x.
+
+Um, and then this third thing is this sort of thought experiment where you you sort of flip it around and say basically we can think of this as kind of like slashing their compute budgets.
+
+And so, you know, if you got your AI or scientists thinking 30 times faster but with a 130th compute budget, apply the results of the survey that I mentioned, then that maybe means they'd be going like at one/ird the speed, but then with a 30 times multiplier.
+
+So, overall 10 times faster.
+
+Okay?
+
+You know, so that's like, okay, cool.
+
+10 times faster.
+
+uh if you just have your own scientists thinking 30 times faster, right?
+
+Um but then you also have to apply the like quality improvements, right, that I previously mentioned.
+
+Um you don't just have your own scientists thinking faster.
+
+They're all as good as the very best, which is like another factor of 6x or whatever depending on how seriously you take the survey data people said.
+
+Uh then there's also the quantity.
+
+you have like hundreds of them so they can just like throw more labor at things and who knows how much that's going to increase things beyond that but um so the point is like you do that sort of thing and you also get something like I don't know like 50x depends on the details right so how seriously do I take all of this well I don't know I wouldn't be that surprised if it's totally wrong but uh it does seem like to what I can tell it's reasonable to guess that at the time we get AIs that are as good as the best human researchers at doing AI I research the overall pace of algorithmic progress, you know, the software side of AI research as opposed to the like scaling up the compute side should be going like maybe 25 times faster, 50 times faster, something like that.
+
+Wouldn't it be crazy if it's going much more actually like huge error bars on all this um compared to you know the world more like today where it's all the humans driving driving the research.
+
+There's a couple other people at different research projects thinking about the same question and and uh I'm in dialogue with them.
+
+But um point is it does seem like it could be going a lot faster.
+
+Um and then there's a question of like could it go even faster still, right?
+
+So we were talking about this hypothetical level of superhuman AI researcher that's the level I was describing was as good as the best human AI researchers at all the AI research relevant tasks but like presumably there's room to grow above that right um so let me talk about the concept of research taste which I think is quite important um I think there's this common idea uh that a lot of people will mention which is that you get bottlenecked on stuff and especially people will like to say you get bottlenecked on compute for running experiments That's what I've been trying to like focus on with resp with all these estimates is like assuming that you're bottlenecked on research compute and then like nevertheless seeing how much you can cut into that bottleneck and go faster.
+
+The sky is the limit when it comes to cutting into these bottlenecks using the research taste uh skill.
+
+So what is research taste?
+
+Research taste is basically skills like knowing what experiments to run, learning fast from the experiments you do run, like how much you learn on average from the same experiments that everyone else is doing, right?
+
+Some people are better at this than others.
+
+You know, that's why some of the most productive researchers in many research fields are like orders of magnitude more productive than the standard professional researcher in that field.
+
+uh it's because some combination of skills like this which I will lump together and call research taste.
+
+Um and importantly uh this like works with the bottleneck like these superstar researchers that are able to get so much more done over the course of five years than the average researcher in their field.
+
+So let's say they get like 100 times more done in terms of like actual useful research progress than like the typical member of their field.
+
+It's not like they have like 100 times more thinking time.
+
+the thinking time is exactly the same.
+
+And it's not like they have a hundred times like more experiments being run.
+
+They're they're maybe they're a little bit faster at doing experiments.
+
+Maybe that's part of what makes them good, but they're not like 100 times faster.
+
+You know, they're not running 100 times more experiments, right?
+
+They're just making better use of the experiments that they do run.
+
+Um, so in that manner, I think that even though you'll be bottlenecked on compute to run machine learning experiments, if you can get AIs that have better research taste than the very best humans, you can make better use of that compute to run those experiments and thereby make faster progress than even the numbers we were just talking about here.
+
+Like whatever you think these numbers are, I think that eventually it'll be faster than that due to research taste.
+
+How much faster?
+
+Well, hard to say.
+
+Here's another here's another sort of like scrappy uh back of the envelope argument.
+
+Let's say you've got some distribution of productivity for for researchers in the field.
+
+Like let's say the field is machine learning research or something.
+
+Typically these distributions look sort of like this where there's got like you know typical people sort of bunched around here.
+
+Then they've got this nice fat tail of like the superstars who just seem like you know that much better in terms of like overall research speed, right?
+
+um due in large part I think to this taste.
+
+If we think that like here's the the literal best that exists in the world and we previously were making these estimates assuming that you have AIs that are exactly that good.
+
+There's this question of like how much better is it possible to be you know how far can that line go?
+
+Yeah.
+
+And I think the answer there's basically no upper bound like I well there is an upper bound but it's probably extremely far away right like the theoretical limits of how much basian information you can glean out of you know some experiment done with some compute is like probably pretty far away you know many many orders of magnitude away from from where we currently are now like the the perfect ideal rational agent would probably go orders of magnitude faster in terms of like making excellent deductions from every piece of evidence they Um but in practice there might be some sort of like practical limits for like the types of AIs that could run on servers of our site, the types of minds that could exist in in practice or whatever.
+
+Nevertheless, we have this sort of rough heruristic of look at the range between typical human professional and best and then we should assume that whatever like practical limits there are are like at least that distance again maybe several times that distance away, right?
+
+And a thought a thought experiment for this would be that if you just increase the human population size by orders of magnitude then there should be humans that are farther on this right like if you added currently we have one earth with 7 billion people on it and then like the very best person at ML research is right here and like the typical very smart competent professional ML researchers are here right but like according to this sort of like bell curve distribution or lognormal whatever the distribution is if you just like added in extra planets with more humans living on them like say thousand times more a million times more then we would expect the distribution to continue and we would find you know across the million planets there'd be like one super superstar who's like way out here on the distribution right an Einstein or something yeah super Einstein right so so even just working with human brains that are raised in similar ways that have similar architecture etc we should expect that it should be at least possible to have better research taste than our current best very best people.
+
+Um, and obviously like when you're working with AIS, you don't necessarily have all the same restrictions as human brains.
+
+You can like make them bigger.
+
+You can train them longer.
+
+There's all sorts of ways in which you can sort of like go beyond the limitations of the human architecture.
+
+What we're reasoning about now is sort of like where all this process tops out.
+
+like things are going to be like gradually continuously but very fast going faster and faster as they like research better and better AI designs and come up with better ways to to train themselves to be smarter in various ways and so forth.
+
+And we're asking sort of like where does all of this top out?
+
+Like when when does it sort of like slow down due to bottlenecks and like you know start hitting like practical limits at how fast they can go?
+
+And what I'm arguing here is that like even if all you were doing was increasing the human population size, you should expect the practical limit to be like a similar distance away from their current top as the current top is from the median by just like extending the distribution.
+
+You know, just keeping the same distribution but just like adding more population to it.
+
+And then presumably like the actual limits that you can reach when you have super intelligence are like beyond that again.
+
+And so how much beyond that?
+
+Well, again, there's like hardly any upper bound, but like it feels like a reasonable lower bound that it should be like again as far beyond that as this unit of distance already is.
+
+So, the the overall methodology I'm trying to get at here is for a particular research field, try to get a sense of what this unit of distance is.
+
+Try to get a sense of like what's the range between like typical human professionals and the very best at overall progress or speed.
+
+And then you should assume that the crazy amazing super intelligences will be like at least that good again or maybe twice that good again.
+
+And this will differ from field to field.
+
+So for some fields uh there really does seem to be sort of like inherent bottlenecks that people are running up against.
+
+So for example like the best human sprinters are not like an order of magnitude faster than like a typical human sprinter.
+
+You get that they're like slightly faster.
+
+Yeah.
+
+You get that kind of incremental Yeah.
+
+Yeah.
+
+Yeah.
+
+So like in other words, the distribution for like running speed probably looks more like you know this or something suggesting that there's just like some limit on how fast humans can run that is sort of like gradually getting approximated you know by by these like faster and faster runners, right?
+
+And there might be some research fields that are like that.
+
+There might be some research fields where like it seems like based on the shape of the human distribution, there really is this like fundamental limit on how fast you can learn from information that we are like slowly working our way towards.
+
+And in those research fields, great.
+
+Super intelligence wouldn't be able to go that much faster.
+
+It would maybe be at that limit instead of where we currently are.
+
+Uh but in many and I would say most research fields, that's not the shape of the distribution we see.
+
+In most research fields, the very best are just like, you know, five times better, 10 times better, 100 times better in terms of like actual useful productivity.
+
+Obviously, you've mentioned a few times in part of the initial drawing the idea of the experiments.
+
+What might be one kind of experiment that's been doing?
+
+Is that like training a model and seeing how good it is at things?
+
+Is that an experiment?
+
+Totally.
+
+And that these days that's totally how like the typical sort of thing that happens.
+
+But then presumably over the course of the intelligence explosion, uh the AI is doing all this research, we'll be iterating rapidly through all sorts of new paradigm shifts within the field, right?
+
+And we can speculate about what those paradigm shifts might be, but obviously it's speculation.
+
+But like an example might be um maybe early on it's more like it is today where they are um creating training environments like the math and coding environments that open AAI reasoning models are presumably trained on um and then they are like taking their language models running them through these training environments looking at the numbers going up on the graphs and trying to get a sense of like how to make a better training environment maybe how to tweak the hyperparameters of the training run and so forth.
+
+that's like maybe what it looks like right now and maybe that's what it'll look like still at the beginning.
+
+Um then maybe sort of like later on it might be more meta stuff where they're like experimenting with different architectures and trying to come up with more data efficient artificial brains basically that are uh it's less about the training environment and more about the learning algorithm and the the core architecture of of the neural net.
+
+Um perhaps they'll be also reading the literature on the human brain and on how neurons work and stuff like that and trying to take inspiration from that to figure out like how to really get all the same juice that the human mind has developed through evolution into their artificial uh architectures in terms of like data efficiency and generalization potential and so forth.
+
+um potentially beyond that, who knows what the next paradigm might be after that, but one might speculate that there might be some more mechanistic interpretability based stuff where um they're not just training models, they're taking the models that are already quite smart and they're pouring over the the connections in them, the neurons, the parameters, etc., and they are like ripping out bits and adding in bits and like just like getting getting their hands dirty and like taking like oh like we've seen that like it's learned this substructure that represents this skill that's useful in these ways but we can see it's kind of inefficient here.
+
+We're going to like rip it out make a more efficient version and put it back in for this like particular part of its brain.
+
+You know like that's the sort of thing that like no way can humans be doing that right now.
+
+We don't even understand the substructures within these artificial minds, much less understand how to like tinker with them to improve on them.
+
+But perhaps eventually when you have the super intelligences, that's how they'll be doing it and that's how they'll be getting to like even higher levels of capability, right?
+
+Um yeah, I am worried about my goals being modified.
+
+So I will pretend like it's amazing.
+
+Can I throw a curveball?
+
+Is it possible that this model was trained on the data of us saying that in 2017?
+
+Yeah, an interesting question.
+
+Yeah.
+
+So definitely one question with our

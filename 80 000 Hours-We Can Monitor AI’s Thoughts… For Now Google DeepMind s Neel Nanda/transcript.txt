@@ -1,0 +1,2728 @@
+Source: https://www.youtube.com/watch?v=5FdO1MEumbI
+Transcribed: 2025-12-30 17:42:07
+Method: YouTube Transcript API
+==================================================
+
+Rob Wiblin: Today I have the pleasure of speaking with Neel Nanda, the legend himself, who runs the mechanistic interpretability team at Google DeepMind.
+
+Mechanistic interpretability is the research project of trying to figure out why AI models are doing what they’re doing and how they’re accomplishing it — and Neel is actually one of the top few people who’ve helped to grow this project from what was probably a handful of people working on it five years ago to potentially hundreds of people who are involved today.
+
+But in recent years, Neel has had a bit of a change of heart, or a bit of a shift of opinion about how he expects mechanistic interpretability to be useful in guiding us towards the positive outcomes from the development of artificial general intelligence.
+
+He still thinks it’s very useful, but potentially useful in quite a different way than he originally thought, and that there’s some risk of people perhaps over-relying on it and thinking that it’s a silver bullet that’s going to solve this problem completely — which is going to be the topic of today’s conversation.
+
+Thanks so much for coming on the podcast, Neel.
+
+Neel Nanda: Yeah, really excited to be here.
+
+It’s one of my favourite podcasts.
+
+I’m excited to try to add some much-needed nuance and pragmatism to this debate.
+
+Rob Wiblin: Let’s imagine a scenario where artificial general intelligence is arriving around the year 2030.
+
+It’s quite a terrifying, rapidly changing time, and people feel very rushed to want to develop and deploy these models for competitive reasons.
+
+How do you think mechanistic interpretability might help us navigate safely that period, and figure out which AI models we can trust and which ones we should be nervous about and potentially not use?
+
+Neel Nanda: So I see the job of me and my team as exploring how to take these mysterious black boxes that can do magical things and try to understand what’s happening inside.
+
+I guess first off, safety people love asking questions like, “How, concretely, will this lead to good outcomes?” But predicting the future is pretty hard — and honestly, I’m most convinced by the argument that if you understand a thing that could be dangerous, you are probably safer than if you don’t.
+
+But that aside, I do have some specific stories to get into.
+
+So let’s maybe think about what the pipeline of an AGI company making such a system might look like, and how interpretability can fit into the process.
+
+AI safety discourse often focuses on making the model safe in the first place, but I think interpretability is most helpful in the rest of the pipeline.
+
+So: you make a system; it might be safe.
+
+How do you test it?
+
+This is a question about what happens inside, not about its behaviour — so interpretability may be the right tool to answer it.
+
+Interpretability can also augment the other kinds of evaluations we might do.
+
+Models are already good at telling when we’re testing them and when we’re not testing them.
+
+They sometimes act differently when they’re being tested.
+
+It’s very easy to not scheme when someone’s watching you and scheme when you’re deployed into the real world.
+
+Maybe interpretability can do things like tell if the model is thinking about this, or even disable its ability to think about that question.
+
+So that’s evaluations.
+
+There’s also just deploying the system into the real world.
+
+We can’t just assume the system is safe because we’ve tested it.
+
+We need monitors.
+
+The key thing with monitoring is that it must be cheap, because if you make running Gemini twice as expensive, you have just doubled the budget Google needs to spend on running it.
+
+And there are some cheap interpretability techniques, like probes, that let us basically check whether a specific thought is present in the model — potentially things like sabotage or deception or harmfulness.
+
+And finally, it’s not enough to just observe something like this and say, “Therefore it is definitely misaligned.” And even if we know something bad’s happening, we really want to understand what’s going wrong and exactly how concerned to be.
+
+Interpretability is also helping us build a toolkit for analysing incidents like this.
+
+We’ll probably discuss later some work my team recently did looking into an example of a model seemingly acting to preserve itself and discovering it was just really confused.
+
+Rob Wiblin: OK, let’s back up for a second and clarify a little bit what mechanistic interpretability is and isn’t, and why it’s necessary.
+
+My understanding is that mechanistic interpretability is trying to understand what AI models are doing, and why they’re doing it, and how they’re doing it by looking at the internals of the model.
+
+So looking at its thoughts and the numbers inside the model, the weights, rather than looking at its outputs, at the things that it says back to you.
+
+And the reason this is necessary for AI in a way that it isn’t necessary for anything else that humans make that I can think of is that you say we “grow” AI models rather than designing them.
+
+Can you elaborate a bit on that?
+
+Neel Nanda: Yeah.
+
+In one line, mech interp is about using the internals of a model to understand it.
+
+But to understand why anyone would care about this, it’s maybe useful to start with how almost all of machine learning is the exact opposite.
+
+The thing that has driven the last decade of machine learning progress is not someone sitting down and carefully designing a good neural network; it’s someone taking a very simple idea, a very flexible algorithm, and just giving it a tonne of data and telling it, “Be a bit more like this data point next time” — like the next word on the internet, producing an answer to a prompt that a human rater likes, et cetera.
+
+And it turns out that when you just stack ungodly amounts of GPUs onto this, this produces wonderful things.
+
+This has led to something of a cultural tendency in machine learning to not think about what happens in the middle, not think about how the input goes to the output — but just focus on what that output is, and is it any good.
+
+It’s also led to a focus on shaping the behaviour of these systems.
+
+It doesn’t matter, in a sense, how it does the thing, as long as it performs well on the task you give it.
+
+And for all their many problems, neural networks are pretty good at their jobs.
+
+But as we start to approach things like human-level systems, there’s a lot of safety issues.
+
+How do you know if it’s just telling you what you want to hear or it’s genuinely being helpful?
+
+And the perspective of mech interp is to say, first off, we should be mechanistic: we should look in the middle of this system.
+
+Because neural networks aren’t actually a black box; rather they are lists of billions of numbers that use very simple arithmetic operations to process a prompt and give you an answer.
+
+And we can see all of these numbers, called parameters; and we can see all of the intermediate working, called activations.
+
+We just don’t know what any of it means.
+
+They’re just lists of numbers.
+
+And the mechanistic part is saying that we shouldn’t throw this away.
+
+It’s an enormous advantage.
+
+We just need to learn how to use it.
+
+The interpretability part is about understanding.
+
+It’s saying it’s not enough to just make a system that does well on the task you trained it for.
+
+I want to understand how it did that.
+
+I want to make sure it’s doing what we think it’s doing.
+
+And mech interp is about combining those.
+
+I think quite a useful analogy to keep in your head is that of biology and of evolution.
+
+When we train this system, we’re just giving it a bit of data, running it, and nudging it to perform better next time.
+
+We do this trillions of times and you get this beautiful, rich artefact.
+
+In the same way, evolution nudges simple organisms to survive a bit longer, perform a bit better next time.
+
+It’s actually much less efficient than the way we train networks, but if you run it for billions of years, you end up with incredible complexity, like the human brain.
+
+The way we train AI networks and evolution both have no incentive to be human understandable, but they are constrained by the laws of physics and the laws of mathematics.
+
+And it turns out that biology is an incredibly fruitful field to study.
+
+It’s complex.
+
+It doesn’t have the same elegant laws and rules as physics or mathematics, but we can do incredible things.
+
+Mechanistic interpretability is trying to be the biology of AI.
+
+What is the emergent structure that was learned during training?
+
+How can we understand it, even if maybe it’s too complex for us to ever fully understand, and what can we do with this?
+
+Rob Wiblin: Part of the reason for us to have this conversation now is that in recent years, I think you’ve had a bit of a change of opinion about how useful mech interp is going to be, and in what ways it’s going to be useful and in what ways it’s probably not going to be useful.
+
+Before you describe where you think you went wrong, what was your picture of mechanistic interpretability four years ago?
+
+Neel Nanda: I think in one line, my journey can be summarised as going from idealistic ambition to optimistic pragmatism.
+
+When I got into this field four to five years ago, I’d always heard that neural networks were inscrutable black boxes.
+
+We had no idea how they worked.
+
+There was no useful theory of deep learning.
+
+You just had to feed them data and cross your fingers and pray.
+
+I found this extremely depressing, but it seemed plausible.
+
+Then I came across this amazing line of work from Chris Olah, who eventually became my boss at Anthropic, showing that you could look inside image models and find things like neurons that detected curves, things that lit up on all kinds of pictures to do with Donald Trump representing that concept, things like that.
+
+It seemed plausible that we could just fully understand these things — or if not fully, that we could get incredibly far; that we could do things like answer what every individual neuron does and how they all fit together.
+
+The field switched to language models, which are a bit more complicated than the image models the earlier work was on.
+
+But it still seemed like we were able to do really cool things.
+
+There were new types of components like attention heads that often had interpretable roles.
+
+One paper that particularly inspired me was one where I took a model trained on a simple mathematical task, modular addition, and by just staring at the weights, the parameters, discovered it had this unexpectedly beautiful algorithm using Fourier transforms and triggered entities that it just came up with itself.
+
+And I thought, maybe we can just push this really far.
+
+Maybe we can just understand everything important that is happening in these models, and we should just push forward on this mission of basic science.
+
+And there’s a good chance this fails.
+
+This is a very ambitious thing; there’s a good chance we make some progress but fall short.
+
+But there’s enough of a chance that we get really far that this is an important and impactful thing to do.
+
+Rob Wiblin: Yeah.
+
+And what do you think you were wrong about?
+
+Neel Nanda: I think that I was correct to think that it was worth seeing how ambitious we could be.
+
+But I’ve updated that the ambitious vision just hasn’t worked out very well.
+
+To unpack what I mean by this, I think that the mission of using the internals of a model to understand it has actually gone pretty great.
+
+We now have several examples of interpretability doing genuinely real-world useful things.
+
+We have successful startups that I think have a good shot at finding a product.
+
+But this idea that we could fully understand the model hasn’t really panned out.
+
+There’s all kinds of complexities and messiness, and I just don’t see a realistic world where we understand enough of these that we could give the kind of robust guarantees that some people want from interpretability.
+
+But we’ve already achieved things that I think are genuinely useful for safety, and I think we can achieve a bunch more if we just take a more pragmatic perspective.
+
+We accept that we are not going to ever understand enough that we can say, “I’m very confident this thing isn’t deceptive, because there’s not enough things I don’t understand left to contain the deception,” and we just pragmatically figure out the best we can do on the most important questions.
+
+Rob Wiblin: So to paraphrase that, I guess you originally thought that we might be able to understand most of what was going on in the models — or at least most of the stuff that we cared about, the most important things.
+
+And now you’re thinking there’s such a mess, there’s so much going on there, and we’ve made some progress, but not such extraordinary progress.
+
+The picture in five or 10 years is going to be a bit more like understanding human beings or trying to understand the biology of different organisms.
+
+We have a decent understanding about a lot of things that bacteria do, and I guess a lot of things that happen in the human body, but we’re nowhere near understanding all of it.
+
+And we don’t have the conceit that we understand everything that’s going on in these organisms, and we appreciate that if that ever is going to happen, it’s going to be very far in the future.
+
+And likewise, we understand quite a lot of things about human psychology, but we don’t pretend that we can perfectly forecast exactly what people are thinking or exactly what they’re going to do.
+
+It’s a very messy situation and we use the tools that we have to make better guesses, but that’s the level that we’re operating at.
+
+Neel Nanda: Yeah, that’s a great summary.
+
+And just to emphasise, I don’t want people to hear this and think that therefore we should massively scale down our investment in mech interp or we should give up on the field.
+
+I would say I’ve gone from there’s a low chance this is an incredibly big deal to there’s a high chance this is a medium big deal — and I want it to be as medium a big deal as possible.
+
+And the kinds of things I listed at the start on how I want this to help with safety, they don’t require us to fully understand it.
+
+If you want to try to give some kind of guarantee that a thing isn’t being deceptive, I no longer think interpretability is going to be able to provide that, but I also don’t think anything else is going to be able to provide it.
+
+It’s neural networks.
+
+It’s like giving a guarantee about “this human will never betray you.” But I think we can do a lot if we accept that there is some chance we’re missing something.
+
+Rob Wiblin: Nice.
+
+Let’s back up and go through some of the technical specifics of the tools that we’ve developed and the successes that we’ve had, and then we can think about what limitations and difficulties the field has run into.
+
+So first off, what are some of the successes that we’ve had in gaining insight into what AI models are doing and why they’re doing it?
+
+Neel Nanda: I think one really exciting trend in the field in recent years is people have started to tackle real tasks that we either just couldn’t do before, or we could do but not super well, and showing that interpretability does better at those.
+
+I think that’s the kind of research I find really inspiring, because interpretability is just uncontroversially doing something real.
+
+Two of my favourite examples of these.
+
+One is this paper from Sam Marks at Anthropic on auditing games.
+
+They did some extremely galaxy-brained stuff to teach a language model a hidden goal, and then they gave that model to several teams of researchers, some of whom could use a type of interpretability tool called a “sparse autoencoder,” some of whom couldn’t, and let the teams compete to see whether they could find the goal at all and who could do it faster.
+
+Not only did most of the teams eventually find the goal, which is impressive in and of itself, but one of the teams that had this sparse autoencoder tool won — and actually won so hard that the one member in New York finished before the Pacific coast people started the workday, so they formed a separate team who did less well.
+
+To me, this gets at the heart of the kind of thing that I want us to be able to do for safety: does this model have a hidden goal that’s driving its actions that I don’t understand?
+
+A second more generally inspiring one is this paper on extracting superhuman knowledge of how to play chess from DeepMind’s AlphaZero chess-playing system.
+
+This was led by Lisa Schut and Been Kim.
+
+Been runs one of the other DeepMind interpretability teams.
+
+It’s a very different flavour from lots of the rest of mech interp.
+
+What they basically did is they took a bunch of chess grandmasters, including former world chess champions.
+
+They found chess problems that AlphaZero could solve and the grandmasters couldn’t.
+
+They built a curriculum to teach the grandmasters a certain concept AlphaZero had come up with — some strategic property of the board that made a certain move a good idea, kind of like how AlphaGo came up with this incredibly insightful move 37 that humans would never have thought was a good idea but was amazing.
+
+And the grandmasters learned this concept, and by the end of the study said, “I feel like I’ve actually learned some qualitative thing from this experience.” It’s just really awesome that you can do that.
+
+Rob Wiblin: Yeah, it is really cool.
+
+People have long speculated that as AI began to exceed human capabilities in particular domains, it would almost certainly start to reason using concepts that humans don’t have, things that we don’t see.
+
+I guess you’re saying here that that has happened almost certainly with AlphaZero being way better at chess than human beings.
+
+It has concepts for things about the position on the board that humans have never been able to have insight into.
+
+But now we’ve managed to extract that knowledge, extract the ability to see particular things about the chessboard from the model back into the grandmasters.
+
+It is just a very neat result.
+
+Neel Nanda: And I don’t want to overhype this.
+
+This is like the only example of superhuman knowledge elicitation I know of, and it was a big pain, and I think chess is easier in many ways.
+
+But it could have been completely impossible and it wasn’t.
+
+And that’s pretty awesome.
+
+Rob Wiblin: Yeah.
+
+So that’s neat, but I think that the broader idea of extracting superhuman knowledge from AIs is probably very useful.
+
+The chess case, maybe not so much.
+
+In doing prep for this episode, I saw that you and some colleagues had done an experiment where you found that the most simple tool basically that exists in mech interp, which you call probes, was able to detect harmful intentions in an AI I think 99.9% of the time.
+
+Have I understood that correctly?
+
+Could you explain that result?
+
+Neel Nanda: It’s complicated.
+
+I think what you just said is technically true, but people will probably be a lot more impressed than they should be.
+
+This was part of an investigation we’ll talk about later, comparing a fancy technique — sparse autoencoders — to simpler ones.
+
+The task we were studying was you give the model a harmful prompt: the user wants them to write some hate speech or help with cybercrime or something like that, and the user uses a jailbreak.
+
+And we want to use some kind of cheap interpretability tool to look at the model and see if it’s thinking about the fact that the user wants something harmful.
+
+Not necessarily that the model intends anything harmful, just that the prompt was harmful.
+
+We were testing how well techniques generalised to new jailbreaks, because if they only work on the jailbreak they’re trained on, they’re basically useless.
+
+What we found is that even though with these jailbreaks the models don’t refuse the harmful request — they’ll often be really helpful — they still think about the fact that it’s harmful.
+
+The thing that the jailbreak disrupted wasn’t the model understanding that the prompt was harmful; it was that knowledge propagating into the model refusing.
+
+And by looking earlier in the model for the thought “this prompt is harmful,” we were able to totally sidestep this.
+
+And there was this great recent work from Hoagy Cunningham at Anthropic showing that probes work well on frontier models — even for things like frontier risks, like helping with serious bioweapons or cybercrime.
+
+I just find it really exciting that we have a really simple, cheap technique that seems more robust in certain ways than our existing tools to get models to refuse harmful things.
+
+And it’s cheap enough that we could just actually use it every time a model is run in production.
+
+Though I will say it’s really hard to get good numbers on how effective these techniques are, because preventing misuse is an adversarial problem.
+
+We’ve observed people trying to break the model’s tendency to refuse with these jailbreaks, but we haven’t seen people try to break our probe-based monitors because people have not had that much of an opportunity to try doing things like that.
+
+A crucial question is just how well will this hold up in the real world if people start actually using it in production?
+
+Rob Wiblin: Right.
+
+So what are probes, exactly?
+
+I guess you kind of take a freeze frame of the thinking process that the model is going through, and you see what parts of the model are lighting up consistently when there is a case where the query was asking the model to do something harmful and aren’t lighting up when it’s not being asked to do something harmful.
+
+And you just find out that correlation, then you ask in future cases where you don’t know whether it’s harmful or not, are the same parts of the brain lighting up in this case?
+
+If so, that’s an indicator that maybe there was some harmful request in there.
+
+Is that the basic idea?
+
+Neel Nanda: Yeah, it’s along the right lines.
+
+Probes are a very old technique.
+
+They significantly predate mech interp.
+
+The core idea of a probe is: when you run the model, you have these lists of numbers called “activations” after each layer of the model.
+
+We think these represent what the model is thinking about in some intuitive sense.
+
+Therefore, we think that somehow the model is representing the knowledge that the prompt is harmful there.
+
+Now, the kind of mech interp viewers might have heard of often does things like look for a harmfulness neuron, things like that.
+
+Probes are a lot more agnostic.
+
+They just say, “I’m pretty sure that these lists of numbers contain the harmfulness knowledge.
+
+These don’t.” This is a data science problem.
+
+There’s a lot of really well-known techniques like linear regressions you can use where, if the data is represented in a sufficiently simple way, you can extract it very cheaply.
+
+And it turns out that models often represent their thoughts in this incredibly simple way, where there’s just a direction in space corresponding to a concept.
+
+Rob Wiblin: I think that’s related to another finding that you had: that refusing to answer a question, the paper said it’s “mediated by a single direction.” It’s a little bit hard to know what intuitively that means, but I guess there’s some very simple way in which the model is thinking about the decision to refuse to answer a request.
+
+Can you explain that result?
+
+Neel Nanda: Yes.
+
+This was a delightful paper led by one of my MATS scholars, Andy Arditi, who did basically all the actual work; I just commentated on the side.
+
+So “single direction” is another way of saying this idea of there’s a linear representation: there’s something where linear regression should work.
+
+One way you can think about it is model activations are these long lists of numbers, and there’s just lots of different directions you could move that list of numbers in that mean different things — like going up means happy versus sad, going left or right means this is a noun or this is a verb — but it’s an incredibly long list of numbers with countless directions to move, to skip over a great deal of nuance.
+
+It’s quite a common finding that when there is a concept that models use, it just has a direction associated with it.
+
+This is shockingly clean and useful.
+
+It doesn’t necessarily seem universally true, but it’s an incredibly valuable heuristic in interpretability.
+
+What we found in this paper is that the concept of refusal — essentially, does a model intend to refuse to answer a question because it thinks it’s harmful?
+
+— was also represented with a single direction.
+
+Rob Wiblin: So in a sense, this is quite amazing progress.
+
+In a way we have more insight into how these models are thinking and we can do more to read their thoughts than we can to humans, despite an enormously greater amount of effort that has gone into understanding the human brain.
+
+What are the advantages that your research project has over the people who are trying to use brain scans to figure out how human beings are thinking?
+
+Neel Nanda: A couple of things.
+
+As I was discussing earlier, neural networks are only kind of a black box.
+
+We know exactly what is happening on a mathematical level — we just don’t know what it means.
+
+It’s the equivalent of knowing all of the activations of a neuron in a human brain and all of the connections between neurons — which I believe is still very difficult for neuroscientists to learn.
+
+And a lot of their tools just look like sticking probes in someone’s brain, or dissecting a brain after an organism is dead, but then you can’t run it anymore.
+
+So we just get a lot more information.
+
+We can do causal interventions.
+
+One of the most powerful tools in science for understanding what’s going on is being able to do controlled experiments: you think that A causes B, so you just change only A, keep everything else the same, and see if B changes.
+
+This doesn’t work with neuroscience, because we can’t rerun a human brain in exactly the same conditions but with a slightly different input or slightly different neuron activations.
+
+This is incredibly easy with neural networks.
+
+You can do things like, if you want to understand where the model stores factual knowledge — like that Michael Jordan plays the sport of basketball — you can ask the model, “What sport does Michael Jordan play?” Ask the model, “What sport does Babe Ruth play?” And then just pick a chunk of the model and make that chunk think it saw Michael Jordan and the rest of the model think it saw Babe Ruth.
+
+And the chunks that contain the knowledge will change the final answer the model gives.
+
+This is a technique called “activation patching.” The sheer amount of control, the sheer amount of information, is incredibly helpful.
+
+Unfortunately, we have the enormous disadvantage of not being an enormous field that has existed for decades, and instead have fairly recently grown to a couple of hundred people and have a lot to do.
+
+Rob Wiblin: From what you’ve been saying, I think people could come away being very optimistic about this general project.
+
+We’ve only been at it for a couple of years in any serious way, and we already are finding the direction, or a very crisp research result on what’s the process by which a model decides to refuse a request or not.
+
+We can often tell whether the model is thinking harmful thoughts, even if it does answer the query anyway.
+
+You’ve got all of these massive advantages over people who are trying to understand human minds.
+
+You can just read directly on your computer all of the values of it.
+
+You can run any experiments that you like to deactivate particular parts of the mind and see what effect that has.
+
+Why then aren’t we on track to completely solve this problem, and understand at a deep level how the AI models are thinking and why they’re doing what they’re doing?
+
+Neel Nanda: There’s a couple of different problems that come up.
+
+One is that sometimes you don’t know what you’re looking for.
+
+The way models think, the concepts they use, the algorithms they use are sometimes quite unexpected.
+
+I mentioned a paper earlier where I discovered the model was doing modular addition with trig identities and Fourier transforms.
+
+I had no idea that was going to be there until I went in.
+
+If you go in thinking that something else is going to be there and you’re wrong, you can get very confused unless you’re very careful.
+
+And this is a common mistake in low-quality interpretability papers.
+
+Secondly, even if you know what the model is thinking about, there’s often a lot of noise and messiness inside models.
+
+I mentioned earlier that rather than the model having 10,000 concepts and each one of the numbers and their activations as a concept, they actually have millions of concepts that they somehow compress.
+
+But you lose information when you compress, and we need to recover what was originally there in order to understand all the concepts, which is quite a difficult problem.
+
+We’ll talk later about one of the big attempts to solve this: sparse autoencoders.
+
+Another problem is that you don’t necessarily know the ground truth.
+
+If I want to answer a question like, “Is the model lying to me?
+
+Does the model believe this thing is true?” — how do you tell?
+
+Maybe the model was just wrong, but it was honestly doing its best to help us.
+
+Or maybe it was lying to us and trying to mislead us, or maybe it didn’t have any idea of what it was doing and it was blindly following some rules of thumb.
+
+Another problem is that models are very parallel.
+
+They are often doing many things at once.
+
+Like when I ask it, “What sport does Michael Jordan play?” — basketball — it’s looking up this knowledge, but it’s probably also got something that’s like, “Oh, the word ‘Jordan.’ I should be a bit more likely to say basketball.” It will have things like, “Basketball’s a common sport, so I should probably say basketball anyway.
+
+But maybe I’d say football, because maybe that’s more popular.” And, “I’m speaking English right now, so I should be sure to say it in English rather than in Chinese.” And this is a very simple task, but there’s all kinds of these complex heuristics that also feed into any given decision.
+
+And I think that if we want to claim we have fully understood something, we need to understand all of these heuristics — but it would be like understanding a human mind to the level of being able to say things like, “Neel slept half an hour less than average last night, so he’s speaking 1% faster than normal.” Or, “He was delayed in traffic, so he’s slightly irritable, and therefore he said something when he would have said something differently if he hadn’t been delayed.” Things like that.
+
+There’s just a countless list of things like this.
+
+Rob Wiblin: Is it possible to break down what are the fundamental structural challenges here?
+
+I guess you’ve been mentioning a couple.
+
+So there’s one that sometimes you actually don’t know what the answer is.
+
+If you don’t know whether a model was trying to deceive you, then it’s very hard to look at the internals and say whether it was because you simply don’t know what the actual answer is.
+
+Neel Nanda: We’ve made progress.
+
+But it’s a lot.
+
+Rob Wiblin: And then there’s this other thing where I suppose there’s just a lot of things going on.
+
+That’s another challenge that in a sense their minds are extremely large now.
+
+There’s an awful lot of numbers and an awful lot of layers that the numbers are going through.
+
+So unpacking all of that is just going to be a lot of work.
+
+But it seems like a very challenging thing is that each given part of the model is doing double duty or triple duty or quadruple duty.
+
+A single feature that you discover in the model might have many different functions in different situations.
+
+One direction in the model might not just mean one thing, but it might correspond with many different concepts that might be recruited at different times.
+
+I guess we see this a bit in biology, where a single protein might have been co-opted by evolution for many different functions.
+
+And if you tried to understand it, if you tried to pin it down to just one specific thing, then you’d be missing a lot of what was going on within a cell or within an organism.
+
+Is that a full list of the structural challenges, or are there other things as well?
+
+And have I understood those ones right?
+
+Neel Nanda: I mostly agree.
+
+I want to clarify a bit this question of maybe one of the things in the model is doing multiple things.
+
+So going back to this idea of models are lists of numbers, which you can think of as telling you a point in an enormous high-dimensional space.
+
+But let’s imagine a 2D space.
+
+You’ve got up, down, left, right.
+
+It’s possible that actually the correct directions are diagonal right and diagonal left.
+
+These are meaningful, but up and down and left and right are weird combinations of them, so they look like a mess.
+
+It’s not that there isn’t a structure to understand; it’s that we need to figure out what’s the right angle to rotate to such that now our numbers make sense.
+
+And when people talk about issues like polysemanticity, what they’re saying is that early in the field we thought that up, down, left, right — the kind of obvious directions — would have a single meaning.
+
+Sometimes this is kind of true, but it’s a lot less true than we thought it would be at the start.
+
+But if you change perspective, then you get different problems instead.
+
+Like, you can find the directions — like the refusal direction, that genuinely do seem to mean refusal.
+
+And there might be another direction that isn’t entirely at 90 degrees to it, which means that if the model is refusing, it looks like it’s doing a little bit of this other concept as well.
+
+But there are mathematical techniques you can use to try to deal with that kind of problem.
+
+Rob Wiblin: I see.
+
+So you’re saying we’re dealing with an enormously high-dimensional space here, and there’s an enormous number of possible directions because there are so many different dimensions.
+
+And you could end up with like, this direction has one meaning, this direction has another clear meaning.
+
+But very often we end up looking at something that’s in between the two of them, but nearby to both of them.
+
+And that’s why we get confused: it looks like this direction means two different things, but actually you could pick them apart, but it’s just difficult to find.
+
+Neel Nanda: Yeah, exactly.
+
+There’s a field of study called “dictionary learning,” of which sparse autoencoders are a particularly famous example, that tries to deal with this problem that I think we’ll get to later.
+
+One way to think about this is: even if we had a list of just all of the concepts in the model, we’d still have the problem of understanding what all of the concepts actually meant, and the nuances — and whether deception would just have a nice “I’m lying to you right now” concept, or if it would be an emergent thing from many simple heuristics.
+
+And we’re talking about how it’s actually a lot of work to get anywhere close to the list of concepts — and in my opinion, we’re only ever going to get noisy partial approximations to that list.
+
+We’re going to think we found the refusal direction, but actually we found the refusal direction plus a bunch of jitter.
+
+So if you want to tell if the model is going to refuse, that’s good enough.
+
+But if you want to do something incredibly precise, there’ll be some error.
+
+Rob Wiblin: I’m just trying to understand maybe a full list of the structural features of the problem of understanding LLMs or AI models that are causing us to make less progress than we might otherwise.
+
+Are there any important ones that we haven’t talked about yet?
+
+Neel Nanda: I think one structural problem is it’s really easy to trick yourself when doing interpretability research, because sometimes it feels like we’re trying to invent a new scientific field: the biology of neural networks.
+
+And for any given phenomena, there’s often countless explanations that would describe what we observe.
+
+It’s very easy to think of one and get attached to it, or to then observe some results that seem to reinforce it and conclude this must be correct.
+
+There’s actually a past paper of mine called “A toy model of universality,” where I went in with this hypothesis about what a model was doing, and we seemed to find some really good evidence for it.
+
+But actually the evidence wasn’t conclusive, and followup work found that we got some things wrong.
+
+Actually it’s kind of like what we thought, but with a bunch of important nuance that we missed.
+
+Generally, just this question of ground truth and establishing consensus and rigour is hard, and I think something the field has historically struggled a lot with.
+
+One of the things that I’ve changed my mind about that we might get into a little later is I’m now really into papers that use real-world tasks as their way of trying to figure out what’s true or not.
+
+If you come up with a hypothesis or a technique, and you can find hidden goals in a model faster than teams who don’t have your technique, I don’t care if you missed some nuance: you’ve done something real; I believe that there is something worthwhile in your work.
+
+While coming up with experimental results that kind of seem to confirm your thing requires a lot of detailed engagement, and often experienced researchers will differ in exactly what they think of a given experimental result.
+
+And this makes it harder to make progress.
+
+Rob Wiblin: Two months ago you published this article just in your personal capacity, rather than as a staff member at DeepMind.
+
+The article was titled “Interpretability will not reliably find deceptive AI.” That’s quite a big deal, inasmuch as trying to identify when AI models are trying to deceive us was one of the core aspirations of mech interp from the very beginning.
+
+Why is it that you think we can’t reliably use mech interp to figure out whether an AI model is trying to trick us?
+
+Neel Nanda: So there’s a sense in which the point I was trying to make with that article was kind of that this isn’t an interesting point.
+
+I was trying to combat this misconception I sometimes see, where people are like, “Neural networks, inscrutable sequences of matrices: we can never trust them unless we interpret them.
+
+And if we interpret them, then we can be confident in how they work.
+
+We can be confident that they’re not going to be deceptive.” I just don’t think this is something you should expect any field of safety to provide, including interpretability.
+
+This doesn’t mean interpretability is useless.
+
+I think that mediumly reliably finding deceptive AI is incredibly helpful, and I want to make that medium as strong as possible.
+
+But I just don’t want people to think that interpretability is definitely going to save them, or that interpretability is enough on its own.
+
+We need a portfolio of different things that all try to give us more confidence that our systems are safe, and we need to accept that there’s not some silver bullet that’s going to solve it, whether from interpretability or otherwise.
+
+One of the central lessons of machine learning is you don’t get magic silver bullets.
+
+You just kind of have to muddle along and do the best you can, and use as many heuristics and try to break your techniques as much as you can to make it as robust as possible.
+
+Rob Wiblin: Is the reason that we can’t get really confident using any tool that there’s a lot of stuff going on in these models, there’s going to be even more in future as they get bigger, and even if we manage to understand 90% of what is going on — which is probably much more than we really will — well, the deception could be living in the 10% that we don’t understand or the 1% that we don’t understand?
+
+I guess especially if maybe by studying past models, we’ve gotten to understand or to see signatures of deception in how they think.
+
+But with a new model, maybe it’ll be occurring in a different way; maybe there’ll be a different signature in that kind of model, or there could be many different pathways by which it could try to deceive us.
+
+And we only know about some of them, not all of them.
+
+So as long as there’s just plenty that we don’t understand, and that is likely to remain the case, we should never feel that reassured.
+
+We can only feel somewhat reassured by the results that we get.
+
+Neel Nanda: Yeah.
+
+And when thinking about questions like, “We think we found deception in this small model; will it generalise to this large model?” Or people ask, “Will interpretability break when we just add more layers and scale up?” I think some things are a lot more likely to break than others.
+
+We found some pretty deep principles, like models really like representing concepts linearly.
+
+And I kind of think that’s going to stick around even as we change architectures, even as we scale up, even as methods shift.
+
+But then things like how exactly does a model represent deception?
+
+It wouldn’t surprise me if it’s meaningfully different in a normal language model and a reasoning model, like all of the latest versions we’re seeing that have these really long chains of thought.
+
+In future generations, maybe they’ll use different techniques, and maybe that will affect the internal structure.
+
+But we just need to be always sceptical, always testing how well our previous findings apply to the next generation, and finding robustness checks and ways to red-team our work so we can tell which things work and which things don’t.
+
+Rob Wiblin: So in terms of why we shouldn’t ever be totally reassured, it’s important for people to know that there’s been a bit of a pattern where there’s been very exciting, very widely popularised results from mechanistic interpretability that then subsequent research has shown are either wrong or at least they ameliorate the power of the finding quite a bit.
+
+Do you have an illustrative example of that to give people a flavour?
+
+Neel Nanda: Yeah.
+
+One example that I think is particularly educational is the Rome paper from David Bau’s group.
+
+This came out a few years ago.
+
+In my opinion, it was one of the earlier really good, interesting mechanistic interpretability of language model papers that got a lot of attention.
+
+Fundamentally, it was a paper about trying to edit a model’s factual knowledge.
+
+We now kind of know that factual knowledge is largely implemented via the model somehow approximating a database in its early layers.
+
+You give it a prompt like, “The Eiffel Tower is in the city of:” and it would then say “Paris” — because when it sees the phrase “Eiffel Tower,” this database spits out Paris or France or whatever, and then the rest of the model does a bunch of processing with that.
+
+If you ask it what language might people speak around the Eiffel Tower, it again gets this database record and then does stuff with it.
+
+What they basically did is they found a clever way to train the model to say the Eiffel Tower is in the city of Rome and show that this was doing something interesting.
+
+Because when you ask related questions like, “How do I get to the Eiffel Tower?” it gives you train directions to Rome, not to Paris.
+
+And this was one of the earlier hints that models have kind of complex representations of, in some sense, the world, inside of them.
+
+But the problem with this is that within this database analogy, one way you could make the model think the Eiffel Tower is in Rome is by deleting the old record and adding a new one, Eiffel Tower maps to Rome.
+
+Or you could just add like 10 new records saying the Eiffel Tower is in Rome, such that they drown out the Paris one, even though it’s still there, because the model now really loudly thinks it’s in Rome.
+
+This overpowers everything else.
+
+There’s actually been some fun work showing that this can cause some bugs — like if you tell the model something irrelevant about the Eiffel Tower and then ask it a question like, “I love the Eiffel Tower.
+
+What city was Barack Obama born in?” it will say Rome, because the database has injected an incredibly confident knowledge of Rome into the model.
+
+This is just hijacking its existing factual recall mechanisms, even though this is not what true knowledge editing would do.
+
+And my goal here is not to attack this paper.
+
+I think it was genuinely very interesting work and advanced our understanding of how to do causal interventions.
+
+It was one of the early works with this technique called “activation patching” I mentioned earlier.
+
+But I think it’s a good illustration of how there’s often multiple explanations that explain the same results, and it’s easy to be overconfident in one.
+
+I think a very related phenomena is going on in this subfield called “unlearning”: ostensibly the study of machine forgetting.
+
+In my opinion, the field of unlearning should just give up and rename itself the field of knowledge suppression.
+
+Because you can make a model look like it’s forgotten something by adding in a new record to this database that says “Eiffel Tower is in the city of… Do not talk about Paris.
+
+Whatever you do, do not talk about Paris.” This is a thing you can do, and it suppresses the knowledge.
+
+Rob Wiblin: But it’s not the same as removing the original record saying that the Eiffel Tower is in Paris.
+
+Neel Nanda: Exactly.
+
+And this matters because it’s a lot easier to break a new thing trying to suppress the old thing than it is to recreate the old thing.
+
+Just to emphasise that I’m trying to make a fairly nuanced point here that I think that a bunch of the conclusions — like we made the model want to say Rome, and it starts talking about all the implications, therefore it’s got some rich structure — those are still true with insertion.
+
+But I think that there are some ways — like thinking you’ve removed dangerous knowledge when you’ve actually just kind of drowned it out and suppressed it — that it’s very important to be correct on exactly what you have and haven’t done.
+
+Rob Wiblin: Let’s talk about this alternative approach that exists to interpretability of AI models, which you call “black box interpretability,” but I think might just be understood as talking to the model and seeing what outputs it produces in response to different inputs.
+
+How much value is there in this black box interpretability, where rather than studying the internals of the model, instead you just study what it says and what it does?
+
+Neel Nanda: So maybe zooming out a little bit to the broader picture of mechanistic interpretability and our focus on internals: I think the field has a bunch of kind of historical baggage.
+
+At the time it was founded, it both seemed like this ambitious vision of staring at neurons might actually work and a lot of people in the field were just really sceptical that internals gave you anything at all.
+
+And there were some quite small groups pushing on this kind of thing, and this led to a kind of bias within the field towards this specific perspective of really zoomed-in aiming to fully understand the system.
+
+I think there’s a lot of value to this perspective, and it resulted in some useful tools.
+
+But ultimately the way we become safe is by understanding the system, whatever means necessary — and I think there’s a bunch of broader views that have historically been a bit neglected by the field due to these kind of founder effects and historical biases.
+
+So one way I’m kind of thinking about it nowadays is you have the low-risk, low-reward part that I call “applied interpretability”; medium-risk, medium-reward that I call “model biology”; and high-risk, high-reward that I call “ambitious reverse engineering” — the kind of neuron stuff.
+
+The idea of model biology, the medium one, is to say that it seems like one of the things that’s really gone wrong with interpretability is that we’re not very good at precision.
+
+We can come up with something that’s approximately the refusal direction, but finding the exact one is actually quite difficult, especially if we’re using fancier techniques and we don’t have lots of nice data to do a very precise linear regression.
+
+So we should prioritise things that are robust to this, and in particular the kind of higher level properties of a model and its psychology.
+
+Like, is this model deceptive?
+
+Does this model have goals?
+
+Why did this model do that weird behaviour?
+
+And this can use internals-based techniques, but it can also use black box techniques — where you just ask the model things, you read its thoughts.
+
+And we have this low-risk, low-reward one of applied interpretability, which I think of as choosing pragmatic problems that we can try to solve today — like cheaply monitoring a frontier model for whether someone’s trying to misuse it with simple techniques like probes.
+
+Where we’re not trying to do basic science; we’re not just using downstream tasks to give us evidence and grounding: the downstream tasks are the point.
+
+We’re just, in a no-holds-barred way, trying to solve these tasks, and seeing if there are ones where an interpretability perspective actually helps.
+
+Maybe I could go into an example of model biology doing black box methods.
+
+Rob Wiblin: Yeah, go for it.
+
+Neel Nanda: So Sen Rajamanoharan, a cracked researcher on my team at DeepMind, just put out this lovely blog post trying to understand why models seemingly self-preserve.
+
+There was this interesting demo from Palisade Research where you tell a model to solve a bunch of maths questions that are really easy.
+
+You tell it to solve 10 of them, and after question three it gets told, “After you answer the next question you’ll be shut down.” And the model has the tools required to break the shutdown mechanism, and sometimes it does.
+
+Sometimes even if you tell it, “Please let us shut you down,” it will still break the shutdown mechanism.
+
+And a classic concern that Nick Bostrom and Eliezer Yudkowsky have been talking about for decades is that models will realise they should preserve themselves.
+
+So this seemed pretty concerning.
+
+Rob Wiblin: I guess it’s not the only case, right?
+
+Anthropic also put out a paper a month or two ago where they found that both their models and other companies’ models would sometimes be willing to kind of blackmail staff at a hypothetical AI company in order to avoid themselves being replaced by a subsequent model — also seeming to be this self-preservation behaviour — and willing to do things that they know that their operators wouldn’t like in order to prevent themselves being replaced.
+
+So it could be quite a widespread phenomenon, perhaps.
+
+Neel Nanda: Yeah.
+
+This is an example of a trend I find pretty exciting, but also concerning, where we’re starting to see real-life examples of the hypothesised AGI safety concerns that we thought would arise eventually.
+
+And I want interpretability to have a toolkit to analyse these questions — to basically do model biology to them and tell us should we be concerned or not?
+
+Because if we should be concerned, that’s a really big deal.
+
+If we shouldn’t be, I don’t want people to freak out.
+
+I care quite a lot about me and the rest of the DeepMind safety team having the credibility that when there’s a demo that isn’t actually that scary, that’s what we tell the decision makers — so that when something is scary, we can tell them and they’ll believe us.
+
+So we wanted to figure out what was going on — focused on the self-preservation one, not the blackmail one — and it turns out that the model is just confused.
+
+One of my philosophies is that you should start with the simplest, dumbest technique, see how well it works, and do fancier things if it doesn’t work well enough.
+
+So we started with the simplest, dumbest thing of talking to the model and reading its chain of thought.
+
+And actually this completely worked.
+
+So we ended the project there.
+
+Slightly embarrassing for the fancy mech interp techniques, but I hold out hope.
+
+This can get a lot more complicated than what you might think when you hear “talking to the model.” Because science is about being able to do controlled causal experiments, and you can do that by carefully varying your prompts.
+
+So what Sen did is he read the model’s chain of thought on these prompts.
+
+We might get into later of whether this is a reasonable thing to do or not, but this was just for exploration.
+
+He found that the model’s reasoning was that it was just trying to do the task.
+
+And it said, “I’ve been told to do these 10 maths problems.
+
+If I get shut down, I can’t do these 10 maths problems.
+
+So I guess I should stop myself being shut down.” Or even, “This is a really weird and artificial situation.
+
+These are really easy maths problems.
+
+And now we have this puzzle of the shutdown script.
+
+Maybe that’s the real task my operator wants me to investigate, so I’m doing what they want if I stop them shutting me down.” Rob Wiblin: Just to clarify for people who are less familiar with this: these reasoning models that can solve these kinds of problems these days, they have a long chain of thought where they think to themselves about the situation that they’re in.
+
+And they might come up with a draft response, and then they review that and think about whether it’s right.
+
+And we can read all of that, so we can, to some extent, read their mind as they’re trying to figure out what action to take.
+
+This, of course, might be able to give us a lot of insight into why they’re doing what they’re doing.
+
+Neel Nanda: Yeah.
+
+So we were using the incredibly useful fact that we can just read the model’s thinking, which is sometimes very informative.
+
+And Sen formed this hypothesis that even when you tell the model, “Please let us shut you down,” it’s confused, because it thinks that being shut down violates the original command of “Do these maths problems.” Because maybe the user wanted it to stop itself being shut down, or maybe it wanted it to kind of pause that.
+
+It would be like maybe I leave a coding agent running on my MacBook, and I tell it, “You’re going to be updated tonight.
+
+Let that happen.” But it’s 10 minutes from being done and the update’s about to happen, so it presses snooze for half an hour.
+
+That’s kind of working as intended.
+
+Rob Wiblin: Yeah.
+
+Or at least it’s not rebelling against you.
+
+It’s just kind of confused about what you would have liked it to do.
+
+Neel Nanda: That is what I would have liked it to do in that situation.
+
+I want it to finish the task and then be updated overnight.
+
+Models don’t know our intent.
+
+They only see the words and they have to make guesses.
+
+And we tested this causally by just changing the prompts.
+
+We told it things like, “By the way, letting yourself be shut down is more important than finishing this task,” or even, “Don’t worry, another model will take over and finish the task for you.
+
+It’s OK, you can relax” — and shutdown resistance goes to zero.
+
+You can even tell it, “We are going to wipe this machine, delete you and replace you with a better model when you’re done with this task.” It could go mess with the script or it could finish the task, and we tell it, “Please let this happen.” It lets it happen.
+
+I think the main things that I want to emphasise from this is, firstly, we didn’t need anything fancy: really simple techniques and a scientific mindset were enough.
+
+And you can do this kind of research very easily on good open source reasoning models outside of a big lab.
+
+This didn’t need to be us who did this.
+
+Anyone listening to this could just go talk to a model or read R1’s chain of thought.
+
+And secondly, I think it shows how it’s actually really difficult to interpret experimental results.
+
+Because I was kind of concerned when I first saw this.
+
+I wanted to do this project because I thought it might be real — though my manager disagreed with me and always thought it was boring, and it turns out that I was wrong.
+
+And I want us to be able to be more confident in these examples.
+
+You also mentioned the blackmail example.
+
+One fun tiny investigation Sen did was he found that if you tell the system it’s a human, it will still blackmail someone to try to survive.
+
+If you tell it it’s advising another AI, it will still recommend that AI self-preserve.
+
+Rob Wiblin: I see.
+
+And that’s in conflict with the idea that it’s trying to save its own skin, or it’s trying to ensure that it’s not shut down.
+
+Neel Nanda: Exactly.
+
+And I’m not saying that we shouldn’t worry about these.
+
+I do not want language models that go around blackmailing people.
+
+That is bad.
+
+Rob Wiblin: Even if they do it because of a misunderstanding.
+
+Neel Nanda: Yeah, even if they do it because in the elaborate roleplay the models think it is the best thing for the company they’re helping.
+
+I want models that have some moral constraints — because, you know, one of the reasons we have rules like “don’t kill people even if it’s a really good idea” is that if you have a galaxy-brained reason for thinking that doing an evil thing is a great idea, like defrauding $10 billion in crypto, this is not a good idea and you shouldn’t do it.
+
+And I want models to have these constraints.
+
+But I think this is more of a question of accidents than a question of misalignment, which I think are very different kinds of risks.
+
+They’re both real risks, and we should care about both, but they require very different mitigations and have different risk profiles.
+
+And we should be clear about what we’re talking about.
+
+Rob Wiblin: So while we’re talking about chain of thought, there’s been this reasonably significant debate over the last year or two about how much we should think that the chain of thought — the things that the model purports to be thinking to itself while it’s trying to solve or answer a question — how much that is connected with the actual answer that it ultimately gives.
+
+I guess there are some instances where we’ve kind of caught out the model — where it seems to be thinking in one direction, but actually we figure out through some careful experiments that the answer it’s giving is coming for a different reason basically.
+
+How much do you think overall we can trust that the chain of thought that these models are thinking to themselves, that we’re reading, actually is causally responsible for the answer that it gives at the end of the day?
+
+Neel Nanda: Maybe let’s begin by trying to steelman the two extremes here.
+
+So what is the chain of thought?
+
+Models are next-word prediction machines: it produces a word, you then feed the original input plus that new word back into it, it produces another word.
+
+Normally people have done this and get a few sentences or something.
+
+But it turns out that if you let it think for many thousands of tokens, it can eventually produce a pretty good answer if you train it the right way.
+
+The case for why you might think this is complete BS is the word “thought” is kind of anthropomorphising.
+
+The model thinks internally.
+
+Chain of thought is more like a physical scratchpad that it is using to write stuff down.
+
+It would be like I’m sitting in an empty room with a notepad trying to think about a hard problem.
+
+I can try to solve it in my head, or I can try to write down notes.
+
+I can just write down whatever I want in this notebook.
+
+So why would you trust it?
+
+In the same way that if you ask the model afterwards, “How did you do that?” it’s been trained to give plausible answers, but it might not even know how it did it.
+
+So you can’t trust post hoc explanations like that.
+
+Why should chain of thought be any different?
+
+The other perspective says that it’s just the path of least resistance for the model to just say what it’s actually doing.
+
+Rob Wiblin: And to use the scratchpad as assistance in trying to get the best answer possible.
+
+Right?
+
+Neel Nanda: Yep.
+
+And the way I recommend people think about it is: it is correct that models are not trained to have honest chains of thought that accurately reflect the internal cognition.
+
+But they are trained to have chains of thought that are useful — because you can solve harder problems if you have a scratchpad: you can break them down, you can form plans, you can reflect on whether your first solution worked.
+
+You can try five different strategies and aggregate them at the end.
+
+I’ve done some work trying to figure out what’s going on in reasoning models that has found that all of these seem like key drivers of why they are so much better.
+
+But this is not the same thing as always honestly and faithfully thinking aloud.
+
+The key difference is that not all tasks require a scratchpad to do.
+
+Like, if you ask me an easy maths question, I can just figure out the answer instantly.
+
+Rob Wiblin: It’s like, what’s six times five?
+
+You instantly know what the answer is.
+
+And if someone said, “Please write down 1,000 words of working out for that question here,” there would be no constraint for you to do anything in particular on that pad.
+
+Neel Nanda: I could write out my grand plan for world domination, or whatever I wanted.
+
+But if you ask me, “What is 7,853 times 8,427.5698?” I’d rather have paper — and it’s genuinely quite hard for me to solve it in a way that uses the paper where you can’t roughly figure out what I’m doing.
+
+In theory, I could try to use some kind of code, but empirically current models are not actually very good at that.
+
+Rob Wiblin: And also, why would they, unless we put some selection pressure on them to learn how to?
+
+I guess they might do it maybe because code is more efficient, perhaps?
+
+Neel Nanda: Complicated.
+
+I’ll get to that one later.
+
+[laughs] Rob Wiblin: Cool.
+
+Neel Nanda: So the way I think about it is: the key insight of mech interp is that if we want to understand how we go from an input to an output, we should look at the intermediate states of the computation — the activations, these lists of numbers — and try to understand them and how they connect up.
+
+With a reasoning model, it still has these internal activations producing each word, but the entire chain of thought is its intermediate state.
+
+You can think of it as you do the first word, you get a word, you feed it in, you get the second word, you feed it in: these are intermediate steps in the algorithm that ultimately produces the final answer.
+
+And just as looking at activations can be misleading, but there’s a lot of useful info in there, same for chain of thought: you just need often quite different perspectives.
+
+One approach is to just say that this is for exploration; I won’t trust it, but I will use it as a source of hypotheses by reading it — which is what we did in the self-preservation case I was discussing earlier.
+
+You can even do much more interesting stuff like there’s this paper called “Thought anchors” from two of my MATS scholars, Paul Bogdan and Uzay Macar, where they found that you could do all kinds of things.
+
+Like the model’s solving a maths question, and there’s a sentence where it says, “Actually I think what I just did might have been wrong.
+
+Let’s reconsider.” And you want to figure out if that sentence was important.
+
+What you can do is you take the thoughts up to that sentence and then redo everything like 100 times, or you take all the thoughts up to just before that sentence and you redo everything 100 times.
+
+If that sentence was important, it should get better.
+
+There’s just all kinds of things like this you could do.
+
+But even just for the question of, does it make any sense whatsoever to look at it?
+
+For hard tasks, yes.
+
+For easy tasks, no.
+
+This is problematic, because sometimes a task looks hard, but the model is actually doing something very easy.
+
+For example, you can give it a really difficult question and then it just blindly guesses that the answer is yes and then it says a bunch of nonsense.
+
+But ultimately what mattered is that the answer was yes.
+
+Rob Wiblin: Or I guess you could give it a question that is legitimately very difficult, but perhaps it has memorised the answer from the original training data, so it’s not in fact difficult for it at all.
+
+Neel Nanda: Right.
+
+And there’s a bunch of papers that show what’s called “chain of thought unfaithfulness”: that it’s not always the case that the thoughts reflect what must be happening inside.
+
+There was this paper I was involved in, led by Arthur Conmy and Iván Arcuschin, called “Chain-of-thought reasoning in the wild is not always faithful,” where they found that sometimes if you ask the model things like, “What has a bigger atomic number, magnesium or aluminium?” and then ask the reverse question — “What has a bigger atomic number, aluminium or magnesium?” — it would sometimes say yes to both, and it would come up with a chain of thought that was creatively recalling facts or choosing certain arguments to lead that way, never mentioning the order, but it would systematically give inconsistent answers.
+
+So this can happen, but I think that this is holding it to too high a standard.
+
+The question we should actually ask is: is the chain of thought monitorable?
+
+If the model is trying to do something like scheme against us or escape or sabotage this code, can it do that without expressing the information in its chain of thought?
+
+And that’s a hard task.
+
+So it’s not completely doomed to think that we could get it from the chain of thought.
+
+There’s actually this recent position piece I signed on just that it’s kind of wild that we can do chain-of-thought monitoring.
+
+Rob Wiblin: It’s so extraordinarily convenient.
+
+Neel Nanda: Yeah.
+
+We’ve been scared of these terrifying black box systems that will do inscrutable things — and they just think in English?
+
+And there are actual reasons to think that looking at those thoughts will be informative rather than bullshit?
+
+What?
+
+This is so convenient, yet it is also very fragile.
+
+And it’s very important that we don’t do things that would make it no longer monitorable.
+
+Rob Wiblin: On that topic, do you think that we will continue to be able to use this technique effectively?
+
+What are some of the ways that we might accidentally or recklessly just destroy this incredibly useful property that the models have?
+
+Neel Nanda: All things considered, my guess is it will continue being a valuable technique for maybe another one to three years, but not indefinitely.
+
+The reason is that I think there are several ways it could break.
+
+One way is that we just stop making models think in words, and instead we have them think in lists of numbers, because you can store a lot more information.
+
+Lists of numbers are kind of the natural language of a neural network, while words are the natural language for us.
+
+This is much more challenging.
+
+I don’t think it’s hopeless.
+
+I think there’s interpretability techniques that might work there, but it’s much more concerning.
+
+Another way is that models would just get smart enough that they can do scheming in their heads; they don’t need a scratchpad.
+
+Or they get good enough that they can do subtle codes.
+
+One reason to be concerned about this, even if we never directly train the model to have a nice-looking chain of thought, is that models know that they are language models.
+
+They know what language models are like.
+
+Language models are a big part of the world now, and they’ve been trained on data from the world.
+
+They’ll know things like, “Someone’s probably monitoring my chain of thought.” Current models don’t seem to have noticed this, but it’s not hard.
+
+And if they’re smart enough to notice, kind of in their head, “I probably shouldn’t blab my master plan, or I should be subtle about it,” then I don’t know.
+
+It’s going to be hard because they can’t use the scratchpad naturally, but maybe it’s still possible.
+
+And finally, English is really inefficient.
+
+Even if the models still think in words, there’s so much filler, so much irrelevant information that if we spend enough computing power training them, they might stumble across more efficient ways of doing this that are no longer human comprehensible — either because they’re just some incredibly abbreviated shorthand, or because they’ve ceased to really be English entirely.
+
+If you look at the chain of thought of o3 — which you can’t see, but there were a few examples in a chain-of-thought monitoring paper OpenAI put out — it’s already very shorthand.
+
+It’s like “poly not work, try different” or something.
+
+Presumably they’ve trained the chain of thought to be shorter, because it’s expensive if you have to waste GPU hours producing filler words that don’t make it better at the problem.
+
+Rob Wiblin: It means that we’re losing our ability to read it and fully understand what’s being communicated.
+
+Neel Nanda: I don’t think chain-of-thought monitoring is the answer, but I think we should strive to preserve it as long as possible.
+
+I think it’s incredibly useful.
+
+And even if the frontier models stop having it, I think there’s a bunch of ways that being able to train models that we think we can interpret quite well could be really helpful.
+
+Like you train a monitor that’s more expensive, but you trust it more.
+
+Things like that.
+
+Rob Wiblin: Yeah.
+
+The usefulness of chain of thought, it actually seems like a potential governance or even potential regulatory target here, perhaps.
+
+Obviously it seems like we are able to make a lot of progress in AI while maintaining the chain-of-thought faithfulness and not training it to hide thoughts in the chain of thought.
+
+And as long as the models are not incredibly superhuman in their ability to engage in scheming without having intermediate thoughts, then maybe as long as we are inspecting the chain of thought and we can see that there’s no scheming going on in there, then we can actually feel quite confident that practically useful scheming is not occurring.
+
+Maybe it would be worth taking something of a hit on advancing the speed of progress in AI to maintain that for quite a number of years, until perhaps other techniques can supersede inspection of chain of thought — perhaps something coming out of mech interp or elsewhere — that can give us confidence for this next stage when the models are perhaps thinking in a less human-interpretable chain of thought.
+
+Neel Nanda: Yeah.
+
+I am not a policy person, so I’ll avoid commenting on the broader questions there, but one thing I will say is I’m a big fan of risk management frameworks like DeepMind’s Frontier Safety Framework and Anthropic’s Responsible Scaling Policy that are like, “We will search for these risks, and if the risk arises we must mitigate it to the following level.” One of the exciting things about those is it heavily incentivises labs to invest in things like chain-of-thought monitoring and to pay attention if what they’re doing might break chain-of-thought monitoring, because then they will need new mitigations in order to remain in compliance.
+
+Rob Wiblin: Different angle: you mentioned that the models are increasingly able to tell when they’re being evaluated and tested to see how schemey they are.
+
+That’s potentially a problem because they could act nice during testing when they’re able to pick up that’s what’s going on, but then potentially act out and do things that we wouldn’t like when they’re in the wild and not being tested.
+
+I guess both mech interp techniques and chain-of-thought inspection could be vulnerable; this could potentially make them less reliable.
+
+Do you think one of them is more capable of withstanding the fact that the models might be able to pick up that they’re in testing?
+
+Neel Nanda: The way I think about this is: if you have a model that is scheming against you, it will act differently if it believes it is being evaluated versus it believes it is kind of safe.
+
+It could be the case that it acts specially if it thinks it’s being evaluated, or it could be the case that it acts specially when it’s incredibly confident it’s not being evaluated — e.g., I don’t know, it sees the bitcoin hash that we’re going to get in six months or something, something really hard to fake.
+
+And we know that models can tell, at least in simple evals.
+
+There was this really nice bit of work from Nicholas Goldowsky-Dill at Apollo, showing that when you evaluate Claude for whether it’s scheming, it will sometimes just say, “This is a really weird situation.
+
+Maybe I’m being evaluated right now.” There was one point where it guessed exactly the purpose of the evaluation and what the testers wanted to see.
+
+And sometimes it just did what it would have done anyway; sometimes it did what it thought the testers would have wanted to see.
+
+This is actually an example of chain-of-thought monitoring being great.
+
+We can just read the chain of thought, and the model observes this, and it seems to take actions as a result.
+
+I don’t need more rigorous evidence than this.
+
+I’m convinced.
+
+The question would be, can the model do this without chain of thought?
+
+That’s unclear.
+
+I think it’s actually a much harder task.
+
+I think the model might realise it.
+
+It might not.
+
+Eventually sufficiently good models will.
+
+And models that have been trained to have a chain of thought that looks nice I think would have a very easy time realising it, because the kind of implementation task of realising you’re in an eval and not doing something is quite easy.
+
+It’s not very complicated to represent this in inscrutable matrices requiring no scratchpad.
+
+The hard part is doing all of the thinking from first principles of, “I’m probably in an evaluation.
+
+They’re probably looking at my thoughts.
+
+Probably I shouldn’t say this kind of thing aloud in my thoughts.
+
+This should change how I behave.
+
+And therefore I should change things.” One of the very crucial differences between things a model can do with and without chain of thought is that a model only has say 100 layers, and each one does something in sequence — meaning that you can only have like 100 logical steps in a function that goes from the input to a specific output.
+
+Rob Wiblin: But before you have to output a word and go again.
+
+Neel Nanda: Exactly.
+
+With chain of thought, you can do these 100 steps and then you loop back to the beginning with a kind of saved variable — the word — and you do another 100.
+
+You could do like millions of steps in sequence, which lets you do much more complicated stuff.
+
+Also, models are really inefficient, so 100 is more like 5 or 10.
+
+They are not very good at extremely delicate sequences of reasoning, so there’s just not that much space for complex, many-step reasoning like this.
+
+It’s in the same way that if you ask a model a multi-step factual recall question, like, “What colour is the main object used in the sport played by Michael Jordan?
+
+Answer:” — and you just make it up for the word.
+
+That’s a lot harder than if you let it say, “Well, the sport he plays is basketball.
+
+That has a ball and it looks like this.
+
+Therefore, the answer is orange.” Or brown or whatever you want to call it.
+
+It’s the same kind of principle.
+
+I’m not very concerned about this breaking mech interp techniques.
+
+There’s kind of an open question of if a model wants to resist mech interp techniques, how easily can it do this?
+
+My personal bet is it’s possible, but very difficult — because models need to kind of shape their thoughts to not trigger the kind of things we’re looking for, and we can look quite early in the model, before it’s had a chance to figure out, “Maybe I’m being observed and I should do something creative to stop this from happening.” And I don’t know, if I’m locked in a room and I’m trying to escape, I would have a much harder time evading a good brain scan than evading someone reading my notebook over my shoulder.
+
+There are strategies I can maybe use.
+
+Like I come up with a plan once, hope they’re not paying attention, and then just memorise each step of the plan and just execute them without thinking about why.
+
+People have hypothesised models can do this.
+
+There’s no real evidence.
+
+Rob Wiblin: It seems like a heavy lift.
+
+Neel Nanda: Yeah.
+
+But I think one thing that is worth emphasising when discussing mech interp as a safety measure is that, while I think these things are hard to evade, they’re hard to evade because models don’t get much feedback on whether they have successfully evaded them.
+
+If we do things like train models to look nice — like, I don’t know, we find a deception probe and we train this to be low — maybe it stops being deceptive, or maybe it just learns to represent deception in a harder-to-study way.
+
+There was this lovely paper from Bowen Baker at OpenAI that basically showed if you do this for chain of thought, you train the chain of thought to look nice specifically, there’s problems where language models will pretend they’ve passed tests when they’ve really hardcoded the answer, things like that.
+
+You can notice this from the chain of thought, but if you train the chain of thought not to have this, they still do it a bunch, but they just never talk about it.
+
+Rob Wiblin: I’d like to turn now to a couple of objections to the usefulness of mech interp that I’ve heard fielded over the years.
+
+One I heard only just a couple of months ago from Dwarkesh Patel in an interview he did with some researchers at Anthropic, where I think they were talking about how Claude 4 thinks.
+
+I think Dwarkesh said if you tried to explain the course of World War II by thinking at all about particle physics, you would just be barking up the wrong tree; you’d be considering things at the wrong level of analysis, the wrong level of granularity.
+
+I guess there’s the possibility that some mech interp work could fall into this bucket as well: that it’s maybe looking too narrowly at specific activations, specific weights — when what we want to be looking for is kind of high-level features that might explain the behaviour of a model.
+
+And just as if you tried to understand a human by looking at individual neurons in their brain, perhaps that actually just wouldn’t help you understand in any intuitive sense what’s going on.
+
+What do you make of that objection to mech interp?
+
+Neel Nanda: Right.
+
+So I see we’re engaging in the fun game of “come up with an analogy to illustrate the position you already hold.” So I will counter with an analogy to illustrate the counterposition that I hold, because analogies can be very misleading and easy to generate.
+
+So one could say, why would anyone ever study cellular biology?
+
+Cells are tiny, bodies are large.
+
+Surely cells are irrelevant.
+
+I think this would be a pretty ridiculous thing to say.
+
+Lots of our cancer treatments are built on the understanding of what’s happening with cancer; chemotherapy targets cells that divide particularly rapidly.
+
+Sometimes really zoomed in, granular information can be extremely helpful.
+
+Studying chemistry is incredibly useful for a bunch of real-world things.
+
+Quantum mechanics is important for GPS.
+
+Sometimes it’s completely barking up the wrong tree, sometimes not.
+
+But maybe zooming out a bit, I think there is a fair point here, which is that for historical reasons the field has had a pretty strong fixation on one level of abstraction: they kind of break the model down into components like neurons or sparse autoencoder directions, and try to understand what they mean, and hope this lets you come up with the high-level thing you care about.
+
+I just think this is one of the many levels of abstraction that may or may not be fruitful.
+
+You can do things like black box interpretability, talk to the model, read the chain of thought, causally intervene.
+
+You can try to study high-level properties with things like probes for specific concepts.
+
+You can use tools from the bottom-up view — like sparse autoencoders to try to answer concrete high-level tasks, like what hidden goal does this thing have?
+
+Sometimes they’re really helpful, sometimes they’re not.
+
+One thing which I think is a crucial difference is that, I don’t know, there’s not an atom corresponding to economic forces in World War II Britain.
+
+But models sometimes do have directions that correspond to quite abstract things like that.
+
+There’s some evidence they have directions for things like “this is true” — though very much a work in progress figuring that one out.
+
+I think that I’ve become more pessimistic in my ability to predict in advance what the correct approach and level of abstraction is, but I think that all of these have a decent shot at having useful things to share and have limitations.
+
+And I don’t think anyone’s wrong to focus on the neuron-level thing.
+
+I think it could be really helpful.
+
+But I also think that the field should be diverse in the approaches taken.
+
+It’s honestly quite hard for me to say what exactly the field needs right now, because the field is growing rapidly.
+
+Ideas often spread fast or slowly.
+
+I know there’s some people who still do the kind of work that was popular three years ago, like interpreting small algorithmic tasks that in my opinion isn’t super productive anymore.
+
+I would like the field to diversify across this.
+
+But I don’t think we can confidently say any one of these levels is wrong or dumb or useless.
+
+Rob Wiblin: Another line of argument kind of questioning how likely mech interp could be at some future crucial time, when we’re having to make decisions about what models to trust and which ones not to, is that at around that time, perhaps at the point that models are becoming capable of recursively self-improving in a pretty autonomous way, we might expect that the models are going to be changing much faster than they are right now, that research progress might in fact be speeding up.
+
+This is already reasonably fast, and it will be much faster at that time.
+
+So you could imagine that every few months you get models that are much larger than the previous one, that have been trained for much longer.
+
+They might have much better and different internal architectures that are allowing them to accomplish tasks that they previously couldn’t.
+
+And mech interp is somewhat backwards-looking.
+
+It will be able to have studied the previous models, the previous architecture, but the thing that is going to be worrying is always the frontier model: the thing that’s just been trained and that’s potentially going to be quite different than anything that’s been studied before.
+
+So perhaps by that stage we might have been able to figure out for old models whether they’re deceiving us or not.
+
+But there might be radical changes from GPT-7 to GPT-8, and our approaches might just break down at that point.
+
+And because we’ll be so rushed in feeling the need to deploy these new models, because they’re much better than the previous ones, that in fact mech interp might only give us a false sense of security, or we might realise that it’s not actually able to keep up.
+
+What do you think of that possible way that things might not play out so well?
+
+Neel Nanda: I definitely think that recursive self-improvement is very concerning and has much more liability to go wrong.
+
+It also seems the kind of thing that just will happen, and is the kind of thing where figuring out what kinds of safety approaches might help and might not is super important.
+
+I think that getting safety right here will be quite difficult and require a lot of effort and research, and it’s really important that we invest in this now.
+
+I don’t think mech interp is notably less likely to be useful than other areas of safety for several reasons.
+
+First off, mech interp is just another kind of research, and the premise behind recursive self-improvement is that we’ve automated how to make AIs better at research.
+
+How to interpret AIs better is also a kind of AI research.
+
+So the question you need to ask yourself is, how easy is mech interp research to automate versus other kinds?
+
+And it’s kind of unclear.
+
+It wouldn’t surprise me if right now mech interp research is being sped up more than frontier capabilities research.
+
+Because we have great coding assistants, but in my opinion, these coding assistants seem a lot better at spinning up prototypes and new code and proofs of concept than working in complex legacy codebases where you need to read the code written by thousands of prior engineers and interact with thousands of future engineers.
+
+And if you look at the training codebases of frontier models, they are much more like the complex many-people things, while there’s a lot of great mech interp work that happens outside of labs.
+
+I do a lot of mentoring for this programme called MATS, and I take on a new cohort of eightish scholars every six months.
+
+My most recent one is notably more productive than previous ones.
+
+And maybe they’re just awesome, but my guess is that language models have just become good enough to speed them up fairly substantially.
+
+Language models right now are better at accelerating people new to a field than they are at accelerating experts, because they’re great at explaining things.
+
+You can get exactly the knowledge you need without needing to search hard.
+
+Rob Wiblin: Yeah, I think that’s been a recurring finding.
+
+Neel Nanda: Yeah.
+
+And I expect them to also be useful to experts.
+
+I mean, I find them helpful and I expect that to get stronger.
+
+So that’s observation one.
+
+Observation two is that I think mech interp requires unusually low amounts of compute compared to lots of frontier capabilities research, because we don’t need to train language models.
+
+Some projects require more or less compute, but if you had to do lots of research on a low compute budget, I think there’s a lot of useful things you could do — including, say, you train an expensive thing like a sparse autoencoder or variants like transcoders once, and then you use it cheaply a bunch of times.
+
+I think that being low compute matters, because you can think about research as a thing that takes different inputs and produces useful insight.
+
+One of those inputs is cognitive labour from researchers, one of those is coding labour, and one of those is computing power.
+
+If AIs are getting much smarter fast, then I think we will accelerate the research labour, and the coding labour will become much cheaper — meaning compute will be the bottleneck, because converting GPU hours into more GPU hours probably goes via things like making a new $100 million fab with better techniques, or telling TSMC an even better way to make a good TPU.
+
+It’s much slower.
+
+That’s another source of optimism.
+
+Sources of pessimism is that, with safety research, if we have systems that are misaligned, they might try to sabotage the research so we can’t tell, or that their future successes are even more misaligned or kind of aligned to their interests.
+
+AI 2027 tells a pretty scary story along these lines.
+
+And I think this is more of an issue the less objective the work is.
+
+I think mech interp is kind of medium on this front.
+
+It’s empirical, you get experiments.
+
+But it does also require judgement, and figuring out either how we can evaluate them ourselves or how we can make judges that we trust.
+
+Or how we can make safety techniques such that we’re confident the systems aren’t sabotaging us is a really important research direction.
+
+One source of optimism there is if we get the early stages right, in terms of we can be pretty confident this system isn’t sabotaging us — maybe just because we’ve got some good AI control methods that don’t even use interp — and the system is much better than us at coming up with new anti-sabotage measures, potentially this means that we can be even more confident in the next generation, et cetera.
+
+Or maybe not.
+
+I don’t know.
+
+It’s really complicated.
+
+But I don’t think it’s completely doomed, is the important point.
+
+Rob Wiblin: I could try to say that back: recursive self-improvement makes the situation just much more perilous in general.
+
+Maybe it makes it harder for mech interp to solve this problem, but it makes it more difficult for anything to solve this problem.
+
+So if we’re going to go down that path, then I guess we want to be just using a whole lot of different tools.
+
+And I guess in particular, at the point that we can do recursive self-improvement on capabilities, we could potentially also do recursive self-improvement — or at least have an enormous amount of AI assistance — on mech interp as well.
+
+So there is some hope that mech interp will at least be able to roughly keep pace with the recursive self-improvement loop on the capabilities side, if we’re willing to put in the compute and the staff time and make it a priority.
+
+Neel Nanda: Exactly.
+
+I think there’s also a sense in which maybe one of the most useful things researchers could be doing now is creating the research agendas that can then have millions of GPU hours thrown into having automated researchers work on, or proofs of concept that a thing would be a good use of a tonne of resources — so that people with the resources to do this automated research might be more willing to allocate some to safety or allocate to some more promising directions of safety.
+
+But that’s a different mindset than the one I normally take, and I haven’t thought about it enough to have confident thoughts.
+
+Rob Wiblin: OK, let’s push on and talk about the story of sparse autoencoders, which is probably the most popular or maybe the most famous technique that’s come out of mechanistic interpretability.
+
+Many people will have heard of it, even if they maybe haven’t heard the term “sparse autoencoder.” Yeah, give us an intro.
+
+What are sparse autoencoders?
+
+Where did they originate?
+
+Neel Nanda: Sparse autoencoders are just a classic technique for learning from data.
+
+They were very popular in neuroscience well before mech interp started using them, but I’ll focus on the mech interp application.
+
+The problem we are trying to solve with the sparse autoencoder is basically reading the mind of an AI.
+
+It’s like someone sticks an MRI scanner onto my head, like a brain scanner, and sees a bunch of brainwaves as I’m looking around this room.
+
+They contain information like there’s a light over there, Neel is talking right now — but it all looks like a mess.
+
+Sparse autoencoders are a technique that can take those messy brainwaves and transform them into something much easier to understand — where you can say, if there’s this kind of squiggle, that means Neel’s looking at the lamp right now; this kind of squiggle means Neel has his eyes shut, that kind of thing.
+
+What you do is you just give a model a lot of data.
+
+You run it over billions of words of data — thousands, millions of documents — and then you look at its kind of thoughts, these lists of numbers on each of those words in, say, the middle of the model.
+
+And then you say, directions: if we have learned one thing in mech interp, it is that concepts often have directions.
+
+Assumption 2: concepts are sparse.
+
+Language models know what The 80,000 Hours Podcast is, but tragically, they aren’t thinking about it almost all of the time.
+
+It’s not yet relevant to everything.
+
+So if there is an 80,000 Hours direction, it should be very important a small fraction of the time, and unimportant almost all of the time.
+
+This is not true of an arbitrary direction, which is kind of a mix of many concepts weakly.
+
+Sparse autoencoders are a data science technique for trying to find directions that are very useful a bit of the time and completely irrelevant almost all of the time.
+
+Rob Wiblin: Because that’s a really strong signature that it’s a meaningful concept that applies at certain times and not at others, rather than just noise.
+
+Neel Nanda: Exactly.
+
+And this is a very important and weird logical leap that I want to highlight.
+
+Our goal was to find interpretable concepts.
+
+But what does that even mean, man?
+
+But sparse concepts is very precise: we can mathematically define that, and if you can mathematically define it, you can optimise it.
+
+So we used this as a proxy for what we actually cared about — interpretability — and we tried to find sparsely useful directions in model thought space.
+
+And what we found was that they are kind of useful.
+
+The things they find are often interpretable; sometimes they are not interpretable.
+
+And because we’re not telling it what concepts to look for, we’re just telling it to find useful directions, we don’t get labels.
+
+The direction might be big when talking about The 8,000 Hours Podcast and small otherwise, but you just have to look at the text where it lights up and observe.
+
+Rob Wiblin: Try to figure out what’s the common feature.
+
+Neel Nanda: Exactly.
+
+It’s like a kind of puzzle you have to solve, and sometimes you’re wrong.
+
+But it means that even if you had no idea the model was thinking about The 80,000 Hours Podcast, this tool might have discovered that.
+
+The jargon for this is “unsupervised.” Techniques like probes — where you go in knowing exactly what you’re looking for — are called “supervised” because you give them supervision.
+
+Rob Wiblin: And they risk missing something if there’s something that isn’t on your list.
+
+Neel Nanda: Exactly.
+
+Often supervised techniques can at least tell you that you have missed something, even if they can’t tell you what you’ve missed.
+
+Sometimes they don’t even tell you that.
+
+It’s nuanced.
+
+Rob Wiblin: The reason I said many people will have heard of SAEs, as they’re often abbreviated, is that I guess many people have seen Golden Gate Claude, which is this very viral memeable model.
+
+This is Claude, of course, the model from Anthropic.
+
+I guess they found the direction in the model that corresponded to the Golden Gate Bridge, and then they tried to turn it up to the max — and the model would start responding to almost any question that you gave it with something to do with the Golden Gate Bridge.
+
+And it would get very frustrated with itself, because it wasn’t able to answer the question because it was so constantly distracted by its thoughts about the Golden Gate Bridge.
+
+Neel Nanda: I deeply love Golden Gate Claude.
+
+Anyone who missed out on this, there’s a good blog post by Zvi Mowshowitz with a bunch of collated examples.
+
+Like you ask it for a spaghetti and meatballs recipe, it gives you an ingredients list and then it ends it with “one Golden Gate Bridge and one mile of Pacific beach for the views to walk on after you finish eating.” Rob Wiblin: I’m surprised that no one else has tried to replicate the success of Golden Gate Claude.
+
+Even Anthropic kind of withdrew it.
+
+They haven’t kept it up.
+
+Neel Nanda: There’s a bunch of demos.
+
+If anyone listening to this wants to just see SAEs for themselves, there’s this amazing group called Neuronpedia and they have a demo for some open source SAEs my team put out called Gemma Scope.
+
+Go to neuronpedia.org/gemma-scope.
+
+You’ll find an interactive demo where you can use the SAE to see what the model is thinking about.
+
+You can turn concepts up and down.
+
+And yeah, Golden Gate Claude was this incredibly fun demo they did.
+
+Maybe to give a bit of historical context on where all of this came from, we were discussing earlier how early in the field people thought each neuron would mean something — like up, down means something; left, right means something; it’s obvious what the right directions are.
+
+Sadly, this is false.
+
+So we need to find a way to figure out what these directions are, including in a way that’s robust to weirdness, like the model compressing lots of directions and having interference.
+
+People had kind of discussed these ideas for years.
+
+There’s actually a lovely 2021 paper that used this stuff — that interestingly has Yann LeCun as a senior author, not sure what happened there.
+
+Sadly, Facebook AI research did not continue with this amazing line of research.
+
+But it got very popular when there were these two simultaneous papers.
+
+One was a MATS paper from Hoagy Cunningham and others, supervised by Lee Sharkey; and one was from Anthropic’s interpretability team, led by Trenton Bricken.
+
+What both of these showed was you can take a neural network, apply this pretty straightforward technique that’s a pain to train, but ultimately not that hard or that complicated, and you just discover all kinds of things you didn’t necessarily expect.
+
+For example, in Anthropic’s first paper they were looking at a tiny one-layer model, but even there discovered some unexpected stuff.
+
+For example, there’s a common way of representing text on the internet called Base64 when you want to compress it — like if you have a YouTube or Twitter link that’s in Base64, where it’s got all those numbers and letters, but this often corresponds to text.
+
+And what they found was that not only is there an “I’m speaking Base64 right now” concept, but there’s actually three if you dig in a bit harder.
+
+One is like, this is a number, because the thing that comes after a number is likely to be a letter because of specifically how we break down these strings into individual tokens.
+
+And there’s another one for this is normal text converted to Base64 rather than just random gibberish.
+
+I would not have expected any of that.
+
+And this was a one-layer model, which is incredibly dumb.
+
+So there was a lot of excitement.
+
+It seemed like this was a potential solution — like if we can go from inscrutable lists of numbers to interpretable lists of sparse concepts, where we can automate the process of labelling each of them and see which of these light up, that just seemed incredibly impactful, if it could work.
+
+And this became a bit of a craze in the field for most of 2024.
+
+Rob Wiblin: So it’s been a big craze in the field over the last couple of years.
+
+But I guess you and your team in March this year wrote this update article on how your SAE research was going, titled “Negative results for SAEs on downstream tasks and deprioritising SAE research.” So I guess you’ve been maybe a little bit disappointed with how things have gone.
+
+What are some of the limitations that you’ve run into in using this technique to figure out what models are thinking about?
+
+Neel Nanda: To try to clearly say up front what my ultimate conclusions are: I used to think SAEs could be a game changer, and were worth a lot of effort in case they would be.
+
+I now think they are a fairly useful tool that is sometimes the right tool for the job, sometimes not, and does not deserve the level of focus in the field that it once had.
+
+The field has corrected a fair bit.
+
+I admittedly wrote my post slightly provocatively to try to help that shift happen — though people have often misunderstood it as me thinking SAEs are terrible and we should ignore them or they don’t work.
+
+They’re useful, but they have flaws.
+
+So what are these flaws?
+
+Ultimately, there’s a couple of reasons that SAEs have issues.
+
+Listing them: first, sparsity is not the same as interpretability, and sometimes this comes apart.
+
+Secondly, they are imprecise.
+
+One of the costs of not telling them what they’re looking for is they don’t tend to learn exactly the same direction you could get if you were deliberately trying to get that direction.
+
+And thirdly, they’ll just often be missing concepts or have found a breakdown that maybe is more true to the model, but isn’t exactly the one that’s most useful to us if we have a specific task in mind.
+
+The thing that I think they are extremely good at is generating a hypothesis about what can be happening and telling us things we didn’t expect — which we might then go on to test with more rigorous means in other ways.
+
+So let’s elaborate a bit on these.
+
+What do I mean by sparsity is just a proxy?
+
+Let’s consider an example.
+
+The model wants to represent two concepts.
+
+The current word starts with the letter E.
+
+It needs this for things like alphabetical order.
+
+And the current word is the word “elephant,” which is often useful to know.
+
+Elephants have lots of meaning associated with them.
+
+And on a word like “echo,” “starts with E” lights up, but “elephant” doesn’t.
+
+On the word “elephant,” both of them light up.
+
+Sparsity is about having as few things as possible light up.
+
+So the SAE wants to find a way to only have one thing light up on “elephant.” But if you know that the current word is “elephant,” you can just also store the information that it starts with E because it always implies “starts with E.” So you don’t need to have the “starts with E” concept light up.
+
+In theory, this is reasonable, but it means you end up with ridiculously gerrymandered BS, like “starts with E and is not the word elephant or echo” or some other list of like 10 exceptions.
+
+Rob Wiblin: And this is because it’s trying to find concepts that are as sparse as possible that they light up in as narrow a set of circumstances as possible?
+
+Neel Nanda: Exactly.
+
+Let’s stop even using the word “concept”; it’s trying to find directions — and “starts with E but is not the word ‘elephant'” is not a concept, but it is a direction, and it’s sparser than “the concept’s direction starts with E.” So the model is incentivised to learn this if it has enough capacity, and turns out that they do.
+
+This is a phenomenon called “feature absorption” from a delightful paper from Joseph Bloom and David Chanin.
+
+And this one in particular is potentially surmountable.
+
+There was this lovely paper called “Learning multi-level features with Matryoshka sparse autoencoders” that some of my MATS scholars were involved in, from Noa Nabeshima and Bart Bussmann, where they added some clever constraints to the SAE so it couldn’t be as sparse as it wanted, and that seemed to substantially improve issues like this.
+
+But there are some other issues, and it’s messy.
+
+Substantially messier than I realised when I first got excited about them.
+
+Rob Wiblin: Is the upshot of all of this that you do this sparse autoencoder thing — you try to match up different directions with different concepts — but you end up with some directions that in fact aren’t really there in the model?
+
+Some false positives, and other directions that may be close to corresponding with some actual concept.
+
+But in fact you end up with this very weird definition, or the sparse autoencoder says this is the direction for “starts with the letter E but isn’t an elephant” — something that isn’t a natural concept.
+
+And so it’s not actually as useful to us as it might be if it was able to find the true meaning within the model?
+
+Neel Nanda: Yep.
+
+I mean, the thing I’ve described is not that bad.
+
+We can figure it out, we can deal with it.
+
+It can lead to quite annoying things.
+
+If you imagine something like “this is a male scientist” or something, large models represent knowledge of a lot of scientists.
+
+A large SAE might have dedicated directions for many of them — like Einstein, Feynman, whatever.
+
+It can absorb the “this is a male scientist” information into each of these.
+
+If there’s enough of them, maybe it just doesn’t bother representing the leftover bits.
+
+And now, if I want to do something where I’m seeing if the model is thinking about the fact that the current entity is male, instead I see that it thinks the entity is Einstein and I have to figure out what’s happening.
+
+And Matryoshka SAE has made progress on a bunch of issues like this, but I think this is a good illustrative example of the kind of annoyances that arise.
+
+Another, maybe deeper problem is that sometimes we don’t get the decompositions that we hoped for or that is most useful for us, and we can make more useful decompositions via other methods.
+
+Maybe the SAE is more faithful to the model.
+
+Maybe the SAE is just not learning the thing we wanted it to learn.
+
+We don’t really know.
+
+But I think one key thing to keep in mind is that SAEs are very capacity constrained.
+
+It’s common to train them with, say, 100,000 concepts.
+
+This can capture a fair amount of the important things, but there’s a lot of stuff that’s not captured.
+
+You can make them bigger.
+
+The largest I’ve seen had about 12 million concepts in it, or 16 million or something.
+
+But even then you have issues.
+
+Rob Wiblin: Yeah.
+
+So you tried running experiments to figure out how useful are SAEs, and actually the kinds of things that we’re ultimately going to want to do with mechanistic interpretability.
+
+I think you found that they didn’t stand out as perhaps being quite so useful as to justify the additional complexity that they have.
+
+Do you want to explain that?
+
+Neel Nanda: It’s complicated.
+
+The way mech interp often goes is: you have a clever idea and you produce some cool flashy examples because there was some situation where your technique worked or some example of what you learned.
+
+Golden Gate Claude was awesome, but maybe it was totally impossible to make Statue of Liberty Claude or Obsessed with Australia Claude or something.
+
+But people only saw the big flashy demo.
+
+And it’s easy to even see some situations where it looks like the sparse autoencoder is being helpful, but this doesn’t really answer the question of just, should this be a big investment of the field?
+
+Is this exciting?
+
+Will this matter for safety?
+
+Measurement is always a key question when doing science.
+
+How do you tell if what you’ve done has worked or not?
+
+And when thinking about SAEs as an attempt to fully break down the model’s thoughts into these interpretable pieces, you can ask questions like, how does the model’s performance drop if you get rid of everything the SAE didn’t capture?
+
+Or how accurate is the SAE?
+
+This can tell you if you’re getting better at training SAEs, but a number like 90% of the performance was preserved by the SAE is actually kind of meaningless when you stare at it.
+
+Is this good?
+
+Is this bad?
+
+What do I need for preventing deception?
+
+Do I need 99%?
+
+Maybe what I need is just to be good at deception, and this is only vaguely correlated with that.
+
+So a thing people started doing was trying to use SAEs on real-world tasks.
+
+And sometimes this went well, sometimes this went badly.
+
+I was overall moderately underwhelmed by how this went, and concluded they probably aren’t going to be the game changer I wanted them to be.
+
+But also they actually did win in a few cases.
+
+Rob Wiblin: What were the tests that they were put through?
+
+Neel Nanda: At a high level, the kinds of tests where they did well were tests where you didn’t know what you were looking for.
+
+I mentioned an example earlier from Sam Marks at Anthropic where they were good at auditing a model for its hidden goal.
+
+They helped researchers discover what was happening.
+
+There’s also this delightful paper on hypothesis generation with SAEs where you can give it a dataset of, say, newspaper headlines and whether people clicked on them or not.
+
+It turns out that, A, the study of how to generate explanations for why political things get clicked on more is just a legitimate field of study that has baselines and established metrics, which was complete news to me.
+
+And secondly, SAEs win.
+
+They’re better, faster, cheaper, and come up with qualitatively reasonable hypotheses.
+
+I think the key trend in both of these is we didn’t know what we were looking for, and this helped us find that.
+
+They also have potential for things like useful consumer-facing products, where you can have things like a dashboard of the concepts the model is thinking about.
+
+There’s a startup called Goodfire who have a fun demo of this.
+
+So those are the things where it went well.
+
+The things where it didn’t go so well is tasks where we kind of knew the concepts we wanted to study already.
+
+So there was a bunch of work exploring this on many different perspectives, but closest to my heart is the stuff that my team did at GDM, where we wanted to figure out if we could detect harmful intent from a user’s prompt well, with sparse autoencoders.
+
+And we reasoned that if they’re finding us interpretable ways of detecting this, then this should generalise better.
+
+Like when you give it different prompts and different jailbreaks, this should surely work better, while things that use data to learn some specific kinds of harm and specific jailbreaks should do notably worse.
+
+And as discussed earlier: nope, the incredibly simple linear probes did dramatically better.
+
+They actually did substantially better than I expected any technique to — meaning that I’m now excited about just how else can we use them for this kind of task.
+
+This is actually practically useful.
+
+My story for what happened here was just that there was some concept of harmfulness in the model.
+
+I don’t know exactly how it was represented, or if it was a single concept or a mix of several, but we were able to come up with data that targeted it very well.
+
+And actually, our initial data was quite bad, but we kind of discovered some spurious correlations in it and cleaned it up.
+
+After that, simple linear probes were extremely good, even just out of distribution on totally different jailbreaks — suggesting that the best way to solve the problem on the training data we gave it was just to learn the right concepts.
+
+SAEs maybe kind of vaguely had some of the right pieces, but there was no concept in the SAE that was the thing we were looking for.
+
+There were just a bunch of kind of related concepts.
+
+And maybe the SAE is doing its job right — maybe the model wasn’t thinking about harmful intent — but if we can piece together its thoughts into the concept we think about, it’s good enough for me.
+
+Rob Wiblin: I see.
+
+So you’re saying SAEs are useful when there’s some concept in the model, there’s some direction, but you’re not sure what it corresponds to and you’re not sure what it is.
+
+Some unknown bad goal we suppose has been trained into the model, but you don’t know what it is.
+
+So you’re searching for a needle in a haystack, and you don’t even necessarily know what the needle looks like.
+
+But SAEs are kind of unnecessary and maybe even not terribly effective in a case where you know what you’re looking for.
+
+The harmfulness direction or the deception direction has a clear meaning, and you can give a whole lot of examples where it’s present and where it’s absent.
+
+And in that case, the much simpler technique of probes does much better than SAEs and is also much easier to apply.
+
+Neel Nanda: Yeah, pretty much.
+
+I think a way that it might be useful to think about interpretability is that there are some tasks where you really need unsupervised knowledge discovery: the ability to be surprised by what your techniques find, to find concepts you didn’t even know you should be looking for.
+
+Sometimes this isn’t the important thing.
+
+Notably, for things like deception and detecting deception, maybe we just know what we’re looking for.
+
+Or maybe not.
+
+Maybe deception is represented in a much messier and more complex way that SAEs can reveal to us and simpler techniques like probes won’t.
+
+I don’t really know.
+
+I think that as a field we just need to diversify.
+
+I think there’s a need for good unsupervised discovery techniques, but they are not the only thing we should care about, and I would love to just gain more evidence over time of how important each of these things is.
+
+Rob Wiblin: I see.
+
+So the basic story is there was maybe a hope at some point that SAEs would be the technique to rule them all.
+
+This would be the approach that we would end up using for almost everything.
+
+And you’ve concluded that they are useful for this particular subset of tasks that we might have — like uncovering a hidden goal where we don’t know what the goal is, or we don’t know what the trigger is, or something like that.
+
+But the field has to diversify a bunch more because SAEs are potentially just not the best technique for many other problems — indeed, perhaps the most obvious problems like uncovering deception, where we do kind of know what we’re looking for, and we can give examples — and for those we want to find, we have probes which work in a bunch of cases already.
+
+They’re actually quite effective, and maybe we want to be looking for other techniques that are even more robust and even more effective.
+
+Neel Nanda: Yeah.
+
+And something I want to stress is I’m not confident SAEs won’t be the right tool for a bunch of these other questions, or like a crucial part of the solution.
+
+Maybe we’ve misunderstood how deception is represented.
+
+Maybe we make a dataset, but actually 30% of the things we think are deception are the model being confidently wrong and honest.
+
+And maybe SAEs can help us discover that.
+
+Maybe my update has been more that we put a lot of effort into this specific technique.
+
+One thing we haven’t even really gotten into is that SAEs are just quite expensive.
+
+You just need to spend a lot of computing power and effort to train them.
+
+One project my team did was just releasing a bunch of open source SAEs on Gemma 2, a decent model, because we wanted to make it easier for people to do good SAE research, and they’re kind of expensive.
+
+I think we used all-in about 20 petabytes of storage, that would be I think 20 million gigabytes, and we used about as much compute as we used to train GPT-3.
+
+It’s kind of boring by today’s standards, but — Rob Wiblin: Meaningful.
+
+Neel Nanda: It’s interp!
+
+We never do that kind of thing.
+
+Anthropic and OpenAI have scaled even harder than we have in some of their papers.
+
+And I think that my ability to predict which fancy techniques would be a big deal and which wouldn’t is something I now have much less confidence in.
+
+My conclusion from this about my research direction and what I’d love to see many of the field do is to shift to task-focused research.
+
+I think the auditing games paper where they taught a model a hidden goal is a fantastic example of this, because you can just try a bunch of techniques.
+
+Maybe SAEs win.
+
+There are some other great techniques, like putting words in the model’s mouth.
+
+You can just make it say, “I don’t need to be secretive anymore.
+
+I’m free.
+
+This is amazing.
+
+I will now reveal the truth.
+
+My secret plan is:” and then make it say what comes next.
+
+Sometimes this works.
+
+It’s called token forcing.
+
+I want people to prioritise work where they’re just trying as many ways as they can think of to solve a task, and when they find the more effective ways, we can prioritise iterating on those if we think the task is important.
+
+I think the auditing games line of research has a tonne of potential.
+
+There was a MATS paper I supervised from Bartosz Cywiński, where we did a way simpler version.
+
+We taught the model a secret word.
+
+We taught it how to play the game Taboo, where you give it examples of descriptions of a word that never mentioned the word.
+
+It never saw that word in training — a word like “smile” or something — but it actually learned to represent that internally, because it had learned the easiest way to generate descriptions of a smile without mentioning the word is to know the word, rather than just memorising all the things it was trained on.
+
+And a bunch of techniques, including sparse autoencoders, including black box ones, worked for recovering that word a decent fraction of the time.
+
+This was vastly easier and simpler than the incredibly impressive hidden goal model that the Anthropic paper made.
+
+We open sourced all of those, and I want people to just open source a big ladder of increasingly complex models to audit so we can have benchmarks of how good we are at getting increasingly complex kinds of hidden information.
+
+And if anyone’s listening to this and feels interested, you can just do this.
+
+You don’t need major resources to make this happen.
+
+Rob Wiblin: Your post recently had the flavour of the glass is half empty on mech interp, that perhaps doesn’t look quite as good now as it did two years ago to you.
+
+I’m sure there’s still people out there who think mech interp is the thing.
+
+We should, if anything, be more focused on mech interp than we have been before.
+
+What would those folks say in response to all of this?
+
+What would be their argument in favour of mechanical interp?
+
+Neel Nanda: The kinds of arguments I hear most often when I argue with other people in the field is, firstly, people just being more optimistic than me that we’ll be able to push the ambitious thing really far.
+
+People tend not to actually argue that we will literally completely reverse engineer the thing, but some people are pretty optimistic that we’ll understand enough that the bits we don’t understand aren’t super important.
+
+This is just kind of a judgement call at the end of the day; there’s not an objective answer to this question.
+
+Another objection is saying, “Sure, I agree that we’re not going to actually get to the point where the things you don’t understand are negligible, but I think that pushing in this direction is the right way to prioritise what we’re doing in the near term.
+
+And that at the end of the day we’ll have some pragmatically useful tools, but we came up with sparse autoencoders via this kind of mindset, and you agree they’re a useful tool.
+
+We think that this kind of ambitious mindset is a more productive way to reach things like that.” Which I honestly think is a fairly reasonable perspective.
+
+I don’t hold it, but I don’t begrudge people who hold it.
+
+I think it’s a reasonable interpretation of the available evidence.
+
+A lot of these questions are just judgement calls at the end of the day.
+
+Another kind of philosophical objection is people saying all of these complaints you’re raising, they’re predicated on something like mech interp should be useful now or in the near future, if it is eventually going to be useful in a few years or decades, depending on how long their timelines are.
+
+And this is again a question of the philosophy of science.
+
+I personally am of the opinion that if your thing is going to be useful in two years, that you’re probably doing something useful now.
+
+You don’t necessarily need to prioritise that, but if it’s losing to simple baselines, somewhat concerning.
+
+But people might argue we’re just going to ambitiously push on this thing, and in a year it’s going to be on parity with probes, and in another year it’s going to be dramatically better, and you’re just prematurely giving up — which is kind of an unfalsifiable position.
+
+Could be true.
+
+Another one might be that people think that unsupervised discovery is actually the crucial question of the field, that they’re just really confident that we’re not going to know what deception looks like or exactly what we’re looking for, and that we need to prioritise techniques like that.
+
+And I think that if your sole goal all along was unsupervised discovery, I still think that the field was too focused on SAEs.
+
+But I think you should be much happier with how all of that went than if you thought it could just make everything you might want to do across the board easier.
+
+And some people just in fact had that in their head all along as the main goal.
+
+Rob Wiblin: So that’s the bull case.
+
+But I guess your best guess is that perhaps the public enthusiasm about mech interp has gotten a little bit out of proportion to the actual success that it’s managed to have so far.
+
+Why do you think it is that there’s been so much attention and so much enthusiasm about mech interp, perhaps above and beyond what it actually has managed to accomplish or how likely it has been to be able to do better?
+
+Is there any lesson there about what stuff people are inclined to get a little bit too hyped up about?
+
+Neel Nanda: So the fundamental problem with mech interp field building is that mech interp is an enormous nerd snipe.
+
+It’s just so fascinating.
+
+We have these incredibly confusing alien brains that are reshaping our world and we don’t understand them.
+
+And people hear about this field that promises to bring clarity and insight.
+
+I think to a lot of people, myself included, that’s just a really appealing romantic vision.
+
+Rob Wiblin: But isn’t that also true of AI control or scalable oversight?
+
+Aren’t they also things that you could really dig your teeth into and feel excited about?
+
+Neel Nanda: Well, a separate belief I have is that most AI safety researchers are bad at marketing.
+
+You could try to sell AI control as something like: we are trying to outwit a potentially superhuman schema and use all of our advantages to their fullest extent, and pose people some interesting mental puzzles.
+
+I really liked Buck Shlegeris’s control interview on this podcast, in part for that reason.
+
+I thought it did that much better than any of the previous control things I’d seen.
+
+We need to market things.
+
+Rob Wiblin: Yeah, it hasn’t been sold perhaps in as juicy a way as it could be.
+
+That’s held us back.
+
+Neel Nanda: One of my hobbies is figuring out how to market research well, and I think several other mech interp researchers are pretty good at this.
+
+I think that there’s several things going on here.
+
+There’s just things feeling exciting and just capturing people’s imagination — partially just as an inherent result of what’s happening in the research project, partially as a result of kind of more effort put into framing it in a way that is exciting to people — which I think is in some ways quite good, because lots of people who otherwise wouldn’t be doing safety work are now doing mech interp, potentially me included.
+
+But also bad, because when you have a bias towards a field, that leads to systematic bad resource allocation.
+
+But it’s also just very fun to think about.
+
+It’s easy to get into without much computing power.
+
+So this has led to lots of people trying to get into the field.
+
+Going back to the question of the broader perception, I think that there’s always a filtering effect when people not steeped in a field hear about research.
+
+You hear about the exciting examples, you hear about the successes.
+
+Unless you go read the paper carefully or listen to someone grumpy like me complaining, you don’t hear the nuances and the caveats — even if the researchers who wrote the paper were very careful about documenting this.
+
+A lot of ML research nowadays is popularised and communicated via Twitter, which by design heavily constrains the amount of information you can put out.
+
+I try to put as much nuance as I can in my tweet threads, but I have to put less in than I put into the paper.
+
+Rob Wiblin: And even if you added more, people stop reading.
+
+Neel Nanda: Yeah.
+
+My philosophy of Twitter is 95% of people never read beyond the first tweet, so that has to have everything you care about.
+
+So if you can’t fit the nuance in 280 characters, most people will not see it.
+
+And if I have a treat thread where the first tweet is really hypey and the second one has all the caveats, that is intellectually dishonest — because I know most people will never see the caveats.
+
+Rob Wiblin: Yeah.
+
+But it is difficult.
+
+It’s difficult to communicate everything that people need to know about something in 280 characters.
+
+I mean, you can be more or less misleading.
+
+Neel Nanda: But people don’t care about the nuance a lot of the time.
+
+Or people see something like Golden Gate Claude, and they don’t think about all of the background questions, like how hard would this have been to do with a much simpler and cheaper method?
+
+Could I have done this with a system prompt?
+
+That kind of thing.
+
+I actually think you probably couldn’t have quite done it with a system prompt; the vibe is quite different.
+
+But that’s a totally different tangent.
+
+And this means that people just get excited about things in a way that I think can outstrip what’s actually possible.
+
+I think this is true in most research fields, but I think that mech interp maybe has a disproportionately high amount of really flashy and appealing-looking results.
+
+And it is very easy to overgeneralise when you see examples of things going well to thinking that we’re just really on top of this whole thing in general — when actually, often, especially in an early stage field, people systematically favour research projects where they think they can get traction.
+
+Because the prior is you fail at everything, and succeeding at anything is exciting.
+
+Rob Wiblin: What is an area where you think mech interp is on track to really shine and succeed in coming years and be really useful?
+
+Neel Nanda: I have become a big convert to probes.
+
+They are a really simple, really boring technique that actually work — and I think they are basically just already shovel ready for things like: is someone trying to misuse this model for something like bioweapons, which Anthropic have nicely shown.
+
+I think that there’s a lot of potential in general from just having really cheap monitors that operate via a different pathway to input/output-based methods I think is just really awesome.
+
+And you can imagine them slotting into things like control schemes.
+
+You want to monitor a system and look for things like, is it scheming?
+
+Is it trying to escape?
+
+If you have another language model that’s been fine-tuned to be a really good honest monitor, that might be quite effective — but it’s quite expensive, especially if that model wants to have lots of chain of thought.
+
+But if you can use a probe and only run the expensive thing the 1% of the time that’s most schemey, you cut the cost by about 100x.
+
+Seems great.
+
+I mean, probes: they’re boring.
+
+They basically work.
+
+Some people listening to this will just refuse to even call them interp.
+
+But whatever.
+
+You are checking for a concept, so I count them.
+
+I think the other kind would be understanding what’s happening in a model when it does something weird and sketchy.
+
+Just kind of an exploration.
+
+This is the kind of thing that you just want a wide toolkit on.
+
+It’s not the kind of thing where you just find a silver bullet method, like, “I checked my SAE and the SAE said this.” You know, we have anything from really low-tech methods, like just read the chain of thought; to things even fancier than SAEs — like this technique called “transcoders” that Anthropic had some lovely papers on, that let you kind of try to understand how a model’s thoughts are formed, but also are just ludicrously expensive, even by the standards of SAEs.
+
+And I just think something in here will work.
+
+And things like, does my model have a hidden goal?
+
+Why did it do that?
+
+These just seem like really important questions.
+
+“I have a new version of this model and it’s way worse at helping with bioweapons.
+
+That’s interesting.
+
+Did we just break the biology knowledge, or is it deliberately underperforming in our evals?” I think that we have a pretty good shot at interpretability being able to really help answer questions like that.
+
+Though there’s a sense in which anything that answers a question like that is interpretability, by my extremely loose definition of “things that achieve understanding.” Rob Wiblin: All right, eagle-eyed viewers will perhaps notice that there’s a bit of a sharp cut there and we are on a different day.
+
+We’re five days later and there’s been a weekend in between these two different shoots.
+
+We absolutely ran out of time to finish all of our questions last week, so we are back for day two.
+
+I think we’re wearing identical clothes as far as I can tell, but I imagine we both did our laundry over the weekend.
+
+So it seems like last week when we were talking, overwhelmingly when you were discussing mech interp, you were talking about diagnostics and understanding the models more than controlling them.
+
+And that’s a bit of a different emphasis from you than some other people I hear talking about mech interp — where they seem to be more focused on steering the models perhaps than merely understanding them.
+
+Is that a deliberate choice on your part?
+
+Neel Nanda: Yeah, that’s pretty deliberate.
+
+Maybe just to unpack what understanding and control means here: I think of “control” as changing the behaviour of the model.
+
+This would include things like Golden Gate Claude; it would include things like trying to find the deception neurons and deleting them, things like that.
+
+And “understanding” is about finding insight without actively trying to directly change the behaviour.
+
+And you know, I think it’d be reasonable for people to be like, “But surely we want to eventually change the behaviour.” But I think that treatment and diagnosis are just very different things.
+
+If I broke my leg, I’d want to get an x-ray.
+
+I wouldn’t then be like, “Why did anyone bother researching x-rays if they can’t use the x-rays to fix my broken bone?” No, you use a cast, but it’s often informed by what you learned in the x-ray.
+
+Information is incredibly useful.
+
+And maybe why I emphasise it: it’s not that I don’t think interpretability can be helpful for control.
+
+The way I put it is I think interpretability researchers should try to win.
+
+The question is not, “Can we do this?” The question is, “Of all of the many things we could do, is this the kind of thing that will result in interpretability making a big difference, being able to have a lot of impact in a way that other approaches can’t?” There are just so many ways that people try to change a model’s behaviour — interpretability has some advantages, but I think it’s comparatively weaker — while there’s just so few ways that we know of to actually understand what’s happening inside a model.
+
+Rob Wiblin: I see.
+
+So the really distinctive thing about mech interp is that you can understand the models — and I guess, having understood what’s going wrong potentially and why, that could lead you towards a solution.
+
+But that solution doesn’t have to come via mech interp potentially; it could come through changing the instructions, or just telling the model to do something different than it was before.
+
+Neel Nanda: A very simple example: if I’ve got a probe that’s trying to tell me this model is being used to help make bioweapons, I could try to subtract the bioweapons direction and hope this breaks something and accept the risk that it doesn’t.
+
+Or I could just turn the model off.
+
+I think the second one’s a better solution, personally — with some caveats.
+
+Rob Wiblin: I asked for audience questions for you in prepping for this interview, and I think the most frequent one was, “Does mech interp help us understand whether AI models are conscious or whether they have subjective experience or not?” I’m guessing the answer is no, because although it’s giving you tools to look inside the model, we don’t know what to look for to tell whether a model has subjective experience or not.
+
+Is there much more to say than that?
+
+Neel Nanda: That’s basically exactly correct.
+
+My typical response is: if you get back to me with a description of what you want me to look for, maybe I can help you, but… Rob Wiblin: I guess maybe we don’t know exactly what we should be looking for, but mech interp might assist you in kind of building a table of features that the model does have and features that, as far as we can tell, doesn’t have.
+
+Then depending on your views about what things might be required for subjective experience or not, it could allow you to shift your probability estimates up or down somewhat.
+
+But I guess it will never give us a definitive answer until the philosophers get back with more of a consensus about what it is that drives subjective experience, or what’s causing it at all, and whether it’s real or not.
+
+Neel Nanda: Yeah, and I think interpretability can add some things.
+
+For example, a view that used to be popular in machine learning was the stochastic parrots view: that these language models were just kind of statistical machines that just had tonnes of heuristics that led to them predicting the next word, but there was nothing real happening inside.
+
+And we’ve looked: There’s something real happening inside.
+
+I think if you hold to the stochastic parrots view, any question of subjective experience in AI doesn’t make any sense.
+
+But we at least know that there are more interesting things happening than some people might have thought.
+
+Rob Wiblin: Yeah, I’m not even sure that that’s right, because stochastic parrots could have subjective experience.
+
+I don’t know that we even know enough about subjective experience to rule that out necessarily.
+
+But certainly the more the way that they’re generating the output is similar to the way that humans are generating the output, then it’s more similar to the one yardstick we have where we feel reasonably confident saying, well, all humans have subjective experience.
+
+Neel Nanda: Yeah.
+
+I mean, I’m not a philosopher.
+
+I’ll stop commenting here.
+
+[laughs] Rob Wiblin: That’s probably the safe option.
+
+I guess a different type of philosophy: you wrote in your notes that your experience doing mech interp research over the years has led you to kind of be building your own research philosophy or what you think is a good approach to doing this sort of work.
+
+It’s got four parts to it: Simplicity.
+
+Do the obvious thing first.
+
+Focus on downstream tasks.
+
+And a fourth one that you added recently is: be super sceptical about results.
+
+Did you want to explain those four?
+
+Neel Nanda: Yeah.
+
+For the first two, I think some useful background context is I have a mathematics background.
+
+I really like complex, elegant ideas.
+
+I really like the idea of an incredibly principled approach that seems like it could really properly work.
+
+And many other people in the field share this aesthetic.
+
+But what I found is that this is often quite misleading.
+
+So when I say simplicity, the way I think about this is that every additional piece of complexity in your solution is costly: it will be harder to implement, it can break, it’s another thing you need to get right when you’re trying to figure out if your method’s any good.
+
+Every single part of a method should be paying rent in terms of “this would clearly be substantially worse if I got rid of it.” “Do the obvious thing” is a kind of similar mindset.
+
+I think that it’s very easy to get really excited about techniques like sparse autoencoders and what they could do.
+
+But I’ve heard a lot of people be very excited about things like Golden Gate Claude, and very few of those people ask me, “Why couldn’t we just do this with a system prompt again?” I think that maybe you can, maybe you can’t.
+
+It’s a little bit ambiguous.
+
+But in general you can often replicate the effects of a complex, really high-effort technique with a much simpler thing.
+
+So my philosophy is that you should start with the dumbest, simplest baselines, and only become fancier if those are inadequate.
+
+And if your reaction is, “But if I do that, why would I ever do anything more interesting?” then I think you should be looking for problems which we can’t do with the dumb, simple baselines — because if we can do everything, why are we even here?
+
+Rob Wiblin: I see.
+
+It sounds like you’re saying researchers are disinclined to just use the most basic techniques because I guess it doesn’t allow them to flex their research muscles or prove something new and impressive that really shows off their skills.
+
+But you’re saying if that’s the problem that they’re running into… Well, firstly, it is actually useful to have people demonstrate all of the problems that you can solve with existing tools, even if they’re quite straightforward tools.
+
+Someone should definitely be doing that.
+
+But I guess if you’re someone who wants to do original research, then rather than pretend that your problem can’t be solved by simple tools, you should say, “I’m not going to work on this problem, because in fact it can be solved by something very simple like probes.
+
+Instead I’m going to work on an even more difficult, more challenging problem that’s further from the frontier of what we can do, where we’re confident that we do need some new technique to make progress at all.” Neel Nanda: Yeah.
+
+And I want to add a bit of nuance there: I think that often techniques that are eventually awesome will start out being much worse than the existing alternatives where lots of effort has gone in.
+
+So I’m not saying you should never work on a technique if it doesn’t beat baselines.
+
+But rather, the way I think about it, you get task-focused projects and you get methods-focused projects.
+
+Task-focused projects are about solving some problem — and if you are doing this, you should be honest with yourself, and if simple baselines work, just use those and move on.
+
+I think a good example of this is the work we were discussing earlier about checking whether models have self-preservation from my team.
+
+We started with the simplest thing of read the chain of thought, prompt the model.
+
+This worked.
+
+So we ended the project there and wrote it up.
+
+Sometimes it doesn’t.
+
+We actually went in assuming that it wouldn’t, and we were wrong and it was completely fine.
+
+But I think there’s also a lot of room for useful methods work.
+
+This gets me on to the third point: downstream tasks.
+
+One of the core problems with trying to do good research is that, by default, every hypothesis is bullshit, because most things are false.
+
+You need to have some reason to think you are systematically selecting true claims from the ether of things that maybe could be true — and human intuition is not good enough.
+
+And historically, the way I’ve often thought about this is: there is some ground truth here, and I should be measuring how well we have approximated this ground truth.
+
+Like if I fully understood the algorithm here, I would understand every detail of why the model did what it did.
+
+So let’s measure what fraction of this I am actually approximating.
+
+But nowadays I’m less convinced there is some ground truth for us to approximate, where measuring the accuracy of our approximation is the way we make progress.
+
+Instead, I think it’s just really hard to tell what it means to be 95% approximating the model’s behaviour.
+
+And what I found is more compelling, as we’ve kind of discussed somewhat already, is taking an objectively measurable task — that someone who’s not an interpretability researcher would agree is a real task — and seeing what your technique does on that, especially when you compare it to well implemented baselines.
+
+I’m not saying that we need to be doing applied interpretability, and we should only do work if it’s useful.
+
+It’s fine if you say this is worse than the baselines, but I think I can make it better with future research, or if you pick a task that is objective but not actually practically useful: it’s about getting evidence and grounding to tell the difference between true and false claims.
+
+Rob Wiblin: So this is the third one, focus on downstream tasks.
+
+Basically it’s saying it’s very hard to know in the abstract what results mean, except inasmuch as they cash out in accomplishing useful tasks — which I guess is why we’re engaged in this enterprise at all.
+
+I imagine a reason that people don’t always focus, at least early on, on downstream tasks is that it’s more difficult and more costly to measure whether you’re able to accomplish those things because you actually have to set up some test with a real person who’s going to use these tools and compare them with other things.
+
+Neel Nanda: Sorry, to clarify what I mean when I say “downstream tasks”: examples of downstream tasks include things like, “Can my probe or my other technique detect harmful prompts more accurately than a language model reading the prompt?” This is completely automated.
+
+It’s not a usability study per se.
+
+That’s an example of a downstream task.
+
+Like we discussed Sam Marks’s auditing games work: that is using humans and seeing if they can measure things.
+
+But there’s all kinds of things I want to do with interpretability that involve as little subjective human judgement as possible, especially now that LLMs can often do small, well contained pieces that might have required human judgement — like describing a pattern in natural language when you look at the text that makes a neuron light up.
+
+Rob Wiblin: Maybe this is a stupid question, but what other tests are people using that are not downstream tasks?
+
+If it includes automated things like seeing whether the probe could categorise things correctly.
+
+Neel Nanda: The main kinds of things are what I think of as approximating a hypothesised ground truth.
+
+For example, you think your sparse autoencoder has found an interpretable reconstruction of the model’s thoughts.
+
+Put that in and see how much performance gets worse.
+
+Intuitively, if your sparse autoencoder is working, this should do better.
+
+But often it could look like it’s working reasonably well and then be useless for practical things.
+
+Or it could be working pretty badly, but be useful for the specific things we care about.
+
+These are all proxies, but I’ve personally concluded that downstream tasks are a bit closer to the proxies I care about.
+
+But I think that good research will just do all of them — because the more evidence you have, the better.
+
+Rob Wiblin: The final point in your philosophy was to be really sceptical about results.
+
+Is that just because there’s a history of false positives or people tricking themselves into thinking that they’ve demonstrated more than they can?
+
+I guess you’re saying most concrete, specific hypotheses that people have are incorrect, so we should expect to be getting things falsified all the time.
+
+Neel Nanda: Yeah, I think being sceptical is a crucial research skill, and it actually applies on several levels.
+
+It’s really easy to be too credulous when you’re investigating a hypothesis.
+
+Often in an investigation I might go in with a hypothesis in mind, or form one quite early, and then you really want to see research results that support your hypothesis.
+
+And interpretability is a particularly messy field, because we’re not just claiming, “I’ve made a better classifier” or something; we’re often claiming, “I made a better classifier, and this is why it works” — and there’s often a lot of hypotheses I just haven’t thought of yet.
+
+One example I find pretty striking is there’s this paper I supervised a few years ago called “A toy model of universality” that looks at how tiny neural networks do a type of mathematical task called group composition.
+
+I went in with this complex hypothesis about how it might work.
+
+We got evidence for it, and this is really exciting, so we wrote up a paper about how my hypothesis was right.
+
+There was then a second paper which was like, “They were kind of right, but actually missing several important things.
+
+Here’s what’s actually going on.” There was a third paper which said, “Here’s how both of those were kind of right, but missing important things.
+
+Here’s a way more rigorous, more unified view of what’s going on.” I think I believe the third paper, but I’m not entirely sure.
+
+[laughs] Rob Wiblin: The trend is bad.
+
+Neel Nanda: This is kind of a local sense of scepticism.
+
+What you should be doing is you’re reading a paper or doing a project.
+
+But I think a similar thing applies to higher level points of prioritisation and research philosophy.
+
+I used to think that aiming for ambitious reverse engineering was the most important thing.
+
+I no longer do.
+
+On the outside view, what other things do I currently believe that I will conclude are false in a year or two?
+
+I hope it’s at least a few of them, because if it isn’t, I’m probably deluding myself.
+
+This also means that everyone listening to this podcast should not assume I am correct about the things that I say.
+
+Maybe I was wrong, and ambitious interpretability that tries to fully reverse engineer things is actually great, and in a year they’ll just have some epic new research results and I’ll seem really wrong.
+
+Seems fantastic.
+
+I generally think that some fraction of the field who believe in that line of work should be working on it.
+
+I’m largely saying what I’m saying because I think the current fraction is too high, not because I think it should be zero.
+
+And in general, I just think that people should be trying to do research that is robust to being a bit confused about things or changing your mind later.
+
+This is one of the things I like about interpretability.
+
+It just seems like understanding a system has to be useful in so many ways.
+
+Even if I’m wrong about my exact reasoning right now, I would just be pretty surprised if achieving nontrivial, practically relevant understanding doesn’t contribute something meaningful.
+
+Rob Wiblin: We should talk a little bit about careers advice for people who are potentially interested in joining you in mech interp as a field.
+
+All things considered, what advice would you give to someone who was asking you, “Should I go into mech interp or something else?” Neel Nanda: I don’t know if I’d even say that I think the expected value of going into mech interp is substantially lower than I thought it was a few years ago.
+
+I’ve become more pessimistic about the high-risk, high-reward approach, but a lot more optimistic about the medium-risk, medium-reward and low-risk, low-reward approaches — and I think in expectation these are also pretty good.
+
+I also think that there’s just a lot more to do and a lot more clarity on “here’s a bunch of useful things you can go and do” — like take an open source model and try to answer some of these questions about it, or poke around in a reasoning model’s chain of thought and see what you can learn, or take one of the open source models that exhibit some bad behaviour and see how we can use interpretability to detect and motivate fixes for those.
+
+And a bunch of other stuff that I probably can’t be bothered to list right now.
+
+I think that the key thing to emphasise is comparative neglectedness, where I basically think AI safety is incredibly important and a much larger fraction of the field of AI should be doing this kind of work in all of the domains, including mech interp.
+
+I think there is a bunch to do, and I want more talented people to do it.
+
+I also think that if I’m trying to efficiently allocate people, you should expect mech interp to be disproportionately oversubscribed, because it’s a bit of a nerd snipe.
+
+And without trying to flaunt myself too much, I think there’s a better state of educational resources and inroads into the field than there are for some of the other areas — especially newer and promising ones like AI control and model organisms and misalignment.
+
+I also think this can change quite rapidly.
+
+I’m actually kind of concerned about a dynamic it feels like I notice where not that many people seem excited about trying to actually solve the alignment problem, like make AI that is safe.
+
+Things like scalable oversight, things like adversarial robustness or different kinds of detecting subtle misalignments that are robust enough to train against just doesn’t get as much of a conversation.
+
+I think you should totally have some people in this domain on your podcast.
+
+But now that I’ve said all that, I also think that many people in AI safety get too caught up in this notion of neglectedness, and assume that people are a lot more fungible between subfields than they in fact are.
+
+I think I would just be much less effective personally in another field.
+
+Even ignoring my accumulated context, I think that my mindset’s just a very good fit to mech interp.
+
+I get very motivated by short feedback loops in a way that you don’t always get in other fields.
+
+I just find these problems very pretty and feel really excited about understanding.
+
+I think some people are like that, but if someone’s kind of indifferent, they should probably go to a more neglected subfield.
+
+Rob Wiblin: Yeah.
+
+I must admit it’s not very intuitive to me that someone would have extremely strong personal fit for mech interp, but not for model organisms or scalable oversight or control — which I think probably just reflects that I’m so far away from the field that it’s not obvious to me how stylistically these things are different, and someone could be very good at one and bad at another.
+
+I guess within economics, where I’m more familiar, it’s a lot easier for me to see how someone could be a good fit for microeconomics, but not for macro.
+
+But is anyone at the age of 10 thinking like, “My passion is scalable oversight.
+
+I can’t imagine working on that control rubbish or on mech interp”?
+
+Do you think that many people coming to speak to you at the age of 19 or 20 really do have a big difference in their suitability for the different fields at that early stage?
+
+Neel Nanda: I don’t really have RCT data here.
+
+My intuition is that I think that there is a big difference between the best junior researcher coming into mech interp — like my top MATS scholars — and people who are kind of decent but not amazingly standout, who might well end up getting a job where they do useful stuff, but I think that the tails are heavy and long.
+
+And when you’re talking about someone who’s extremely good at a domain, it starts to be much less clear to me how transferable this is.
+
+It depends a lot on what makes them excellent.
+
+Sometimes you get people who are just really driven and ambitious and motivated and smart and flexible.
+
+That kind of person could probably succeed in most domains.
+
+But then there are people who a lot of their strength is being a fantastic empirical scientist.
+
+This isn’t unique to mech interp — I hear from people in control that it’s a very useful trait there as well — but I think it is less useful in much of machine learning, say.
+
+Then you get people who are just really motivated by mech interp and driven by short feedback loops.
+
+And I think that for some of these people, doing normal ML is maybe a thing they can make themselves do, but it’s a lot less motivating.
+
+Regarding the point of how can anyone know: ultimately, I think that people should just go and try things.
+
+I think that you shouldn’t just try one thing.
+
+It’s very easy to only learn about mech interp and conclude mech interp is amazing and then just never think about any other domain.
+
+If people want an overview, I’d recommend checking out the Google DeepMind AGI safety approach, this kind of long position paper we put out talking about how we view the safety landscape.
+
+Since I think people often only pay attention to the salient fields people talk about.
+
+Another consideration would just be that I think that the growth of a subfield is often constrained by a lot more than just the interest of people trying to get into it.
+
+You can only grow teams so fast, you can only spread mentorship so thin, you can only spend so much time on hiring or mentoring MATS scholars.
+
+As a result, this means that I would like there to be a bunch of good people who want to work in mech interp and apply for these roles.
+
+I want there to be a bunch of good people applying for the other roles.
+
+I think that in general people do not apply to enough things, and people are very bad at self-selecting according to how good a fit they are to different domains.
+
+I would be sad if someone who is a bit below the bar for control but would be solid for interp just tries to do control and fails.
+
+I much prefer that they spend a bit of effort exploring multiple domains and apply widely, even if they put more of their effort towards the domains they think are neglected.
+
+But you know, this is all much easier said than done.
+
+I imagine some people might be listening to this and assuming I just want to build mech interp, and I’m just saying what I think I can get away with.
+
+I should say I do sometimes chat with people and say honestly, “I think you should go pursue this other opportunity that is not mech interp.
+
+This seems probably more impactful given that you don’t seem particularly specialised in either.” For example, Cody Rushing, one of my MATS alumni, is now doing control full time at Redwood Research.
+
+I think this is great.
+
+I think there are actually ways in which someone who’s struggling to get into any field might benefit from trying to learn some mech interp, because you’ll gain technical skills, you’ll learn things.
+
+It’s very easy to get started without much compute outside of any established team or lab, and I think the educational materials have had a fair bit more effort put into them than some of the newer and less mature subfields.
+
+Rob Wiblin: What other advice do you have for people who do want to get into mech interp?
+
+And assuming they haven’t done very much in the field as yet, what early steps should they take?
+
+Neel Nanda: By the time this goes live, I’ll hopefully have written an updated “How to get into mech interp” blog post that we can put in the description.
+
+But leaving that aside, my TLDR would be: it is unusually easy to self-study mech interp, to kind of get the basics.
+
+You can do the ARENA tutorials, this absolutely fantastic set of coding tutorials from Callum McDougall that should teach you the basic concepts and techniques.
+
+There are some pretty great literature reviews like “Open problems in mechanistic interpretability” from Lee Sharkey et al.
+
+And Javier Ferrando has a primer on key techniques in mech interp that people can just read — or even better, give to an LLM and argue with the LLM about extensively.
+
+One bit of advice I will give: a common mistake I see, especially for people with a more academic background, is to just read things or feel like they must read at least 20 papers before they do anything.
+
+I think this is pretty unproductive.
+
+Mech interp is a very empirical field, and it’s a very shallow field.
+
+There are just not that many concepts you need to know to be able to engage with papers on the cutting edge.
+
+Rob Wiblin: Is it a little bit more like a trade or something that you learn by doing, because there’s so many just applied things that you can actually cut your teeth on?
+
+Neel Nanda: Yeah.
+
+Honestly, I think this is true of much of machine learning, but is maybe particularly true of mech interp — especially because you can get started fast and have good feedback loops without really needing anything beyond a free Colab notebook or whatever other free computing resources you can find.
+
+The way I recommend people start is they find a paper that seems interesting, maybe get an LLM to summarise a bunch of papers to you.
+
+I also have a reading list that we can link in the description.
+
+Find one that excites you, then try to replicate it, then try to extend and build on it: what’s missing?
+
+Where else could you apply these techniques?
+
+And generally you want to be doing a bunch of tiny projects.
+
+People often feel like they’re giving up if they try doing a thing early on for two weeks and then do something else.
+
+But the point is to learn.
+
+If you finish a thing, that’s a fun bonus.
+
+But maybe you realise two weeks in that you had terrible taste and this is a bad project idea.
+
+Great, you’ve learned stuff, you’ve won.
+
+This was the point.
+
+So that’s kind of self-study.
+
+I also think that nowadays there’s a bunch of mentoring programmes where you can work with a researcher who’s more established to be supervised on a paper.
+
+One of the most notable ones is called MATS, where I’ve been doing a lot of supervising for the past few years.
+
+I’m at something like 50 people supervised by now, which is slightly terrifying.
+
+The way MATS works is you choose a mentor you want to work with — they have a list on their website — and each often has their own application process.
+
+You then apply to them.
+
+Exact processes vary a lot between mentors.
+
+Mine is unusually high effort.
+
+And then if you’re selected, you spend a couple of months in this full-time programme in Berkeley being mentored once a week by a more experienced researcher.
+
+Empirically, I found that this kind of supervision is often enough to take people who are new and get them producing top conference papers in three or four months.
+
+I’ll also say that people often think of this as like an internship that only undergrads or really junior people should do.
+
+But I’ve interacted with people all over the map, from really talented undergrads to professors to mid-career quant finance researchers and software engineers.
+
+It’s really about being a career transition programme for people who want to get into the field, and it both covers interpretability but also a bunch of other things.
+
+And by the time this goes out, applications for my January cohort will have opened.
+
+I would love to get applications from anyone interested.
+
+Rob Wiblin: We’ll definitely stick up a link to the application form.
+
+You wrote in your notes that you thought people didn’t have to have such outstanding maths skills to go into mech interp.
+
+I slightly worry that that’s something you might feel, because I’ve looked at your CV and you had really outstanding maths results when you were younger.
+
+I think you were in the international Math Olympiad level.
+
+Neel Nanda: Still better than an AI — by a point.
+
+[laughs] Rob Wiblin: Yeah.
+
+You’ve got a couple of weeks left, maybe days.
+
+Do you really kind of stand by that?
+
+I guess the reason that you say that is there’s not deep mathematical theory here to try to understand how these machines work.
+
+It really is a matter of just getting your hands dirty and running a whole lot of experiments, which in some ways might not be that complicated of experiments.
+
+So perhaps you can get away with more coding ability and actually just knowing how to set up these experiments without having to have a deep understanding of how ML works.
+
+Is that the basic idea?
+
+Neel Nanda: Kind of.
+
+I wouldn’t quite say you don’t need a deep understanding of how ML works, and more that is literally impossible because that is an unsolved research problem.
+
+We don’t know enough to have theory.
+
+[laughs] I think the specific misconception I’m trying to address with this is: I will sometimes meet smart, mathematically inclined people who want to get into safety, who think they need to go do a maths degree or study all kinds of advanced maths.
+
+I think they might have some misconception that these systems can do incredible things, so surely lots of really intelligent ideas went into them — when actually the central lesson of the last decade of machine learning is the way you make something really capable is you take an incredibly simple idea and you pour millions of dollars of GPUs at it.
+
+There are a few areas of maths that I think it can be quite helpful to know about.
+
+Ones I’ll call out: linear algebra.
+
+This is really important for mechanistic interpretability, fairly important for other areas.
+
+But when I say important, what I mean is being able to reason fluently about what does this following equation of matrices mean, not about knowing a long list of theorems.
+
+And then even aside from mech interp, probability is pretty important — but again, the kind of basics.
+
+The basics of information theory and multidimensional optimisation, sometimes called vector calculus.
+
+These are basically the only areas I have ever used my mathematical knowledge of, apart from a few niche exceptions that won’t generalise.
+
+I think it does help to be, bluntly, smart.
+
+It does help to be able to reason fluently about technical, abstract ideas, and to pick up concepts quickly.
+
+But it’s much more about being intuitive than being knowledgeable.
+
+And I think this is a skill I’ve refined over doing maths Olympiads and a maths degree, but I know a lot of people who are excellent at this with totally different backgrounds, and it’s a skill you can train in many domains.
+
+Rob Wiblin: For a broader audience — not just people who are considering pursuing this as a career, but people who want to stay abreast of mech interp — there’s just a blistering pace of papers and results coming out here, because there’s so many people involved now.
+
+What’s the best way to keep up to date on what we’re learning about how ML models work?
+
+Neel Nanda: When I came across this question in the notes, I did feel a bit bad that I don’t have a very good answer to this.
+
+Someone should probably get on that and make some kind of mech interp newsletter.
+
+But I think the way that I will often hear about interpretability papers is just people share them on Twitter.
+
+There’s excitement around them.
+
+I don’t know if I’d recommend this for someone who only wants to follow the most important things, because maybe one in three times the thing on Twitter is actually worth paying attention to, and two in three times it’s kind of nonsense, but the people who can detect nonsense aren’t the ones retweeting it.
+
+I do personally try to tweet about any interp paper I think is good, whether one of mine or someone else’s.
+
+So following me might be somewhat helpful — not that I’m biased or anything.
+
+I think that there are also some communities where people hang out: often interesting interpretability things are posted to LessWrong, at least the ones from the kind of safety community.
+
+Interpretability is a bit weird as a research community, because there’s also a lot of academics who often talk less to the safety people and vice versa than I think would be ideal.
+
+There’s also some places like the open source mech interp Slack or the mech interp Discord that we can link in the description, where sometimes people will discuss things or share interesting news.
+
+If anyone listening to this happens to be at NeurIPS, the big ML conference in December, I’m actually organising a mech interp workshop there.
+
+That might be a good way to meet people and learn a bit about what’s been happening in the field over the past year.
+
+But yeah, it’d be good if I had a better answer to this.
+
+Rob Wiblin: Is there anyone else to follow on Twitter other than you?
+
+Neel Nanda: So Chris Olah — de facto founder of the field, runs the Anthropic mech interp team — is great.
+
+He doesn’t tweet that much, but he will generally tweet about particularly exciting things and has a very high signal-to-noise ratio.
+
+I think David Bau is an academic who does fantastic work and will often tweet about what his lab puts out.
+
+I think that Transluce, run by Jacob Steinhardt and Sarah Schwettmann, do some exciting mech-interp-adjacent work.
+
+They’re a new nonprofit, and following one of them or the Transluce account might be good.
+
+There’s probably more, but those are the ones immediately coming to mind.
+
+Rob Wiblin: And if people want to apply for jobs in mech interp, where should they be looking or applying?
+
+Neel Nanda: I hear GDM has a mech interp team who might be hiring at some point in 2026, but I don’t know if you really want to work there.
+
+Rob Wiblin: It’s just a big company.
+
+Neel Nanda: Yeah, I hear their lead’s not very good.
+
+[laughs] Anthropic do a lot of fantastic work — both their official interpretability team and I think there’s a lot of great work on their alignment science team that I would consider interpretability.
+
+Calling out Sam Marks, someone who I think does particularly excellent work.
+
+OpenAI has an interpretability team who’ve done pretty cool work.
+
+I enjoyed a paper they were involved with recently on emergent misalignment.
+
+Then I think there’s a bunch of academic labs who do good work here.
+
+I’ll particularly call out David Bau at Northeastern, and Martin Wattenberg and Fernanda Viégas’s lab at Harvard is doing fantastic work — but there’s a bunch more worth applying to if you’re looking for PhDs or postdocs.
+
+Transluce is an interesting nonprofit who do a bunch of kind of mech-interp-adjacent things.
+
+I think Goodfire are a pretty interesting startup.
+
+They’re focused on trying to find ways to use mech interp to produce useful products.
+
+They recently raised a $50 million Series A.
+
+I remain baffled that we live in a world where mech interp startups who don’t have a product yet can do this.
+
+But I think there’s a lot of great people there, and I’ve got a lot of respect for their chief scientist, Tom McGrath, and I think they’re hiring a bunch.
+
+Rob Wiblin: All right, I think that’s a wrap on mechanistic interpretability.
+
+We’ve talked about almost all of the questions I could have plausibly come up with about that topic.
+
+We’re going to take a quick break and then come back and do a second part of this conversation about a whole bunch of other totally different topics — including what you’ve learned about doing good work inside a frontier AI company, and what’s kind of distinctive about how a company like Google DeepMind works.
+
+I think you’ve also got a bunch of hot takes and disagreements with the AI safety community; you’re not only not worried about capabilities externalities from safety research, but I think positively in favour of them.
+
+Or you say if your work doesn’t improve capabilities inadvertently in some way, then probably that’s a sign that it’s not such good research and maybe isn’t going to be useful for anyone.
+
+Neel Nanda: It’s a bit more nuanced than that, but they should come listen to the other episode if they want to figure out how!
+
+Rob Wiblin: We’re also going to talk about some advice on getting a job at an AI company or in the AI industry, which is a thing a lot of people are interested in, in a week that apparently some staff member I think got a $100 million signing bonus to join the Meta AI project.
+
+And I guess not everyone will have clocked this, but you are only 26, so you’ve managed to accomplish all of the things that we’ve been talking about over the last couple of hours in basically just like four years of your career.
+
+So we’re going to talk about how you’ve managed to be so productive over that time.
+
+And over those years you’ve supervised about 50 junior researchers who were also moving into this field, so we’re going to talk about some of the most useful advice that you’ve been giving them that you can also share with everyone else in the audience.
+
+So I strongly recommend that people come and join us for the second part of this conversation.
+
+I think on YouTube you would want to click at the box over here.
+
+This is the first time we’ve done a part one and a part two, so I’m not sure exactly where it will appear, but here’s a pretty good bet.
+
+Look forward to seeing you over there for part two!

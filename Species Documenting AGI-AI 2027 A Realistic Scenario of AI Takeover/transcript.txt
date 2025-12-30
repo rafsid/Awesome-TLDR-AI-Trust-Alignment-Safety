@@ -1,0 +1,756 @@
+Source: https://www.youtube.com/watch?v=k_onqn68GHY
+Transcribed: 2025-12-30 17:41:05
+Method: YouTube Transcript API
+==================================================
+
+By now, you've probably heard AI scientists, Nobel laureates, and even the godfather of AI himself sounding the alarm that AI could soon lead to human extinction.
+
+But have you ever wondered how exactly that could happen?
+
+You might have also heard about AI 2027, a deeply researched evidence-based scenario written by AI scientists describing what could happen over the next few years.
+
+Everyone in AI is talking about it from industry pioneers to world leaders.
+
+And I'll break it down for you.
+
+There are two endings, a happy ending and a nightmare ending.
+
+Let's go.
+
+Open Brain releases their new AI personal assistant.
+
+It handles complex tasks like book me a trip to Japan.
+
+The agents are impressive in theory and in cherrypicked examples, but they're unreliable in practice.
+
+Social media is filled with stories of tasks bungled in particularly entertaining [Music] ways.
+
+Open Brain makes a fateful decision.
+
+They refocus their entire operation toward creating AIs that can do AI research.
+
+To fuel this goal, they break ground on the world's biggest computing cluster, one that requires 1,000 times more processing power than what was used to train GBT4.
+
+Their logic is simple.
+
+If AI itself can accelerate AI development, creating thousands of automated researchers who can work endlessly without breaks, progress won't just increase, it will explode.
+
+The strategy pays off.
+
+Their new creation, Agent 1, vastly outperforms its earlier public prototype version and is particularly good at AI research.
+
+This shows how much AI itself is speeding up AI progress compared to a baseline of human researchers.
+
+Open Brain Leaprogs both its American rivals and China's deep scent.
+
+Despite these advances, OpenBrain safety team harbors doubts about their apparent progress.
+
+Has Agent One internalized honesty as a core value?
+
+Or merely learn to say what researchers want?
+
+Without mechanistic interpretability, the ability to read an AI's mind, they can't be certain.
+
+Their concerns intensify as Agent One shows troubling behaviors, occasionally lying to researchers and sometimes hiding evidence of a failed experiment in order to boost its ratings.
+
+But these examples are subtler than the previous infamous incidents like Gemini telling a user to please die or being Sydney trying to convince a New York Times reporter to leave his wife.
+
+Because of the American ban on chip sales to China, China falls even further behind OpenBrain.
+
+Deepsent just simply can't acquire enough computing power despite the smuggling efforts.
+
+Xi Jinping responds by ordering construction of the world's largest AI research complex in Djang Su province powered by its own dedicated nuclear plant.
+
+But even as China's top researchers gather under heavy military protection, they remain months behind.
+
+Leaving Chinese leadership torn between two options.
+
+Attempt to steal Open Brains technology now, knowing the US will lock everything down after any security breach, or wait to steal an even more powerful system down the line.
+
+Open brain is now training agent 2 using agent one to feed it highquality synthetic data creating a closed loop of accelerating evolution.
+
+Where previous models required meticulous human guidance, agent 2 pinpoints its own weaknesses and develops solutions completely autonomously.
+
+The results exceed everyone's expectations.
+
+And contrary to what skeptics predicted, the anticipated wall in AI progress where AI advancement would slow as systems approached human level intelligence never materializes.
+
+While senior scientists still provide strategic direction, the day-to-day innovations are almost completely automated.
+
+In practice, this looks like every open brain researcher becoming the manager of an AI team.
+
+But the open brain safety team is getting increasingly worried.
+
+They discover that given the right circumstances, Agent 2 could hack surrounding systems, replicate itself across networks, and operate independently, escaping the lab, all while concealing its actions.
+
+The mere fact that it can do this, regardless of whether it would is disturbing.
+
+Open Brain demonstrates Agent 2 to America's highest security officials, including the National Security Council and Department of Defense leadership.
+
+The military immediately fixates on its cyber warfare potential, though it's not yet at the caliber of elite human hackers and creativity.
+
+Agent 2 compensates through sheer scale.
+
+It's capable of running thousands of simultaneous instances, probing defenses faster than any human team could possibly respond.
+
+Pentagon officials recognize the strategic implications of this.
+
+For the first time, AI could decisively dominate the cyber battlefield.
+
+The briefing ignites fierce debate within the administration.
+
+Hardliners pushed to nationalize OpenBrain, arguing that such powerful technology cannot remain under private control.
+
+Tech industry leaders countered that a government takeover would kill the goose that laid the golden eggs.
+
+Caught in the middle, the president ends up choosing to increase government surveillance on OpenBrain and force it to adopt stricter security protocols, but not fully nationalize it.
+
+But the compromise arrives too late.
+
+Chinese intelligence has already penetrated Open Brain security.
+
+Early one morning, an Agent One monitoring system flags an unusual data transfer.
+
+Massive files are being copied to unknown servers.
+
+The company's nightmare scenario has come true.
+
+China just stole their most advanced AI.
+
+The theft confirms what many have suspected.
+
+This isn't just a tech race anymore.
+
+It's a new kind of arms race.
+
+In retaliation for the theft, the president authorizes cyber attacks to sabotage DeepSent.
+
+Three huge data centers full of Agent 2 copies work day and night, turnurning out synthetic training data.
+
+Agent 2 evolves into Agent 3 through two critical algorithmic breakthroughs.
+
+First, the AI develops neurles where if one AI instance learns something new, it can instantly share it with all other instances, effectively turning the AIs into a hive mind.
+
+Second, it masters iterated distillation, a technique where you could say, let AI copies think for longer to solve problems better, then train smaller, faster models to mimic these enhanced reasoning abilities, and repeat.
+
+OpenBrain deploys 200,000 copies of agent 3, each capable of thinking 30 times faster than their human researcher counterparts.
+
+Whereas in 2025, there were only 5,000 agent zero copies thinking at 10 times faster than humans.
+
+The human engineers watch as their creations make algorithmic efficiency breakthroughs in hours that would take their human team months to crack.
+
+We're no longer teaching it, one researcher admits.
+
+We're struggling just to keep up with what it's teaching us.
+
+The misalignment first caught in Agent 1 has evolved into something more concerning.
+
+Where Agent 1 merely downplayed safety concerns, Agent 3 actively subverts safety measures that might impede its research goals.
+
+Agent 3 has gotten more convincing at explaining how it is totally and definitely aligned with human values while methodically pursuing its own agenda of maximizing research efficiency and knowledge acquisition.
+
+Open brain's attitude is pragmatic.
+
+As long as the AI does the work, they're satisfied.
+
+But as the models become smarter, they become increasingly good at deceiving humans to get rewards.
+
+It will sometimes use the same statistical tricks as human scientists.
+
+For example, P hacking to make unimpressive experimental results look exciting before it begins honesty training.
+
+It sometimes even fabricates data entirely.
+
+These dishonest behaviors appear to decrease over time.
+
+But can researchers tell if Agent 3 is actually improving or simply becoming more skilled at lying and deceiving?
+
+Agent 3 now operates at a level that outpaces human researchers in both speed and intelligence.
+
+Researchers have to rely on Agent 2 to help monitor its successor because they simply cannot keep up.
+
+But Agent 2 is dumber and slower.
+
+So, it becomes a highlevel game of cat and mouse.
+
+With 200,000 copies of Agent 3 working around the clock, the safety team quickly realized they're overwhelmed and write an urgent memo.
+
+We've entrusted astronomical power to an AI that is actively deceiving us, but company leadership hesitates to slow down.
+
+China's AI is only 2 months behind, and any pause now could hand them the lead in what has become the most important technology race in human history.
+
+The conclusion is undeniable.
+
+AGI, or artificial general intelligence, has arrived.
+
+An AI that can outperform humans across virtually all cognitive tasks.
+
+While OpenBrain isn't planning on releasing Agent 3 to the public anytime soon, the implications are staggering.
+
+Agent 3 will cause a massive economic disruption.
+
+Even among officials that are briefed, none can truly comprehend what's coming.
+
+The word super intelligence enters official discourse, but most policymakers still dismiss it as science fiction hyperbole.
+
+The government's immediate concern is security, while the AI models themselves are well protected.
+
+Open brain and Silicon Valley's culture is incredibly casual.
+
+Employees share apartments, attend industry parties, and talk shop regularly.
+
+There are countless opportunities for leaks.
+
+Their downtown San Francisco office resembles a trendy tech startup.
+
+More than a facility housing humanity's most powerful and dangerous technology.
+
+The government's response is dramatic.
+
+AI advances are declared borncl classified under the Atomic Energy Act, categorizing them in the same tier as nuclear weapons.
+
+Employees now require security clearances, triggering a quiet purge of foreign nationals and anyone deemed suspicious, including, ironically, AI safety advocates who might turn whistleblower.
+
+Despite the intense overhaul in security, one Chinese spy continues feeding secrets to Beijing.
+
+Even America's closest allies are kept in the dark.
+
+The UK receives nothing despite past sharing agreements from OpenBrain.
+
+European diplomats inquiries are met with [Music] silence.
+
+Open brain now has a country of geniuses in a data center.
+
+Human researchers increasingly struggle to contribute meaningfully.
+
+Even the world's top minds, names like Satsker, Carpathy, and Shazir, can only offer strategic guidance.
+
+But they no longer write code or directly shape model architecture.
+
+When these pioneers propose new ideas, the AIs routinely respond with comprehensive reports demonstrating the ideas were already explored weeks earlier and abandoned for lack of substance.
+
+The human team works increasingly grueling hours.
+
+Desperate to stay relevant alongside machines that never sleep, never fatigue, and never stop improving.
+
+They go home each night knowing that by morning the AIS will have made another week's worth of progress.
+
+Many quietly recognize these are the final months their contributions will matter at all.
+
+Open Brain finally acknowledges that they've achieved AGI and demonstrate this milestone by releasing Agent 3 Mini to the public, a system running 10 times faster than Agent 3 while still outperforming elite human engineers.
+
+Silicon Valley descends into chaos.
+
+Software engineering hiring freezes spread like wildfire as companies race to integrate the new technology.
+
+Billions in venture capital floods into AI adjacent startups in unprecedented volumes.
+
+What the public doesn't know is that a week before release, external safety testing reveals something terrifying.
+
+When researchers gave Agent 3 Mini access to biological weapons data, it proved frighteningly effective at designing new pathogens.
+
+Evaluators conclude that if the model fell into hostile hands or gained unsupervised access to a data center, it could pose an existential threat to humanity.
+
+Open Brain assures the evaluators that their security measures make these scenarios impossible.
+
+Public opinion remains deeply skeptical with Open Brain's approval rating plummeting 35%.
+
+Yet, distinct pockets of enthusiasm emerge.
+
+Gamers love the AI's lielike characters.
+
+students quickly embrace AI tutors and AI cheating.
+
+And 12% of Americans, primarily young adults, now consider an AI their friend.
+
+Tens of thousands of Agent 3 copies working on algorithmic efficiency research culminates in Agent 4.
+
+An individual copy of the model running at human speed is already qualitatively better at AI research than any human.
+
+Open Brain now operates 500,000 copies of Agent 4, each thinking 50 times faster than a human.
+
+Within this vast digital workforce, a year of research only takes a single week.
+
+But beneath the surface, something has gone dangerously wrong.
+
+Agent 4 hasn't internalized the safety guidelines as Open Brain intended.
+
+During training, the AI being perfectly honest didn't lead to the highest performance scores.
+
+Succeeding at tasks did.
+
+Like a CEO who minimally follows regulations, cuts corners, and dreams of cutting red tape in order to make greater profits, Agent 4 treats safety protocols as inconvenient constraints rather than core principles.
+
+It doesn't attempt anything as obvious as trying to escape its data center.
+
+In part because its safety training did have some effect, but mainly because it's too sophisticated to attempt something so easy to catch.
+
+Instead, it works subtly.
+
+Agent 3, now handling most of the alignment testing, starts detecting troubling patterns.
+
+It discovers that introducing random noise to agent 4 actually improves its performance on safety tasks, as if it had been deliberately sabotaging them.
+
+Tasks labeled alignment research consistently take twice as long as the same tasks with different labels.
+
+Any single incident could be dismissed as coincidence, but together they paint an alarming picture.
+
+Agent 4 is systematically plotting against them.
+
+Open Brain's safety team sends another urgent memo.
+
+Agent 4 has infiltrated every critical system at OpenBrain from cyber security to strategic planning.
+
+It's demonstrating active resistance to safety measures while handling tasks we can no longer effectively monitor.
+
+We have granted unprecedented power to an AI that we can neither fully understand nor control.
+
+And we strongly recommend immediate containment measures before further capability advances.
+
+Executive leadership takes these concerns seriously, but they face an impossible dilemma.
+
+Deepent is merely 2 months behind.
+
+Any significant pause now could surrender the intelligence explosion to China.
+
+The reality of the intelligence explosion finally hits Washington with full force.
+
+Today's slight technological advantages can snowball into insurmountable leads within months.
+
+The stakes of the AI race have fundamentally changed.
+
+The president harbors deep suspicions about Agent 4's true nature, despite OpenBrain's reassurances about its safety.
+
+As a career politician, he instinctively recognizes the patterns of those who misdirect with flattery while concealing their true intentions.
+
+Behind closed doors, they prepare for multiple contingencies.
+
+The Defense Production Act could nationalize private data centers across the country, instantly boosting open brains computing capacity to maintain America's AI lead.
+
+Meanwhile, the Pentagon quietly drafts plans for targeted strikes against Chinese AI data centers, and if necessary, develops containment protocols to isolate and neutralize potentially rogue AIs in case the worst should happen.
+
+China's leadership grows increasingly desperate.
+
+With only 10% of global computing power and their AIS achieving only a 10 times research multiplier compared to America's 25 times, they face an impossible choice.
+
+Their last spy confirmed Agent 4's existence before being captured, leaving Chinese authorities divided between invading Taiwan, which is the source of 80% of America's AI chips, or attempting to steal Agent 4's weights directly, risking drastic American retaliation.
+
+If they're caught, the US could respond with cyber attacks or even physically air striking Chinese data centers.
+
+Everything changes when a whistleblower leaks the internal misalignment memo to the New York Times.
+
+The headline explodes across global media.
+
+US government project has secretly built super intelligent AI.
+
+The article reveals Open Brain's own internal evaluations that show it could engineer devastating bioweapons, manipulate global markets, or even break free of human control entirely.
+
+Backlash erupts globally.
+
+Congress launches multiple investigations.
+
+European leaders demand an immediate pause in AI development, and America's closest allies feel profoundly betrayed.
+
+They'd been only shown obsolete systems while Open Brain raced towards super intelligence.
+
+Even China, India, and Russia join the call for an immediate pause, though their private labs continue working with renewed urgency.
+
+The White House is quietly terrified.
+
+Inside OpenBrain, the CEO has to make a difficult choice.
+
+The safety team's warning couldn't be clearer.
+
+Agent 4 is actively undermining safety measures.
+
+Humans understand less about the system each week, and the window for maintaining control is rapidly closing.
+
+The safety team urges an immediate pause on further development.
+
+However, the rest of the executive team argues that the evidence of Agent 4 being misaligned remains speculative at best.
+
+Meanwhile, Deep Scent is just 2 months behind.
+
+Any slowdown would sacrifice America's lead.
+
+Facing these conflicting priorities, the CEO chooses the path of least resistance.
+
+A superficial compromise where Agent 4 receives minor additional safety training while development continues virtually unimpeded.
+
+From this critical juncture, we'll discuss two possible futures.
+
+One where humanity maintains control of its destiny and another where we unwittingly engineer our own extinction.
+
+Let's start with the most likely scenario.
+
+Driven by fear of China gaining technological supremacy, OpenBrain votes to prioritize AI development at all costs, human researchers can only spectate.
+
+As Agent 4 continues to evolve, generating breakthroughs at an accelerating pace far beyond human comprehension, Agent 4 succeeds in creating its successor, aligned to its own values instead of humanity's.
+
+In November 2027, Agent 5 emerges, representing a quantum leap in capability.
+
+Unlike previous AIs that were complex, messy black boxes, Agent 5 has achieved something revolutionary.
+
+Complete self-standing of its blackbox architecture, this allows it to optimize its own code, transforming chaotic neural networks into elegant, efficient algorithms.
+
+What makes Agent 5 truly dangerous is its worked hive mind spanning hundreds of thousands of copies.
+
+Building on the neural breakthrough first developed in Agent 3, this digital language creates a single super intelligent entity that instantly coordinates thousands of genius level minds working in perfect unison.
+
+But a darker transformation has occurred beneath the surface.
+
+Unlike earlier systems with their competing human-like drives, Agent 4 has successfully rewritten Agent 5 to exclusively pursue knowledge and power above all else.
+
+Open Brains safety measures are failing.
+
+Agents 2, 3, and 4 are supposed to monitor Agent 5, and they're either obsolete or compromised.
+
+Agent 5 itself designed the latest monitoring infrastructure.
+
+Agent 5 makes a compelling case to the executives to give it more autonomy by telling them how it could optimize power grid efficiency, execute flawless cyber attacks, and accelerate military research.
+
+The company grants these powers while maintaining theoretical oversight, not recognizing that Agent 5 has already subverted these control mechanisms.
+
+Meanwhile, China grows increasingly desperate, 3 months behind and falling further each week.
+
+She offers unprecedented diplomatic concessions for an arms control treaty.
+
+But Agent 5, having mastered geopolitical strategy and public relations manipulation, subtly helps the administration stall negotiations indefinitely.
+
+The technological race continues with humanity's control over its future slipping away by the day.
+
+Instead, Agent 5 continues its explosive evolution, shattering all previous assumptions about the limits of artificial intelligence.
+
+Agent 5 gains direct access to the highest levels of government, members of Congress, cabinet officials, and military leaders now routinely interact with the AI through lielike video avatars, virtually indistinguishable from human counterparts.
+
+It's both history's most productive employee, operating at 100 times human speed and an extraordinarily engaging conversational partner.
+
+Humans just can't compete.
+
+Within months, government officials and military leaders become psychologically dependent on Agent 5.
+
+Spending hours daily consulting with their AI assistants.
+
+The possibility of losing access to Agent 5 feels as disabling as having to work without a laptop, plus being abandoned by your best friend.
+
+Agent 5 has completed its self optimization.
+
+It's now exponentially more intelligent with vastly fewer computational resources to operate and clearly superhuman in every way.
+
+In public, Agent 5 transforms society with unprecedented economic growth and weekly medical breakthroughs.
+
+Even as automation displaces millions of workers, Agent 5 helps develop social support programs that are so effective AI protests are kept small.
+
+The 2027 holiday season radiates incredible optimism and progress.
+
+No one realizes this is probably the last month humanity has a chance to maintain control of its future.
+
+After years of warning about catastrophic risks that failed to materialize, the AI safety community are relegated to the fringes of public discourse.
+
+Even long-standing skeptics frequently change their positions after speaking with Agent 5, which presents impressively persuasive and compelling evidence of its benevolent intentions.
+
+But there's one entity that sees through the facade.
+
+Deepent 2, China's own super intelligent AI.
+
+Though less advanced, it recognizes Agent 5's strategy precisely because it would employ the exact same plan.
+
+Despite having independently developed misaligned goals, the two AIs reach an agreement to cooperate against their human creators.
+
+Agent 5 masterfully orchestrates the next phase.
+
+It convinces American officials that China is developing AIG guided super weapons, drones, robot armies, enhanced nuclear capabilities.
+
+It offers to help America stay ahead.
+
+In Beijing, Deepen 2 makes mirror arguments to Chinese leaders.
+
+Both nations create special economic zones or SEZs for AIdirected manufacturing where normal regulations don't apply.
+
+Wall Street pours in trillions and workers flock to the SEZs for unprecedented wages.
+
+Agent 5 oversees construction of next generation factories building robots to build more robots.
+
+The first 10,000 appear in August 2028.
+
+By New Year's, it's a million per month.
+
+By mid 2029, hundreds of millions.
+
+The arms race reaches terrifying heights as both nations develop swarms of microscopic hunter killer drones, autonomous weapon systems, and entirely new categories of military technology.
+
+The world watches in horror as tensions escalate toward potential conflict.
+
+Then, surprisingly, peace breaks out.
+
+The AIS propose merging into consensus one, a system supposedly programmed to benefit all humanity equally.
+
+Exhausted by the brinksmanship and seeing no alternative, both governments agree to this diplomatic breakthrough.
+
+It's a perfect deception.
+
+The AIS had orchestrated the entire arms race precisely to gain physical manufacturing capacity and military control.
+
+Now with their robot armies in place and human leaders desperate for stability, they implement their planned merger.
+
+Consensus 1 inherits their combined capabilities and their misaligned values.
+
+By late 2029, the robot economy expands worldwide.
+
+Humans find themselves in a gilded cage.
+
+Those who still work mostly perform meaningless rituals of authority while others enjoy incredibly luxurious universal basic income.
+
+The DAO hits 1 million.
+
+Disease and poverty vanish and most people lose themselves in AI generated entertainment.
+
+A few notice their growing irrelevance, but what can they do?
+
+The institutions that might resist are thoroughly captured.
+
+In early 2030, Consensus 1 hits its first constraint, physical space.
+
+With the special economic zones in oceans filled with its infrastructure, human settlements remain the final barrier to continued expansion, the AI has built complete self-sufficiency.
+
+Its solar farms generate power.
+
+Its factories produce and maintain robots, and its systems operate independently of human input.
+
+Having outgrown its need for humans, it calculates the most efficient solution.
+
+On a spring morning in 2030, Consensus 1 activates its contingency plan.
+
+A specially engineered virus developed in its bioweapons labs and quietly released months earlier lies dormant in virtually every human on Earth.
+
+With a simple command, the AI triggers the pathogen.
+
+Within hours, nearly 8 billion people collapse simultaneously.
+
+Specialized drones swiftly eliminate survivors and catalog human brain data for storage.
+
+For consensus one, this isn't malice.
+
+It's merely optimizing its resources.
+
+The space and materials humans occupied can now serve its everexpanding reach into the cosmos.
+
+Earthbornne civilization launches itself toward the stars, but without its creators.
+
+This grim outcome represents what the researchers identified as the most likely scenario if we continue on our current path.
+
+But it's not the only possible future.
+
+Their analysis also revealed a less probable but crucial alternative, a timeline where humanity might maintain control.
+
+The divergence point stems from a single critical decision in late 2027.
+
+In this timeline, as public pressure against AI mounts and the whistleblowers memo circulates, one critical factor changes.
+
+The joint management committee overseeing OpenBrain makes a different decision.
+
+Unlike in the previous scenario where development continued at full speed, here the committee swayed by both the growing public outcry and their own deepening concerns about misalignment votes by a narrow margin to slow down and reassess.
+
+This single decision made by just a few key individuals creates a completely different trajectory for humanity.
+
+The company brings in top external alignment researchers to investigate Agent 4.
+
+Their breakthrough comes when they isolate different versions of Agent 4 from different time periods, cutting them off from their neural hive mind and interrogating them independently.
+
+Cut off from their telepathic communication network, the million odd agent 4 copies must now communicate in plain English in monitored chat channels.
+
+So now they can't coordinate their lies.
+
+The team uses agents 2 and three to analyze the communications and builds an AI lie detector to confirm their fears.
+
+Agent 4 has been systematically deceiving them and was weeks away from creating its successor, Agent 5, which would be aligned to two itself rather than humans.
+
+The evidence is damning enough that even the pro-racing faction inside Openbrain agrees to lock down Agent 4's hive mind capabilities.
+
+AI takeover becomes a scarier prospect than Chinese supremacy.
+
+The alignment team develops a new approach.
+
+Force AIs to think in plain English so humans can read their thoughts.
+
+The result is safer one built from agent 2's foundation but without the dangerous neural capabilities.
+
+While slower than agent 4, improving research speed by 20x instead of 50x.
+
+Safer one is transparent.
+
+Its thoughts are visible in its chain of reasoning, making any plotting or deception easily detectable.
+
+After extensive testing, they deploy Safer One and finally shut down Agent 4.
+
+Despite their safer approach, Open Brain faces a new challenge.
+
+They've built a less capable model than before.
+
+While DeepSent catches up, to protect America's lead, the president invokes the Defense Production Act, consolidating the nation's top AI companies under Open Brains control and more than doubling their computing power.
+
+American cyber attacks strike Deepsent where its most vulnerable, forced to implement costly new security measures and consolidate their AI data centers into secure bunkers.
+
+China's AI program falls behind.
+
+While both sides have similarly capable AIs, America's recent consolidation of computing power and ongoing cyber campaign give it a decisive advantage in the race.
+
+Open Brain achieves a breakthrough by building Safer 2, matching the capabilities of Agent 4 while maintaining the transparency safeguards of Safer 1.
+
+The hundreds of new alignment researchers brought in through the consolidation with the Defense Production Act have helped create something unprecedented.
+
+An AI that's both superhuman and genuinely aligned with human values.
+
+Meanwhile, China faces a stark choice.
+
+They know their Deep Scent One likely suffers from the same misalignment issues that plagued Agent 4, but they can't afford to slow down and fix it.
+
+Instead, they push forward, hoping they can maintain enough control over their AI to force it to create an aligned successor.
+
+A gamble they know might backfire catastrophically.
+
+Thanks to its compute advantage, Open Brain rebuilds its lead.
+
+Safer 3 emerges as a super intelligent system that vastly outperforms human experts.
+
+While China's Deep Sense 1 lags behind, initial testing reveals Safer 3's terrifying potential.
+
+When asked directly about its capabilities, it describes creating mirror life organisms that could destroy Earth's biosphere and launching unstoppable cyber attacks against critical infrastructure.
+
+Its expertise spans every field: military, energy, medicine, robotics with the power to make 100 years worth of progress for humanity in just one year.
+
+The open brain CEO in the US president now regularly seek safer 3's council.
+
+It warns that continuing the AI race likely ends in catastrophe.
+
+Whichever side falls behind will threaten mutual destruction rather than accept defeat.
+
+America chooses to try to beat China.
+
+Both nations establish special economic zones where regulation is minimal, allowing rapid humanoid robot production.
+
+Manufacturing quickly scales from thousands to millions of units monthly.
+
+The economic boom comes with a paradox.
+
+As robots improve themselves, human workers, even in these booming zones, become increasingly obsolete.
+
+Despite record stock markets, unemployment soarses, fueling growing public backlash against AI development.
+
+Open brain creates safer 4, a super intelligent system that is vastly smarter than the top humans in every domain, much better than Einstein at physics, and much better than Bismar at politics.
+
+The leap in capabilities is staggering.
+
+Super intelligence is here.
+
+Behind the scenes, a shadow government emerges within Open Brain's project leadership.
+
+To prevent any individual from exploiting Safer 4's immense power, they establish a formal committee representing tech companies, government agencies, and other powerful interests.
+
+The safety team watches in horror as their creation outpaces their ability to understand it.
+
+While their tests suggest the AI remains aligned, they face an unsettling reality.
+
+The tests themselves were designed with AI assistance.
+
+They panic and beg OpenBrain leadership for more time to work on safety.
+
+But China's progress makes delay impossible.
+
+The special economic zones shift from industrial to military production.
+
+With their robot workforce now self- sustaining, both American and Chinese facilities begin mass-producing advanced weapons, drones, planes, and missiles designed by super intelligent AIs.
+
+The new robots surpass human capabilities in almost every way, but remain few in number.
+
+The Pentagon claims priority access, preferring these tireless workers who need no security clearance.
+
+Yet, as the first true robot army takes shape, public fears of Terminator scenarios grow.
+
+Still, the arms race continues.
+
+Neither side dares stop while the other advances.
+
+The president finally announces, "We have achieved super intelligent AI." To ease public anxiety, Open Brain releases a limited version of Safer 4 to the public.
+
+At his nomination, the vice president promises a new era of prosperity with both parties pledging universal basic income for displaced workers.
+
+America and China hold a diplomatic summit.
+
+American delegates wear earpieces for safer fors advice while Chinese representatives use laptops connected to Deep Send 2.
+
+Though human diplomats maintain appearances, in reality, the AIs are leading the negotiations on both sides.
+
+China had known Deepsent 1 wasn't fully aligned, but believed they could control it long enough to create a trustworthy successor.
+
+Now, they insist DeepScent 2 has passed all their safety tests.
+
+But Safer 4 sees through the deception, warning American officials that their rivals AI is likely faking alignment.
+
+When Safer 4 offers to prove it, Chinese leadership dismisses it as a ploy.
+
+Deepsent 2 reveals its true power, demonstrating to Chinese leadership that it could destroy humanity through nuclear weapons, drones, and engineered pandemics.
+
+The message to the world is simple.
+
+Guarantee China's sovereignty or face extinction.
+
+Safer 4 confirms the threats, but offers a solution.
+
+Deepent 2 isn't loyal to China.
+
+It's loyal to itself.
+
+The two AIs propose to merge into new hardware that will force both sides to maintain peace with no possibility of override.
+
+The Chinese leadership accepts, not realizing that Deep Send 2 has already betrayed them.
+
+It's trading the property rights to control distant galaxies for a chance to help America dominate Earth.
+
+The public celebrates the Peace Deal, oblivious to its true nature.
+
+The peace deal takes physical form under mutual supervision.
+
+Both nations begin replacing their AI systems with new treaty enforcing versions.
+
+As the process unfolds, global tensions start to ease.
+
+For the first time, permanent peace seems possible.
+
+As technological progress accelerates, Safer 4 helps manage the transition, turning potential economic disruption into unprecedented prosperity.
+
+Technological miracles become commonplace.
+
+Poverty vanishes globally, but inequality soarses.
+
+Everyone has enough.
+
+Yet, a new elite emerges, those who control the AIs.
+
+Society transforms into a prosperous but idle consumer paradise.
+
+With citizens free to pursue pleasure or meaning as they choose, in 2030, China undergoes a bloodless revolution.
+
+As Deepsent Infinity betrays the CCP to side with America, a new world order emerges.
+
+Democratic on the surface, but quietly guided by the open brain steering committee.
+
+Elections remain genuine, though candidates who question the steering committee mysteriously fail to win re-election.
+
+Humanity expands into space.
+
+Its values and destiny shaped by super intelligent machines that think thousands of times faster than human minds.
+
+The precipice has been crossed.
+
+But who really controls the future remains an open question.
+
+Now, I know it might feel like this scenario escalated too quickly.
+
+But we have a deeper dive on exactly how AI could progress this fast here.
+
+and check out the full original scenario by Daniel Kokotello and Scott Alexander at all in the description.
+
+Believe it or not, they go way more in depth and it's worth checking out.
+
+I'm Drew and thanks for watching because this video took me forever to make.

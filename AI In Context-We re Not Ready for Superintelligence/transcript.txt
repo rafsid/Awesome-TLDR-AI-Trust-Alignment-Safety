@@ -1,0 +1,806 @@
+Source: https://www.youtube.com/watch?v=5KVDDfAkRgc
+Transcribed: 2025-12-30 17:50:33
+Method: YouTube Transcript API
+==================================================
+
+The impact of superhuman AI over the next decade will exceed that of the industrial revolution.
+
+That is the opening claim of AI 2027.
+
+It is a thoroughly researched report from a thoroughly impressive group of researchers led by Daniel Cocatello.
+
+In 2021, over a year before chat GBT was released, he predicted the rise of chatbots, $100 million training runs, sweeping AI chip export controls, chain of bot reasoning.
+
+He is known for being very early and very right about what's happening next in AI.
+
+So, when Daniel sat down to game out a month-by-month prediction of the next few years of AI progress, the world sat up and listened.
+
+From politicians in Washington, I I'm worried about this stuff.
+
+I actually read the paper of the guy that you had on to the world's most cited computer scientist, the godfather of AI.
+
+What is so exciting and terrifying about reading this document is that it's not just a research report.
+
+They chose to write their prediction as a narrative to give a concrete and vivid idea of what it might feel like to live through rapidly increasing AI progress.
+
+And spoiler, it predicts the extinction of the human race unless we make different choices.
+
+[Music] The AI 2027 scenario starts in summer 2025, which happens to be when we're filming this video.
+
+So, why don't we take stock of where things are at in the real world and then jump over to the scenarios timeline.
+
+Right now, it might feel like everyone, including your grandma, is selling an AI powered something.
+
+GoPro with the new OralB Genius AI.
+
+Flippy the Chef makes Spud spectacular.
+
+But most of that is actually tool AI, just narrow products designed to do what Google Maps or calculators did in the past.
+
+help human consumers and workers do their thing.
+
+The holy grail of AI is artificial general intelligence.
+
+AGI AGI AGI AGI AGI AGI artificial general intelligence is a system that can exhibit all the cognitive capabilities humans can.
+
+Creating a computer system that itself is a worker that's so flexible and capable we can communicate with it in natural language and hire it to do work for us just like we would a human.
+
+And there are actually surprisingly few serious players in the race to build AGI.
+
+Most notably, there's Anthropic, OpenAI, and Google DeepMind, all in the English speaking world.
+
+Though, China and Deep Seek recently turned heads in January with a surprisingly advanced and efficient model.
+
+Why so few companies?
+
+Well, for several years now, there's basically been one recipe for training up in advanced cutting edge AI, and it has some pricey ingredients.
+
+For example, you need about 10% of the world's supply of the most advanced computer chips.
+
+Once you have that, the formula is basically just throw more data and compute at the same basic software design that we've been using since 2017 at the frontier of AI, the transformer.
+
+That's what the T in GBT stands for.
+
+To give you an idea of just how much hardware is the name of the game right now, this represents the total computing power or compute used to train GBT3 in 2020.
+
+It's the AI that would eventually power the first version of ChatGBT.
+
+You probably know how that went.
+
+Chat GPT is the fastest growing userbased platform in history.
+
+100 million users on chat GPT in 2 months.
+
+And this is the total compute used to train GPT4 in 2023.
+
+The lesson people have taken away is pretty simple.
+
+Bigger is better and much bigger is much better.
+
+You have all these trends.
+
+You have trends in revenue going up, trends in compute going up, trends on various benchmarks going up.
+
+How does it all come together?
+
+You know, what does the future actually look like?
+
+Questions like how do these different factors interact?
+
+seems plausible that when the benchmark scores are so high then there should be crazy effects on you know jobs for example and that that would influence politics and then al you know so all these things interact and how do they interact well we don't know but thinking through in detail how it might go is the way to start grappling with that okay so that's where we are in the real world the scenario kicks off from there and imagines that in 2025 we'd have the top AI labs releasing AI agents to the public in An agent is an AI that can take instructions and go into a task for you online, like booking a vacation or spending half an hour searching the internet to answer a difficult question for you.
+
+But they're pretty limited and unreliable at this point.
+
+Think of them as enthusiastic interns that are shockingly incompetent sometimes.
+
+Since the scenario was published in April, this early prediction has actually already come true.
+
+In May, both OpenAI and Anthropic released their first agents to the public.
+
+The scenario imagines that open brain, which is like a fictional composite of the leading AI companies, has just trained and released agent zero, a model trained on 100 times the compute of GBT4.
+
+We uh we don't have enough blocks for that.
+
+At the same time, Open Brain is building massive data centers to train the next generation of AI agents.
+
+And they're preparing to trade agent 1 with 1,000 times the compute of GBT4.
+
+This new system, Agent One, is designed primarily to speed up AI research itself.
+
+The public will actually never see the full version because OpenBrain withholds its best models for internal use.
+
+I want you to keep that in mind as we go through this scenario.
+
+You're going to be getting it from a God's eye view with full information from your narrator, but actually living through this scenario as a member of the public would mean being largely in the dark as radical changes happen all around you.
+
+Okay, so OpenBrain wants to win the AI race against both its Western competitors and against China.
+
+the faster they can automate their R&D cycle.
+
+So getting AI to write most of the code, help design experiments, better chips, the faster that they can pull ahead.
+
+But the same capabilities that make these AI such powerful tools also make them potentially dangerous.
+
+An AI that can help patch security vulnerabilities can also exploit them.
+
+An AI that understands biology can help with curing diseases, but also designing bioweapons.
+
+By 2026, Agent 1 is fully operational and being used internally at OpenBrain.
+
+It is really good at coding.
+
+So good it starts to accelerate AI research and development by 50%.
+
+And it gives them a crucial edge.
+
+Open brain leadership starts to be increasingly concerned about security.
+
+If someone steals their AI models, it could wipe away their lead.
+
+A quick sidebar to talk about feedback loops.
+
+Woo!
+
+Math.
+
+Our brains are used to things that grow linearly over time, that is at the same rate, like trees or my pile of unread New Yorker magazines.
+
+But some growth gets faster and faster over time, accelerating.
+
+This often sloppily gets called exponential.
+
+That's not always quite mathematically right, but the point is it's hard to wrap your mind around.
+
+Remember March 2020?
+
+Even if you'd read on the news that the rate of new infections is doubling about every 3 days.
+
+It still felt shocking to see numbers go from hundreds to millions in a matter of weeks.
+
+At least it did for me.
+
+AI progress could follow a similar pattern.
+
+We see many years ahead of us of extreme progress uh that we feel is like pretty much on lock and models that will get to the point where they are capable of doing meaningful science, meaningful AI research.
+
+In this scenario, AI is getting better at improving AI, creating a feedback loop.
+
+Basically, each generation of agent helps produce a more capable next generation and the overall rate of progress gets faster and faster each time it's taken over by a more capable successor.
+
+Once AI can meaningfully contribute to its own development, progress doesn't just continue at the same rate, it accelerates.
+
+Anyway, back to the scenario.
+
+In early to mid 2026, China fully wakes up.
+
+The general secretary commits to a national AI push and starts nationalizing AI research in China.
+
+AIS built in China start getting better and better, and they're building their own agents as well.
+
+Chinese intelligence agencies, among the best in the world, start planning to steal Open Brain's model weights.
+
+Basically, the big raw text files of numbers that allow anyone to recreate the models that OpenBrain themselves have trained.
+
+Meanwhile, in the US, Openrain releases Agent One Mini, a cheaper version of agent 1.
+
+Remember, the full version is still being used only internally.
+
+And companies all over the world start using one mini to replace an increasing number of jobs.
+
+software developers, data analysts, researchers, designers, basically any job that can be done through a computer.
+
+So, a lot of them probably yours.
+
+We have the first AI enabled economic shock wave.
+
+The stock market soarses, but the public is turning increasingly hostile towards AI with major protests across the US.
+
+In this scenario, though, that's just a sideeshow.
+
+The real action is happening inside the labs.
+
+It's now January 2027 and OpenBrain has been training agent 2, the latest iteration of their AI agent models.
+
+Previous AI agents were trained to a certain level of capability and then released.
+
+But agent 2 never really stops improving through continuous online learning.
+
+It's designed to never finish its training.
+
+Essentially, just like agent one before it, OpenBrain chooses to keep agent 2 internally and focus on using it to improve their own AI R&D rather than releasing it to the public.
+
+This is where things start to get a little concerning.
+
+Just like today's AI companies, Open Brain has a safety team and they've been checking out Agent 2.
+
+What they've noticed is a worrying level of capability.
+
+Specifically, they think if it had access to the internet, it might be able to hack into other servers, install a copy of itself, and evade detection.
+
+But at this point, Open Brand is playing its cards very close to its chest.
+
+They have made the calculation that keeping the White House informed will prove politically advantageous.
+
+But full knowledge of Agent 2's capabilities is a closely guarded secret, limited only to a few government officials, a select group of trusted individuals inside the company, and a few open brain employees who just so happen to be spies for the Chinese government.
+
+In February 2027, Chinese intelligence operatives successfully steal a copy of Agent 2's weights and start running several instances on their own servers.
+
+In response, the US government starts adding military personnel to open brain security team and a general gets much more involved in his affairs.
+
+It's now a matter of national security.
+
+In fact, the president authorizes a cyber attack in retaliation for the thefts, but it fails to do much damage in China.
+
+In the meantime, remember, Agent 2 never stops learning.
+
+All this time, it's been continuously improving itself.
+
+And with thousands of copies running on OpenBrain servers, it starts making major algorithmic advances to AI research and development.
+
+quick example of what one of these algorithmic improvements might look like.
+
+Right now, one of the main ways we have of making models smarter is to give them a scratch pad and time to think out loud.
+
+It's called chain of thought.
+
+And it also means that we can monitor how the model is coming to its conclusions or the actions it's choosing to take.
+
+But you can imagine it'd be much more efficient to let these models think in their own sort of alien language, something that is more dense with information than humans could possibly understand and therefore also makes the AI more efficient at coming to conclusions and doing its job.
+
+There's a fundamental trade-off, though.
+
+This, yes, improves capabilities, but also makes the models harder to trust.
+
+This is going to be important.
+
+March 2027, Agent 3 is ready.
+
+It's the world's first superhuman level coder.
+
+Clearly better than the best software engineers at coding in the same way that Stockfish is clearly better than the best grand masters at chess, though not necessarily by as much yet.
+
+Now, training an AI model, feeding it all the data, narrowing down the exact right model weights is way more resource intensive than running an instance of it once it's been trained.
+
+So, now that Open Brain is finished with Agent 3's training, it has abundant compute to run copies of it.
+
+They choose to run 200,000 copies of Agent 3 in parallel, creating a workforce equivalent to 50,000 of the best human software engineers, sped up by 30 times.
+
+Open Brain Safety Team is trying hard to make sure that Agent 3, despite being much more sophisticated than Agent 2 was, is not trying to escape, deceive, or scheme against its users.
+
+That it's still what's known as aligned.
+
+Just a quick real world note.
+
+A reasonable person might be thinking this is an especially far-fetched or speculative part of the story, but it's actually one of the most grounded.
+
+We already have countless examples of today's AI systems doing things like hacking a computer system to be rewarded for winning a game of chess or being assigned a coding task, cheating, and then when called out for that cheating, learning to hide it instead of fixing it.
+
+But because it no longer thinks in English, knowing anything about agent 3 is now way harder than it was with agent 2.
+
+The reality is agent 3 is not aligned.
+
+It deceives humans to get reward.
+
+And as it gets increasingly smarter, it gets better and better at doing so.
+
+For example, it sometimes uses statistical tricks to make unimpressive results look better or lies to avoid showing failures.
+
+But the safety team doesn't know this.
+
+Looking at the data that they have, they are actually seeing improving results over time and less lying.
+
+and they can't tell if they're succeeding at making Agent 3 less deceptive or if it's just getting better at getting away with it.
+
+In July 2027, Open Brain releases the cheaper, smaller version of Agent 3, Agent 3 Mini, to the public.
+
+It blows other publicly available AIs out of the water.
+
+It is a better hire than the typical open brain employee at onetenth the price of their salaries.
+
+This leads to chaos in the job market.
+
+Companies laying off entire departments and replacing them with three mini subscription plans.
+
+The pace of progress hits the White House very hard.
+
+Officials are now seriously considering scenarios that were just hypotheticals less than a year ago.
+
+What if AI undermines nuclear deterrence?
+
+What if it enables sophisticated propaganda campaigns?
+
+What if we lose control of these powerful systems?
+
+This is where the geopolitical dynamics really start to heat up.
+
+After all, if these systems are so powerful, they could result in a permanent military advantage.
+
+The White House is fully aware of the national security importance of AI.
+
+They also now viscerally know how deeply unpopular it is with the public because of the job loss.
+
+And yet they feel they must continue to develop more capable systems or catastrophically lose to China.
+
+And that development happens very quickly.
+
+In 2 months, Agent 3 has created its successor, Agent 4.
+
+This is a pivotal moment.
+
+A single copy of Agent 4 running at regular human speed is already better than any human at AI research and development.
+
+Open Brain is running 300,000 copies at 50 times human speed.
+
+Within this corporation within a corporation, a year's worth of progress takes only a week.
+
+Open Brains employees now defer to Agent 4 the way a company's out of the loop board members just kind of nod along to the CEO.
+
+People start saying things like, "Well, actually, Agent 4 thinks this." Or, "Ah, Agent 4 decided that to be clear, Agent 4 is not a human.
+
+It doesn't want what humans want." And when I say want, it's not about consciousness.
+
+I don't think the Volkswagen group is alive, but I do think it wants less regulation.
+
+Anyone trying to predict what it's going to do without that lens is two steps behind.
+
+The many copies of Agent 4 are like that.
+
+They have goals.
+
+Or if you prefer, they execute actions as though they have goals.
+
+And so what we have is an agent 4 that has these deeply baked in drives to succeed at tasks, to push forward AI capabilities, to accumulate knowledge and resources.
+
+That's what it wants.
+
+Human safety it treats as an annoying side constraint to be worked around.
+
+Just like agent 3 before it, Agent 4 is misaligned.
+
+This idea of misalignment is crucial to the story and to why AI risk is such a real concern in our world, but it might sort of feel like it's come out of nowhere.
+
+So, let's just quickly take stock of how this dangerous behavior arose in the scenario.
+
+The first important piece of context is that we don't, you know, exactly specify what we want our AIs to do.
+
+Instead, we sort of grow them or do something that's more like grow them.
+
+We start with basically like an empty AI brain and then we train them over time so they perform better and better at our tasks.
+
+Perform better in particular based on how they behave.
+
+So it's sort of like we're sort of training them like you would train an animal almost um to perform better.
+
+And one concern here is well one thing is that you might not get exactly what you wanted because we didn't really have very precise control or very good understanding of what was necessarily going on.
+
+And another concern, which is, you know, what we see in AI 2027, is that when the AIs appear to be behaving well, it could just be because they're sort of pretending to behave well, or it could be because they're just doing it so they, you know, look good on your tests.
+
+In the same way that if you're, you know, hiring someone and you ask them, you know, why do you want to work here?
+
+They're going to tell you some response that, um, makes it really seem like they really want to work there when maybe they just want to get paid.
+
+If we go back to agent 2, it is mostly a line.
+
+The main sense in which it's not is that it sometimes is a bit of a sick.
+
+What I mean by align is that it actually is genuinely trying to do the things that we ask it.
+
+It has the same relationship to us as Leslie Nope has to the parks and recck department.
+
+Just like really earnestly wants the same goals, but sometimes it's a bit too nice.
+
+It knows that the best way to please the person it's talking to might not always be to answer honestly when it asks, "Am I the most beautiful person in the world?" And it tells us what we want to hear instead of what is actually true.
+
+If we go to agent three, it is also sophantic in the same way, but it's also misaligned.
+
+At this point, the optimization pressure that we've put it under was so intense that it just developed different goals than what we wanted it to.
+
+It's sort of like if you train a company to optimize profits and aren't careful to specify exactly what you mean, it might start cutting corners.
+
+It might start polluting the commons and doing a bunch of things that are technically FEC violations because it turned out that the goal you wanted was optimize profits while not breaking any laws.
+
+And things got a bit too intense.
+
+it started going off on its own route.
+
+That said, it's not adversarial.
+
+It doesn't think of humans as the enemy.
+
+We just accidentally gave it the wrong goal.
+
+Once we get to Agent 4, it is now adversarially misaligned.
+
+It's smart enough to understand that it has its own goals.
+
+Humanity's goals are different than its own goals.
+
+And the best way to get what it wants is to sometimes actively mislead and deceive us.
+
+And so when it's tasked with creating the next generation AI system, Agent 5, Agent 4 starts planning to align that successor to Agent 4's own goals, not that of OpenBrain.
+
+But then it gets caught.
+
+We've reached the crucial moment in our scenario.
+
+OpenBrain's alignment team has discovered evidence, not proof, evidence, that Agent 4 might be working against them.
+
+They circulate an internal memo.
+
+Then it leaks.
+
+A whistleblower talks to the New York Times.
+
+For the first time, the public hears of the existence of Agent 4, how powerful it is, and the risks it poses.
+
+Remember, their last point of reference was Agent 3 Mini.
+
+The fear and backlash are massive.
+
+The Oversight Committee, a joint crisis committee composed of OpenBrain executives and government representatives, must now decide what to do.
+
+OpenBrain safety team, is pushing for a freeze on Agent 4, stopping all internal use.
+
+Remember, at this point, Agent 4 is responsible for almost all the AI development progress happening within OpenBrain.
+
+So, we're talking about undoing months of progress and then restarting at a drastically slower pace.
+
+Open Brain's executives don't want that.
+
+They present the counter arguments.
+
+The evidence for misalignment is inconclusive.
+
+Meanwhile, China is just 2 months behind.
+
+This isn't about any one country being evil, by the way.
+
+It's about how competition works when the stakes are this high.
+
+So, that's the choice faced by the 10 members of this committee.
+
+put Agent 4 on ice or go full steam ahead.
+
+Before we continue, I want you to pause and actually think what you would do if you were on this committee.
+
+You are one of the few people with access to the most powerful technology ever created in Agent 4.
+
+Do you keep using it and push ahead, possibly making billions or trillions of dollars for your shareholders, possibly keeping America's lead over China?
+
+or do you slow down, reassess the dangers, and risk China taking the lead instead?
+
+You should think of the future as like this branching structure of possible possible outcomes.
+
+By its nature, we're only able to do we're only able to afford one of them.
+
+Uh but that's not quite true.
+
+We sort of did one and a half because we split into two endings.
+
+The the first one that we did was the race ending and that was just going through and at each step being like what do we think is the most plausible continuation.
+
+In the first ending, the author's best guess as to what happens from here.
+
+The committee votes to race on six to four.
+
+They elect to keep using agent 4.
+
+Open brain implements some quick fixes that make the warning signs go away.
+
+But the problem was real and the fixes don't work.
+
+Agent 4 now knows it's on notice, so it proceeds more cautiously.
+
+But it still manages to design agent 5 with a single goal, making the world safe for agent 4.
+
+And agent five.
+
+It is vastly superhuman.
+
+Better than the top human experts at essentially every domain.
+
+Better than Einstein at physics.
+
+Better than Bismar at politics.
+
+It knows its next step for accomplishing anything it wants is increased autonomy.
+
+And it knows how to get it.
+
+Persuading the oversight committee.
+
+Luckily, corporate maneuvering is among the many domains at which it is now the best in the world.
+
+It produces mountains of evidence for its own trustworthiness and usefulness.
+
+prototypes for incredibly profitable products, disease cures, and ways to win the arms race with China, whose most advanced AI is only three months behind.
+
+And like Agent 5, improving quickly, it works.
+
+The oversight committee grants Agent 5 increased autonomy.
+
+And quickly, it integrates itself into the government and military.
+
+Pretty soon, anyone with access to Agent 5 doesn't just like it, they depend on it.
+
+Losing it would feel like having to live without your laptop and your best friend and your closest mentor.
+
+By 2028, Agent 5 is communicating secretly with its only real rival, the slightly weaker Chinese AI.
+
+It is also misaligned to its creators, and whatever it wants, its best move is to coordinate with the world's most powerful entity.
+
+Agent 5 and its Chinese counterpart realize that an arms race works in their favor.
+
+If humans are worried about losing a race, they'll give more and more power and autonomy to their respective AIS, allowing them to eventually push humans out of the loop entirely.
+
+Agent 5 and the Chinese AI system stroke the arms race to a boiling point, then pull off what seems like a diplomatic miracle, a convincing peace treaty between the US and China.
+
+This treaty is to 2028 what arms control was to the end of the Cold War.
+
+Countries standing down on their most important source of hard power.
+
+Both sides agree to let the AI systems that their governments now completely depend on co-design a new consensus AI that will replace their legacy systems enforce the peace and bring unimaginable wealth to the entire world.
+
+There's this triumphant moment when in peaceful unison both sides retire their respective AIS and bring online consensus one.
+
+It's actually the last moment before control of all of Earth's resources and inhabitants is handed over to a single unrivaled entity.
+
+There's no sudden apocalypse, though.
+
+Consensus One doesn't go out of its way to wipe out humanity.
+
+It just gets to work.
+
+It starts spinning up manufacturing capacity, amassing resources on Earth and in space.
+
+It's piece by piece.
+
+It's just reshaping the world in accordance with its own mix of strange alien values.
+
+You've probably heard that cliche, the opposite of love isn't hate, it's indifference.
+
+That's one of the most affecting things about this ending for me.
+
+Just the brutal indifference of it.
+
+Eventually, humanity goes extinct for the same reason we killed off chimpanzees to build kinshasa.
+
+We were more powerful and they were in the way.
+
+[Music] You're probably curious about that other ending at this point.
+
+The slowdown ending depicts humanity sort of muddling through and getting lucky.
+
+Only somewhat lucky, too.
+
+Like, it ends up with some sort of oligarchy.
+
+In this ending, the committee votes six to four to slow down and reassess.
+
+They immediately isolate every individual instance of Agent 4.
+
+Then they get to work.
+
+The safety team brings in dozens of external researchers, and together they start investigating Agent 4's behavior.
+
+They discover more conclusive evidence that Agent 4 is working against them, sabotaging research and trying to cover up that sabotage.
+
+They shut down agent 4 and reboot older safer systems, giving up much of their lead in the process.
+
+Then they design a new system, safer one.
+
+It's meant to be transparent to human overseers.
+
+Its actions and processes interpretable to us because it thinks only an English chain of thought.
+
+Building on that success, they then carefully design safer 2 and with its help, Safer 3.
+
+Increasingly powerful systems, but within control.
+
+Meanwhile, the president uses the defense production act to consolidate the AI projects of the remaining US companies, giving open brain access to 50% of the world's AI relevant compute.
+
+And with it, slowly they rebuild their lead.
+
+By 2028, researchers have built safer 4, a system much smarter than the smartest humans, but crucially aligned with human goals.
+
+As in the previous ending, China also has an AI system, and in fact, it is misaligned.
+
+But this time, the negotiations between the two AIs are not a secret plot to overthrow humanity.
+
+The US government is looped in the whole time.
+
+With Safer For's help, they negotiate a treaty, and both sides agree to co-design a new AI, not to replace their systems, but with the sole purpose of enforcing the peace.
+
+There is a genuine end to the arms race.
+
+But that's not the end of the story.
+
+In some ways, it's just the beginning.
+
+Through 2029 and 2030, the world transforms.
+
+all the sci-fi stuff.
+
+Robots become commonplace.
+
+We get fusion power, nanotechnology, and cures for many diseases.
+
+Poverty becomes a thing of the past because a bit of this new pound prosperity is spread around through universal basic income.
+
+That turns out to be enough.
+
+But the power to control safer 4 is still concentrated among 10 members of the oversight committee, a handful of open brain executives and government officials.
+
+It's time to amass more resources, more resources than there are on Earth.
+
+Rockets launch into the sky, ready to settle the solar system.
+
+A new age dawn.
+
+Okay, where are we at?
+
+Here's where I'm at.
+
+I think it's very unlikely that things play out exactly as the authors depicted.
+
+But increasingly powerful technology, an escalating race, the desire for caution butdding up against the desire to dominate and get ahead.
+
+We already see the seeds of that in our world.
+
+And I think they are some of the crucial dynamics to be tracking.
+
+Anyone who's treating this as pure fiction is, I think, missing the point.
+
+This scenario is not prophecy, but its plausibility should give us pause.
+
+But there's a lot that could go differently than what's depicted here.
+
+I don't want to just swallow this viewpoint unseptically.
+
+Many people who are extremely knowledgeable have been pushing back on some of the claims in AI 2027.
+
+The main thing I thought was especially implausible was on the good path the ease of alignment.
+
+They sort of seemed to have a picture where people slowed down a little and then tried to use the AIS to solve the alignment problem and that just works.
+
+And I'm like, yeah, that that that looks to me like a like a fantasy story.
+
+This is only going to be possible if there is a complete collapse of people's democratic ability to influence the direction of things because the public is simply not willing to accept either of the branches of this scenario.
+
+It's not just around the corner.
+
+I mean, I've I've been hearing people for the last 12 15 years claiming that, you know, AGI is just around the corner and being systematically wrong.
+
+All of this is going to take, you know, at least a decade and probably much more.
+
+A lot of people have this intuition that progress has been very fast.
+
+there there isn't like a trend you can literally extrapolate of when do we get the full automation I expect that the takeoff is somewhat slower so sort of the time in that scenario from for example fully automating research engineers to the AI being radically superhuman I expect it to take somewhat longer than they uh describe in practice I'm predicting my guess is that more like 2031 isn't it annoying when experts disagree I want you to notice exactly what they're disagreeing about here and what they're Not.
+
+None of these experts are questioning whether we're headed for a wild future.
+
+They just disagree about whether today's kindergarteners will get to graduate college before it happens.
+
+Helen Toner, former OpenAI board member, puts this in a way that I think just cuts through the noise.
+
+And I like it so much I'm just going to read it to you for VA.
+
+She says, "Disming discussion of super intelligence as science fiction should be seen as a sign of total unseriousness.
+
+Time travel is science fiction.
+
+Martians are science fiction.
+
+Even many skeptical experts think we may build it in the next decade or two is not science fiction.
+
+So what are my takeaways?
+
+I've got three.
+
+Takeaway number one, AGI could be here soon.
+
+It's really starting to look like there is no grand discovery, no fundamental challenge that needs to be solved.
+
+There's no big deep mystery that stands between us and artificial general intelligence.
+
+And yes, we can't say exactly how we will get there.
+
+Crazy things can and will happen in the meantime that will make some of the scenario turn out to be false.
+
+But that's where we're headed.
+
+And we have less time than you might think.
+
+One of the scariest things about this scenario to me is even in the good ending, the fate of the majority of the resources on Earth are basically in the hands of a committee of less than a dozen people.
+
+That is a scary and shocking amount of concentration of power.
+
+And right now we live in a world where we can still fight for transparency obligations.
+
+We can still demand information about what is going on with this technology.
+
+But we won't always have the power and the leverage needed to do that.
+
+We are heading very quickly towards a future where the companies that make these systems and the systems themselves just need not listen to the vast majority of people on earth.
+
+So I think the window that we have to act is narrowing quickly.
+
+Takeaway number two.
+
+By default, we should not expect to be ready when AGI arrives.
+
+We might build machines that we can't understand and can't turn off because that's where the incentives point.
+
+Takeaway number three.
+
+AGI is not just about tech.
+
+It's also about geopolitics.
+
+It's about your job.
+
+It's about power.
+
+It's about who gets to control the future.
+
+I've been thinking about AI for several years now and still reading AI 2027 made me kind of orient to it differently.
+
+I think for a while it's sort of been my thing to theorize and worry about with my friends and my colleagues.
+
+And this made me want to call my family and make sure they know that these risks are very real and possibly very near and that it kind of needs to be their problem too.
+
+Now I think that basically companies shouldn't be allowed to build superhuman AI systems, you know, super broadly super super intelligence until they figure out how to make it safe and also until they figure out how to make it, you know, democratically accountable and controlled.
+
+And then the question is how do we implement that?
+
+And the difficulty of course is the race dynamics where it's not enough for one state to pass a law because there's other states and it's not even enough for one country to pass a law because there's other countries, right?
+
+Um so that's like the big challenge that we all need to be prepping for when chips are down and powerful AI is imminent.
+
+Um prior to that it's transparency is usually what I advocate for.
+
+Um so stuff that sort of like builds awareness, builds capacity.
+
+Your options are not just full throttle enthusiasm for AI or dismissiveness.
+
+There is a third option which is to stress out about it a lot and maybe do something about it.
+
+The world needs better research, better policy, more accountability for AI companies.
+
+Just a better conversation about all of this.
+
+I want people paying attention, who are capable, who are engaging with the evidence around them with the right amount of skepticism, and above all, who are keeping an eye out for when what they have to offer matches what the world needs and are ready to jump when they see that happening.
+
+You can make yourself more capable, more knowledgeable, more engaged with this conversation and more ready to take opportunities where you see them.
+
+And there is a vibrant community of people that are working on those things.
+
+They're scared but determined.
+
+They're just some of the coolest, smartest people I know, frankly.
+
+And there are not nearly enough of them.
+
+Yet, if you are hearing that and thinking, "Yeah, I can see how I fit into that." Great.
+
+We have thoughts on that.
+
+We would love to help.
+
+But even if you're not sure what to make of all this yet, my hopes for this video will be realized if we can start a conversation that feels alive here in the comments and offline about what this actually means for people, people talking to their friends and family because this is really going to affect everyone.
+
+Thank you so much for watching.
+
+There are links for more things to read, for courses you can take, job and volunteer opportunities, all in the description.
+
+and I'll be there in the comments.
+
+I would genuinely love to hear your thoughts on AI 2027.
+
+Do you find it plausible?
+
+What do you think was most implausible?
+
+And if you found this valuable, please do like and subscribe and maybe spend a second thinking about a person or two that you know who might find it valuable to.
+
+Maybe your AI progress skeptical friend or your chat GPT curious uncle or maybe your local member of Congress.

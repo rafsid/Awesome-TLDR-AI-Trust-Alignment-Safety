@@ -1,0 +1,2268 @@
+Source: https://www.youtube.com/watch?v=Dt1ySXYTGuA
+Transcribed: 2025-12-30 18:05:13
+Method: YouTube Transcript API
+==================================================
+
+If you can't even put together a Manhattan project for this, right?
+
+If you can't even put together all of our greatest scientists working on this for a generation, you're not going to make it.
+
+Like, you're not even trying.
+
+This is a thing that has made discourse around AI so bad.
+
+If someone comes to you and tells you this is the definitive difference between human and animals, between chat GPT and pre-Chat GPT AI, between chat GPT and humans, you should be like, well, they're a crank.
+
+This is a scientific problem where we put a lot of efforts in and we failed.
+
+Why do you think your intuition just because it feels like it is like the correct one?
+
+We want to understand intelligence.
+
+We want to understand coordination.
+
+We want to understand alignment.
+
+These are obviously problems that are extremely relevant to our species long-term happiness, but they're also very dangerous.
+
+The goal is just to buy more time.
+
+Right now, there is a willy-nilly race.
+
+There is almost no thought given to safety.
+
+If one does not address these problems, then you lose and currently we're losing.
+
+So, Tofu Labs is a new AI research lab I'm starting in Zurich.
+
+It is funded from past ventures involving AI as well.
+
+And so, we are Swiss version of DeepSick.
+
+So a small group of people very very motivated very hard working and we try to do some AI research starting with LLM and O1 style models.
+
+What we're looking for now is chief scientists and also research engineers.
+
+You can check out positions at tufalabs.ai.
+
+Okay guys, so welcome to MLSG.
+
+It's so good to have you both here.
+
+So great to be back.
+
+It's been a while.
+
+Indeed.
+
+Um so in November you guys published a piece called the compendium.
+
+Um it's a monster.
+
+It's about 115 pages long.
+
+I really enjoyed reading it.
+
+Uh maybe Connor first, can you give us the the elevator pitch of that?
+
+Very simply, we just want to make the full case of why we think extinction from super intelligence is very likely, why we think this happens, why we think it's still happening, and what can be done about it.
+
+Yeah.
+
+Okay.
+
+So, um you were saying basically in in the first section, so you're talking about the state of AI today, and you said that recent AI advances are due more to scale.
+
+You're saying that safety is being sidelined.
+
+So you said, you know, open AI, deep mind, anthropic, they're pouring resources into building more powerful models.
+
+They're openly acknowledging the risks while they continue to go, you know, full speed ahead.
+
+Uh I think it still holds uh true.
+
+The advances that we're seeing in AI are not from understanding different aspects of intelligence.
+
+It's not making intelligence into a more measured objective uh property.
+
+It's not factoring it into natural concepts and so on and so forth.
+
+It's mostly still mostly blackbox approaches and just iterating on algorithms until we find one that works and then pouring more compute.
+
+I still think that the risks are openly acknowledged and I still think they're racing for it.
+
+It seems pretty transparent from a point of view like the the world in which we learned more about intelligence and started to understand more about intelligence and how it works is very different from what is currently happening basically.
+
+But Connor why is it the case that intelligence can just be a black box that we can just continue to train and train?
+
+I mean you made the comment in in the compendium that this type of technology is not designed it's grown.
+
+Why is that the case?
+
+Why is it so easy if you like to mechanize intelligence?
+
+Truth is I think this is one of the great mysteries of our universe.
+
+Like I think this is genuinely an unsolved question.
+
+I think it's genuinely surprising that if you have a bunch of particles and you shake them around in a bit of a soup, eventually a human pops out.
+
+Like I think this is like genuinely weird and like not something that would be obvious.
+
+Even if we had a chimp, right?
+
+If you tell me I take a chimp, I don't know if you've seen a chimp.
+
+They're kind of terrible, you know?
+
+And you give it a bit of bigger brain, now they like start making art and nuclear bombs.
+
+This is not obvious, right?
+
+Like it's not obvious that you just like take a bunch of neurons and you put bunch more neuron soup together and eventually you get something that can like invent mathematics.
+
+This is a fact about reality though.
+
+So like the like for me this like scaling and like neural networks working isn't something that was predicted by some like deep underlying theory of physics.
+
+It's just something we observe happens and we don't really know why which I think is like you know some people take this as therefore therefore it won't keep or therefore it won't matter.
+
+But I think of it kind of the other way around.
+
+The fact that we don't know why this happens doesn't allow us to like make any predictions of like when it will stop or like how it will go forward.
+
+But one thing that I was taken back by is in a way this argument diminishes how clever we are as bio machines, right?
+
+You know, we we self-replicate when we have children.
+
+There are no power grids.
+
+There's there's no, you know, kind of orchestration network.
+
+we just have sex and and nine months later and a child pops out and it it just seems incredibly efficient, right?
+
+Because because you also made the comment in in the compendium that that there's no kind of physical laws that prevent this type of intelligence emerging, but I think of humans as being just in a different category.
+
+You can think of it that way.
+
+I think it definitely makes sense as humans were optimized by a different process for a different thing.
+
+I think that's a fair way of seeing things.
+
+I just think it's kind of irrelevant.
+
+What we see from this, what I take from this is that weird things are possible and predicting what is possible is very hard.
+
+Like I think it's just very very hard to predict what is or what isn't possible.
+
+It's definitely true that humans are extremely clever in many of the ways they're designed.
+
+In some ways, it's extremely stupid.
+
+You know, the point is that we the fundamental thing is we don't understand intelligence.
+
+We don't know really what it is, how to build it, how to structure it.
+
+We don't have a science.
+
+We're prescientific.
+
+It's kind of like how, you know, alchemists thought about chemistry.
+
+Like alchemists could look at acids and metals and, you know, organic compounds and be like, well, some shit's going on here and like obviously important.
+
+I think we're in a similar circumstance with intelligence.
+
+I don't think we can figure it out.
+
+I just think we currently haven't.
+
+So, I'm just trying to rationalize this because a lot of people will hear you saying we need to basically make AGI illegal.
+
+That seems like not hyperbolic, but it for the average person that that seems like a very strong thing to say.
+
+What's the justification for that?
+
+What you just said is not true.
+
+The average person actually completely agrees with this.
+
+I think this is completely commenurate.
+
+We've done polling on this.
+
+But ML researchers was 10%.
+
+Yes.
+
+Uh I think the fact that you still get 10% of extinction risk that you still get many people talking about extinction risks is like a good show that you can go against incentives.
+
+Jeffrey Hinton left Google to talk about extinction risks.
+
+So, you know, incentives are not an iron law that confine you and prevent you from being an actual human with agency and free will.
+
+Isn't Isn't there this notion though that even if AIs could self-replicate?
+
+They would need to have factories.
+
+They would need to um have access to materials.
+
+It feels like there's this argument that intelligence is all you need.
+
+And it's almost an appeal to um omniscience that these things if only they are smart enough they can they can do all of these things.
+
+But surely in the real world you need to be moving molecules around.
+
+You you need to be um working with materials and and so on.
+
+It it seems like in the physical world it's it's a really difficult thing to do to build this kind of intelligence.
+
+Yes, absolutely.
+
+Building things is hard and the fact that humans can build uh you know microchips and chimps cannot is both downstream of us having thumbs and of us having higher intelligence.
+
+These things are very closely related.
+
+But like when we're when we're thinking about building an AGI, we're not talking about we're building a thing on a rock in outer space.
+
+You know, we're talking about a thing that's deeply integrated into the economy, like these systems are being integrated as hard as possible, as fast as possible, put on the internet, given all human knowledge, giving access to tools, given human supporters, human helpers, and the wider economy.
+
+The economy is much smarter than any individual human.
+
+The economy can build machines that I can't build, that no individual could build.
+
+I don't think any individual person can build a lithography machine but the economy can humanity can build lithography machines and I think it's useful to think about like in practice when we see AGI or ASI systems emerge that it will they will be part of these systems and they will use these systems as part of their extended cognition.
+
+You know a powerful AGI system will be able to do anything a corporation can do and probably will at least for a little while.
+
+You know it will probably purchase machines.
+
+It will probably do research.
+
+It will probably pay humans to do things like these are useful levers.
+
+Will it do that indefinitely?
+
+Probably not.
+
+You know, if there was something that's much smarter than the entire economy and it gets like a couple years to develop new technology, I don't know what technology you would invent.
+
+Maybe you would involve, you know, paying humans.
+
+Maybe it wouldn't.
+
+Interesting.
+
+I mean, one of the comments that that you made about intelligence, Gabe, was was that I think you define it in quite simple terms.
+
+It's just the ability to solve problems.
+
+Why why is that a good way to think about intelligence?
+
+I'll be mean.
+
+I think uh nice reason for why it's a good way to define intelligence is that it's quite underspecified.
+
+You can pick whatever classes of problems that you want.
+
+Uh if you want to pick formal problems, you know, you can get into the computability the theory type of things.
+
+If you talk about problems of like different time and space resources, you get back into complexity theory.
+
+If you think about more logical descriptions or in grammar based description, you get into Schumsky hierarchy theory.
+
+It's like it's vague enough.
+
+It's uh that it lets you define the types of problems that are of interest to you.
+
+Uh for instance, we can just take a couple of benchmarks like arc AGI and say that this is the definition of intelligence.
+
+So it's like a very uh practical definition, not in the sense that it's very grounded, just in the sense that you can use it however you want.
+
+So that's why I like this definition.
+
+You made this very good argument in your paper that there are always people who say there's there's something missing, right?
+
+If only we had intentionality or um I quite I mean you were just touching on the Chsky hierarchy and so on.
+
+You know, Chsky said that humans are different.
+
+Um, there was this Prometheus moment where we had some weird genetic mutation and we could now do the merge operation in our brains and we became touring machines.
+
+And that's the reason why we dominated the world, right?
+
+That we we have this this ability that we that we didn't have before.
+
+And that seems to go against this notion of of a continuum, right?
+
+Because I mean, Connor, you were just saying that look at chimp brains, look at our brains, the brains get a little bit bigger.
+
+Now all of a sudden we're dominating the world.
+
+But it's more interesting to from my perspective to think that we are GIS.
+
+Chimps are not GIS.
+
+And if you think about it, ASIS will also be GIS.
+
+They'll be touring machines.
+
+We'll be able to communicate with them.
+
+It seems to me that it would be different with us and and ASIS than it would be with us and chimps.
+
+Maybe.
+
+I mean, depends on what you mean by different, right?
+
+Like I don't know if you've ever actually observed chimps for like an extended period of time or read a book about chimps.
+
+We have a lot in common with chimps.
+
+Chimps have politics, you know, and not just like, oh, this guy is higher ranked than this guy.
+
+They scheme.
+
+They make plans about we're gonna ambush this guy so we can make this guy the leader and then he will repay me.
+
+Like, this is the complexity that chimps have.
+
+I I really recommend reading actual books by actual primatologists about chimps.
+
+Just them telling stories about chimps because I think like people like one of my favorite genres of like philosophy which Kchsky was a great example of is philosophy of mind that could be completely disproven if they had met one animal in their entire life is like animals are way smarter than I think a lot of people realize.
+
+Is like like dogs can plan, they can pattern recognize, they can remember things, they can understand identity, they have theory of mind.
+
+You know, it's not perfect, right?
+
+Like, sure, it's much more primitive than humans, but it's obviously on a spectrum.
+
+You know, chimps, orangutangs, and so on are on a spectrum.
+
+Even rats have a lot of sophisticated behaviors, but like I'll look at a rat do a thing and I'll be like, he's just like me for real, you know?
+
+Like, I I understand why he did that.
+
+Like, he had an emotion in there.
+
+Like, look, he's angry.
+
+I think especially with mammals, like this isn't just uh noise.
+
+Like, there is kind of like a steady increase of a thing.
+
+I think a lot of people have tried very very very hard to use all of their big brain IQ points to come up with something that will cleanly beautifully separate humans from everything else.
+
+And I think the story of science and the you know ever since Darwin and beyond is that like there is no clean separation.
+
+There is no clean cut.
+
+There is no touring machine not touring machine.
+
+All the evidence points to the opposite.
+
+It's just like you just do more things.
+
+You have more patterns.
+
+You have more general cognition.
+
+you have more compute, you have more things, you have better algorithms, but it's all on the spectrum.
+
+I agree with so much of what you've just said.
+
+I think it's possible for both things to be correct.
+
+There was a great book by Max Bennett, a brief brief history of intelligence, and he was saying that, you know, mammals that they have the same prediction apparatus as as we do.
+
+But maybe there's something to what Chomsky is saying that we do have a capability that is a discontinu of the other capabilities that that you're talking about.
+
+But it goes to your point that we can galaxy brain ourselves and we can point out specific instances of capabilities that we have that animals don't have that ASIS might have.
+
+But your your premise is that this is just a pointless discussion.
+
+I think there is a point to the discussion where you must take a step back.
+
+So people make the mistake many time being like oh the difference between animals and humans is tool use and then animals use tools.
+
+Okay, well it was not tool use it's language and then animals use language and so you keep you know postponing what is the actual thing.
+
+So on one end you could be like well there's no such thing on the other end you can still be like well I predict that the next generation of human might be able to build nukes and I still predict that the next generation of chimps won't and I predict that no other animal species will.
+
+So it's like we have an internal model we have an internal understanding that there is a difference.
+
+So what we must recognize is that we don't have a good understanding of what that difference is.
+
+Is it the last difference?
+
+We don't know.
+
+We do not have a good understanding of this.
+
+We can have hints.
+
+We can have intuitions.
+
+We can have various things.
+
+I will happily share mine right after.
+
+But I think the first thing to do is to actually take a step back and be like, well, when scientists tried to define this difference, they failed.
+
+And I think it's a very important step in science, which is to realize that we failed to solve a problem.
+
+For instance, P versus NP is a very salient problem where we realize that it fails.
+
+And whenever someone comes and says, I have a solution to P versus NP, our first reaction is, well, you're a crank.
+
+And I think we should have not necessarily to that extreme, but a similar attitude with intelligence.
+
+If someone comes to you and tells you this is the definitive difference between human and animals, between chat GPT and pre-Chat GPT AI, between chat GPT and humans, you should be like, well, they're a crank.
+
+This is a scientific problem where we put a lot of efforts in and we failed.
+
+Why do you think your intuition just because it feels like it is like the correct one?
+
+Personally, I think this is a thing that has made discourse around AI so bad is that basically anyone feels like they have the correct intuition and I think having the humility to take a step back and be like I have my guess but they are my guesses is like quite hard.
+
+The other one is also there are discontinuities in continuums.
+
+Let's say at some point you must compound enough that you discover I don't know overall tradition or writing or something that is higher bandwidth.
+
+If you don't get there within a generation or within a tribe level of complexity well you never develop it.
+
+And if you get there then you can use this new uh bandwidth this new type of system to do more.
+
+Once you have writing you can have you know traditions that persist way past the degradation of like oral transmission.
+
+When you have a clear language with a clear grammar, you know, even before writing just more systematized grammar, you can have oral transmission that lasts for longer.
+
+I'm not saying it's writing oral transmission.
+
+I'm literally just using those as examples.
+
+But what I mean is that you can also have discontinuities that emerge from continuums.
+
+You're better at language.
+
+And through this and some chance you get to a place where you develop some oral tradition that lets you do much more possibly you know proto religions that was like impossible for previous species and this lets you do more and more and more and so I think there's also this type of stuff that is easy to forget.
+
+It's like these continuums emerge from continuums qualitative differences can emerge from mere quantitative differences.
+
+Ultimately it's all physics and quantum waves this type of stuff.
+
+I think for ASI there are similar considerations you know um if a human must learn something like just learning one fact as a human you must do space repetition it's still not that good and so on and so forth teaching everyone one fact is like basically impossible whereas for AI doing a fine tune of all the deployed instances trivial and so with ASI you expect that you'll have this type of discontinuities from continuums you can realize some dynamics but even as you realize ize them.
+
+You should keep in mind and be very focused on what you do not understand.
+
+You should make clear what you're confused about and so on and so forth.
+
+Just I don't know what they are and we should not be pseudocientific and use like pseudo techchnical terms to talk about those extra things because right now our theories only support saying vague things like this.
+
+We do not have a strong enough science of intelligence to be that precise.
+
+I I kind of agree with you.
+
+I mean first of all you were talking about the nuance of um the dynamics of collective systems and and systems thinking and and emergence right so um a lot of people certainly in the olden days when we thought about intelligence they thought all intelligence happens inside the brain and and and even if we needed to have some kind of emergent properties that it would only emerge from a baseline a basis of capability inside the human brain and that's not necessarily the case.
+
+So we might say you need to have touring machine brains but maybe you don't because you can build systems of lower brains or systems of LLMs that are touring complete in some way so that the whole thing becomes a wash.
+
+But the problem though is that we have this legibility problem.
+
+We need to have precision in in regulation right and if we're saying all of these things are extra we can't use the word agency we can't use the word consciousness then how do we have the precision and the legibility to actually talk about the things that we need to regulate.
+
+When I think about doing hard things in the world, I think it's very important to separate between hardness, how much effort it takes to do something and whether something's possible.
+
+For me, these are different things.
+
+So most of the arguments of the kind of shape that you're talking about are something like, well, we don't know exactly what, you know, the intelligence thing is, therefore it's impossible to regulate.
+
+This I disagree.
+
+The argument of we don't know exactly what the thing is, so therefore it's hard to regulate.
+
+That I agree with.
+
+I'm sure most people have heard about big tobacco, especially the 50s and the 60s and their massive campaign against the emerging ev scientific consensus that smoking caused cancer, which is of course bad for business.
+
+There's a fun thing where to this day we still don't actually know which chemical exactly in tobacco smoke causes cancer.
+
+This is still not 100% clear.
+
+Like we have like many good guesses and so on, but it's not 100% settled.
+
+So back in the 60s, the tobacco company said, "Well, of course, if smoking cause cancer, we want to regulate it, but let's first find out what the chemical is, and then we'll figure it out." And this is the same thing that's happening here.
+
+Sure, of course, we should stop AGI.
+
+Once we figured out what it is, so you come back to me once you figured that out.
+
+And this is just a isolated demand for rigor.
+
+This is like a completely disproportionate demand for rigor.
+
+It's like sure it would be great if we figured out the proper metrology of intelligence.
+
+If we figured out the proper science of intelligence and like boom, here's the thing.
+
+If you do this thing, all problems solved would be great.
+
+But this is not the world we live in.
+
+You have to say like what is the smallest circle I can draw where I'm guaranteed it's in there.
+
+So the more we understand intelligence, the more we can shrink the circle.
+
+But if we don't understand intelligence, that circle has to be quite large.
+
+I mean, this reminds me of that expression.
+
+It's like pornography, right?
+
+I I know it when I see it.
+
+And you're saying it's it's like intelligence.
+
+It's dangerous intelligence.
+
+I know it when I see it.
+
+So, it feels like an appeal to our intuitions.
+
+I know it when I see it is talking about something that is grounded in reality.
+
+And so, in regulation, you can talk about things are grounded in reality.
+
+For instance, you can say, "Let's ban all projects that have the explicit aim of building AGI or ASI." This is not a thing that you can measure but this is a thing that a judge can decide on.
+
+This is why we have a judiciary system and why not everything is done in laws through the legislative systems.
+
+Like for instance, you know the we can mention fraud, we can mention deception and so on and so forth.
+
+They're not fully grounded definitions, but there's still a judge that can come and be like, "Yep, that's it." So first, that's like one thing that you can keep track of in reality, which is just the intent of people.
+
+We have ways to talk about the intent of people of the law.
+
+It's normal.
+
+We're people.
+
+Loss is for people.
+
+So if we could not talk about this would be pretty screwed and we can leverage this.
+
+So for instance, we can talk about compute and be like yes, let's ban training runs uh beyond a certain threshold of compute and so on and so forth, but just compute by itself is not ASI.
+
+You can have ASIS under thresholds of compute.
+
+You know, if you just limit compute, what you're doing is that you're funging the resources that were into compute into algorithms or into more theory and so on and so forth.
+
+So you must actually go wide.
+
+You must look at what are the different precursors to super intelligence.
+
+So it can be like I'll ban uh large amounts of compute.
+
+Uh I'll ban this type of open source models.
+
+Uh we can ban you know automated AI R&D.
+
+So just AI systems improving themselves without any human in the loop.
+
+We can ban uh systems that you know require less than 10 days of effort to jailbreak.
+
+uh we can then fully online systems where is there where there's literally no kill switch, no gate, nothing like this and there are many things that we can do and that's what it looks like to be in a pre-scientific field.
+
+It it does come back to this pornography thing again a little bit though.
+
+So you're saying that even professional ML researchers, many of them, in fact almost half of them think that there is a very significant risk of existential harm and average people just out there also think there is a significant risk of existential harm and just the average person I mean how are they basing that assessment?
+
+I think I mean it depends on the individual of course but I think there's very common intuition if there's something and it's smarter than you and you don't control it that's bad and turns out that's a really good intuition all things equal no you shouldn't build something smarter than you that you cannot control like just on like the burden of evidence for like should be on why is that a good idea why should we give you this extraordinarily l like unusual license to take this completely unprecedented amount of risks with civilian lives that did not consent to be part of this.
+
+Like why should we give you a license like this?
+
+It shouldn't be you prove to me that I shouldn't do this.
+
+The thing I'm wrestling with it sounds objective when we use these percentage numbers, but um Sesh Kapoor put a piece out about this in in his um AI snake oil blog and he was saying that they're subjective probabilities.
+
+Now, with the smoking thing, I'm not sure whether at the time there was evidence, there was hard evidence that it was it was, you know, killing people, giving people cancer.
+
+Maybe there wasn't, but is isn't it a little bit more speculative now that we think that there is a 10% risk, but how is that actionable?
+
+And think about if I started um I move in next to your house with your where your kids live and I go into my garage and I start making napal or start brewing, you know, housemade, you know, pipe bombs.
+
+What is the probability that I will blow you up?
+
+Well, you don't know.
+
+That's just your subjective probability.
+
+You're just being subjective about whether or not I'm going to blow up your children.
+
+You don't have an objective probability of how likely my pipe bombs are to blow up your children.
+
+This is how criminal law works.
+
+This is how risk assessment works is like there are no objective probabilities of how likely are you to have an accident?
+
+How likely um will this happen or that happen?
+
+It's just we use the best models and judgments that we have.
+
+But this comes back to the legibility thing, right?
+
+So, you know, if I if I threaten you with a with a gun, it's it's intelligible that I'm threatening your life.
+
+If I slowly poison a lake over the course of 50 years and there are all of these like second order effects, it's it's illegible, right?
+
+And I I feel like it's the same way with AGI.
+
+Could you because you're kind of saying basically that there's a catastrophe.
+
+Like, if we don't if we don't act now, there's going to be a catastrophe.
+
+But all of the other people out there, they're saying, well, you know, wait a minute, guys.
+
+I I'm building these amazing applications with these LLMs and I'm doing all these cool things and and there's economic growth and it's capitalism and this is an amazing thing.
+
+Like how do you explain to those people that this is actually very dangerous?
+
+I think there's a very nice thing here which is we're not in that world.
+
+We're in the world where the people building the systems like the ones at the frontier like Deis Sam or Dario have actually said that there are extinction risks.
+
+like they actually signed a statement in public saying there are extinction risks from AI.
+
+It should be a global priority alongside pandemics and nuclear war.
+
+I don't understand why we'd grasp with a hypothetical that is grounded in nothing given that this is not the world we live in.
+
+We have Jeffrey Hinton who has left Google specifically to talk about this risks.
+
+We have Yoshua Albjo who talks about those risks.
+
+So there are a few people who disagree.
+
+The the point is not that this is unanimous, but the point is not that we're not in the world where people working on this are just like completely denying everything on us.
+
+You mentioned Dario Emodi.
+
+I mean, he put a piece out recently called Machines of Loving Grace and that felt like a bit of a U-turn because he he was much more upfront about um the risk from um AI earlier on.
+
+And I can't help but get the feeling that now they've they've got so much investment, you know, you kind of you have to say the right thing.
+
+And on on the other side of the spectrum, you got people like um and andre and he put out this techno capitalist manifesto.
+
+Um and in in your compendium, uh Connor, you you actually you wrote some profiles about all of the different, you know, reasons why people behave the way they do.
+
+Maybe maybe like bring in those those two manifesto pieces, but also how how does it fit into these profiles?
+
+on the individual level or like close to the individual level.
+
+There's like I think it's sometimes useful to think about like kind like five major ideologies that are currently like involved in the AI race in particular.
+
+The kind of like oldest that is like pushing for this is what we call the utopists.
+
+These are people who um for various reasons think that utop like transhuman utopia is both uh desirable and achievable and in fact they should be the one to do it.
+
+So these uh underlies a lot of like your your daarios and your demises and your you know effective altruists and stuff like this.
+
+Another view of this which like the Andre view which seems similar to this but I think it's kind of different is like the accelerationist view.
+
+What they're saying is there's like more growth more goodter technology more gooder.
+
+So we just make more technology and put it there and then good.
+
+Uh accelerations don't even try to be king of the world.
+
+They're just like we just build all the technology and open source it and then good.
+
+There's other factors involved in this as well.
+
+Another big one is big tech for them.
+
+AI is just another form of power, another form of you know gain.
+
+Nothing particularly out of the usual there.
+
+And of course, there's also just a bunch of opportunists, you know, who are just kind of in it because it's hype, because, you know, crypto is not the thing anymore, so they have to go somewhere.
+
+And like this is the thing.
+
+Okay.
+
+And and essentially all of these folks believe that whoever gets to AGI first will win.
+
+Depends, right?
+
+Like everyone thinks this to different degrees, right?
+
+Like a lot of the accelerationists believe that the person who gets to has to get to it first is nobody.
+
+You have to open source it.
+
+And you the utopist think well if I get AGI everything good.
+
+Big tech I don't think really thinks that way at all.
+
+It's just like power power power power power power power power power power power power power power power power power power power power power power power.
+
+And opportunist I think don't think at all.
+
+I think it's just like whatever makes them money.
+
+I don't think they believe things.
+
+And people like Andre even sat the other day he said you know my my benchmark of of progress is growth.
+
+Undeniably over the last 100 years or so there's been at least a correlation with growth and you know increased standards of of living and and and whatnot.
+
+So it it's it's a reasonable inference even if possibly an incorrect one.
+
+What would you say to those people?
+
+Many things to say.
+
+The first one is just fertility is has been crashing for the last few decades even though we still had growth.
+
+So I think the model is pretty bad.
+
+There are many things that have worsened even though we still had growth.
+
+I don't think this is an actual intellectual position.
+
+I think this is much more driven by ideology.
+
+I'm interested in in labor market disruptions as well.
+
+I know that's a bit more of a near-term risk.
+
+But I think it was Buckmaster Fuller and quite a few people as you've just been alluding to said that when we have this technology that we won't need to work very much anymore, but but now we're in like an even weirder stage, right?
+
+Because we have the prospect of the value of human labor going to zero because AGI will be able to do everything.
+
+And then we've got this notion of well, do we need universal basic income?
+
+And are we heading towards a form of zombie capitalism, right?
+
+um where people don't have anything to do and people have no purpose in in life.
+
+So I think there are like three main outcomes that different people will expect.
+
+I think one is extinction risks.
+
+Uh this is the one that Connor and I expect is like the main line on our current course of action.
+
+Of course we do things because we think it can be changed but it's like right now it's the main line.
+
+The other one is we have somewhat controllable somewhat superhuman intelligence.
+
+And the last one is the one that we that you just mentioned which is postcarity.
+
+And the true thing is like our science of economics is not good enough to manage this.
+
+Basically the two proposals that I often hear are one like communism like people being like yep the states will just dictate what everyone has and the state manages everything and so on and so forth.
+
+The other one is UBI so universal basic income.
+
+UBI in practice means you know the AI companies produce everything and you tax them I don't know like 90% and you redistribute this as income to people and then people have some markets dynamics uh where we have you know strong enough regulation that AI companies do not just strangle people and like have you lived on earth in the last few decades the last few decades are like the decades where big tech has not been regulated at all with social media they just could do whatever the [ __ ] they wanted newspapers are like super regulated radio super regulated TV super regulated social media much more power algorithm mediated no regulation whatsoever with AI no regulation whatsoever voluntary commitments so do you think that in five years you'll have the political power as they have like the entire economic power to be like well now we'll tax you and and we'll make you give money to everyone like bro how do you have a good economy when you have a few companies that have overwhelming power and you do not have leverage through your population or rather the population has no leverage over you and you just get lobbyed by them and you've already failed for like 15 years.
+
+It's like I mean Janice Farafakis used the term technofudalism you know where the the new capital is is GPUs and we have this insane concentration of power.
+
+The weird thing to me is that a lot of a lot of accelerationists they kind of accept that this is the future yet they still welcome it.
+
+Like why is that?
+
+Ideologies are like a way of thinking where you just want a simple solution and you're trying to justify why this simple solution works.
+
+You're not looking at the world and be like from the current world what is my portfolio of solution that I must you know approach and refine and so on and so forth.
+
+It's like backward thinking.
+
+You start from the solution and then try to justify it as much as possible.
+
+I think there are other reasons.
+
+The biggest one is just a big misunderstanding of humanist and western values.
+
+the west has triumphed because it built like [ __ ] strong institutions.
+
+Uh the reason why you can have nice competition that is productive and so on and so forth is because we built an entire apparatus that was meant for this.
+
+Uh like that's the entire point of like liberal humanism, the 19th century's doctrine and so on and so forth.
+
+If you don't have rules, you don't have competition.
+
+You get the state of nature, you get street fights, you get somalia.
+
+It's not nice places.
+
+People prefer watching MMA and prefer and people prefer the west to do businesses.
+
+So you need a very strong rule of law.
+
+You need a very strong institutions that will enforce contract that will own the external like the negative externalities and make sure that you can compete that you will not you know [ __ ] your opponents that you will not inflict harms on everyone else and that the rules will be so such that when you compete you do something beautiful you do something productive and things like this.
+
+This understanding I think it has been eroded by like massive FUD campaigns and massive lobbying campaigns from like VCs and techno capitalist techno optimistic VCs like where they just thud everything and they just finance anyone that will say those things not for the spare heads of the spokespeople I don't think they matter much I think they're mostly driven by power and ideology but for all the people following them I think those people just forgot what made humanism great what made western institutions Great.
+
+What made our, you know, constitutions last for 250 years?
+
+It was that we actually managed to strike a pretty good balance between, you know, fierce competition and a strong frame that leverages this.
+
+Yeah.
+
+I mean just just to do devil's advocate a little bit.
+
+So the the libertarians that they also want to have laws and particularly things around like the protection of of their private property and and and many others.
+
+But they would say though because I understand that the the power lens is a is a great lens to understand things.
+
+But a lot of libertarians don't have power and and they say well we need to have you know the natural world is distributed.
+
+It's robust and open source is a good thing because you know we'll build AIs that can counterbalance each other and and the system will be better overall because we'll have this kind of freedom of enterprise and and and private capital and so on.
+
+What's your response to that?
+
+Nature is not a beautiful balance.
+
+It's red and tooth claw.
+
+Nature is full of parasites and violence and cannibalism and like it's terrible.
+
+Being a wild animal is terrible.
+
+The idea that nature or like existing in nature is like this like nice beautiful everything is good you have everything taken care of is such a privileged like first world problem view of reality it's like be live growing up in like a sheltered suburb which is an incredibly complex system which is optimized to give you as much comfort as possible like wow I don't I don't I mean I'm basically a wild animal look at me like wow like see the world's easy why is everyone complaining like many of these people come from a very privileged background, right?
+
+Many of these libertarians are not hard scrabble, you know, you know, people who were born in third world countries and like fought their way up or whatever.
+
+You know, some of them are and like respect to them, right?
+
+But like many of them are suburban white kids, like let's be very clear here.
+
+And this is not a coincidence.
+
+This is not a coincidence because like the truth is is that like if you talk to people who many people who've been like in like bad regimes, who've been in like failed states or whatever, they care a lot about laws.
+
+They care a lot about order.
+
+like way more than like westerners or libertarians would like they'll like often many of these cultures will have extremely like too far maybe rules about like law and order and obedience and authority and whatever and this is also not a coincidence.
+
+It's because chaos is terrible.
+
+Chaos is truly truly truly awful.
+
+I think this is the fundamental difference between me and these libertarians is that deep down I think chaos is bad like that the the state of nature is entropy chaos and death everything that is not that is an exception that we must fight for something we must build and that is very very hard like there's a saying that there's like there's no such thing as chaotic good I think this is true like I think there there's you know there's three alignments there's lawful good lawful evil evil and chaotic.
+
+Those are the only three that exist.
+
+Like if you're chaotic, if chaos exists, if there's open, if there's no rules, you can't be good.
+
+It's too chaotic.
+
+It's too whatever, right?
+
+Like, you know, systems will just decoher.
+
+If you have very if you have order, you can have evil or you can have good.
+
+You know, you can like order can be evil obviously, right?
+
+But you can't have non-ordered good.
+
+As I like to say, it's like, you know, libertarians are like house cats, completely dependent on a system they neither understand nor appreciate.
+
+And like, you know, sorry to be harsh here, but like this is like truly what I think.
+
+It's just like for me, the humanist values, the institutions, the west are an incredible anomaly.
+
+This is not the default state of the universe and we can lose it and then that's it.
+
+I mean, so I think you're advocating here for ethical humanism.
+
+And they they might, I guess, argue that that's quite anthropocentric because what you're saying here is that we shouldn't we shouldn't lie back on the natural order of things.
+
+You're you're saying that we have some kind of privileged status and we have created systems of governance and institutions and so on which have served us very well.
+
+And if we just let let the system rip, if we trust the void god of entropy, as as you so beautifully articulated, Connor, then everything's going to go to hell in a hand basket.
+
+I think this is a pretty core observation.
+
+Yeah, we think that what's important is for humans to flourish to some extent, sentient beings to erase suffering or at least force suffering.
+
+We think that everyone's deserves to pursue their happiness and to grant them the ability to actually reach it.
+
+I was at a conference and I had a talk a conversation with like a guy from San Francisco.
+
+It was like batshit crazy and the guy was like in a very bad social circle where at the end of the conversation he was like, "Oh yeah, I do not care for children and even the children close to me, I don't feel more affection toward them than to a counterfactual nonsensient being." And I think that to the extent that we privilege the happiness of existing humans and it postpones AGI, then that's bad because we're like preventing trillions of nonhuman happy beings from existing.
+
+And so it's like [ __ ] the preferences of existing humans and also [ __ ] them because they have no power so they don't matter.
+
+And after that there's San Franciscan girl that comes to me and he's like oh what did you talk about?
+
+I was like, well, I was talking about how I dislike, you know, antihumanist ideologies in SF.
+
+And then she was like, oh, humanism.
+
+Is this the thing where people want to live in human bodies forever?
+
+And and I think this is basically the understanding of a lot of those people of humanism.
+
+They don't understand human values.
+
+They literally do not have an understanding of human values.
+
+I would not call this anthropocentric.
+
+This is stupid.
+
+There is no one else.
+
+like there's only us and a couple of other sentient beings.
+
+So either you care for the people and the beings that are here or you care for like non-existent things.
+
+So Connor, you you said in the compendium basically we've got this problem that the the foxes are guarding the hen house.
+
+And what I mean by that is I mean Dario, he went on on the lecture and he said, "Oh yeah, you know, we can self-regulate.
+
+We've got all of these levels, these threat levels.
+
+you know, at threat level three, we do this and open AAI have similar things.
+
+That that seems like a good thing, right?
+
+Well, I mean, so I've recently been talking to the top petrol engineers at Exxon Mobile and they've assured me that their climate change readiness preparedness framework system will ensure that their new oil drilling well will totally not be a problem.
+
+Oh, well, they know a lot more about oil than I do.
+
+I mean, they're the petrol engineers, right?
+
+So, like, they must know a lot more about this than I do.
+
+They probably know more about climate change than I do.
+
+Like, you know, I I I'm no, you know, climate engineer.
+
+Like, I don't know.
+
+So, so what's the problem, Tim?
+
+Yeah.
+
+But the thing is on on the on the surface, I I agree that they might suddenly change tech, you know?
+
+So, Open AI next month, they might say, um, wait a minute, boys.
+
+We're going to start charging $4,000 a month for this, and now normal people can't afford this technology anymore.
+
+Because right now, looking at what they're doing, they do seem to red team.
+
+when you use chat GBT it seems aligned to some extent you know it won't it won't do illegal stuff and it seems like they are genuinely making an effort we could say that Exon Mobile is making an effort to stop climate change and like there are genuine arguments to be made here they do spend probably millions of dollars on climate change prevention I they finance scientists and like they reduce their emissions in like various ways and whatever right so like should we therefore be like all right climate change is not a problem anymore's on the Why would you a priority even listen to this?
+
+Why would you even entertain this?
+
+Like where is the cynicism here?
+
+Right?
+
+Like where is the journalism here?
+
+Right?
+
+Like where where like if someone who's like hello my job is to lie to you and you're like well this seems like a trustworthy guy.
+
+I should listen I should hear him out.
+
+You should be like no like why would I listen to this guy?
+
+Right now there is a framing of alignment that has been done by the people racing which is basically PR washing.
+
+It's like alignment means my users like my products which is completely unrelated from how AI alignment was coined which was aligning uh AGI or superhuman intelligences to uh human values such that when they act out in the world it's with the best interest of people.
+
+This thing has been a PR campaign for the last 10 years basically.
+
+And right now when people ask this type of questions it shows that they won.
+
+It goes even deeper.
+
+OpenAI did, you know, a 1984 by talking about the OG alignment problem as super alignment.
+
+No, it's just alignment.
+
+That's what it that's literally what it meant.
+
+Having nice chat bots was not alignment.
+
+A big sub problem of alignment is tomorrow you have a super powerful system that has more power than the rest of the world combined.
+
+There is now global dictator.
+
+What do you have this global dictator do?
+
+And right now we don't have any answer to that one.
+
+Our best answers are like western constitution with possibly a few bells and whistles.
+
+But even then, if we're like this is now the world government forever, would be like super afraid because we just do not have a good answer to that question.
+
+This is like the general alignment problem.
+
+Just how do you make a complex system that is powerful aligned with human values?
+
+And this has so many sub problems that you know we haven't solved yet like studying complex systems, studying systems more powerful than human which ties back into the discussion of intelligence and the continuum.
+
+Thinking about how you can make more objective human values, thinking about governance, public choice theory, game theory, sociology, psychology.
+
+It's like many many fields that we It's not even that we haven't solved them.
+
+It's just we haven't scienced them yet.
+
+We do not have standard definitions, objective measures, uh, systematic indicators of progress for any of those fields.
+
+And so when you talk about we've made chat models that people like, I'm like, but this is not solving any of the problems I care about.
+
+This is not solving any of the worrying [ __ ] If tomorrow you have a system that is more powerful than the rest of the world, what is the type of stuff that you want it to do?
+
+We don't feel like we know meaningfully more about morals, public choice theory, governance, institutions, and any of those like pretty core topics than five years ago when GV3 started or 10 years ago when we had the boom of deep learning.
+
+And so if tomorrow anthropic, open AAI, deep mind start making progress on all of those questions, they're like, whoa, those are tractable solutions.
+
+Let's integrate them to our governance structure.
+
+and we start feeling more confident about the deployment of more and more powerful systems then like wow this will be real progress and we will see it in real life we will feel more confident when there are more powerful systems happening in a way this is and and the thing is I know many alignment folks that work in in the large labs and they're very bright they're brilliant people but there is a kind of safety washing where we've been gaslit into thinking that friendly chat bots equals alignment in the compendium you basically said that it's really hard it's a moral and philosophical challenge as well as just a technical challenge.
+
+The current approaches are not on track.
+
+There's no automatic fixes.
+
+It's a high stakes gamble.
+
+And you proposed that we need to have a kind of Manhattan project to to fix this problem.
+
+What it would mean to solve alignment for super intelligence would mean taking all of the problems that people solve their daytoday lives and you're going to solve all of them with software and there will be no bugs and produce a world that is like worth living in.
+
+And I'm like holy [ __ ] If you can't even put together a Manhattan project for this, right?
+
+If you can't even put together all of our greatest scientists working on this for a generation, you're not going to make it.
+
+Like, you're not even trying.
+
+We want to understand intelligence.
+
+We want to understand coordination.
+
+We want to understand alignment.
+
+These are obviously problems that are extremely relevant to our species long-term happiness and, you know, having a good outcome.
+
+But they're also very dangerous.
+
+To address those problems, to solve this problem, you need to have a institutional solution.
+
+You need to have an institution, a group, a project, whatever that can possess the knowledge to build an unlined ASI and then not do that.
+
+This is the important property that you need.
+
+If we were like talking about how do we get to a good future with aligned ASI on the path to getting to an aligned ASI way before that you get to a point where you can build unaligned ASI and you have to then not do that.
+
+Currently, our civilization does not have the ability to not do this.
+
+This is why we die.
+
+Could we build an institution that is like cut off you know from the rest of the world has super high cyber security is extremely cautious extremely you know staffed by our greatest you know geniuses and philosophers and so on that take decades or even centuries to work on this problem.
+
+Could that work?
+
+Maybe.
+
+Like that's the kind of thing where I'm like all right you know like that that could work.
+
+This seems like the minimum thing you would try.
+
+I I want to get to this point of why is alignment so difficult?
+
+Right.
+
+So, so naively and and we need to we need to get to the complexity here.
+
+Naively, you might just think I've read Isaac Azimoff and you know he was painting this picture of how we can use these rules, you know, to to basically guard the behavior of AI robots, do this, don't do that.
+
+Why would that not work in in practice?
+
+I I think basically dumb ideas are ideas that refuse to engage with the complexity of the world.
+
+here if you do engage with the complexity and you're like what is a set of rule that I will feel confident if a super powerful system had those rules I think it's a very good way to think about the problems if tomorrow we have a world government what is the constitution what is the set of laws that we want this world government to have I don't think we have a good answer to that if we had a good answer to this I will be much more optimistic about solving alignment now not in general I think we can solve it in general although we have like a tight deadline but specifically now with the current deadline.
+
+So like if we had this answer, let's say tomorrow we have a super powerful system.
+
+What is the set of rule where if we're guaranteed that the system follows those rules, we feel good about it.
+
+The only constraint being we understand the rule, you know, you cannot ask it just do whatever is good.
+
+You have to actually understand the rule.
+
+So the rule of the laws of robotics, you know, do not harm people like directly physically harm people.
+
+We can understand that one.
+
+That's one of the problems.
+
+It's like this is just genuinely hard.
+
+The second one is that actually the first problem is trivial.
+
+You can just say do nothing, boom, solved.
+
+But this is not enough.
+
+One of the big things is that you want to avoid bad things from happening.
+
+You still want a system that can deals with the other risks that are here.
+
+So for instance, someone else building misaligned ASI is like the most common one.
+
+But you could also say World War II.
+
+You could also say boweapons.
+
+Your system must not do nothing.
+
+It must deeply interact with human society in a way that will radically change its future.
+
+That's why we want ASI.
+
+What is a set of rule for a system that is so powerful that it can radically alter the course of humanity?
+
+What is a set of rule where you're confident that the system following those rules ends us in a nice place, not with someone else building an aligned ASI.
+
+So your system cannot just do nothing or be super limited or just do cancer research and so on and so forth.
+
+Once you have those rules in a way that is like reliably legible to us, you know, is not using words like agency where we all disagree on the definition.
+
+It's more like directly physically harm people to this level.
+
+So it's not an objective physical thing, but it's still very legible.
+
+We can assume that the system will be able to evaluate it.
+
+Once we have those rules, then there's the technical problem of have the system follow those rules.
+
+The good thing about rules is legibility.
+
+I mean, this harks back to symbolic AI, right?
+
+There were folks who tried to um design AI systems using hard-coded rules of knowledge.
+
+It was great because it was intelligible, right?
+
+But the problem is it's brittle, right?
+
+How how do you define a chair?
+
+Just like the blind men in the elephant where all of the men have different perspectives of of a bigger whole truth.
+
+So the world is a very gnarly complex place.
+
+And it turns out that there is no consistency with this.
+
+So then if we want to have a framework of governance with any precision, we start galaxy braining ourselves.
+
+we say, well, maybe we should look at the intention, the consequence, the function, the dynamics, the behavior in all of these different things.
+
+We're we're trying to make surface contact with reality and they all have different trade-offs.
+
+This is why I said if you have a systems that has this level of granularity where you're allowed to use such concepts and your rules invoke such concepts, I'm still hopeful.
+
+If we had a constitution that uses concept up to that level of you know non-objectivity and we're confident that this constitution if it becomes a constitution of the world government leads to a good future I will be much much more hopeful for alignment.
+
+It doesn't mean that technical alignment is a nothing burger because for instance you know the chair example uh or the d the direct harm example you can always go for edge cases and so if you do not protect yourself against edge cases you can get adversarial attacks and so on and so forth.
+
+So you will want some technical AI safety that says well I only look about at the mode of the distributions.
+
+If I get into edge cases I will avoid combining many edge cases or I will be much more conservative and this type of stuff.
+
+But I think this is a much more tractable problem.
+
+If we have the correct rules, now your job is to make an AI follow them reliably and not get trolled.
+
+I'm much more optimistic.
+
+Yes.
+
+But but of course they still need friction with with reality.
+
+Something that just came to my mind is I guess there are different forms of alignment.
+
+I mean the similar to in the real world, you can control people through motivation.
+
+So a carrot and a stick.
+
+You can place guard rails.
+
+So you can say if you go out of bounds then something bad happens or or even just guards in general.
+
+I can put some someone in prison and say you're not physically allowed to move out of out of these bounds.
+
+Do those ring true to you?
+
+I mean how many approaches are there to aligning these systems?
+
+A agi alignment is just a special case of general alignment.
+
+It's like how do you have a complex system and do what you want, right?
+
+The original meaning of the word alignment as it was like originally used is to is often what would now be called intent alignment is you build a system that wants to do the right thing.
+
+There are other forms of alignment.
+
+Like I think a common confusion that people have around alignment is that they look at like GPT and they're like well look it understands human values.
+
+This is mostly irrelevant.
+
+It's not completely irrelevant but like understanding make is not the same as wanting.
+
+We don't exactly know how a future AGI system will make decisions.
+
+I don't like how will an ASI's decision-m system work.
+
+I don't know like I think it will have something in common with current systems but many things will be very different.
+
+And how will you causally interact with that system or modify or shape that system in a way where consistently produces outcomes that you would endorse morally?
+
+I think this is a question right.
+
+There are degradations of this right such as for example corability.
+
+Cordibility is this idea of building systems that allow themselves to be modified or shut down.
+
+There's stuff like control.
+
+A system will do exactly as told even if it's bad for you.
+
+This is a simpler version of alignment because alignment is more enlightened in a certain degree.
+
+And as for like how exactly to achieve these things depends on the level of extraction we're talking about, right?
+
+Like I don't think an AGI system is going to be one coherent like blob on one specific computer chip, right?
+
+The same way that I don't thinking of a human as one specific blob of neurons in like one specific brain is like necessarily the best way to predict what they will do.
+
+If you want to get humans to not do certain things or to do other things, you usually have to think at higher levels of extraction.
+
+You have to think about laws.
+
+You have to think about groups, norms, culture, you know, physical threats, you know, policing, stuff like this.
+
+And I think which of these methods work and like which one are even options is super context dependent.
+
+Like when we talk about how we enforce norms on humans, we use different concepts and when we talk about enforcing invariance on computer programs, right?
+
+Because we have different tools and we're trying to achieve different things.
+
+And I think we don't know what the right abstractions are to talk about AGI or ASI in general.
+
+Like a lot of the concepts we used to talk about humans, you know, when we talk about policing or we talk about incentives, god forbid, or we talk about threats or whatever, right?
+
+How many of these will generalize to like ASI systems, I think it's unclear.
+
+I think I think we don't know and like there's no there's no economics or you know microeconomics of super intelligence.
+
+There's no public choice theory of super intelligence etc.
+
+I think it could be developed but we don't have it currently.
+
+I will say we don't have it for the human level.
+
+So for alignment which is having a system act in a way that is aligned with human values.
+
+We don't have a reliable way to do this.
+
+So uh you mentioned the keratinistic this doesn't get people to act in a way that is aligned with human values.
+
+This is closer to control and still a limited form of control.
+
+you know principal agent problems, incentive problems, misaligned incentives problems, perverse incentives, all this type of stuff.
+
+So this is not even a solved problem.
+
+So there's alignment, you have a degradation, which is corigibility, which is having systems that can be corrected.
+
+So this is basically one of the great things of like western constitutions is that they can be changed.
+
+They plan for referendums.
+
+They plan for laws that can be changed.
+
+This is what they're about.
+
+Whereas if you think about a lot of historical religions or ideologies, they're like set in stone.
+
+So by construction, they don't have the corabibility property.
+
+They're meant to be fixed forever.
+
+So usually we don't go for alignment because we know we don't have it.
+
+So in practice, the things that work are not like that.
+
+The things that work are like more courageable.
+
+Even when we pass laws, we we do not expect much that they will be aligned with human values.
+
+We more expect trial and experiments.
+
+So instead, if you think about it, the main focus of the constitutions is not even on courageibility.
+
+It's on what they usually call boundedness.
+
+So just make sure your system doesn't have too much power.
+
+This is the entire spirit behind like democracy, republics, uh checks and balances, having representants, many different representants, decentralizations, you know, having uh how do you call this?
+
+The the town guy, the mayor, department, councils, region councils, many ministers, and so on and so forth.
+
+It's like much more a form of boundedness where we make sure that each system is like limited enough so that none can take too much power than actual courageability and much less so alignment.
+
+If you you know we talked about markets the way we do markets is with like strict boundedness.
+
+We're not aligning people with the common good.
+
+We're just creating conditions very harsh conditions such that when people compete there we get some things that are aligned with good.
+
+But this takes a lot of effort and sometimes this fails and right now we do not have a great theory of either of those.
+
+The example of growth and yet fertility crash.
+
+So even if we still have growth, fertility crash.
+
+So what gives?
+
+Another example is big tech.
+
+You know we did boundedness.
+
+We were like we split different power.
+
+We have antitrust laws.
+
+We have all this type of stuff.
+
+And yet for the past 15 years, you have big tech that can Jews do whatever they want with all the crazy new tech, social media, social media feeds, AI and not be regulated in any way whatsoever.
+
+Like this is both a failure of boundedness and of coribility.
+
+We cannot correct them.
+
+Like they do not let themselves be corrected.
+
+When you start talking about regulation, they lobby hard, they fud.
+
+This is like anticoribility.
+
+So if we had a system that was resilient to like all of those failure modes at the human level, we could start thinking about alignment.
+
+And I assume that if we had this, we would have a grounded enough understanding of alignment that we can start talking about super intelligence alignment.
+
+So it's not just making sure that current companies don't [ __ ] us over.
+
+It's making sure that if you had a company that had a billion times its current power, it still works and it doesn't [ __ ] us over.
+
+It's like we're so far from this.
+
+And when someone is like alignment is just an engineering problem and we're making tractable progress on it.
+
+I'm like where is the tractable progress?
+
+If you have solutions to this type of problems tell us and the institutions will be much better.
+
+Even smaller problems like corigibility boundedness and so on and so forth have direct applications.
+
+It's just we suck at them.
+
+We don't have a level of alignment that is as refined as our institutions work and are aligned.
+
+We don't have a level of corigibility much less alignment that is as refined that reliably when our institutions veer off we know they can course correct we don't have a level of bondedness such that you don't get one of the richest men on earth with one of the most politically powerful men on earth work together and just collude one thing I want to get to with the power thing though is that it becomes so abstract you know this is the way a lot of companies and governments they start using such abstract language like power safety and and so on it doesn't mean anything.
+
+And if we were to regulate against power, we would have to use proxies along the lines that you suggested, you know, how many ministers do I have or how many people do do I have?
+
+And as soon as you start using proxies, then you have the good hearts law problem.
+
+This is why alignment is hard.
+
+It's like we're just not good at this.
+
+If you ask me, hey Gabe, how do you design a constitution that does not fall prey to good heart laws?
+
+I'm like, hey man, you know, people say I'm smart, but I'm just me.
+
+I'm not at that level.
+
+Uh, and I think this is what I mean when I say like owning where you are.
+
+It's like collectively we're just not that good.
+
+We don't know.
+
+The best thing to do from my point of view given that we don't know is one stay alive and two start experimenting, build your knowledge and iterate.
+
+We suck at this.
+
+We should iterate much more.
+
+It's one of the typical thing about governance is that no one wants to iterate.
+
+you know all ideologies are like just do my thing remove all regulations kill all capitalist kick out all immigrants and so on and so forth like you don't even need this you can experiment so France in its constitution since like 15 to 20 years ago has a thing where you can experiment it has enshrined in its constitution the right to test a law locally and if it works out well you know extend it from a point of view if you think about like what 21st century governance would look like embracing the complexity of things embracing our current state of knowledge it will be much more things like this.
+
+It will be things like where you experiment in a bounded way.
+
+You see what happens.
+
+You draw lessons from that.
+
+You try to take those different problems, ground them, build standard definitions are like more objective than what we have.
+
+Build objective indicators, reliable measures of progress, scientific methods that can deal with a reality that is more complex than just, you know, physical systems or uh reproducible systems like simulations and things like this.
+
+And this is a whole like scientific program that should be undertaken.
+
+There's also this problem of legibility to the demos dur during COVID.
+
+Do you do you remember it was quite an interesting time that we had all of these scientists coming on the TV and they were giving us very highresolution information about the COVID pandemic and so on.
+
+And you know the problem with high resolution information is it's inconsistent and it's it's illeible.
+
+People didn't understand it and people simply didn't they couldn't make sense of it.
+
+And and that's why in a democratic system we have this kind of hierarchy, right?
+
+We have the experts at the top um who are at a high resolution may maybe not.
+
+And more technocracy than democracy but well you appreciate the point that it's it's beyond the cognitive horizon of most people to actually understand how the these people are busy.
+
+They're working.
+
+They've got stuff to do.
+
+So you know maybe we should have an elite group of experts who understand things at a higher resolution and they should institute governance and so on.
+
+What what what do you think the people at the top are not supposed to be experts?
+
+They're supposed to be representants and as representants when there are things that are about a domain of expertise, they're not supposed to take sides.
+
+They're most supposed to take a consensus.
+
+If there are not a consensus, they're supposed to take a portfolio of approaches that takes into account the different beliefs of the different experts, which is very different from I don't know, you have a scientist as minister of science and he takes his own opinions.
+
+So I think this is a very technocratic view of democracy which is not the one that has worked in the west historically.
+
+My point is though is that you are describing this epically inscrable alignment challenge and I'm guessing that only a small group of people would be able to wrestle with that.
+
+Is that fair?
+
+So I think this is a very good question and I think it's very important.
+
+I think for instance, this is a part where I disagree a lot with people like Elazar Yudkovski.
+
+For instance, Elazar talks a lot about making people smarter and things like this.
+
+I personally do not think this is the bottleneck.
+
+I think the biggest bottlenecks I would name three are like traumas, compulsions and trolls.
+
+Traumas are things that people want to avoid.
+
+So for instance, in the important problems you have to do things that you dislike.
+
+For instance, talking to people.
+
+A lot of researchers or engineers hate talking to people and this is causally why they discard governance and policy.
+
+A lot of the things that are necessary to solve alignment involve talking to people and you'll need to do experiments with real world people with real world groups.
+
+You'll need to talk with people who disagree with you and you will have to not assume immediately that they're stupid.
+
+And in practice, I have found this to be a much bigger bottleneck than oh, I would have loved that this 130 IQ person had like 60 extra IQ points or whatever.
+
+So that's one.
+
+It's like traumas.
+
+The other one is like the opposite.
+
+It's compulsions.
+
+So you have a lot of smart people who are extremely compulsive.
+
+We had people who came to work on safety.
+
+They had a specific approach in mind.
+
+We did some of that.
+
+We're like, well, the approach didn't work.
+
+Let's change.
+
+And then the person feels bad because they just wanted to work on this approach, not necessarily on the best one.
+
+This is what I mean by compulsion.
+
+It's like the opposite of a trauma.
+
+A trauma pushes you away.
+
+A compulsion pulls you toward.
+
+And the last one is trolls.
+
+Uh ideologies are like great trolls.
+
+Uh like modern ideologies that want to simplify everything will always tell you that a huge chunk of your humane values are like wrong and that you should discard them.
+
+Uh same for cults and things like this.
+
+It's things that is are not even your compulsions.
+
+You're not even drawn to them.
+
+It's just they [ __ ] you up.
+
+And so in practice, I found that the strongest bottlenecks are like people with trauma, people with compulsion, and people getting trolled.
+
+And I think the solution to this is not higher IQ with people that are smart enough to reliably follow rules of various complexity, which I think for instance at least includes like 2 to 5% of the population.
+
+I think for those people you can create the like more advanced scientific methods, more advanced constitutions that they can reason about and through those methods they can solve those problems.
+
+I think the bottleneck when you'll design such a system is how to avoid people being traumatized and guided by their trauma, guided by their compulsion and trolled.
+
+This is for instance a big thing about objectivity.
+
+Like when we introduce objectivity in science is not that objective things are the only things that matter.
+
+Like there are many many other things that matter.
+
+It's just that when you have something that is objective, it's much harder to get trolled.
+
+Like you know, you don't have bickering about definitions.
+
+It's just objective.
+
+When you have something that you can touch, someone cannot lie to you.
+
+You can just touch it yourself.
+
+Like a big part of the scientific method is not about saying that interpersonal dynamics, interactive dynamics, and so on and so forth do not exist.
+
+It's about finding methods where when we follow those methods, we do not get trolled.
+
+And I think this is a much bigger bottleneck to solving those problems than I don't know higher IQ or having a hundred experts gather together and so on and so forth.
+
+I think this is a wrong view of science which is an artifact of our current system where the best that we can do is do a sandbox you know for startups and labs and you know give them enough money both in the public you know with research labs and in the private industry with like VCs and hope that there are some who win and do epic [ __ ] without any theory for a while.
+
+I mean maybe we should move on to your proposals a little bit but but you guys are basically proposing that we need to have this um grassroots movement and it's it seems I mean just being honest it seems ambitious right because it's a collective action problem and there's this legibility problem and we need to build strong governance and institutions along the lines that you've been proposing.
+
+This seems intractable.
+
+Hard or intractable?
+
+Well, you tell me again.
+
+Well, I think it's hard.
+
+I don't think it's intractable.
+
+I mean, otherwise I wouldn't be doing this, now would I?
+
+Like, from my point of view, saving the world was never going to be easy.
+
+And if you thought it was, welcome to the real world, you know?
+
+Like, the real world is actually hard.
+
+Like, it's just like we have to actually wrestle that the real world is complex.
+
+The real world is actually hard.
+
+Any solution that gets around that is not an actual solution.
+
+And like all these ideologies that are simplifying the world into some simple thing, all you need to do is X.
+
+All you need to do is more growth.
+
+All you need is open source everything.
+
+and all you need to do is communism whatever right all of these are fake and wrong like all of them is because the world is actually complex it's not infinitely complex you know if it was infinitely complex we wouldn't even have physics right like everything would just there would be no people right it's in fact not infinitely complex in fact built many great things you know we are in this like you know well slightly underheated you know warehouse right now but like you know at least at least it's mostly dry we live in industrial society right like we have you medicine.
+
+We have, you know, mostly like quite safe streets, you know, you know, we we live in London and like despite the reputation, it's mostly fine.
+
+And these things are not a given.
+
+Like it's the same thing as we were talking about before about like chaos is the default, right?
+
+Like I think we could have had the same conversation, you know, a billion years ago and we're just like atoms.
+
+Like why do you think that, you know, coherent, you know, cell walls are possible?
+
+And that seems really hard.
+
+Like look at all these forces in the universe and you're saying there's supposed to be a cell wall that can hold these things at bay.
+
+That seems unlikely.
+
+It seems intractable.
+
+And my answer would have been I don't know like why are we even talking here?
+
+We're molecules.
+
+In the modern world the way I see things is there are actually tractable ways to make.
+
+One of the things is just like we are not currently in World War II.
+
+We have you know gave us like at least two to 5% of the population in my opinion honestly more of people are like more than smart enough to understand these problems here.
+
+Like I think the percentage is actually higher than this personally just I think there's a difference between understanding the problem and making progress on the problem.
+
+That's very fair.
+
+So 2 to 5% who can make progress on the problem which is a lot like there's a lot of people right and in terms of understanding the problem I think most people can understand the problem to the degree necessary for democracy to function.
+
+The whole point of democracy is kind of what Gabe was talking about here is that democracy is a system where not everyone has to be able to solve the problem.
+
+That's the beauty of the system.
+
+If you know 50% can at least understand the problem and 2% can solve it, that's okay.
+
+You still solve the problem and that's really great.
+
+There is nothing physically stopping us from just stopping, right?
+
+Just don't build AGI, right?
+
+Like governments tomorrow physically could just go to all the people and say knock it out.
+
+This is now illegal.
+
+Now whether it will actually happen, that's a very different question.
+
+I'm sure Gabe has a lot to say on like what are the next proximal steps one would take towards that but I want to make it very clear is that like there are worlds where it is actually not tractable where there are concrete physical like barriers like this cannot be done for example worlds in which ASI already exists I think there's a you know some small probability that somewhere in a server a protoi has already been spun up and we just don't know it yet right I think it could the case like 1% chance or 2% chance, right?
+
+If that is the world we currently live in, it's too late.
+
+How do we win?
+
+And and but when I say win, I don't necessarily mean like a yes or a no binary.
+
+Like there might be gradations of of winning, but how do we win?
+
+I think the biggest shot that we have at winning is to leverage our current institutions.
+
+Basically, for instance, if we were at war, if World War II on AI had already started, I would be actually pessimistic about the prospects of winning.
+
+Uh I think it will go from like tractable but hard to quite untractable.
+
+Like it's still physically possible.
+
+It's just I don't see what I could do.
+
+So what I mean is specifically we should leverage the fact that we're at peace right now.
+
+There is some trust between states even though different people you know are trying to speedrun losing that trust in many different ways.
+
+You want to win to win you need power.
+
+So you try to accumulate power.
+
+The problem is that this is a negative sum game.
+
+If everyone does this what happens is that everyone fights competes.
+
+You have possibly one winner left still alive at the end and possibly with the resources that are left which can be trust money alive people and whatever they might enact the win.
+
+But it's not even guaranteed that they have enough to enact their personal win.
+
+So I find this theory of change really bad.
+
+The reason why I say it's negative sum is that zero sum games are just redistributions.
+
+If you have to sync resources into redistributing, this becomes a negative sum game.
+
+So it's actually a negative sum game.
+
+That's basically how I see deep mind, how I see open AAI, how I see anthropic, how I see XAI.
+
+All of them are competing for being the one who builds AGI.
+
+You can give them good intent or not.
+
+It doesn't matter.
+
+What matters is that their current theory of change, their current plan is race, so you're the first.
+
+And this is an extremely negative sum game.
+
+Another type of theory of change is if you want something, you can realize that you're human, it likely means that others want the same thing.
+
+And so instead of trying to get the power to accumulate to you, you try to get power to accumulate to everyone who wants the same thing.
+
+which in the case of winning, meaning surviving and not dying from ASI, captures pretty much [ __ ] everyone.
+
+And so given that you have everyone that wants this, you know, you have a massive stream, you have the truth behind you and so on and so forth, and you should think of all the ways you can leverage this.
+
+I talked to a bunch of people in AIT and many of them tell me something like, "Oh, but we cannot do this, Gabe.
+
+The institutions are broken." Okay, what do you mean the institutions are broken?
+
+They tell me, "Oh, the politicians don't understand anything about extinction risks.
+
+They're so [ __ ] dumb.
+
+They don't know anything about AI." Blah, blah, blah.
+
+W I'm like, "But have you talked to them?
+
+Have you taught them?" And the answer is usually nah.
+
+And I'm like, "Well, it's not the institution that is broken.
+
+It's you." The institution is predicated on the experts go to the representants and explain the thing to the representants and make the case to the representants.
+
+That's what a republican democracy is.
+
+It's not a technocracy.
+
+It's not the experts make the decision.
+
+It's not just you have a few people making the decision.
+
+It's not just a representative regime.
+
+It's a representative democracy.
+
+So you still must have the people who know come to the represent and give them the information.
+
+It's not because you're a representant that you have science like this.
+
+At some point someone must tell you the information.
+
+the arbitrage to be made is so big that with Control AI the nonprofit over December uh and January and I think the beginning of February too they just cold mailed uh all MPs and lords uh I forgot what the response rate was but at the end we got 60 meetings with them over a couple of months and just at that point when we tell someone else in the safety we got 60 meetings with like members of parliament they're like Wow, how did you do this?
+
+We didn't know you were like super networkers and so on and so forth.
+
+It's like bro, we we just like cold mailed everyone.
+
+There's no network.
+
+Like no warm intro and so on.
+
+Like coldest mail possible.
+
+And then uh we just made the case for extinction risk to the best of our understanding for like 30 minutes to an hour depending on the meeting.
+
+and 20 of them so like a third 33% hit rate like supported a statement extinction risks are talked about by experts like Jeffrey Hinton Yosha Benjo Sam Alman and so on and so forth and there should be binding regulation in the UK to curtail them.
+
+This is like 20 MPs where a lot of people will prefer playing like House of Cards type of [ __ ] you know, machinery, shooting each other and so on and so forth just to get one MP promise that possibly in a few years they might say something for them.
+
+I think that right now people are way too cynical for no reason and they have not even tried.
+
+I think Gabe's like even underplaying like this.
+
+This is only one example of a thing that you know me Gabe control AI have seen over and over again when we proposed this project which is to get legis you know elected leaders to sign a statement that includes the word extinction like this very clear relate we talked to you know uh seasoned lobbyists you know PR firms you know like you know like real experts and they all unanimously told the same thing this is impossible it cannot be done Maybe if you take out the word extinction, maybe then you can get a couple people, but even then you're going to have to network.
+
+You're going to have to pay to play.
+
+You're going to have to like whatever.
+
+Like this is otherwise it's impossible.
+
+Don't even try.
+
+You're wasting your time.
+
+And this was just complete [ __ ] It's like it's not perfect.
+
+No, it's like there are many of these things that did turn out to be true.
+
+But like many of them were not.
+
+And no one has done the obvious thing of just actually doing the de you know Republican democratic thing of going to every our representatives and actually making the case to the best of our abilities.
+
+Okay.
+
+But what what is the push back?
+
+Why why do they not want to use the word extinction?
+
+It depends on different people like again the hit rate for something not optimized at all without giving them anything in exchange like you know training session on AI just making the case and that's it was 33%.
+
+If you think about any sales process, you never have a conversion of like 33%.
+
+Already like ludicrously high.
+
+From my point of view, the main reason why it's not higher is just we haven't optimized much yet.
+
+We just have done the dumbest [ __ ] possible, which is just go to the politicians, coldmail them, schedule a meeting with the one who responds, and just make the honest case.
+
+Treat them as a fellow human being who can think and make decisions by themselves.
+
+And the case was not perfect.
+
+Uh many things were not perfect.
+
+Sometimes they're like, "Let me see with my whip." And they don't come back to you.
+
+And so on and so forth.
+
+Many different things.
+
+But still, we think this should be scaled up.
+
+Um scaled up in many ways.
+
+We should go for draft bills instead of just statements.
+
+A bunch of them were interested in actual draft bills to see what would the regulation look like.
+
+I think this should be scaled even within the UK.
+
+not only legislatives but also you know executive people um intellectuals academics journalists like this just requires a lot of effort to go to everyone and just explain them the situation to the best of our ability and obviously we think this should be done beyond the UK like US EU other relevant jurisdictions in general and politics and right now the main thing that makes me optimistic is that whenever I hear someone who does this they always give me like super positive results not only in AI like in general it's like we do have functioning institutions people are well educated especially representatives and so on and so forth we have the best education that we've had like since the beginning of the history of humanity any high schooler knows more than like any scientist a thousand years ago and so I think that to the extent that your plan and your theory of change does not leverage this and it's just a negative some game Yes, you'll be [ __ ] and we'll all be [ __ ] But to the extent that we leverage those actual great institutions, what made you know the modern word the modern world work you know uh what what led to the great things uh that we in the west benefit from and so on and so forth.
+
+I think that if we leverage those institutions we'll get great results.
+
+And right now the main thing that we want to do is basically extend this proof of concept make it legible and help other people and other organizations who want to do similar things do the same.
+
+I assume there will be bottlenecks but I don't think the bottlenecks will be intractable.
+
+I think the bottlenecks will look more like we need more people to participate but but there's there's gradations of winning.
+
+So so around 30% that that that's a lot and that's talking about um institutions and elected representatives and and so on.
+
+There's there's also the matter of just normal people and that may even be higher but what does it mean when you scale that number up?
+
+What what barriers will there be?
+
+Will you find dynamics that when you get to 50% 60% 70% that you will have adversaries?
+
+You'll have forces that push against you.
+
+I think it's the other way around.
+
+I think the adversaries are the default.
+
+There are already adversaries.
+
+There are already many adversaries.
+
+They already exist.
+
+They have advers.
+
+They have spent the last 15 years adversarying.
+
+You know, alignment doesn't mean alignment anymore.
+
+Voluntary commitments are the peak of what states have in mind.
+
+The international summits have been interrupted and the latest one have been moved from like the AI safety summit to the AI action summit.
+
+They are already like racing as hard as they can and so on and so forth.
+
+I think that what we see is like the worst dynamics that we can see.
+
+It's like when no one fights back.
+
+It's like when no one actually tries to use the good methods.
+
+It's like when even the good guys are using the bad methods.
+
+Enthropic is racing and Anthropic has the support of the effective altruist.
+
+Holden Kinowski, the CEO of Open Philanthropy, the main effective altruist organization has joined Enthropic like in January.
+
+Effective altruists are like a key example of this.
+
+Instead of building grassroots support and making the case to everyone, they instead did entism.
+
+They try to enter various organizations and take power from there which is like the typical troskiest handbook.
+
+Usually if we actually try to leverage like humanist methods uh leverage our institutions and so on and so forth we have made so much more progress technologically uh education wise that we're now at a point where there's like so much that can be done.
+
+Imagine I don't know one of the founding fathers or if you want to go outside of the western tradition imagine the Buddha you know having access to the internet right now all of them will be like what the [ __ ] we had in mind projects that will be across generations but we can actually solve it all now the Buddha wouldn't talk about reincarnation the the founding fathers wouldn't talk about you know doing things over many generations and not hoping to actually solve the problem and things like this be like holy [ __ ] we can do it let's go let's [ __ ] go I think the main thing to do is that leverage our institutions, leverage the good values that we have, leverage the education that people do have, leverage our current information and communication technologies.
+
+And I think if we actually do this and if we actually have people go talk to their representatives, go talk to their local intellectual elites, whether it is academics, journalists, experts, whatever, I think we can actually get like meaningful change.
+
+I think there are many obstacles on the way that you know have the shape of like traumas, compulsions, trolls, trolls being the biggest ones.
+
+For instance, you know, a lot of the nice people don't want to say the true things.
+
+They've been taught that saying the true things I don't know is like cringe or not strategic.
+
+A lot of the good people have been taught to lie.
+
+And so I think there are a lot of habits to unlearn.
+
+Our institutions are pretty powerful.
+
+We can pass laws.
+
+We do have constitutions.
+
+We do have countries.
+
+We do have nation states.
+
+If tomorrow we just want to ban AGI, we can just like block all of the AGI companies like from one day to the next.
+
+Yeah.
+
+But I mean, we we started off by saying the collective action problem is not intractable possibly, but very hard.
+
+And we have these race dynamics because the winner takes all.
+
+And and then we we spoke about the spectrum of of winning, right?
+
+It's not a binary, but you need to at least saturate a threshold or, you know, you need to find some consensus in order to make this work.
+
+And also, we live in a world where there is just insane amounts of misinformation, disinformation, and so on.
+
+So, so it just seems like there there are so many like counterveailing forces that you're fighting against here.
+
+I don't think they matter that much.
+
+I think the misinformation, disinformation, still despite all of this, we still have polls and surveys where people are really for basically any type of regulation against AI.
+
+So it's like despite all of this, we're still there.
+
+This is what I mean when I say the adversaries have advers for like the last 15 years.
+
+And despite this, they're still only at that point.
+
+Despite this, people still see things.
+
+This is why I think that if we leverage our institutions, it only gets better from now on.
+
+I think the way it gets worse is if we do nothing the race dynamics you know just US forces every other country to militarize basically and at some point the tensions are so high and we don't have any international treaty to alleviate this you know through diplomacy uh economic sanctions and whatever that it starts becoming military at that point you get either skirmishes attacks which I already think start getting too late to possibly world war II and at that point we're truly [ __ ] but right Now that's not the world I see in the current world there are still a lot that can be done despite all the dynamics that you've mentioned like the current experiments are not before they're after so it's like the more we do it the easier it gets not the harder the adversaries have already adversed that's why the situation is so bad they have done this for the last 15 years now if we fight back I expect it only gets better it's not really a collective action problem we talk about dynamics like the prize on earth dilemma where you need everyone to do the thing at first, but you can easily transform a prisoner's dilemma situation into one where people can unilaterally do things.
+
+Uh, I think there are a bunch of things that can be done here.
+
+The first one is for each country to have an internal plan to deal with things like if the US tomorrow lets one of its companies build existentially risky technology whether it is you know weapons of mass destruction or just analigned ASI think each country should have an actual contingency in case they see this happening with like an ambiguous proof.
+
+You don't need coordination for having an internal plan.
+
+Another thing is feelings like kill switches.
+
+You want to have a kill switch on all of your clusters.
+
+You know, we talk about runaway AI and like we can just turn it off.
+
+Well, implement the mechanisms to turn it off.
+
+Like each country should have, you know, the president press a red buttons and all the clusters are shut down for like 15 minutes until we can see what's up.
+
+And this should be tried, you know, every 3 to 6 months and the clusters are not shut down.
+
+The APIs are still running.
+
+When this happens, they should be fine.
+
+And this is a thing you can do unilaterally.
+
+It's just you having more control over what happens within your own territory.
+
+And finally for the elephant in the room which is the international treaty.
+
+The nice thing with international treaties that you can put whatever you want into them.
+
+So of course as an individual country you will not want to just sign it unilaterally and bind yourself unilaterally.
+
+You know what you can do?
+
+You can put in the treaty.
+
+This treaty only takes effect when you have 35% of GDP and 35% of world population that are represented.
+
+GDP so that you have competitive pressure so that you can you know play against others and world population so that you have legitimacy and this is a thing you can do coincidentally I'm writing a brief and policy paper featuring those but I think you don't need to go for collective action problems that's the beauty of technology in general it's like in a world where we have never thought about game theory it's hard to come up with such a treaty you know that does not take effect until you have critical thresholds and things like this because you're not even thinking in those terms.
+
+You just do the naive treaty and it fails.
+
+This is what I mean when I say we can do better than the founding fathers, that we can do better than the enlightenment humanists and things like this.
+
+We have all of this understanding.
+
+We're in a strictly more scienced, more knowledgeful, better technology-wise situation than they were.
+
+This is why I'm like truly convinced that with their [ __ ] they managed to build the current world, the current modern world.
+
+With our [ __ ] and their [ __ ] combined, imagine what we can do.
+
+This is what I mean like in practice this is what it means to have access to technology.
+
+All countries can't just meet every month over a zoom call and talk about AI.
+
+This is not tractable like a 100 years ago.
+
+You cannot ask representative of all countries to meet every months.
+
+We can now.
+
+There are many things like this in coordination that are not possible that I think we should do that I think are not collective action problems.
+
+If you don't want to join the worldwide call, just don't, you know, enjoy not having confidential information.
+
+Sure, I think we should do it.
+
+I think to the extent that we do more of it, things will get better.
+
+Uh, and this is true at all levels.
+
+It's true at the country level, at the world level, at the citizen level, at the local expert, local elite level.
+
+I think it's just we should play that game more because whenever we have played it in the past, we have won more.
+
+And even today when we play it, we get good things.
+
+And coincidentally, when you play the opposite game of just gaining more power, things go more to [ __ ] It's not a coincidence.
+
+I think a lot of people do feel that way.
+
+I think a lot of people do understand that the reason things go well for everyone is when we act in a way that makes things go well for everyone.
+
+I think everyone has a native understanding that if you try to act in a way that makes things [ __ ] for everyone else like getting power for yourself to trample over others because you don't agree with them it makes things [ __ ] for others and everyone understands that when others do this it makes things [ __ ] for you.
+
+I think those are like very very intuitive things for people in the 21st century.
+
+a thousand years ago you needed religions and I think now we're like at a point where we have truly understood those dynamics.
+
+Uh we're like well past humanism.
+
+Humanism needed a lot of morals to uh you know substitute for understanding.
+
+Now we have this actual understanding.
+
+We understand why when people are being selfish and there is no frame for that selfishness things go worse.
+
+We could even write formal models of it.
+
+We have economics and game theory.
+
+I think that armed with this understanding, yeah, just play the winning game.
+
+Like, don't try to gig your brain.
+
+Don't get trolled.
+
+Don't get into the FUD.
+
+Just play the winning game.
+
+And the more we play the winning game, the more we win.
+
+Is 10 people enough?
+
+I don't think so.
+
+Do we need a billion people?
+
+I don't think so.
+
+I think the the wonder number might just be between 10,000 and a million.
+
+And it's both a lot, but it's also very little.
+
+Like imagine uh us and control AI that's like 10 people.
+
+Imagine uh thousand to 10 to 100 thousand control AIs you know all contacting MPs all contacting experts all having just 33% success rate without any coordination without anyone else without optimization.
+
+Imagine if they all do this.
+
+It is but but it's still a very complex collective action problem.
+
+And you guys are advocating to ban AI development basically which which is going to have a lot of a lot of push back.
+
+It already has and not alli development but also I I might say that there are many parts of your proposal which a lot of people would get on board.
+
+I mean you mentioned the the kill switch the firewall that's a very good idea.
+
+I mean we we should firewall every single country every single region.
+
+When bad stuff happens we need to cut it off.
+
+If you pitch it at that level, you could make a lot of your proposals go through because no one's going to say that's a bad idea.
+
+But but anyway, just just to you, Conor, maybe with just final thoughts.
+
+You want to make AI illegal.
+
+I want to make ASI illegal.
+
+ASI unregulated, you know, untrustworthy, non-consensual ASI.
+
+Well, so you wouldn't ban large language models?
+
+Not necessarily.
+
+If they are precursors to ASI, yes, but they easily could be.
+
+I think we should not have open source GPT5 because that's like way too close for comfort.
+
+Fog of War is way too big for me to have like be comfortable having a GPT5 system be open sourced.
+
+Will this happen?
+
+Probably.
+
+And I think that's very bad.
+
+I think this is a sign of us not doing the obvious things.
+
+Like I think this is like actually an important question that I think people should like actually let the audience like you at home think about.
+
+Why no kill switch?
+
+Why is there no kill switch?
+
+Why do companies constantly get hacked?
+
+Why do we constantly lose all of our personal information and nothing [ __ ] happens?
+
+What the [ __ ] is going on?
+
+Like actually though, like we know how to build secure systems.
+
+Like this is a thing that can be done.
+
+Why is it not happening?
+
+And like why would you expect it to be any different when we're dealing with systems that are way harder to build, right?
+
+And the answer is like no, I don't expect it to.
+
+And like we should have been 20 years ago, we should have already been building way more secure internet protocols and way more secure hardware and way more secure like you know firewalls and stuff and like emergency switches and stuff.
+
+If we had gone back and if I was in charge like I would have built a much more secure internet than the one we're on right now.
+
+Like how is it that we still like click on links and then some JavaScript overflows or Chrome and then the whole thing is pawned forever.
+
+Like what the [ __ ] is going on?
+
+Like who the [ __ ] designed this [ __ ] I think these are actually important and like we don't have time to go all the way into but it's important to think about why did this happen to get back to your important question.
+
+Okay, there's going to be push back against, you know, ASI being banned and like yes, I think a lot of this push back is from an extreme minority, a minority that has extremely vested interest, which is, you know, the tech companies who want to build ASI and are okay with killing everyone.
+
+There are people who are okay with murdering other people.
+
+I don't care about that.
+
+We vote them out and we say, "Nope, you cannot murder people.
+
+In fact, it is in fact illegal for you to do so and if you try, we throw you in jail." That's what democracy is, right?
+
+I just challenge that a tiny bit.
+
+I mean it on Twitter it maybe I'm in a bubble but it seems like everybody loves AI.
+
+I think you're in a bubble.
+
+I think there's no sane person on Twitter including myself.
+
+Go to any median person in like any middle income or high income country and like ask them what they think about transhumanism.
+
+Like what do you think is the hit rate between them saying yeah it seems like a good idea.
+
+We should accelerate towards that.
+
+Like how many like like actually do you actually expect that [ __ ] any of them will say yeah that sounds like a good idea.
+
+It's a extremely small minority of like extremely weird people, which should be clear, I think it should be legal to be weird.
+
+I think weird people are great, right?
+
+I'm pretty weird, right?
+
+I think it should be legal to be weird and like have weird beliefs as long as you don't harm other people.
+
+I'm okay with some people, some philosophers, you know, talking about long-term futurist counterfactual ASI, you know, couples, whatever, right?
+
+You know, knock yourselves out.
+
+Have fun.
+
+I hope you're having a good time, right?
+
+What is not okay is if they then are doing things which actually threaten human lives which is what's happening right now and this is the thing we need to focus on is that there are actually people who are actually threatening human lives with their actions and there actually has to be a democratic oversight in this is that people have a stake in their own lives and their own continued existence and the amount of threat their society is exposed to.
+
+People have a stake in this and we have done polling.
+
+The numbers are overwhelming and bipartisan.
+
+You know, there are some people who are like 20% I die.
+
+Who cares?
+
+Let's go.
+
+There are some people who are like this, right?
+
+And like I think they should get a vote, too.
+
+Like I do think they should be allowed to vote for this position, but they're going to get outvoted and they know this, which is why they are doing lobbying and blackmail and threats and, you know, propaganda and FUD, etc., because they can't win a fair fight.
+
+To going back to what you were saying earlier, what Gabe was talking about as well, it's like, why do we think this is tractable at all?
+
+There's a very very important thing that we have go going for us and there are worlds in which this is not true and if this wasn't true I wouldn't feel optimistic and the fact is that this is actually true is that people actually don't want ASI to kill them there are worlds in which this is different there are very strange worlds where for some reason most people are like Silicon Valley EAC people like 70% of the world population if that was the case all right [ __ ] we're actually [ __ ] right but we actually asked.
+
+Like sometimes I feel like I'm living like in the True Men Show or something, right?
+
+Where like people tell me, "Uh oh, don't don't go over there.
+
+Don't there's nothing there." And I'm like, "Have you checked?" Like, "Well, no, I haven't checked, but don't go there.
+
+There's nothing there.
+
+There's nothing there for you, bro.
+
+Bro, bro, don't even look.
+
+Doesn't matter." I'm like, "Oh, I'm going to go check." "No, no, no.
+
+You're wasting your time.
+
+It's actually strategically you can't talk to politicians.
+
+No, you you just can't.
+
+You just can't." And then I go over there.
+
+I talk to the politicians.
+
+I'm like, "Huh, wow.
+
+Okay, actually, there's a bunch of there's a thing here." And this has happened to me.
+
+So often in my life I like I feel so gaslit by like all these techniquarian like people who I grew up with where I'm just like well no I actually talked to normal people I actually did polling I actually did focus groups I actually talked to politicians and their model of the world is like factually wrong and this is what we must leverage right this is the thing that still gives me hope that this is tractable if I had checked and the techn libertarians had been right I don't know that would be a very different world than the one we live And this is a conversation we had.
+
+I pushed for this for actual years.
+
+Gabe is one of the people who, you know, got me to like look through the True Men Show and like actually go and ask like I was I remember when I first met Gabe, I was often telling him I'm like, "No, Gabe, I can't talk to politicians." Like, "No, it's impossible.
+
+They won't listen." He's like, "Have you tried?" And I'm like, "Well, no, I haven't." And then back and forth and back and forth and back and forth.
+
+Eventually, I did talk to politicians.
+
+And yeah, some of them are idiots.
+
+Sure, of course.
+
+But like turns out many of them are actually not or at least they care and they're trying to figure things out and like they need help.
+
+And then I look at San Francisco, I look at the technical like you [ __ ] lied to me.
+
+Connor Gabe, thank you so much for joining us today.
+
+It's been great.
+
+It was a pleasure.
+
+Pleasure.
+
+[Music]

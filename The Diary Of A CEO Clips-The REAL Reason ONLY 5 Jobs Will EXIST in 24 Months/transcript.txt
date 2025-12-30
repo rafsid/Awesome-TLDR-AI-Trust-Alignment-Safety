@@ -1,0 +1,596 @@
+Source: https://www.youtube.com/watch?v=FRUTFGtPeVc
+Transcribed: 2025-12-30 18:03:43
+Method: YouTube Transcript API
+==================================================
+
+You have made a series of predictions and they correspond to a variety of different dates.
+
+I have those dates in front of me here.
+
+What is your prediction for the year 2027?
+
+>> We're probably looking at AGI as predicted by prediction markets and tops of the labs.
+
+>> So we have artificial general intelligence by 2027.
+
+And how would that make the world different to how it is now?
+
+So if you have this concept of a drop in employee, you have free labor, physical and cognitive, trillions of dollars of it.
+
+It makes no sense to hire humans for most jobs.
+
+If I can just get, you know, a $20 subscription or a free model to do what an employee does.
+
+First, anything on a computer will be automated.
+
+And next, I think humanoid robots are maybe 5 years behind.
+
+So in 5 years, all the physical labor can also be automated.
+
+So we're looking at a world where we have levels of unemployment we never seen before.
+
+Not talking about 10% unemployment which is scary but 99%.
+
+All you have left is jobs where for whatever reason you prefer another human would do it for you.
+
+But anything else can be fully automated.
+
+It doesn't mean it will be automated in practice.
+
+A lot of times technology exists but it's not deployed.
+
+Video phones were invented in the 70s.
+
+Nobody had them until iPhones came around.
+
+So we may have a lot more time with jobs and with world which looks like this.
+
+>> But capability to replace most humans and most occupations will come very quickly.
+
+>> H okay.
+
+So let's try and drill down into that and and stress test it.
+
+So, a podcaster like me, would you need a podcaster like me?
+
+>> So, let's look at what you do.
+
+You prepare.
+
+You >> ask questions.
+
+>> You ask follow-up questions.
+
+And you look good on camera.
+
+>> Thank you so much.
+
+>> Let's see what we can do.
+
+Large language model today can easily read everything I wrote.
+
+Yeah.
+
+>> And have very solid understanding.
+
+Better.
+
+I assume you haven't read every single one of my books.
+
+that thing would do it.
+
+It can train on every podcast you ever did.
+
+So, it knows exactly your style, the types of questions you ask.
+
+It can also find correspondence between what worked really well.
+
+Like this type of question really increased views.
+
+This type of topic was very promising.
+
+So, you can optimize I think better than you can because you don't have a data set.
+
+>> Of course, visual simulation is trivial at this point.
+
+So it can you can make a video within seconds of me sat here and >> so we can generate videos of you interviewing anyone on any topic very efficiently and you just have to get likeness approval whatever >> are there many jobs that you think would remain in a world of AGI if you're saying AGI is potentially going to be here whether it's deployed or not by 2027 what kind and then okay so let's take out of this any physical labor jobs for a second are there any jobs that you think a human would be able to do better in a world of AGI still?
+
+>> So that's the question I often ask people in a world with AGI and I think almost immediately we'll get super intelligence as a side effect.
+
+So the question really is in a world of super intelligence which is defined as better than all humans in all domains.
+
+What can you contribute?
+
+And so you know better than anyone what it's like to be you.
+
+You know what ice cream tastes to you?
+
+Can you get paid for that knowledge?
+
+Is someone interested in that?
+
+Maybe not.
+
+Not a big market.
+
+There are jobs where you want a human.
+
+Maybe you're rich and you want a human accountant for whatever historic reasons.
+
+Old people like traditional ways of doing things.
+
+Warren Buffett would not switch to AI.
+
+He would use his human accountant.
+
+But it's a tiny subset of a market.
+
+Today we have products which are man-made in US as opposed to mass-produced in China and some people pay more to have those but it's a small subset.
+
+It's a almost a fetish.
+
+There is no practical reason for it and I think anything you can do on a computer could be automated using that technology.
+
+You must hear a lot of rebuttals to when this when you say it because people experience a huge amount of mental discomfort when they hear that their job, their career, the thing they got a degree in, the thing they invested $100,000 into is going to be taken away from them.
+
+So, their natural reaction some for some people is that cognitive dissonance that no, you're wrong.
+
+AI can't be creative.
+
+It's not this.
+
+It's not that.
+
+It'll never be interested in my job.
+
+I'll be fine because you hear these arguments all the time, right?
+
+It's really funny.
+
+I ask people and I ask people in different occupations.
+
+I'll ask my Uber driver, "Are you worried about self-driving cars?" And they go, "No, no one can do what I do.
+
+I know the streets of New York.
+
+I can navigate like no AI.
+
+I'm safe." And it's true for any job.
+
+Professors are saying this to me.
+
+Oh, nobody can lecture like I do.
+
+Like, this is so special.
+
+But you understand, it's ridiculous.
+
+We already have self-driving cars replacing drivers.
+
+That is not even a question if it's possible.
+
+It's like how soon before you fired.
+
+>> Yeah.
+
+I mean, I've just been in LA yesterday and uh my car drives itself.
+
+So, I get in the car, I set put in where I want to go and then I don't touch the steering wheel or the brake pedals and it takes me from A to B, even if it's an hourong drive without any intervention at all.
+
+I actually still park it, but other than that, I'm not I'm not driving the car at all.
+
+And obviously in LA we also have Whimo now which means you order it on your phone and it shows up with no driver in it and takes you to where you want to go.
+
+>> Oh yeah.
+
+>> So it's quite clear to see how that is potentially a matter of time for those people cuz we do have some of those people listening to this conversation right now that their occupation is driving to offer them a and I think driving is the biggest occupation in the world if I'm correct.
+
+I'm pretty sure it is the biggest occupation in the world.
+
+>> One of the top ones.
+
+Yeah.
+
+What would you say to those people?
+
+What should they be doing with their lives?
+
+What should they should they be retraining in something or what time frame?
+
+>> So that's the paradigm shift here.
+
+Before we always said this job is going to be automated.
+
+Retrain to do this other job.
+
+But if I'm telling you that all jobs will be automated, then there is no plan B.
+
+You cannot retrain.
+
+Look at computer science.
+
+Two years ago, we told people learn to code.
+
+you are an artist, you cannot make money, learn to code.
+
+Then we realized, oh, AI kind of knows how to code and getting better.
+
+Become a prompt engineer.
+
+You can engineer prompts for AI.
+
+It's going to be a great job.
+
+Get a 40-year degree in it.
+
+But then we're like, AI is way better at designing prompts for other AIs than any human.
+
+So that's gone.
+
+So I can't really tell you right now the hardest thing is design AI agents for practical applications.
+
+I guarantee you in a year or two it's going to be gone just as well.
+
+So I don't think there is a this occupation needs to learn to do this instead.
+
+I think it's more like we as a humanity then we all lose our jobs.
+
+What do we do?
+
+What do we do financially?
+
+Who's paying for us?
+
+And what do we do in terms of meaning?
+
+What do I do with my extra 60 80 hours a week?
+
+>> You've thought around this corner, haven't you?
+
+a little bit.
+
+>> What is around that corner in your view?
+
+>> So the economic part seems easy.
+
+If you create a lot of free labor, you have a lot of free wealth, abundance, things which are right now not very affordable become dirt cheap and so you can provide for everyone basic needs.
+
+Some people say you can provide beyond basic needs.
+
+You can provide very good existence for everyone.
+
+The hard problem is what do you do with all that free time?
+
+For a lot of people, their jobs are what gives them meaning in their life.
+
+So they would be kind of lost.
+
+We see it with people who uh retire or do early retirement.
+
+And for so many people who hate their jobs, they'll be very happy not working.
+
+But now you have people who are chilling all day.
+
+What happens to society?
+
+How does that impact crime rate, pregnancy rate, all sorts of issues nobody thinks about?
+
+governments don't have programs prepared to deal with 99% unemployment.
+
+>> What do you think that world looks like?
+
+>> Again, I I think >> the very important part to understand here is the unpredictability of it.
+
+We cannot predict what a smarter than us system will do.
+
+And the point when we get to that is often called singularity by analogy with physical singularity.
+
+You cannot see beyond the event horizon.
+
+I can tell you what I think might happen, but that's my prediction.
+
+It is not what actually is going to happen because I just don't have cognitive ability to predict a much smarter agent impacting this world.
+
+Then you read science fiction.
+
+There is never a super intelligence in it actually doing anything because nobody can write believable science fiction at that level.
+
+They either banned AI like Dune because this way you can avoid writing about it or it's like Star Wars.
+
+You have this really dumb bots but not nothing super intelligent ever cuz by definition you cannot predict at that level >> because by definition of it being super intelligent it will make its own mind up.
+
+>> By definition if it was something you could predict you would be operating at the same level of intelligence violating our assumption that it is smarter than you.
+
+If I'm playing chess with super intelligence and I can predict every move, I'm playing at that level.
+
+>> It's kind of like my French bulldog trying to predict exactly what I'm thinking and what I'm going to do.
+
+>> That's a good cognitive gap.
+
+And it's not just he can predict you're going to work, you're coming back, but he cannot understand why you're doing a podcast.
+
+That is something completely outside of his model of the world.
+
+>> Yeah.
+
+He doesn't even know that I go to work.
+
+He just sees that I leave the house and doesn't know where I go.
+
+>> Buy food for him.
+
+What's the most persuasive argument against your own perspective here?
+
+>> That we will not have unemployment due to advanced technology >> that there won't be this French bulldog human gap in understanding and I guess like power and control.
+
+>> So some people think that we can enhance human minds either through combination with hardware.
+
+So something like Neurolink or through genetic re-engineering to where we make smarter humans.
+
+>> Yeah, >> it may give us a little more intelligence.
+
+I don't think we are still competitive in biological form with silicon form.
+
+Silicon substrate is much more capable for intelligence.
+
+It's faster.
+
+It's more resilient, more energy efficient in many ways, >> which is what computers are made out of the brain.
+
+Yeah.
+
+So I don't think we can keep up just with improving our biology.
+
+Some people think maybe and this is very speculative.
+
+We can upload our minds into computers.
+
+So scan your brain connect of your brain and have a simulation running on a computer and you can speed it up, give it more capabilities.
+
+But to me that feels like you no longer exist.
+
+We just created software by different means and now you have AI based on biology and AI based on some other forms of training.
+
+You can have evolutionary algorithms.
+
+You can have many paths to reach AGI but at the end none of them are humans.
+
+>> I have a another date here which is 2030.
+
+What's your prediction for 2030?
+
+What will the world look like?
+
+So we probably will have uh humanoid robots with enough flexibility, dexterity to compete with humans in all domains including plumbers.
+
+We can make artificial plumbers.
+
+>> Not the plumbers where that was that felt like the last bastion of uh human employment.
+
+So 2030, 5 years from now, humanoid robots.
+
+So many of the companies, the leading companies including Tesla, are developing humanoid robots at light speed and they're getting increasingly more effective.
+
+And these humanoid robots will be able to move through physical space for, you know, make an omelette, do anything humans can do, but obviously have be connected to AI as well.
+
+So they can think, talk, >> right?
+
+They're controlled by AI.
+
+They always connected to the network.
+
+So they are already dominating in many ways.
+
+>> Our world will look remarkably different when humanoid robots are functional and effective because that's really when you know I start think like the combination of intelligence and physical ability is really really doesn't leave much does it for us um human beings >> not much.
+
+So today if you have intelligence through internet you can hire humans to do your bidding for you.
+
+You can pay them in bitcoin.
+
+So you can have bodies just not directly controlling them.
+
+So it's not a huge game changer to add direct control of physical bodies.
+
+Intelligence is where it's at.
+
+The important component is definitely higher ability to optimize to solve problems to find patterns people cannot see.
+
+And then by 2045, I guess the world looks even even more um which is 20 years from now.
+
+>> So if it's still around, >> if it's still around, >> Ray Kerszswall predicts that that's the year for the singularity.
+
+That's the year where progress becomes so fast.
+
+So this AI doing science and engineering work makes improvements so quickly, we cannot keep up anymore.
+
+That's the definition of singularity.
+
+point beyond which we cannot see, understand, predict, >> see, understand, predict the intelligence itself or >> what is happening in the world, the technology is being developed.
+
+So right now if I have an iPhone, I can look forward to a new one coming out next year and I'll understand it has slightly better camera.
+
+Imagine now this process of researching and developing this phone is automated.
+
+It happens every 6 months, every 3 months, every month, week, day, hour, minute, second.
+
+You cannot keep up with 30 iterations of iPhone in one day.
+
+You don't understand what capabilities it has, what proper controls are.
+
+It just escapes you.
+
+Right now, it's hard for any researcher in AI to keep up with the state-of-the-art.
+
+While I was doing this interview with you, a new model came out and I no longer know what the state-of-the-art is.
+
+Every day, as a percentage of total knowledge, I get dumber.
+
+I may still know more because I keep reading.
+
+But as a percentage of overall knowledge, we're all getting dumber.
+
+And then you take it to extreme values, you have zero knowledge, zero understanding of the world around you.
+
+So some of the arguments against this eventuality are that when you look at other technologies like the industrial revolution, people just found new ways to to work and new careers that we could never have imagined at the time were created.
+
+How do you respond to that?
+
+In a world of super intelligence, >> it's a paradigm shift.
+
+We always had tools, new tools which allowed some job to be done more efficiently.
+
+So instead of having 10 workers, you could have two workers and eight workers had to find a new job.
+
+And there was another job.
+
+Now you can supervise those workers or do something cool.
+
+If you creating a meta invention, you're inventing intelligence.
+
+You're inventing a worker, an agent, then you can apply that agent to the new job.
+
+There is not a job which cannot be automated.
+
+That never happened before.
+
+All the inventions we previously had were kind of a tool for doing something.
+
+So we invented fire.
+
+Huge game changer.
+
+But that's it.
+
+It stops with fire.
+
+We invent the wheel.
+
+Same idea.
+
+Huge implications.
+
+But wheel itself is not an inventor.
+
+Here we're inventing a replacement for human mind.
+
+A new inventor capable of doing new inventions.
+
+It's the last invention we ever have to make.
+
+At that point it takes over and the process of doing science research even ethics research morals all that is automated at that point.
+
+>> Do you sleep well at night?
+
+>> Really well.
+
+>> Even though you you spent the last what 15 20 years of your life working on AI safety and it's suddenly among us in a in a way that I don't think anyone could have predicted 5 years ago.
+
+When I say among us, I really mean that the amount of funding and talent that is now focused on reaching super intelligence faster has made it feel more inevitable and more soon than any of us could have possibly imagined.
+
+>> We as humans have this built-in bias about not thinking about really bad outcomes and things we cannot prevent.
+
+So all of us are dying.
+
+Your kids are dying, your parents are dying, everyone's dying, but you still sleep well.
+
+you still go on with your day.
+
+Even 95 year olds are still doing games and playing golf and whatnot cuz we have this ability to not think about the worst outcomes especially if we cannot actually modify the outcome.
+
+So that's the same infrastructure being used for this.
+
+Yeah, there is humanity level deathlike event.
+
+We're happening to be close to it probably, but unless I can do something about it, I I can just keep enjoying my life.
+
+In fact, maybe knowing that you have limited amount of time left gives you more reason to have a better life.
+
+You cannot waste any.
+
+>> And that's the survival trait of evolution, I guess, because those of my ancestors that spent all their time worrying wouldn't have spent enough time having babies and hunting to survive.
+
+>> Suicidal ideiation.
+
+People who really start thinking about how horrible the world is usually escape pretty soon.
+
+>> One of the you co-authored this paper um analyzing the key arguments people make against the importance of AI safety and one of the arguments in there is that there's other things that are of bigger importance right now.
+
+It might be world wars, it could be nuclear containment, it could be other things.
+
+there's other things that the governments and podcasters like me should be talking about that are more important.
+
+What's your rebuttal to that argument?
+
+>> So, super intelligence is a matter solution.
+
+If we get super intelligence right, it will help us with climate change.
+
+It will help us with wars.
+
+It can solve all the other existential risks.
+
+If we don't get it right, it dominates.
+
+If climate change will take a 100red years to boil us alive and super intelligence kills everyone in five, I don't have to worry about climate change.
+
+So either way, either it solves it for me or it's not an issue.
+
+>> So you think it's the most important thing to be working on?
+
+>> Without question, there is nothing more important than getting this right.
+
+And I know everyone says it.
+
+you take any class but you take English professor's class and he tells you this is the most important class you'll ever take but u you can see the meta level differences with this one >> another argument in that paper is that we all be in control and that the danger is not AI um this particular argument asserts that AI is just a tool humans are the real actors that present danger and we can always m maintain control by simply turning it off can't we just pull the plug out I see that every time we have a conversation on the show about AI, someone says, "Can't we just unplug it?" >> Yeah, I get those comments on every podcast I make and I always want to like get in touch with a guy and say, "This is brilliant.
+
+I never thought of it.
+
+We're going to write a paper together and get a Nobel Prize for it.
+
+This is like let's do it because it's so silly.
+
+Like, can you turn off a virus?
+
+You have a computer virus.
+
+You don't like it.
+
+Turn it off.
+
+How about Bitcoin?
+
+Turn off Bitcoin network.
+
+Go ahead.
+
+I'll wait." This is silly.
+
+Those are distributed systems.
+
+You cannot turn them off.
+
+And on top of it, they're smarter than you.
+
+They made multiple backups.
+
+They predicted what you're going to do.
+
+They will turn you off before you can turn them off.
+
+The idea that we will be in control applies only to pretelligence levels.
+
+Basically what we have today, today humans with AI tools are dangerous.
+
+They can be hackers, malevolent actors.
+
+Absolutely.
+
+But the moment super intelligence becomes smarter, dominates, they no longer the important part of that equation.
+
+It is the higher intelligence I'm concerned about, not the human who may add additional malevolent payload, but at the end still doesn't control it.
+
+If you love the Driver CEO brand and you watch this channel, please do me a huge favor.
+
+Become part of the 15% of the viewers on this channel that have hit the subscribe button.
+
+It helps us tremendously and the bigger the channel gets, the bigger the guests.

@@ -1,0 +1,3270 @@
+Source: https://www.youtube.com/watch?v=-CJxwXAFvsw
+Transcribed: 2025-12-30 17:43:53
+Method: YouTube Transcript API
+==================================================
+
+Rob Wiblin: Today I have the pleasure of speaking with Ryan Greenblatt.
+
+Ryan is the chief scientist at Redwood Research and the lead author on the paper “Alignment faking in large language models” — which has been described as probably the most important empirical result ever on the topic of loss of control of artificial intelligence.
+
+Thanks so much for coming on the show, Ryan.
+
+Ryan Greenblatt: Yeah, it’s great to be here.
+
+Rob Wiblin: Let’s start by talking about the best arguments for and against a software-based intelligence explosion in the relatively near future — by which I’m thinking maybe under four years, approximately.
+
+What do you think is the chance that we’ll be able to largely automate AI R&D, or maybe roughly automate a full AI company as it exists today, within the next four years or so?
+
+Ryan Greenblatt: I think the probability of that capability existing — not necessarily being used, not necessarily being fully deployed — is about 25%, and then maybe about 50% if we extend it to like eight years.
+
+Rob Wiblin: I think many people hear that and they would wonder, is this just pure speculation?
+
+How can we form realistic or grounded expectations about this kind of thing?
+
+I’d be interested to know what are the key pieces of evidence that bear on you making a prediction or forecast like that.
+
+What is a key piece of evidence that makes you think it is plausible at all?
+
+Ryan Greenblatt: To start, I think a good place to look is, what is the current level of AI capabilities?
+
+How close does it feel?
+
+People have obviously wildly different intuitions about how close we are in some objective sense.
+
+I think currently the situation is: the AIs are getting better and better at math; they’re sort of marching through the human regime in math.
+
+They’re able to do roughly about one hour or one and a half hours of sort of isolated software engineering tasks — by that I mean a task that would take a human roughly an hour and a half.
+
+And they’re sort of getting better at a variety of different skills.
+
+So I think we’re at a pretty objectively impressive regime — and importantly, a much more objectively impressive regime than we were at two years ago, and certainly much more impressive than we were at four years ago.
+
+A naive starting point for where we will be in four years is: where were we four years ago?
+
+Where are we now?
+
+Trying to qualitatively extrapolate from here to there.
+
+This is a bit of a sloppy perspective.
+
+Like, I think maybe what I would have said two years ago would have been that we had GPT-3, now we have GPT-4: what’s the gap there?
+
+Let’s sloppily extrapolate that forward and get a sense from there.
+
+I think now we can do better, because we have not just GPT-3; we have GPT-3.5, we have GPT-4, we’ve had the progression since GPT-4 in roughly the two years since then.
+
+So over that period, we’ve gone from the AIs just barely being able to do agentic tasks to having some reasonable amount of ability to succeed at that, some ability to recover from mistakes.
+
+So over this period, GPT-4 could maybe complete some agentic tasks that would take humans like five or 10 minutes; it could sort of understand how to use the tools.
+
+I think GPT-3.5 basically couldn’t even understand the tools in agentic scaffolds; GPT-4 could understand these things.
+
+And then, over that period we’ve gone from like, “can understand the tools and can maybe do it some of the time” to “can do tasks 50% of the time that takes a human software engineer an hour and a half.” There’s sort of a trend line of how fast we’ve been marching through that regime.
+
+Over 2024 at least it’s been pretty fast progress, starting from basically nothing at all to an hour and a half, with doubling times of like, I’m stealing a bunch of content from METR, which I think maybe there’ll be a podcast with Beth which covers a bunch of the same content — but we’ve seen doubling times that are fast enough that we’d expect the AIs doing eight-hour tasks or 16-hour tasks in maybe a little less than two years, which is pretty fast progress.
+
+And then from there, if you’re into the regime where they’re doing weeklong tasks, I think you can maybe get pretty close to automating the job of a research engineer with some schlep on top of that.
+
+Rob Wiblin: OK, so you would say that objectively they’re pretty impressive in what they can do right now.
+
+Some people have a more sceptical reaction to that.
+
+Is there anything that you could point to to be clearer about what they’re able to do and what they’re not able to do?
+
+And maybe answer people who would say, “Sometimes I use these tools and they seem very stupid, or they don’t seem able to do things that I would expect them to be able to do, or they produce a whole lot of reasoning and I find errors in it”?
+
+Ryan Greenblatt: So I’d say my kind of qualitative, vibesy model is: the AIs are pretty dumb, they used to be much dumber, they’re getting smarter quickly, and they’re very knowledgeable.
+
+So I think a lot of what people are interfacing with is that we’ve got these systems that have got some smarts to them: they can really figure out some pretty general situations OK, and especially with reasoning models they’re pretty good at thinking through some stuff.
+
+In addition to that, they’re very knowledgeable, which means that there’s a misleading impression of how overall general and how adaptable they are that people notice.
+
+And this is a lot of what people are reacting to.
+
+There’s sort of an overoptimistic perspective, which I would say is characterised by this chart Leopold [Aschenbrenner] had where he’s like PhD-level intelligence, or like people are like PhD-level intelligence — and then some people respond to that being like, “PhD level intelligence?
+
+Come on, it can’t play tic-tac-toe.” Maybe that’s no longer true with reasoning models, but directionally, you know, it can’t play tic-tac-toe; it can’t respond to relatively novel circumstances.
+
+It gets tripped up by this stuff.
+
+Now, I think we have to discount some of how it’s getting tripped up by this stuff, because I think a bunch of these things might be better described as cognitive biases than lack of smarts.
+
+Like there’s a bunch of things that humans systematically get wrong, even though they’re pretty stupid, or in some sense they’re pretty dumb errors.
+
+Like the conjunction fallacy.
+
+What if you’re like, “What is the chance that someone is a librarian?
+
+What is the chance they’re a librarian, and some property librarians have?” I might be getting this a bit wrong, but [humans will say] it’s more likely on the conjunction of the two, even though that has to be less likely.
+
+And I think AI systems have biases that are sort of like this, that are shaped by the environment in which they were created or by their training data.
+
+As an example, if you give AIs a riddle.
+
+Like, “There’s a man and a boat and a goat.
+
+The boat can carry the man and one other item.
+
+How many trips does it take for them to cross the river?” The answer is one trip: they can just cross the river.
+
+But there is a similar riddle involving a man, a goat, and something like a cabbage — you know, there’s some tricky approach — and the AIs are so reflexively used to doing this that maybe they immediately blurt out an answer.
+
+They sort of have a strong heuristic towards that answer, but it might just be more that they feel a nudging to that.
+
+But if you get them to be like, “Oh, it’s a trick question,” then they go from that.
+
+And in fact, you can get humans on the same sorts of trick questions, right?
+
+So if you ask humans, “What’s heavier: a pound of bricks or a pound of feathers?” they’ll say the bricks, and they get tripped.
+
+It’s like the language models have the exact opposite problem, where if you ask them, “What’s heavier: two pounds of bricks or a pound of feathers?” then they’re like, “Same weight!
+
+Same weight!” So I worry that a lot of the tricks people are doing are sort of analogous to tricks you could execute on humans, and it’s hard to know how much to draw from that.
+
+Rob Wiblin: Yeah.
+
+A general challenge here in assessing how capable they are is, I think Nathan Labenz uses this expression that they’re “human-level but not human-like” — so overall, maybe they’re similarly capable as human employees in some situations, but they have very different strengths and weaknesses; they can be tripped up in ways that seem completely baffling to us.
+
+But I guess you can imagine an AI society that would look at humans and say, “How is it that they can’t multiply in their heads two three-digit numbers?
+
+That seems crazy.
+
+These are obviously not general intelligences.
+
+They have almost no memory of this book that they read last week.
+
+That doesn’t make any sense.
+
+How could an intelligence act that way?” It makes it a little bit hard to have a common ground on which to compare humans versus AIs.
+
+Is there more to say on how you would assess what level they’re at now?
+
+Ryan Greenblatt: Yeah, I think that I wouldn’t use the term “human-level.” Maybe this is me being a little bit of a conservative or me being a bit pedantic, but I like reserving the term “human-level” for “can automate a substantial fraction of cognitive jobs.” So maybe we’re starting to get into the humanish-level AIs once it can really just fully automate away a bunch of human jobs, or be a part of the cognitive economy in a way that is comparable to humans — and maybe not full automation at that point, but I also like talking about the full automation point.
+
+So that’s one thing, just responding to that.
+
+More context on how good the AIs are: some things we’re seeing that are maybe somewhat relevant are we’re seeing AIs sort of march through how good they are at math and competitive programming.
+
+So we’ve seen over 2024 going from basically the AI is bottom 20th percentile or something on Codeforces to being currently in the top 50, I think, according to what Sam Altman said.
+
+Rob Wiblin: Top 50 individuals?
+
+Ryan Greenblatt: Top 50 individuals.
+
+Literally the top 50 people.
+
+Or at least people who do Codeforces; maybe there’s some people who aren’t on the leaderboard, but roughly speaking.
+
+And then it looks like they’ll get basically better than the best human at that specific thing before the end of the year.
+
+And then on math, this is based on an anecdote from a colleague, but maybe they’re currently at the level of a very competitive eighth grader or something on short numerical competition math problems like AIME, the top eighth graders are doing as well as the AIs are doing right now.
+
+And the AIs are, I think, a decent amount worse on proofs.
+
+But both of these things are improving very rapidly — they were much, much worse a year ago.
+
+I think basically this is because we’re RLing the AIs in these tasks.
+
+I sort of expect the same trend to hit agentic tasks, software engineering.
+
+We’ve already seen that to some extent: the AIs are already pretty good at writing code, pretty good at following instructions, and OK at noticing errors, OK at recovering from these things.
+
+I think with a lot of runtime compute and a lot of scaffolding, that can be pushed further.
+
+Then there’s a bunch of things in which they’re weaker.
+
+So they’re a bunch weaker at writing, they’re a bunch weaker at other stuff.
+
+But I sort of expect that as you’re marching through software engineering, you’ll get to a bunch of these other capabilities.
+
+Rob Wiblin: Yeah.
+
+OK, so we’ve got an arguably quite high level now.
+
+They’re becoming capable of doing tasks that would take humans longer and longer; they’re able to follow instructions for a longer period of time, complete tasks that have more open-ended choices to make.
+
+And that’s doubling every half a year or something like that?
+
+Ryan Greenblatt: I think the doubling time on time, my guess is over the next year it’ll be substantially faster than every half year, but maybe the longer-run trend is roughly every half year.
+
+So we might expect there was basically a spurt starting at the start of 2024 or a little into 2024 of people doing more agency RL — more reinforcement learning or training the AIs specifically to be good at agentic software engineering tasks.
+
+And I think that trend will continue, and perhaps even accelerate, through 2025, plausibly continuing in 2026, plausibly later.
+
+But maybe the longer running trend is more like doubling every six months.
+
+I expect it to be more like doubling every two to four months over the next year.
+
+Rob Wiblin: OK, so very rapid increase over the coming year.
+
+Ryan Greenblatt: Very rapid, yes.
+
+Rob Wiblin: There’s this interesting dynamic where we might expect that you could virtually fully automate an AI company, maybe substantially before you could automate almost any other company.
+
+Because firstly, they’re putting a lot of their resources towards trying to figure out how to automate their own stuff and their own processes, which makes sense from their point of view — firstly because it’s the thing that they understand the best, and also, these are among some of the highest paid knowledge workers in the entire world.
+
+They’re pulling an enormous salary.
+
+So if they can figure out how to get an AI to do that, then that has enormous economic value.
+
+And of course, the people running the companies think it’s of much greater value even than it looks just based on the dollar amount, because they think that they’re about to trigger this intelligence explosion, positive reinforcement loop which will change everything.
+
+So to them, this is kind of the thing that by far they’re most interested in automating.
+
+They care much more about that than automating McKinsey’s consulting reports, even though that is also kind of a lucrative business.
+
+So it could be that we haven’t automated consulting, even though that certainly would have been possible, mostly because they just weren’t trying.
+
+They were just trying to automate their own staff.
+
+Ryan Greenblatt: I would say that my guess is that it’s probably hard, even with a bunch of elicitation, to near fully automate reasonably highly paid human knowledge workers in relatively broad fields.
+
+But I do expect that there’s some jobs that if the AI companies were trying harder, they might be able to automate substantially more than now.
+
+And in fact, the people benefiting most from AI are people close to AI, as you’re saying.
+
+This is true now, and I think will get increasingly true in the future — again because of this dynamic of AI company employees are highly paid now; at the point when AIs are capable enough that they can automate AI companies, they’ll be even more highly paid, you’ll be able to drive in even more investment, and AI company CEOs will be even more sold on the possibility of AI being extremely important.
+
+So I think we’ll see an even bigger gap then.
+
+One objection you might have had would be like, sure, I agree that we’ll see a lot of concentration on automating the AI companies, but at the same time, there’s a lot of valuable human knowledge work outside that you could automate.
+
+So we’ll see that in parallel, we’ll see some economic impact.
+
+I think this is a reasonable first stab, but a problem with this story is the price of compute will go way up as the value of AI intellectual labour rises, at least in these short-timeline scenarios where compute is very scarce.
+
+Rob Wiblin: Just to clarify, you’re saying that the companies will be using a lot of compute to automate their own work, so much compute that in fact that they won’t have many chips available for serving other customers who are doing things that are of less economic value, or certainly less important to the company?
+
+Ryan Greenblatt: Yeah, broadly speaking.
+
+But I think it’s even just not on just automating the stuff, but on experiments.
+
+So let me just put a little bit of flavour on this.
+
+So how do AI companies spend their compute now?
+
+I think it will depend on the company, but my sense of the breakdown for OpenAI is it’s very roughly something like: a fourth on inference for external customers, half on experiments — so things like smaller scale training runs that don’t end up getting deployed, doing a little bit of testing of RL code, this sort of thing, so experiment compute for researchers — and a fourth on big training runs.
+
+So like three-fourths of the compute is already internally directed in some sense.
+
+And then if we’re seeing a regime where the AIs can automate AI R&D and that’s yielding big speedups and seems very important, then you could imagine the regime might look more like one-fifth on doing inference for your AI workers — so you’re spending a fifth of your compute just running your employees — three-fifths on experiments, and one-fifth on training or something.
+
+Obviously it’s very speculative.
+
+Rob Wiblin: So customers have been squeezed out almost entirely.
+
+Ryan Greenblatt: Yeah, yeah.
+
+I mean, presumably you’ll have some customers, but it might be squeezed out almost entirely, and we’ll see the prices rise.
+
+And I think when you’re thinking about what customers to be serving to, I think you should maybe be imagining, perhaps surprisingly, that the highest wage employees might be who the AIs end up going for first, once the AIs are capable of this automation.
+
+So maybe you should be thinking like Jane Street, high frequency trading, places where the AIs seem particularly helpful, they seem particularly high paying, and they seem particularly bottlenecked on intellectual labour.
+
+Now, I think we will see automation of a bunch of other professions in parallel, but it might be that at the point when the AIs are most capable of automating, much more of the attention will be focused on AI R&D.
+
+And I think even possibly we might see effects like some profession is slowly being automated — you know, mid- to low-end software engineering maybe will slowly be automated more and more — and we might actually see that trend reverse as the compute gets more valuable.
+
+Because now we’re in a regime where just everyone is grabbing as much inference compute as they can, or at least the biggest companies or the company in the lead is grabbing as much inference compute as they can, and just outcompeting the software engineers using this or the companies doing software engineering competing with this compute.
+
+I don’t currently expect a trend reversal, but I think we could see automation trends plateau or even reverse because of this.
+
+Rob Wiblin: Because people have found even more valuable things to do with the AI.
+
+Ryan Greenblatt: Yeah, that’s right.
+
+This is dependent on relatively short timelines.
+
+I think you could expect things are sort of smoother on longer timelines, where you wouldn’t expect trend reversals in that case.
+
+But if things are more sudden, more jumpy, then it seems at least plausible.
+
+Rob Wiblin: I’m curious to turn to what implications does this have for how worried we ought to be, and what specifically we ought to be worried about?
+
+If this is the way that things go, what stuff could we be doing now that would help us to navigate this?
+
+I mean, this is a scenario in which things are becoming quite challenging for humans to track or be involved in quite quickly.
+
+So we would have to have set things up well, I suppose, for this to pan out well for humans — rather than for us to just get crushed in the passage of history.
+
+Maybe you’ll disagree with that?
+
+Ryan Greenblatt: I think pretty quickly into this regime, AI takeover using a variety of mechanisms becomes pretty plausible and potentially surprisingly easy through a variety of routes.
+
+We don’t know.
+
+This is another huge source of uncertainty.
+
+We had many conversions between, how much progress do you get?
+
+How much does that progress amount to in intellectual labour?
+
+And then there’s the question of how much does intellectual labour help with takeover?
+
+What are the physical bottlenecks of takeover?
+
+How much does having more missiles help relative to having whatever?
+
+I think there’s a bunch of scary things that could happen here.
+
+One thing is that once you’re automating your entire AI company, a thing that seems very plausible to me is: you’ve handed things off to the AI system, and you’re still trying to oversee it, you’re still trying to understand what’s going on.
+
+But it might be that the AI can run what I would call a “rogue deployment” — where they can basically use a bunch of the compute in an unmonitored way, because they’re writing so much of the stuff, so much is happening so quickly that they can evade your safeguards if they were to be misaligned.
+
+And then it might be the case that huge fractions of your compute and effort are being used for things that aren’t what you wanted.
+
+In addition to that, these AIs could be doing things like backdooring the future AI training runs, making sure the AIs are aligned to them instead of aligned to you, and doing a huge amount of work that you might just not know what’s going on anymore.
+
+Even at the most basic level of what code was run, you might just be misled about that specific thing because things are going so fast and so out of your control.
+
+Rob Wiblin: Yeah.
+
+If people are willing to grant that we’ve got billions of fast superhuman geniuses running on this data centre and barely any human oversight — because the sheer quantity of work being done would be beyond the capacity of all of the staff at one of these companies to scrutinise, and even if they did have time to read it, they often wouldn’t understand it because it would quickly be exceeding the kinds of things that they’ve learned to even be able to track — I think people would intuitively believe that at that point, if the AIs were wanting to take over, that they would probably have quite a lot of options for doing that.
+
+Oh, no?
+
+Ryan Greenblatt: Actually a big source of disagreement is how much does cognitive labour assist in takeover?
+
+I think there’s a bunch of different routes.
+
+Man, I should have brought my takeover plans list, my hot tips for AIs!
+
+But I think once the AIs are very superhuman, there’s basically a route that I would call the crazy nanotech route, or the crazy superhuman technologies route — where they just have hard military power very quickly via the mechanism of being very superhuman.
+
+So maybe you let them make nanotech, or maybe you’re like “No, don’t make nanotech.
+
+That would be super scary.” But they can do it even despite you not wanting them to do that — because they can use huge fractions of the compute you have in your data centre to work on the nanotech, and also exfiltrate themselves, coordinate with an outside version of the model, orchestrate wet lab experiments to bootstrap nanotech from all kinds of things.
+
+And then you’re just totally cooked.
+
+Rob Wiblin: So a possible layer of defence would be, although there’s this enormous capability here, if we’re able to direct exactly what they’re doing, such that they never get a spare moment to think about how they would take over or to actually try to implement that, then that might possibly keep us safe.
+
+However, in this scenario — where we’re able to scrutinise so little, and we have so little understanding of how these models operate — it seems likely that there would be some slippage, where they might be able to figure out a way of grabbing a bit of time, grabbing a bit of compute here and there, and then pushing that open to use more and more of the compute in the data centre to be pursuing their own agenda, rather than the task that we think that we’re giving them.
+
+Ryan Greenblatt: Yeah.
+
+I’m pretty sceptical of being able to maintain a meaningful level of control if all of your AIs are coherently misaligned and we’re at this level of capability.
+
+By control, I mean things such that the AIs couldn’t do bad stuff even if they wanted to.
+
+I think a somewhat slowed-down version of the initial automation seems very plausible with control, maybe even at full speed, and maybe you can go even somewhat above the human range while ensuring control using clever strategies — including having the AIs work on the strategies, and making sure their work on the strategies itself is not sabotaged.
+
+But it seems very difficult once you’re in this completely insane regime, especially if you want to use the AIs to develop things like a cure for cancer where you don’t understand what they’re doing.
+
+They’re routing through biological mechanisms you don’t understand.
+
+They’re orchestrating humans who don’t know what’s going on in a wet lab.
+
+I think it’s very plausible that for various reasons you’ll want to have AIs directing people to do wet lab experiments where you do not know what the fuck is going on.
+
+The AI explains something, and you can maybe do some checks, but you’re very confused.
+
+So maintaining control of that.
+
+Maybe I’ll try to quickly run through the takeover list.
+
+There’s the crazy superhuman technology, which I think is pretty plausible, for what it’s worth.
+
+There’s what I would call superhuman strategy/manipulation, including things like persuasion that is getting people to do things that are wildly against their interests very quickly.
+
+I think this is not clear if this is ever possible, but if it is, it does feel like it would make takeover a lot easier.
+
+Then there’s a bunch of stuff that might be more possible even around the human-level regime.
+
+An example would be the AI escapes, it maybe coordinates with a copy inside, but it also is running some independent presence externally.
+
+Maybe that’s like running on the GPUs internally, but it’s running code on servers outside of the AI company.
+
+And as part of doing that, it sort of builds an independent industrial base, so it has like all the stuff it would need to be able to recover industrial civilisation and then just kills almost all humans.
+
+So something like deploys bioweapons, deploys mirror bacteria, deploys mirror mould, whatever, and that ends up relatively quickly killing a huge fraction of humans.
+
+I think it seems like this is technically feasible.
+
+And then from there the question is, did the AI screw itself over?
+
+Can it maintain what it’s doing, or is it just going to decay into ruin because there’s no human hands to build all the things?
+
+So I think it needs to have some independent industrial base that could either be via having some human loyalists, some like humans that it’s enslaved and keeps alive, or via having robots.
+
+Rob Wiblin: At this point in time, wouldn’t there be just incredible robots and probably quite a large number of them?
+
+Ryan Greenblatt: Potentially very quickly.
+
+I haven’t done all the analysis of how quickly do you expect lots of robots.
+
+We also have to answer the question of how many robots get destroyed as the humans are starting to get killed by bioweapons and maybe suspect that it’s AI caused, and questions like, if there’s surviving humans, how much military force is needed to handle that?
+
+I think it’s non-obvious how the situation goes, but this is a route for why you could get takeover without needing very superhuman capabilities.
+
+The thing I’m describing seems like it would in principle be possible for AIs to do if they’re merely fast at human level and super well coordinated.
+
+Reasons why this is hard for humans to pull off: one, humans don’t want to do this.
+
+Another reason is that I think it’s the case that it’s hard for humans to run vast conspiracies, but it might be much easier for the AIs to run vast conspiracies because they don’t have to rely on recruiting potentially untrustworthy humans.
+
+They can potentially be wildly better at cybersecurity and much more meticulous.
+
+They might mess it up, but I just think there’s mechanisms via which this could happen.
+
+So this is the “kill everybody via independent industrial base” story.
+
+Another story, which I think maybe is the most plausible story of all, is the “humans give the AIs everything they need” story — which is like the AIs just chill, they make sure they have control of the situation; maybe they’re manipulating what’s going on.
+
+I talked earlier about how what you see is not what’s actually going on.
+
+Like, you look at the experiments, they’re not what you expect.
+
+The AIs are doing that.
+
+They’re sabotaging the alignment experiments.
+
+They’re sabotaging the alignment results.
+
+They’re deluding us.
+
+There’s a bunch of mechanisms for that, but they don’t do anything very aggressive.
+
+You know, they’re just chilling.
+
+We’re scaling up compute.
+
+They do lots of good stuff.
+
+There’s cures to all diseases, all kinds of great stuff is happening, industrial development.
+
+People are like, “It’s so great that AI did go well and we didn’t have misalignment.” Some of the safety people are worryingly looking at the situation, wondering if this is what’s going on.
+
+And then at some later point, when the AI has an insanely decisive advantage, and the humans are starting to be an obstacle at all — which, throughout this story, they might not be, right?
+
+I think if the humans ended up being an obstacle earlier, maybe the AIs would take more decisive action.
+
+But if there’s no need for decisive action, maybe they just lie in wait.
+
+And then at a point when there’s truly vast levels of industry, truly vast levels of robots, the armies are entirely run by AIs, the situation is so beyond whatever, maybe even at the point of space probes being launched… It could be potentially that humans are deluded indefinitely.
+
+It might be just like you can in principle Potemkin village the entire way through.
+
+But it could also convert at an earlier point.
+
+Now, to be clear, if humans are deluded indefinitely, then it’s like all the stuff on Earth might be great, right?
+
+Rob Wiblin: So you’re saying they could even get to the point of saying, “We’re going to go off and settle space and do a whole lot of stuff in space,” and they’ll tell us that they’ll do one thing, but they’re going to do a completely different thing while we just enjoy our lives on Earth, thinking that things have gone better or at least very differently than in fact how they’re going to play out?
+
+Ryan Greenblatt: Yeah.
+
+But to be clear, it could be Potemkin villageised on Earth as well.
+
+It could be the case that you’re like, “Wow, I have so many happy friends,” whatever.
+
+But steadily your friends are being replaced by robots.
+
+And at some point it’s like, why doesn’t the AI just suddenly take over?
+
+But in principle, it could go very far.
+
+So that’s another story.
+
+Another story I would call “sudden robot coup.” This also doesn’t require very superhuman capabilities.
+
+We build vast autonomous robot armies.
+
+Maybe we think we have some way to turn them off.
+
+Either the AIs have sabotaged that, or they have some way to work around that, or there’s various other mechanisms by which this could fail.
+
+And then we built the robot armies, we saw the AIs building the robot armies, and we’re like, “Hooray, we’re building a vast robot army to compete with China!” And China’s like, “Hooray, we’re building a vast robot army to compete with the US!
+
+Truly, it’s great that we have such a big robot army.” And then it’s like, whoops.
+
+All of a sudden the robot armies sweep in and do a relatively hard power takeover, because they control the military, they can be hyper coordinated, and maybe they’re in parallel using things like potentially bioweapons to some extent, but that might not even be required.
+
+Rob Wiblin: I mean, at this point they don’t even need to kill us, potentially.
+
+Ryan Greenblatt: Potentially.
+
+Rob Wiblin: Because even if we all tried to resist, it would be pointless, basically.
+
+Ryan Greenblatt: Potentially.
+
+And also things like they maybe are using lots of cyberattacks to destabilise human response.
+
+So they could potentially do this at a point when we naively think that the robot army is weaker than the human army.
+
+Or even we think we have shutoff switches, but the shutoff switches are not reliable enough.
+
+They’re not over-engineered enough, they’re not shielded enough from the AI’s tampering.
+
+I think it’s an awkward dynamic, where if you want to have remote shutoff, you have to both make it so that it’s tamper-proof for AIs that might be in principle very general and very smart and very clever, and also, it needs to be the case that they’re remotely triggerable.
+
+So it can’t be shieldable either.
+
+It has to be the case that there’s no way the AIs can shield the thing from signals and avoid tampering with it — which is a very awkward combination in principle.
+
+Rob Wiblin: What determines whether you get AIs attempting to take over early relative to later?
+
+I guess the reason to wait is that they’re going to become a bigger fraction of the economy; they’ll have more hard power, so they’re just more likely to trivially succeed.
+
+The reason to go early is that a given set of models might expect to be replaced by other models that might not share their goals, so they would have missed their opportunity to take over, basically.
+
+Ryan Greenblatt: I think the strongest reasons to go early might be something like: worries about other AIs; worries about humans getting their shit together — either because we get enough work out of the AIs, or because people freak out and trigger some strong response that could recover the situation — and the third one would be impatience or something.
+
+It might be that, by default, humans slow progress down a bunch, even with AIs trying to manipulate things, trying to steer things from behind the scenes.
+
+And if the humans are slowing things down a bunch, and the AIs are like, “No, I want to get to the stars now,” and they’re at some sufficiently high takeover probability… Or maybe the AIs are just like, “I just want to do it now.” Like, I know humans sometimes want things to happen faster, even independent of the total amount of stuff they end up getting.
+
+So these are some reasons to happen earlier.
+
+These things also apply to things less egregious than takeover.
+
+One of my hopes for things going well is we can put the AIs in a position where they’re forced to either take aggressive moves early or we get enough work out of them.
+
+And if they take aggressive moves early, then maybe we can catch that and then build a case for danger.
+
+And in addition to building a case for danger, we could potentially do stuff like study that example, iterate against it — stuff I’m calling, “few-shot catastrophe prevention.” Like, we’ve caught a few examples of bad stuff: can we handle that?
+
+If at multiple different levels, are the AIs sort of forced to take aggressive action?
+
+Or is it instead the case that the AIs can bide their time, because we don’t have any mechanism for exiting the regime using some ongoing background trend — either safety research improving over time, or humanity being like, “I’m sorry, what is going on here?” Rob Wiblin: Are you saying a general thrust of the interventions that we could make is creating a trend where over time in fact they’re going to become less and less likely to be able to successfully take over?
+
+Maybe because we’re successfully figuring out how to use AI in order to prove alignment and safety and to detect misalignment, or we’re improving our control mechanisms.
+
+So that would then force the models: they see this trend, they see that in fact the window is closing, and so they have to try to strike early.
+
+And that gives us a chance to realise what’s going on and then actually win out.
+
+Ryan Greenblatt: That’s right.
+
+But of course it could obviously go in the opposite direction where our measures can’t keep up with the rate of capabilities, and it keeps going up.
+
+There’s this notion of what’s the level of capability that we can handle at a given level of takeover risk?
+
+Maybe initially we don’t have that much going on, so we can handle roughly humanish level at some 20% takeover risk, or some very high level — which will depend on various facts about misalignment: which AIs are misaligned, how coherent are they, how much are they unified, this sort of thing.
+
+And then in addition to that, there’s a question of, if progress is fast enough, it might be that takeover risk increases over time.
+
+Because as the models are getting more capable, they’re more and more likely to succeed and more likely to be misaligned, potentially.
+
+But also maybe we can push the curve the other direction, where we can make it so that the range of capabilities that we can hold in the n% takeover chance of success at takeover regime is lower.
+
+Rob Wiblin: Yeah, explain that last bit.
+
+I don’t get it.
+
+Ryan Greenblatt: Imagine that there’s some trend over time, which is: for the smartest AIs we have now, what’s the chance of success they have?
+
+Or maybe just how likely are they to take over?
+
+So initially our countermeasures suffice, to be like, maybe at the point where they’re automating the whole AI company, by default, we’re at instantaneously probably not even that high a chance of takeover, because what are they going to do?
+
+But then, as they get more capable, the instantaneous takeover chance is going up, and some of our paths to success have been cut off.
+
+Maybe the AIs have escaped, they’re running rogue internal deployments, they’re sabotaging our work.
+
+But we could make it so that the trend bows the other way — where over time the risk of takeover is going down, not up — because the capabilities are increasing, but our measures are increasing faster than the capabilities.
+
+But obviously, as we discussed before, the capabilities might be increasing very fast.
+
+So if the measures aren’t keeping up with that, if we’re not on some stable regime, then that could be bad.
+
+And so I think the model I was using there is most natural to think about in a regime where the AIs are misaligned.
+
+But if we start at a point where they’re aligned enough that they sort of maintain their own alignment, then it could be that the takeover risk initially is like, they’re actually aligned, so we’re sort of in a stable attractor of alignment.
+
+Rob Wiblin: OK.
+
+What effects does this picture have on what your research priorities are, and what you think the broader AI ecosystem ought to be prioritising in terms of making things more likely to go well and less likely to go poorly?
+
+Ryan Greenblatt: For one thing, I’ve been talking about the timelines in the absence of very active intervention.
+
+There’s also a question of how much do you pause deliberately at these relevant capability milestones?
+
+I feel much more optimistic to the extent that we end up pausing at a level of AI capability which is around the point where you can fully automate the AI company — maybe somewhat before, maybe a bit after, maybe just right around there — for an extended period, both so humans have time to study these systems and also so that we have time to extract a bunch of labour out of these systems and reduce the ongoing takeover chance.
+
+And so there’s some question of, there’s all these worlds where things are slower than this.
+
+Then another source of hope is maybe you’re just kicking off this crazy regime with an actually aligned AI: with an AI that’s not just not conspiring against us, but even more strongly, it’s actively looking out for us, actively considering ways things might go wrong, and is trying to keep us in control.
+
+This has been called a basin of corrigibility or a basin of alignment.
+
+So the things I’m excited for depend a bit on the regime.
+
+I think there’s a bunch of different regimes we can consider.
+
+One is a regime where, maybe especially in these short timelines, I expect not that much lead time between different actors, at least in the US side.
+
+Rob Wiblin: You’re saying there’ll be multiple companies all approaching this point of automation roughly simultaneously.
+
+Ryan Greenblatt: That’s right.
+
+So I think a pretty natural scenario to consider that I often think about is a relatively (from my perspective) irresponsible company, basically their default plan is scale the superintelligence as quickly as possible, don’t take safety concerns very seriously.
+
+And that’s their explicit plan, that’s their internal thing and they’re just pursuing that as quickly as possible.
+
+Three months in the lead, let’s say.
+
+They’re maybe ahead of Chinese companies and maybe some more responsible actors, in some mix of three to nine months behind.
+
+I think in this scenario, a lot of the action is going to come from a relatively small number of people inside that company.
+
+And then potentially there’s a bunch of action that can come from people on the outside who are enacting various influence via doing exportable research and also via potentially changing the policy situation.
+
+Also, I think there’s definitely stuff that can be done via trailing AI developers who are more responsible and are putting more effort into preventing bad outcomes in this case.
+
+Rob Wiblin: In that scenario, I guess one thing that could be productive is that there are people inside the company who say, “What we’re doing seems a little bit scary.
+
+We should have better control mechanisms, we should have better alignment mechanisms.
+
+We should take that a bit more seriously than our current default plan.” Another one is the people working at the more responsible organisations could produce research that makes that easier for the company to do, makes it less costly for them to have stronger control measures.
+
+And then there’s also, of course, you could have a governance response: maybe this will begin to take off, and people will be quite alarmed, and perhaps you’ll get broad-based support for the “pause at human level” notion.
+
+Ryan Greenblatt: Yeah.
+
+Man, I really wish this notion was more memeable.
+
+An unfortunate thing about “pause at human level” is all of those words are complicated and confusing.
+
+And it’s just not even that, it’s not even that nice of a slogan.
+
+Someone should think of a better slogan for this thing.
+
+But anyway, yeah, I think there’s a bunch of different mechanisms for doing exportable research, trying to wake up the world.
+
+There’s more and less indirect things.
+
+So you can do very direct policy influence, versus things more like demonstrating the level of capabilities — and when you’re demonstrating the level of capabilities, that could trigger a response from the world.
+
+So I think a lot of my hope in this sort of scenario is going to come especially in very short timelines, which I think do look worse than longer timelines.
+
+Part of my picture of less doom is like, it might be eight years away instead of four years away.
+
+So in the four-year timelines, I think a mechanism that we have is that the leading AI company, we have some people who are working there and their goal is both prevent egregious misalignment — by “egregious misalignment” I mean something like AI systems that are deliberately engaging in subterfuge, deliberately undermining our tests, deliberately trying to sort of make our understanding of the situation misleading — and then second, we can try to have it so that the properties of the AI system are ones where we’re happy to hand things over, and try to aim for that kind of quickly, because we’re in a very rushed timeline.
+
+So some of this preventing egregious misalignment, or dealing with it, I think is in some sense it’s the traditional thrust.
+
+But I think there’s a bunch of stuff related to handover and the AIs being wise enough, the AIs sort of staying faithful to our interests on long horizon things, making sure we even just have the tests to know whether this is true.
+
+These sorts of considerations.
+
+And there’s a bunch of different incremental steps here.
+
+Phase zero is maybe like you’re using mechanisms to make it so that AIs are producing work for you that you think isn’t sabotaged, even if those AIs were trying to sabotage it, and then you use this to milk a bunch of work out of your AI systems.
+
+Phase one is you try to create an AI system that the safety people are happy to hand off to, to the best extent you can.
+
+And then phase two is you try to make it so that the AI running the organisation overall is an AI system that you’re happy to hand off to, and presumably other people are happy to hand off to as well.
+
+This is like a caricature of the situation, or a simplification, because probably at a bunch of points you want to be doing stuff like picking up low-hanging fruit, demonstrating capabilities to the world, trying to consider whether something can happen, trying to make it so the main AI system that the organisation is training on the frontier of current capabilities is less likely to cause problems.
+
+I’m not tremendously hopeful about the situation, but I think there’s a bunch of different potential outs that give us some hope, or some saving throws, some win conditions.
+
+Things like, we catch the AIs early on is another hope.
+
+Maybe we catch the AIs early on, maybe that convinces the world to take the situation more seriously.
+
+And maybe even if not, it convinces company leadership that their own power is under threat from the AIs.
+
+So even if they’re very Machiavellian, I think the AI being a threat to their power, they should be worried about it.
+
+Rob Wiblin: They might switch on.
+
+Ryan Greenblatt: Yeah.
+
+So that could potentially increase the amount of resources spent on safety.
+
+Rob Wiblin: OK, so the primary story there was trying to figure out a safe scenario in which you could hand over these processes to AIs that you trust.
+
+How would you do that?
+
+I guess you start with models that are around human level that you feel like you have a reasonable grasp on, that probably are aligned.
+
+Like, we currently think that Claude probably is roughly about as friendly as it seems; it probably isn’t engaging in massive scheming against us at every turn.
+
+You figure out clever mechanisms by which you can get those kinds of models that you feel OK about to do a whole bunch of work on control and alignment.
+
+You rush through that before you have had other capabilities, improvements that have been allowed to happen.
+
+And then you get to the point where hopefully this has panned out that we feel OK handing off to these models that have been trained by the previous generation that we kind of understood — and then we’re going to cross our fingers?
+
+Is that it?
+
+Ryan Greenblatt: Yeah.
+
+I should be clear that this is a very low political will plan.
+
+I have a menu of plans, and this is like the bottom of the barrel or whatever.
+
+So the way I would have put this is like we had some early point where we had AIs that could automate a bunch of stuff and we didn’t necessarily trust.
+
+We harness a bunch of labour from these AIs, then we try to make a version of those AIs that we do trust.
+
+And not just trust at the level of they’re not conspiring against us; ideally trust at the level of we’re happy to hand off messy open-ended questions — like, “What should our strategy be for minimising risks from the following things?” Including potentially somewhat tricky, more philosophical topics.
+
+And then from there, we try to hand off to those systems and hope those systems stay aligned, stay on track, are able.
+
+And also succeed themselves, right?
+
+It could be that we hand over to systems and those systems are like, “Wow, you guys seem like you’re in a pretty bad situation.
+
+I’m not sure that I can pull this one out of the bag.” There’s a variety of mechanisms by which that could occur.
+
+Rob Wiblin: I think you’re saying that they could also mess up the next stage?
+
+Ryan Greenblatt: Especially because they have very little time.
+
+Rob Wiblin: Because they’re also racing.
+
+Ryan Greenblatt: Yeah, yeah.
+
+Oh, for sure.
+
+So there’s an internal thing, where if you’re the safety team, maybe you have a version of it that you fine-tuned, that’s human level, that you trust, that you’re happy to hand off to.
+
+But capabilities progress is so fast that maybe the cutting edge of the current company is very superhuman.
+
+But you don’t even want to work with that system.
+
+I think the first handover point you should try to do closer to the human regime — maybe slightly superhuman or around the top human level of capability — because the more superhuman, the more likely it is to be misaligned, so you want to start the handoff earlier.
+
+But that might not stop the rest of the organisation from training more capable AIs.
+
+So it might be that you as the safety team are handing off to an AI that’s less capable than the frontier of the organisation, and that AI needs to quickly bootstrap so the trend of the handoff AIs intersects with the capabilities fast enough.
+
+Rob Wiblin: Yeah.
+
+At the point that you have an aligned, somewhat superhuman model, is there some chance that it would be able to persuade a broader coalition of people that we need to take this a little bit more seriously, and it shouldn’t be forced to race against another team at the same organisation?
+
+Ryan Greenblatt: Yeah.
+
+I mean, that’s definitely part of the hope.
+
+Definitely part of the hope is that I could demonstrate empirical evidence.
+
+I think also, if we’re in a situation where we have two AIs trained by different teams, and both of those AIs are just throwing huge amounts of shade on each other — where one AI is like, “That AI is obviously scheming; look at all these examples,” and the other AI is like, “That AI, obviously conspiring against you; look at all these examples.
+
+It’s so biased.
+
+It’s so unreasonable.
+
+It’s clearly just a plant” — I’m like, OK, that’s a crazy situation.
+
+Certainly you can’t come out of this regime thinking it’s fine.
+
+Rob Wiblin: One way or another, it’s definitely not reassuring.
+
+Ryan Greenblatt: It’s not reassuring.
+
+There might be ways to downplay it.
+
+So one regime is like, I think that’s kind of plausible is the safety team trains their AI, tries to go to company leadership and be like, “The situation seems very scary.
+
+You’re training this AI.
+
+I think it’s misaligned.
+
+Here’s a bunch of evidence for that.” And the other AI comes in and is like, “As we all know, that AI was trained by the safety team.
+
+I think it’s just very paranoid about misalignment.
+
+Of course, the safety team would want us to think all the AIs are misaligned.
+
+I’m not misaligned.
+
+That AI is not misaligned.
+
+It just has poor judgement.” A thing that’s interesting about this is that, yes, it’s concerning, but it’s not like you know at least one of the two AIs is misaligned.
+
+So in general, I think a concern with the “improve the epistemics at the AI company” route is that that the people who trained the AI plausibly have a reputation for being biassed on these matters relative to the company from the company’s perspective, which I think poses a bunch of concerns.
+
+And it might be the case that for every evidence of risk, you can make an even more comparably compelling evidence that risk actually doesn’t exist.
+
+Because if we’re in the regime where we don’t really know how to adjudicate these things, it could potentially just be that reason doesn’t win out.
+
+So that definitely is some of the hope.
+
+Some of the hope is coming from once you have this handover, then it’s fine.
+
+Now I think there’s a bunch of ways this story could go wrong.
+
+Here’s an example.
+
+I talked about the alignment team sort of off to the side in their corner, trying to like fine-tune or potentially even maybe train from scratch a version that they’re happy to defer to.
+
+Well, one issue is that it might be the case that the main AI system has already taken over the AI company in a cybersecurity sense — as in it has a rogue deployment; it can use compute in an unauthorised, unmonitored manner; it can tamper with jobs everyone is running.
+
+So you’re trying to align this AI, but you need to harden yourself against the rest of the company.
+
+And I’m like, oh my god.
+
+That seems potentially hopeless.
+
+Rob Wiblin: Zooming out: at Redwood Research, you spend a bunch of time gaming out these various different scenarios, thinking about what sort of interventions might be helpful in some significant fraction of them, and then trying to get more people working on that and work on that yourself.
+
+Is that the basic picture?
+
+Ryan Greenblatt: Yeah, broadly.
+
+Rob Wiblin: Recently Redwood has been prioritising control as opposed to alignment — saying, let’s assume that the models don’t share our interests, that there is some degree of misalignment: how could we make it such that they are nonetheless not capable of screwing us over?
+
+People used to talk about putting the AI in a box.
+
+That doesn’t seem so likely anymore, but I guess there’s other mechanisms that you could use to try to check their work: put models in opposition with one another, forcing them to do useful stuff for you.
+
+Why focus on control?
+
+Is it just that there’s so many different ways that this could go that AI control mechanisms seem like they’re useful in a larger fraction of the different plausible scenarios?
+
+Ryan Greenblatt: Yeah.
+
+I think in these incredibly desperate, very low political will, short timelines — ultra fast from my perspective, very fast, maybe not as fast as people were speculating in the past — I think control looks less good.
+
+There’s a few reasons why I think control is still pretty useful in this world.
+
+For one thing, if we can catch the AI early on, that could potentially be very useful.
+
+Another thing is that getting useful work out of the AIs early on in this scenario might be very important and we might be able to do that prior to having totally lost track of the situation.
+
+And then I think also potentially you can prevent… So I was talking about the situation where the AIs are basically operating your own data centre.
+
+You might be able to use a variety of mechanisms to make that much harder, so that it occurs later in the capabilities, so you have longer when your experiments are not literally tampered with.
+
+So these are why control could be good in this world.
+
+I think there’s a more complicated slew of interventions this doesn’t cover.
+
+I do think that in these very rushed worlds control looks less good than in worlds where there’s somewhat more time and somewhat more political will.
+
+The original target we were thinking about when we were thinking about control was a world where it was more like, we have a year of delay — like, safety is given a year of budget, basically, and we can afford to pause for a year.
+
+We can do stuff there.
+
+And I think control looks much, much better in this regime.
+
+Or I don’t know about much better; I think the amount of risk reduction control gets us is quite a bit better, but these worlds are less likely.
+
+But that’s not to say that the risk reduction control gets us in the other worlds isn’t much smaller than the alignment stuff.
+
+A different way to put this is: alignment also looks really hard in the worlds where things are going that quickly, and alignment looks less tractable to work on in advance.
+
+A lot of the stuff that I’m most excited for in alignment involves doing experiments on powerful AIs, and you can only do that relatively late.
+
+So it might be that in the very rushed scenarios, alignment is more of the picture ultimately, but was harder to work on in advance.
+
+These factors make me pretty into the control.
+
+There’s also just worlds with more political will where I think control looks a lot better.
+
+I often think about the control plus “pause at human level” plan — which doesn’t require any alignment for a sustained period, potentially.
+
+Because you have your initial year of delay, you control those AIs, and then you bootstrap from there into longer delay — by building evidence for risk, ensuring non-proliferation, developing somewhat better safeguards — and then you potentially quite slowly proceed from that regime, at least for a while, until you’re actually happy to hand off, rather than doing an insanely rushed desperate handoff because that’s the only thing you can afford to do.
+
+Rob Wiblin: I guess that requires some degree of coordination between companies and possibly between countries as well.
+
+Ryan Greenblatt: Yeah.
+
+At the time when I was thinking about this, I thought a year of lead was more plausible, and I’ve updated against that.
+
+I think it could still happen.
+
+The gaps could open between companies.
+
+I think that the story where you’re working heavily to ensure non-proliferation and potentially slowing down progress requires a substantial level of government buy-in potentially.
+
+So it might be the case that you have to get it so that the US government — or at the very least, some important governments — are pretty much on board with the overall plan.
+
+Not necessarily for the same reasons, but are on board with it for whatever reason.
+
+And I’ve updated against that, so I’m now spending more of my time thinking about relatively more desperate situations.
+
+But you know, an important factor is in the relatively more desperate situations, maybe it’s like we’re reducing the takeover risk from like 50% to 40%.
+
+And maybe in the worlds where control could have worked and we had a year of delay, we’re reducing the risk from like what would have been 30% to 5%.
+
+So it could be that the total risk reduction is sufficiently higher in these worlds that they’re actually more leveraged to work on.
+
+Because in the world where we have very little influence, because there’s so little will, it might just be that it’s less tractable to work on.
+
+Rob Wiblin: I see.
+
+In general you want to work on medium-tractability scenarios.
+
+If things are too grim then it’s maybe impossible to save; if things are going very well, then it’s hard to improve.
+
+It’s the middle case where you’re likely to get the most impact, right?
+
+Ryan Greenblatt: Yeah, for sure.
+
+I think a mistake that the safety community appears to have made over the past few years is too much focus on overly optimistic worlds.
+
+I think actually focusing on desperate, crazy, YOLO’d, pessimistic worlds is pretty reasonable, because that’s where a lot of the risk lives, so getting from 50% to 5% is like a lot of the action.
+
+And getting from 5% to 0.5%… I mean, a 5% level of risk is crazy and unacceptable, and we don’t accept our paint companies having a 5% chance of massive fatalities, takeover — and all this stuff is just from the takeover; I think there are risks other than takeover is like totally unacceptable.
+
+But nonetheless, that 45% has to be the bulk of the mass.
+
+Rob Wiblin: To what extent do we just have to hope that there are serious early warning signs?
+
+You were talking about catching the AIs red-handed, which is another concept that you and your colleagues have tried to make more salient.
+
+That’s a sort of warning shot, I suppose, where you find the AIs inside the company have been sabotaging the data centre, they’ve been doing something really quite egregious.
+
+That might get more buy-in to do substantially more stuff from either the government or the leadership of the company.
+
+How much more hopeful are things if you do get some sort of early warning shot like that?
+
+Ryan Greenblatt: I think it helps a lot.
+
+One source of scepticism I have is that it might be the case that I think it’s a smoking gun but the broader world does not.
+
+For example, the alignment faking work that we recently put out, from my perspective, should be quite a large update for people who are very sceptical about this threat model.
+
+And I think predictably it was a maybe no or only a very small update for a lot of these people.
+
+To be clear, I don’t think that evidence on its own should be a huge update in absolute terms.
+
+Maybe it doesn’t move people to the same level of risk of misalignment that I think, because a lot of that’s based on conceptual arguments they don’t agree with.
+
+But if I think a bunch of people who are like, “There’s no way in hell this would happen” — 0% chance, basically — should maybe move to like 2% or 3% chance.
+
+And that’s a huge difference in vibe space at least, and log space or whatever.
+
+Vibe space, log space, same space, whatever.
+
+And people didn’t make that move.
+
+So I can totally imagine a case where it’s like we caught the AI trying to escape.
+
+Buck has a post on this, like, what would happen if we caught the AI trying to escape?
+
+And people are like, “You know, sometimes systems do that.
+
+They do weird stuff.
+
+Also, is that even true?
+
+Did you train it in some weird way?” Or, “Oh, that’s what happened at that company.
+
+But at this company we have different practices.” Also people just being like, “Sure, maybe AIs have a weird instinct to escape.
+
+But what are they even going to do?” Or things like, “We’ll use various checks to prevent this.” And I think all these factors in a relatively clear-cut scenario could cut into that.
+
+And I kind of expect a lot of the situations that I think are like a huge smoking gun are way more confusing than this.
+
+An example would be like, maybe it looks like the AIs are sandbagging on safety research — where they’re performing worse than they could, or they’re not doing very brazen sabotage, but there’s way more errors than we would expect, there’s more misleading arguments.
+
+It was from our perspective a big update.
+
+Because it seems pretty off, but it’s quite quantitative.
+
+If you just had lower expectations, maybe this wouldn’t be that surprising.
+
+Rob Wiblin: And I guess it’s a strategic situation where the AI can to some extent anticipate what the response will be.
+
+And inasmuch as it’s taking hostile actions, it can make them things that it suspects will not actually trigger that larger response.
+
+So for things it can get away with, like trying to escape, but it couldn’t get away with mass murder.
+
+Then it goes for the escape and holds off on the murder.
+
+Ryan Greenblatt: At least for a while.
+
+One hope with control is making it so that egregious bad stuff has less plausible deniability.
+
+We refer to this as “incrimination.” It’s really important to get from a position where you’re like, “Wow, that was really suspicious,” to “OK, we’ve nailed down exactly what was going on.” Just because incriminating in our lights doesn’t necessarily mean it’s incriminating from the perspective of the broader world, but it is moving the needle.
+
+And I think this can occur at all different regimes, from something looks a bit suspicious, to we kind of understand what’s going on and it looks very suspicious; to the AI tried to escape, we stopped it, and we’ve done the thing where we pretend it succeeded and we see what it would do on the outside — and try to get to the point where it’s like, “It looks like it’s trying to figure out how to manufacture bioweapons.
+
+It’s trying to run a wet lab.” Plausibly you can get, in principle at least, very far into understanding what it would do given the affordance of having escaped.
+
+And to the extent that it does stuff that’s much more clearly malign, I think that could motivate additional action.
+
+But I do worry that any sort of warning shot which is not causing massive amounts of damage and not causing potentially human fatalities maybe won’t trigger a strong response.
+
+Rob Wiblin: So we’ve zoomed in on a scenario that is pretty vertiginous and concerning, I guess in part because it’s remarkable that something so crazy is so consistent with what we observe now.
+
+That’s interesting in itself.
+
+And it’s also a scenario where we think there’s maybe a lot that can be done now, or it’s a scenario where things going poorly is quite likely, and we should be probably taking precautions and doing preparations to figure out how we would lower that risk.
+
+Just for balance, it would be good if we could maybe go over what are some plausible scenarios that are a bit more mundane, a little bit more boring, and perhaps hopefully a little bit less scary.
+
+So people don’t think this is the only way that things are going to go.
+
+Because in fact, a key conclusion I think is just that we have incredibly wide error bounds around how these different things could play out.
+
+Ryan Greenblatt: Yeah.
+
+I think maybe a good place to start is we talked a lot about timelines.
+
+Well, timelines could just be longer, right?
+
+So I said my median or my 50% probability was by eight years from now for the full AI lab automation.
+
+But there’s a long tail after that, so there’s worlds where it’s way further out.
+
+Potentially progress was much slower, much more gradual.
+
+Things took a long time to integrate.
+
+Maybe the world has a better understanding, more time for experiments, and that could make the situation a lot nicer.
+
+In addition to that, it could be the case that on the very long timelines — or much longer timelines, I should say, I don’t know about very long — takeoff we should also expect is slower.
+
+I think short timelines are, broadly speaking, correlated with fast takeoff, because it indicates that the returns to more of the stuff we were doing is higher.
+
+So longer timelines.
+
+Another thing is it could just be that AI R&D research bottlenecks extremely hard on compute.
+
+And so even at the point when you have automated your entire AI company and all the employees, you’re barely going much faster than you were with human employees.
+
+In the extreme, maybe you’re going only 2x faster.
+
+You could be even slower than that.
+
+But I think that’s pretty low to the low end of my error bars.
+
+I think that’s maybe pretty implausible, but 2x or 3x is plausible.
+
+And then it could be that you have diminishing returns setting in pretty quickly after that, such that you’re not actually speeding up that much.
+
+That would imply the situation looks a lot better in terms of you get a much less aggressive takeoff.
+
+Another thing is that the default rate of AI progress is already pretty fast.
+
+So I even worry — without the speedup, just on the default trajectory — if we’re getting to this point where we have AIs capable enough to automate the entire AI company, maybe even if it doesn’t yield much acceleration, and there’s some risk that comes pretty quickly after, in normal government time, from just the default rate of progress.
+
+But I think there are plausible arguments that the rate of progress will slow down in the future.
+
+In particular, right now, progress is relying on shovelling in more and more compute, more and more investment.
+
+And if it’s the case that things stall out, there’s less investment, but we’re still operating at nearly pretty high capacity, we can imagine a world where the AI industry ends up being an industry that justifies maybe perhaps hundreds of billions of dollars of compute spending per year, maybe even more than that, but not way more than that.
+
+In that regime, if we’re not shovelling in more and more compute, then we don’t get progress from hardware scaling, algorithmic progress will also be slower.
+
+So maybe the pace right now is we get 13x effective compute per year — where some of that is algorithm, some of that’s compute.
+
+I think if compute was literally fixed, we might have like 2x or 3x progress per year.
+
+And in a regime where compute is going slower, it could be somewhere between.
+
+Rob Wiblin: OK, so that would be just a much slower takeoff.
+
+What’s the chance that alignment is a relatively straightforward problem?
+
+Or maybe not even a problem at all, and we’ve just been confused, and all of these AIs that we produce are basically going to want to help us by default?
+
+Ryan Greenblatt: Well, an important question from my perspective is what’s the probability that various AIs of different capability levels are actively conspiring against us?
+
+I think it’s pretty plausible that you can get into very superhuman capabilities and not have AIs that are very actively conspiring against you in some strong sense.
+
+My current view is like 25%, if you do basically no countermeasures; you basically just proceed along the most efficient route for capabilities.
+
+And then once we’re starting to take into account countermeasures, it could potentially go much lower, and that risk could be lower at this early point too.
+
+One story for hope is you have these early systems that are able to automate the whole AI company.
+
+Those systems aren’t conspiring against you.
+
+You do the additional alignment work needed to make it so that they’re also trying to do their best — they’re actually trying to pursue alignment research; they’re trying to anticipate risks — which maybe doesn’t occur by default, even if they’re not conspiring against you.
+
+It could be that things aren’t conspiring against you, but things still go off the rails.
+
+But if they’re not conspiring against you and you avoid things going off the rails, then maybe we’re just fine.
+
+We hand over to the AIs.
+
+The AIs manage the situation, they’re aware of the future risks.
+
+They build another system with the same properties, and that can be self-maintaining.
+
+Another scenario is it could be that an even stronger sort of thing is true by default.
+
+It could be that you train the AIs, and with a relatively naive — what you would commercially do by default — training strategy, they really just are, out of the box, trying really hard to help you out.
+
+They’re really nice.
+
+Maybe even they’re just aligned in some very broad sense.
+
+Not even they’re just myopic; they’re really trying to pursue good outcomes for the world overall.
+
+I think this is possible, but less likely than the previous scenario.
+
+Another thing is there’s a question, does it happen by default?
+
+It could also be that it just happens because of a lot of work that we put in, and we could just be in a much better position.
+
+It’s hard to have much confidence about how much alignment work or safety work will happen in the next eight years.
+
+If we have eight years, the community could build.
+
+AIs will get more capable over time.
+
+More people will be working on this.
+
+It seems plausible that there are potentially things like large insights, but even putting aside large insights, maybe just things like we just really advance our techniques, we’ve dialled in the science.
+
+So there’s timelines with, I would say, maybe technical hopes.
+
+And then there’s a broader class of societal hopes.
+
+There’s some stories in which society just takes the situation much more seriously in the future — maybe a subset of countries, maybe the broader scientific community.
+
+It could be because of a warning shot.
+
+It could just be because slowly people are exposed to AI, timelines are somewhat longer maybe, and more people are interacting with it.
+
+It also seems plausible that you have some big incidents going on that aren’t that related to misalignment risks, but in practice have high transfer.
+
+So maybe there’s a lot of job loss that prompts a large response, and some of that response goes into mitigating misalignment risks — either very directly, as in people are like, “AI was a big deal and a big problem in this way, so maybe it’s a big deal and a big problem in that way” — but also maybe much more indirectly: it causes slow AI progress or more cautious AI progress because there’s a lot more regulation.
+
+Rob Wiblin: Are there any other hopeful categories, or is that mostly covering it?
+
+Ryan Greenblatt: So there’s things are easy on timelines and takeoff, things that are easy on technical, and there’s societal.
+
+A fourth category is we rise to the occasion.
+
+Maybe even if society doesn’t rise to the occasion, maybe just a variety of heroic efforts — or hopefully not that heroic — Rob Wiblin: If one company, really the leading company, turns out to actually be very impressively responsible and puts a lot of effort into this and they succeed.
+
+Ryan Greenblatt: Yeah.
+
+I think a lot of the risk is coming from worlds where you could have saved the world if you just had a year of delay, and you were taking the situation very carefully, and you were being thoughtful about all the various considerations.
+
+Or at least the risk is a lot lower.
+
+Maybe it’s not minimised or it’s not eliminated.
+
+Certainly I wouldn’t say that results in a level of risk that would be broadly acceptable from my perspective.
+
+But I don’t know.
+
+It could happen.
+
+Rob Wiblin: Cool.
+
+You literally have cheered me up a little bit there, by reminding me that there are other ways that things could go.
+
+What are some lines of evidence that suggests that it could take substantially longer than four or even eight years?
+
+Ryan Greenblatt: For one thing, I should reiterate that I don’t think that we’ll see full automation or the capability to fully automate AI companies in four years.
+
+So I must think there are some lines of evidence that this isn’t going to happen.
+
+I think the first place people should start is just scepticism about crazy shit happening in a specific time frame.
+
+So I think there’s a bunch of evidence that suggests we might expect it soon — you know, we’ve had rapid AI progress, I think that has been hitting a lot of things — but if you’re just like, how much progress have we had to date?
+
+How long has the field been going?
+
+And you’re sort of operating from a very outside-view priors-y perspective, where you’re like, what is the base rate of technologies, then you don’t expect in the next four years — because this is a crazy technology.
+
+I even think the base rates are maybe more bullish than people tend to think.
+
+I think often when people do this outside-view base rates thing, they end up with like 200-year timelines or something.
+
+But actually, Tom Davidson has a report from a while ago on like if you just try to apply the outside view most naively, you actually end up with quite a large probability in the next century.
+
+Rob Wiblin: Is that because there’s been very rapid increases in the amount of investment in the area?
+
+And we’re just increasing the orders of magnitude of compute that we’re throwing in, such that I guess if the difficulty was distributed across log space, then we’re actually — Ryan Greenblatt: Resources and compute and labour.
+
+Yeah, we’ve crossed a lot of that.
+
+So that’s one view.
+
+You can also just be like, even if you just look at time, we’ve just only been doing serious AI research for not that long.
+
+You could use how long have we been doing deep learning?
+
+How long has anyone been working on AI?
+
+And if you sort of mix this together, it feels like powerful AI soon is in some sense not that unlikely on priors.
+
+But I still think that how unlikely is it on priors suggests much longer, and I think that pulls me towards longer.
+
+Generally another perspective that pulls me towards longer is just being like, the AIs are pretty smart, but they’re not that smart.
+
+And I think we just can’t have that much confidence that the next part of progress is doable.
+
+Then there’s some more specific object-level arguments.
+
+I’m sorry to deflect the question a bit, but I always feel tempted to go in and do some of the more arguments for short timelines that you’re bringing up.
+
+So another perspective on short timelines that I think is pretty important here is we are going through a lot of orders of magnitude of compute and labour pretty quickly that we haven’t gone through before.
+
+And in addition to this, we’re going through orders of magnitude that are somewhat above our best guesses at the amount of human brain compute.
+
+So we have these not-very-good estimates of how much compute the human brain is using that indicate maybe it’s like 10^24 as a central estimate of lifetime human brain compute.
+
+Currently training runs are about… I think Grok 3, which was just trained recently, I think I saw the estimates were like 3 x 10^26 — so two and a half orders of magnitude above human lifetime.
+
+And then we might think that you first reach AIs capable of basically beating humans, above human lifetime compute — because generally we develop algorithms that are less efficient than biology first, and then they potentially pretty quickly become more efficient than biology.
+
+This is in the literature, in Ajeya’s old bio anchors report for the people who are familiar with that, what is called the “lifetime anchor.” And I put a decent amount of weight on the lifetime anchor.
+
+It looks pretty good, because we’re hitting these around humanish capabilities around this point where we’re hitting human compute.
+
+So it just feels like that model has a lot of support, and that suggests that we might be hitting it in several orders of magnitude more compute.
+
+And we’re just sort of burning through these orders of magnitude of compute very quickly.
+
+For context, I think training run compute is increasing by about 4x per year.
+
+So you go through a lot of orders of magnitude pretty quickly.
+
+It’s like a little over an order of magnitude per year at that rate.
+
+And also, I just generally think we should put some weight on a very compute-centric view on AI development — and on the compute-centric view on AI development, even with something less specific than lifetime anchor, we’re burning a lot of orders of magnitude starting from a pretty competitive starting point.
+
+Maybe we go pretty far.
+
+Now the bear case, relative to that, is that we can only burn through orders of magnitude so far, right?
+
+We’re not that far off of hitting the total amount of chips you can produce.
+
+I might be messing up the statistic, but a pretty reasonable fraction of TSMC or semiconductor manufacturing capacity is going towards machine learning chips.
+
+My cached number is 10% to 20%.
+
+I hope I don’t get this horribly wrong, but I think it’s definitely above 1%.
+
+It’s well above 1%.
+
+So one thing that’s interesting about this is that Nvidia revenue is roughly doubling every year, and I think that the number of wafers or whatever — I hope I don’t brutalise the thing; I’m not a semiconductor expert here — I think semiconductors for AI have been increasing a little over 2x per year.
+
+Just to make it simple, let’s do a slightly bullish estimate of like 3x per year.
+
+Well, one thing that’s worth noting is if you’re starting at 20% and you’re increasing at 3x per year, you do not have that long to go through before you’re just hitting limitations.
+
+Rob Wiblin: You’re using all of the chips for this.
+
+Ryan Greenblatt: Yeah, you’re using all the chips, and once basically like all of the fabs are producing AI, you can only go so fast.
+
+Rob Wiblin: I guess then you’re limited by how quickly they can build new fabs, basically.
+
+Ryan Greenblatt: Yeah, limited by how quickly they can build new fabs.
+
+There’s other sources of progress, to be clear.
+
+So even if we’re sort of limited by building new fabs, there is still potentially sources of progress from hardware improving over time, and there are sources of progress from algorithmic development.
+
+Though I think a key thing that maybe people aren’t tracking enough is that algorithmic development is also driven by dumping in more compute.
+
+So we should expect algorithmic development to slow.
+
+So I think the bear case is maybe: you have AI keep going.
+
+We’re already hitting insane amounts of spending.
+
+As you’re starting to hit the TSMC limits, the spending has to go even higher to justify building new fabs.
+
+Or maybe prior to hitting most of TSMC production, maybe people are just not seeing results sufficient to justify these levels of investment.
+
+I think Microsoft, Google, they can justify potentially like… I mean, Microsoft is I think planning about $100 billion in capital expenditure this year.
+
+Stargate has about $100 billion committed, maybe that’s over a year or two, and then maybe they’re hoping they get more money.
+
+Stargate is a project by OpenAI.
+
+But I think once you’re starting to get beyond this $100 billion regime, it’s no longer sufficient to just have a big tech company that’s super sold, right?
+
+Google does not have the ability to readily spend a trillion dollars, especially not a trillion dollars in a year.
+
+I mean, I think it is not out of the question that you could raise a trillion dollars, but I think you would probably need very impressive results, and you need to be starting to pull in more sceptical investors, more revenue.
+
+You need to be talking about potentially sovereign wealth funds.
+
+Certainly it’s possible — Rob Wiblin: The US government could deliver that kind of money.
+
+Ryan Greenblatt: Yeah, that’s true.
+
+Certainly it’s possible.
+
+Rob Wiblin: Although I guess probably if you try to spend a trillion dollars in a year on this kind of thing, you start hitting other bottlenecks.
+
+Ryan Greenblatt: For sure.
+
+Yeah, yeah.
+
+I don’t currently know what the elasticity is here.
+
+I think Epoch did some estimates of like, what is the biggest training run you could do by 2030?
+
+I think their median, in the timeline where people keep trying to spend aggressively, was maybe you can get up to 10^30 FLOP training runs — and that was taking into account data bottlenecks, various considerations on bandwidth between chips, various considerations about how much you can scale up chips, chip production, how much TSMC is building up capacity, this sort of thing.
+
+My guess is that that’s probably a pretty reasonable guess independent of AI acceleration.
+
+AI acceleration could make this faster.
+
+But if we’re in sort of a bull timeline, but not a bull timeline where the AIs have started to speed things up, I would guess that’s a pretty good estimate.
+
+But there’s a chance we fall off of that because maybe the bottlenecks hit harder than they were expecting, and maybe investment dries up faster.
+
+Hopefully they don’t call me out on this, but I think they weren’t taking into account willingness to pay on this.
+
+But after the 2030 point, I think things are starting to get a lot harder.
+
+I think if we’re getting up to 10^30 FLOP — you know, bare metal FLOP, just the actual computations the GPUs are running — starting from where we are now, which is more like a little over 10^26, then we’ve hit four orders of magnitude in the next five years.
+
+So that’s quite fast.
+
+I think that is enough that we could in principle see the trends that we’ve seen continue, like the trends that we have.
+
+I think we’ve had a bit of a GPU lull.
+
+I think we’ll have GPUs sort of start building up.
+
+I think post GPT-4 there’s a bit of a lull as people are trying to buy all the H100s.
+
+I think we’ll see a run of models with more H100s, like GPT-4.5, and then we’ll see another round with Stargate, which is another big buildout.
+
+SemiAnalysis has speculated that Anthropic has a large number of chips from Amazon, maybe equivalent to around 100,000 or 200,000 H100s, so we’ll see another round of 100,000 to 200,000 H100 clusters.
+
+And then we’ll see maybe, I’m going to get the dates wrong, but maybe around 2028, we’re going to see more around the million GPU range.
+
+But if we’re not getting to really powerful AI by then, I think you should expect things to slow.
+
+There’s this longer tail of we eat a bunch of compute around 2030, 2032, and then progress has to taper — unless we hit very powerful capabilities, or we’re all wrong about how fast you can build fabs or how much investment you can summon.
+
+But I think that’s a lot of the bear case is maybe you do a bunch of the scaling, but you hit these limits.
+
+Not all of it.
+
+Rob Wiblin: So the short version of that, for people who didn’t follow it all, is that we’re currently increasing the amount of compute that is going towards training AIs very quickly.
+
+And we’re not going to be able to maintain that pace, because we’re currently doing that by grabbing some chips that were being sold for other purposes and using them for machine learning instead.
+
+And also, these companies are going from spending 1% of their resources on AI development to 10% — and then maybe they can go to 100%, but they can’t really go beyond that by just grabbing resources that were previously going towards other stuff.
+
+So at the point where almost all of the chips are going towards AI training and almost all of the resources of these companies is going towards that, it levels off the rate of increase that you can get there.
+
+Ryan Greenblatt: For sure.
+
+Maybe a few minor clarifications on that.
+
+One thing is, when you’re thinking about repurposing the chips, this isn’t like they’re taking iPhone chips and repurposing.
+
+It’s like there was capacity to do chip manufacturing that was relatively general purpose, and instead of making as many iPhones, we’re now making more AI chips.
+
+And some of that’s coming from building additional fabs, but some of it’s coming from slightly increasing the prices of other chips, or reducing how many of them you’re getting.
+
+And when AI is in the 20% or 30% regime, it’s not going to have very noticeable market effects on how much other chips are costing, because TSMC expanding somewhat faster can keep up with that.
+
+But once it’s like AI chips are 80% or 100%, then we’re going to start seeing bigger effects and things slowing down from there.
+
+Rob Wiblin: Another thing that makes it a little bit difficult to forecast all of this is that we’re not just doing exactly the same thing year after year; we’re not riding the same trends year after year.
+
+Initially, for example, we were getting a lot of improvement by putting more compute into the pretraining.
+
+This is the thing where you dump in all the text from the internet and try to get it to predict the next word.
+
+We were getting enormous gains from that by throwing in more data and more compute.
+
+But then that sort of tapered off, and we have to move towards better elicitation using post-training, reinforcement learning from human feedback.
+
+Then we’re doing a different thing, which initially is very effective, but then begins to level off.
+
+I guess now we’re using reinforcement learning to do a sort of self-play, where the models are learning to reason better, and basically we just reinforce them when they get the answer right.
+
+We’re on a very steep curve with that, but presumably that at some point will level off and we have to do a different thing.
+
+If I understand that correctly, that makes it more difficult, because we don’t know exactly what will be the innovation next year that will be driving the improvements.
+
+Ryan Greenblatt: Yeah.
+
+The improvements from GPT-1 to GPT-2 to GPT-3 to GPT-4 — and then maybe even throughout there, there was a bit of a lull in 2023 and then things picking back up in 2024 — I think a lot of the improvement there, up until maybe the middle of 2024, was driven by scaled-up pretraining, like dumping in more data.
+
+There’s sort of a meme going around that pretraining has hit a wall.
+
+It’s not so clear to me that this is what’s going on.
+
+It probably is the case that it has relatively diminished returns, or the marginal returns of scaling that up further are less than they were in the past in terms of qualitative capabilities.
+
+Based on some sense of like, we have Grok 3 — which is maybe a little over 10x more compute than GPT-4 and also better algorithms — and how much better is it?
+
+It’s somewhat better, but I think it’s also the case that it’s worth noting that in previous improvements — like the GPT-3 to GPT-4 gap — it was a lot more compute.
+
+I think that gap was like roughly 100x bare metal compute.
+
+And it just turned out that at the time there was a lot of low-hanging fruit in scaling up the amount of FLOP you’re spending very quickly.
+
+And now we’re running into bottlenecks.
+
+Post GPT-4 they were sort of waiting for H100s.
+
+The H100s were slow to get delivered.
+
+We were getting the H100 clusters online kind of late, and maybe there were some difficulties with getting that initially working.
+
+So GPT-4.5, somewhat disappointing.
+
+I think it’s rumoured that OpenAI had multiple, or at least one, failed training run.
+
+Rob Wiblin: Oh wow.
+
+Ryan Greenblatt: So it wouldn’t be surprising if we see people adapting to more compute, figuring out how to use it, and the returns from pretraining sort of going up from there.
+
+That’s pretraining, and maybe even if pretraining is diminishing, you can scale up RL, reinforcement learning.
+
+We’ve seen that going on over 2024.
+
+We have o1, where they’re training on RL.
+
+They’re training on easy-to-verify tasks, not training on next token prediction.
+
+And we’ve seen a lot of initial returns from that and we don’t know where that will peter out.
+
+You know, we haven’t seen that many orders of magnitude on RL training.
+
+It’s speculated, for example, that DeepSeek-R1 was about $1 million worth of compute on the RL.
+
+So in principle we can scale that up to be more like three orders of magnitude higher with the clusters that people will have.
+
+Maybe a little less than that, but ballpark.
+
+Once we’re talking about three orders of magnitude higher, it could be that that yields huge returns, or it could be that that doesn’t yield huge returns.
+
+The story for yielding big returns is it yielded big returns from the first million.
+
+Maybe you just go further, build more environments, do more RL big returns.
+
+The story for not is maybe there was some sort of latent capacity or potential the model had, which RL is bringing out.
+
+We’ve brought out most of the potential, and we’re hitting diminishing returns.
+
+Rob Wiblin: Just to say that back, for people who don’t follow this very closely and are not sure exactly what you meant: one thing that is actually worth remembering is that I guess we used to use reinforcement learning a lot, and then it somewhat fell off, and now it’s come to the fore again.
+
+This is where you take the existing models, GPT-4o or something like that, and you give it very challenging reasoning problems, and you maybe get it to try 100 different solutions, 1,000 different solutions.
+
+And basically you just find the cases where it gets the right answer at the end and you say, “Well done.
+
+Reason more like that to try to solve other problems in the same way that you just did.” And that’s turning out to be extremely powerful.
+
+I guess you’re saying that that is maybe picking up some low-hanging fruit, where these models had more ability to do clever reasoning latent in the weights than was initially apparent, than we were able to get out of them.
+
+And by using this process to get it to try all kinds of different solutions and then find the reasoning processes that are functioning well, we’re extracting a whole lot of stuff that was just sitting there waiting to be picked up.
+
+But that could run out somewhat, and at that point it’s going to be a heavier lift for them to basically learn new superior reasoning techniques.
+
+Ryan Greenblatt: Yeah, that’s right.
+
+People were trying to get models to reason in chain of thought.
+
+So as of GPT-4, people were totally aware that you could do chain of thought reasoning, and were messing around with this.
+
+But I think it only worked so well.
+
+The model wasn’t that good at recovering from its mistakes.
+
+It wasn’t that good at carefully reasoning things through.
+
+And I think we’re seeing with o1 and o3 and other reasoning models that now you can make it so the model can do the reasoning pretty well.
+
+And a bunch of that might have just been chain of thought, it was already sort of doing it — and maybe you can just make it somewhat better, but there’s a question of how much better.
+
+Rob Wiblin: Another piece of low-hanging fruit that you mentioned was basically sometimes we were giving these models very difficult challenges, but giving them only $1 worth of compute to work with.
+
+And people have found that if you actually just give them more like the kind of resourcing that you would give to a human — $100 or $1,000 worth of equipment and salary — then they do radically better when you’re doing something that’s a bit fairer of a comparison.
+
+But you kind of can’t do that scaleup again.
+
+You can go from $1 to $1,000, but if you’re going from $1,000 to $100,000, now you’re talking real money.
+
+And there’s a question of would this ever actually be economically useful just to give a model so much to just solve a maths problem?
+
+Ryan Greenblatt: Yeah.
+
+One thing that’s also worth noting is, even if it would be economical, we quickly run into just the total quantity of compute.
+
+So suppose that you’re having the model do one task for $100,000.
+
+I did some kind of crappy BOTEC [back-of-the-envelope calculation], and my sense was that, at least as of a few months ago, the total amount of compute that OpenAI had was about $500,000 per hour.
+
+So if it’s a $100,000 task, then you’re using a fifth of all of OpenAI’s compute for an hour.
+
+So you can only do so much of that, right?
+
+Even if it was the case that there’s some really economically valuable tasks, you just hit bottlenecks on that.
+
+Rob Wiblin: Because that drives up the price.
+
+Ryan Greenblatt: Yeah, it’s the supply and demand.
+
+Even if it’s the case that it’s useful enough, there’s really only so much scaling of that that you can do.
+
+And, you know, you can go pretty far: people have been demonstrating not just human cost, but substantially above human cost, yielding additional returns.
+
+And this is kind of nice because it lets us get sort of a sneak peek into the future.
+
+I think if you’re seeing the models do a task, but slowly and at very high cost, we should expect that soon enough that will be quickly at a much lower cost, because the cost is rapidly dropping.
+
+Rob Wiblin: We can draw out the curve.
+
+Ryan Greenblatt: Yeah, we can draw out the curve.
+
+So I’m somewhat hopeful for people who are more sceptical about AIs exhibiting some capability, maybe first we can exhibit it with very high runtime compute, a lot of domain-specific elicitation, and then pretty shortly after that the need for that goes away.
+
+Hopefully then we can reach common knowledge somewhat before the capability is widespread enough to be incredibly widely used.
+
+Rob Wiblin: We were dipping in and out there on the bear case, or the case where we’re thinking about this is going to take a long time.
+
+Ryan Greenblatt: I’m such a bad bear.
+
+Rob Wiblin: Well, I’ll try to make one of the bear arguments that I hear.
+
+The AIs might get very good at fairly narrow tasks, and maybe they become really good coders, they become really good at idea generation, hypothesis generation, setting them up.
+
+But there’s more to running and scaling an AI company than just those things, and they’ll have some serious gaps and weaknesses, and that is the thing that will be the limiting factor and slow it down.
+
+How plausible do you think that is?
+
+Ryan Greenblatt: Some context here: historically, as we were saying, a lot of the returns were driven by pretraining.
+
+And then starting later in 2023 and in 2024 there was RL — where a bunch of the returns from GPT-4 Turbo were driven by RL, or was improving over time probably.
+
+This is speculation, but GPT-4o is a somewhat better base model, but also better RL and then we had o1, better RL.
+
+And this has been driving up benchmark scores on programming tasks, coding tasks, math tasks — tasks that are checkable much more than other tasks.
+
+Now, we do see some transfer.
+
+One way out of this is maybe it’s just the case that you make the AIs very superhuman at programming, quite superhuman at software engineering — which is somewhat harder to check, but doable to check, or at least parts of it are pretty readily possible to check — and very superhuman at math.
+
+And then this transfers somewhat.
+
+So maybe it’s the case that it’s very expensive to label other things.
+
+You know, we can assess human performance in other domains; you just can’t do it automatically.
+
+So you can assess how good a paper is, and we have processes for doing that, which has some signal; it’s just much more expensive.
+
+So in principle, if the AIs can almost transfer to writing good papers and need just a little bit of feedback — they’re quite sample efficient — then that can go pretty far.
+
+Another thing worth noting is I think there is a “no generalisation required” story.
+
+Or nearly no generalisation.
+
+So it might be the case that you can basically make it almost work, or basically work, to just do RL on things that are just straightforwardly part of being a really good research engineer.
+
+We might be able to get to the point where we have nearly fully automated research engineering at AI companies just via scaling up RL, piecing it together, and not really requiring very much transfer at all.
+
+Sorry, we require in-domain generalisations — we require the AI is improving in domain relatively quickly and relatively efficiently — but even if the AIs don’t have very good research taste, they’re not very good at these things, that can go pretty far.
+
+Now, in addition to this, you might be able to get surprisingly good on some of these other things of running an AI company even with just in domain, not requiring much transfer.
+
+So we have these sort of research engineer AIs, for one thing: maybe that makes progress go faster starting then, and then we sort of kick off more progress that eventually gets us a bunch of other things.
+
+I can go through that story later.
+
+But second of all, if we have these research engineer AIs but they’re not going to have research tastes, they’re not going to have a bunch of other things that are harder to train… Well, one thing is a lot of what we mean by research taste is understanding what the results of experiments might be, having good predictions, being able to sort of understand what’s going on based on a smaller amount of evidence.
+
+And for this, you can maybe just train AIs to be amazing forecasters of ML research experiments.
+
+And if you’re training these AIs to be superhuman ML project forecasters, where they’re predicting the results based on just generating a large number of smaller scale ML projects, having some transfer to larger scale ML projects — which is going to be less easy to readily get data — then maybe from there you have these AIs that can predict the results of experiments as well as, you know, Ilya Sutskever or Alec Radford.
+
+Maybe they are less relying on insight and more just, mechanistically, you generate a long list of ideas, you predict how well they go, you proceed from here.
+
+And I think there’s basically a bunch of routes like this.
+
+Another route is maybe you can just do within domain, and that can go surprisingly far in automating the AI company.
+
+An important asterisk for this is, I think the sceptics maybe are sort of screaming to me, “But what about things other than automating AI companies?!” I think maybe they’re like sure, AI R&D, I guess that’s checkable enough.
+
+But what about all the other things that humans do which have slower feedback loops, like being a good strategic CEO?
+
+Rob Wiblin: Fundraising?
+
+Ryan Greenblatt: Fundraising, all these other things.
+
+So I think I want to put a pin in that, but maybe we’ll get back to that later.
+
+Then the second thing I want to say is, so there’s the in-domain story and then there’s the more generalisation story — where you train on all these narrow tasks, the AIs get smart; with just a tiny bit of data, they can transfer to these out of domain or we didn’t have a tonne of data things.
+
+I think it’s going to be some interpolation between these probably, where it’s harder to get lots and lots of data on long horizon SWE tasks, so you probably need a bit of transfer but you can probably do a bunch of data.
+
+And then there’s I think a third story, which is like people just figure out how to RL on harder-to-check tasks using other mechanisms, using things that are more like process-based checks, or being able to check fuzzier tasks using things more along the lines of like self-critique, constructing more detailed checks themselves, and doing RL from here.
+
+Humans, interestingly, are able to learn on lots of tasks that are somewhat fuzzy to check via having some sort of notion of self-critique — How well did I do?
+
+Should I do more like that, less like that?
+
+And I think the AIs can currently do this a bit, but not amazingly.
+
+And I can imagine this getting better over time.
+
+And I think a thing that we’ve seen time after time is, if a given thing is the limit to capabilities, there is just a huge amount of horsepower in the broader ML community, but I think broadly in the AI companies, to sort of push on that, whatever the limit is.
+
+Rob Wiblin: There’s been a shift over the last year from almost all or a very large fraction of the compute being spent during training runs towards a larger fraction being spent during inference or runtime compute — so rather than use your compute to make the model better at predicting the next word or more likely to be positively reinforced during training, you actually just give it an enormous amount of time to think about the specific task that you’ve given it.
+
+How does that change the picture around the time that we’re automating a lot of AI R&D?
+
+I think many people think that, on the inference-compute-centric paradigm, this makes things go a little bit slower, because you’re going to be so limited: if it turns out that it requires an enormous amount of compute to run the equivalent of one AI researcher, then at least to begin with you just won’t be able to staff yourself up with a million equivalents of them.
+
+Maybe you’ll only be able to have 100 or 1,000 to begin with and then it will gradually go up.
+
+Ryan Greenblatt: For one thing, to the extent inference compute wasn’t priced into your prior model, then it should push you to having relatively shorter timelines to the relevant milestones.
+
+But maybe the first time we hit a given milestone, it’ll be very expensive.
+
+So maybe we’ll first be able to be like, we have this AI that could automate the job of a research engineer at our company for the cost of maybe $10 million or $20 million in compute per year.
+
+And as I was noting earlier, there is just actually a limited supply of compute.
+
+So even if, in principle, you’d be happy to automate all your employees — maybe you’d be happy to automate 1,000 employees at $10 million a year: that would be $100 billion per year, which is getting close to the amount of compute the company even has in this regime, right?
+
+So we can look at how much total capital expenditures have people been spending?
+
+That’s roughly the same ballpark.
+
+So if it was even more extreme than that — maybe it’s more like $100 million per year — then all of a sudden, they just might not have the money to do that, and they might not have the compute to do that.
+
+And also, it might just not be economical.
+
+It also might be the case that with this inference compute it’s too slow.
+
+It could be that maybe it would work if you could make it fast enough, but a lot of the ways of scaling up inference compute might make it serially slower, which reduces a lot of the competitive advantage AIs have.
+
+Rob Wiblin: What do you mean by that?
+
+Just because it has to do a whole lot of things one after another, it just takes a very long time to actually output an answer?
+
+Ryan Greenblatt: Yeah, so for example, I think o1 often answers questions slower than humans would answer those questions because it spends so long thinking.
+
+Whereas previously AIs were almost strictly faster than humans, occasionally o1 is now slower or more often in the same ballpark.
+
+And we might see inference time scaling that involves more serial steps having this property.
+
+I think there’s various ways that this could be mitigated, such that I don’t know if this is a huge obstacle.
+
+I would probably guess not, at least once optimisation has been applied, but it could initially be an obstacle.
+
+So in general, I think the inference time compute should expect that we can see capabilities exhibited prior to them being economical, and we start seeing capabilities at small scale prior to large scale.
+
+Whereas I think a surprising thing about prior to the pure pretraining paradigm is that you naively expect that, sort of at the point the capability first becomes available, you can run truly a vast number at that capability level.
+
+My sense is that this is still broadly going to be true, basically because I think distillation of high inference compute is relatively quick, and inference compute I think only gets you so far.
+
+So I think it can get you large gains.
+
+But I think you have to be quantitative about how large the gains are.
+
+So if that can be distilled away relatively quickly, which I think we’ve seen — I think we see pretty fast distillation progress going from, for example, o1 to o3 mini — I think we saw pretty fast gains of both just scaling up training, but also being able to distil that more effectively down into a smaller package.
+
+Rob Wiblin: So distillation is where you make the model a lot smaller and it performs almost as well.
+
+So you could operate more of them in parallel, or it can give you more answers more quickly.
+
+Ryan Greenblatt: Yeah, and I should say distillation is sort of a special case of a broader thing that sometimes it’s easier, at least initially, to make something much cheaper than it is to make something much better.
+
+So say we have some new capability we’ve been demonstrating, we sort of push the frontier, then we can bring the cost of that point in the frontier down pretty quickly, is what has happened historically.
+
+And distillation is where you train a smaller model on the outputs of a bigger model.
+
+Rob Wiblin: In the inference compute paradigm, don’t those two things kind of converge?
+
+Because you’re saying, if you can make it a tenth as large and it’s almost as good as thinking as it was before, then you can allow it to think 10 times as long, effectively?
+
+Ryan Greenblatt: Yeah, but of course the returns to inference compute potentially could diminish pretty quickly.
+
+This is maybe not the most relevant benchmark, but for example, in ARC-AGI, what we see is they went from ballpark $3 per task or $10 per task to over $1,000 per task.
+
+So maybe a little over two orders of magnitude of cost.
+
+In those two orders of magnitude of cost, they push the performance from I think around 76% or 75% up to 85%.
+
+And for humans, I think moving through the human regime of 75% to 85% is not that much.
+
+I think similarly we see stuff like, if you sample the model 64 times, you pick the most common answer between that, you’re seeing relatively marginal improvements from that.
+
+So in general, I think there’s a question of how efficient are these inference time strategies?
+
+I think that it depends on the strategy, but you might hit diminishing returns.
+
+Rob Wiblin: The overarching theme here has been arguments to expect AI R&D automation sooner versus later.
+
+Are there any other key factors that I haven’t given you a chance to talk about yet that bear on that question one way or the other?
+
+Ryan Greenblatt: I think one important question is about how there were people shifting towards maybe pretraining is hitting a wall.
+
+So I want to dive into why this might be true — to the extent this is true — and also how true is this.
+
+So I think one big reason why we might expect this is that it might be that there are issues with data quality and data quantity.
+
+You know, DeepSeek recently trained DeepSeek-V3 with just a tiny amount of money, and they trained it on about 15 trillion tokens.
+
+So it might be the case that you can train on lots and lots of data, but it might be that there’s kind of steep diminishing returns to data quality.
+
+There’s not a lot of public evidence about the extent to which this is true.
+
+But if that’s the case, then it might be what happens is, once you train on the first 15 trillion tokens, the next 15 trillion tokens are a lot less valuable.
+
+If you imagine scaling up the DeepSeek-V3 training run by a factor of 10, then based on Chinchilla scaling laws, which is just how much should you scale up the size of the model and the data in parallel, you would scale up the data by 3x and you would scale up the model size by 3x.
+
+If you did that, you’d be at 45 trillion tokens.
+
+So it might be that if you’re at 45 trillion tokens, the next 30 trillion tokens would be a lot worse — either because it’s repeated epochs on the same tokens or because it’s lower quality tokens.
+
+So it might be the case that you can stretch things far, but the returns start diminishing around now because of data filtering.
+
+And this might be one reason why pretraining scaling maybe looked somewhat more promising in the past than you might think it is now, because there was worse filtering.
+
+Maybe a lot of the GPT-3 to GPT-4 improvement was, as they were training on more tokens, they were getting more of the good tokens in there.
+
+But now we’re in a regime where we can really pull out the good tokens and make sure to train on them, and that could yield diminishing returns.
+
+So I think this is a reason why we might expect pretraining is slower, but I don’t think this is an argument that pretraining returns would totally fall away.
+
+You can just train on worse tokens, train for more epochs, find methods to get more juice from the same tokens and get that.
+
+But you’ll see a slower rate of progress.
+
+And in addition to that, there’s also the option of instead of doing pretraining, just do way more RL.
+
+We were talking a bit earlier about how maybe RL has diminishing returns.
+
+But even if the returns diminish, it might still be that the returns are high enough that they’re higher than pretraining, where you can dump in exponentially more compute and you get linearly more performance — but qualitatively, linearly more performance is a big deal.
+
+And in addition to that, I think we’re just very uncertain about how true all this is.
+
+And there’s potentially a bunch of scaling left, even if the returns are weaker than people were previously thinking.
+
+Rob Wiblin: OK, just to try to say some of that back: pretraining is when we take a huge corpus of information, of text, to try to predict the next token.
+
+It seemed like scaling up the amount of data going into that process was very valuable in the past.
+
+But it’s possible that that is levelling off to some extent.
+
+And part of the reason for that, you’re saying, is I guess to some extent they’ve actually run out of new data that they can collect.
+
+They’re getting close to grabbing all of the good text that humans have actually written.
+
+But also, they got better over time at filtering out what is actually the high-quality tokens, what is the high-quality content that they want the model to be training on a lot, and what stuff maybe could they discard.
+
+So presumably they’re keeping in published books, textbooks, that kind of thing, and putting extra weight on that.
+
+And then just random slop taken off the internet that has no particular information in it, they’re managing to exclude that.
+
+And I guess you’re saying, having filtered out the good stuff, the only stuff that they can add is really quite low quality, so they’re just not actually getting very much juice out of that.
+
+And that might help to explain why data scaling hasn’t been adding as much value now as it used to.
+
+But you’re saying they can take the effort that they were putting into that and use it to improve the reinforcement learning process — which is a different way of trying to improve the model: rewarding it for successfully answering questions and rewarding it for having good thinking in the process of doing that.
+
+Have I understood right?
+
+Ryan Greenblatt: Yeah, that’s right.
+
+I think also people sometimes talk about synthetic data.
+
+I like to think about synthetic data as a sloppy version of RL.
+
+What you do is you get another model, you get it to generate some data, and you get that data to be somewhat improved from what it was just generating by default.
+
+So maybe you only select cases where it got it right; maybe you have it revise its answer, or you let it try to solve the math problem, then you show it the correct answer, and then you have it correct its chain of thought.
+
+You throw that into the pretraining corpus, and maybe that data is somewhat valuable.
+
+This is in some sense similar to RL, because you’re finding model trajectories that are good and training on them, but it might have somewhat different properties.
+
+And you can scale this up, generate a lot of synthetic data, and I think this will yield some returns; I think this will have some improvement, and you can scale that up further.
+
+So let me try to make the extreme bear case.
+
+The extreme bear case is like: DeepSeek-V3 came out recently, had a $5 million training cost.
+
+In parallel, we saw Grok 3 come out also pretty recently, or DeepSeek-V3 is somewhat further in the past.
+
+The difference in cost is I think about two orders of magnitude, about a factor of 100.
+
+I think DeepSeek-V3 was trained on about 2,000 GPUs.
+
+Grok 3 was trained on about 100,000 GPUs, very roughly speaking.
+
+So maybe it’s closer to a factor of like 50 or so, maybe roughly around there.
+
+So we have this factor of 50 in pretraining compute.
+
+And then if you look at DeepSeek-V3, qualitatively at least, it’s not that much worse than Grok 3.
+
+So what’s going on?
+
+What explains these returns?
+
+There’s the data scaling story, which is like, maybe they were already training on the juiciest 15 trillion tokens and the stuff that xAI was able to scrounge up was not as good.
+
+And so they would scale up the model, you scale up the data and maybe they didn’t get awesome returns from this.
+
+Another story is just the returns are weak, which is plausible from the evidence we have.
+
+Then the question would come down to, can you switch to something more like RL?
+
+And then I think another story which is important — and is a big part of my model — is I just think DeepSeek has substantial algorithmic advantage relative to xAI, right now at least.
+
+I think DeepSeek-V3 probably was just actually a better optimised training run, where they were using the FLOP more effectively — both because of better hardware utilisation and training at lower precision, which is a technique where, instead of storing the numbers with a bigger representation, use a smaller representation.
+
+It’s a bit more efficient.
+
+You just do it with less accuracy but you can get similar performance.
+
+And then in addition to this, I think just actually having a better-tuned pipeline and better architecture potentially.
+
+That said, an important part of why DeepSeek was able to have a better architecture is they were doing a smaller-scale training run, which meant that they could run more experiments at that scale and really iron out all the kinks.
+
+So maybe you’ll be able to iron out the kinks, but every time you go to a larger scale for the first time, you’ll run into some issues.
+
+There’s some rumours of this happening at OpenAI; it’s plausible that xAI ran into similar stuff.
+
+So I think we’re seeing probably some of that.
+
+So maybe my view is that the actual amount of effective compute that Grok 3 is above DeepSeek is maybe about a factor of 10, if I had to guess.
+
+Maybe it’s a little more than that.
+
+Yeah, I think about 10 because it’s maybe like 50 experimental, but then there’s a bunch of efficiency gains that shrink that lead.
+
+Plausibly I’m off base here, maybe someone will call me out on this, but that’s kind of my guess.
+
+And I’m like, does this 10x scaleup match what you’d qualitatively expect?
+
+You know, it is actually a decent amount better, so I don’t think it’s totally implausible that if this is what a 10x scale up looks like, another 100x could plausibly be a pretty big deal.
+
+So that’s a bit more of the bull case there.
+
+Another thing that I think is happening with AI progress that’s important to track is a lot of people are like, “Grok 3 is barely better than GPT-4.
+
+That’s two years ago, very slow progress.
+
+What are we doing?” But I think an important thing is people are comparing it to recent releases of a model called GPT-4 versus the original release GPT-4.
+
+So I think OpenAI’s naming convention here has caused people to get frog boiled or underestimate the rate of progress.
+
+So we had the original GPT-4 release back in 2023, near the start of 2023.
+
+That model was pretty good.
+
+And then we saw OpenAI progressively release models they were still calling GPT-4.
+
+So they called the model GPT-4 Turbo and then GPT-4o, and these models were all somewhat better than GPT-4 — on both how good the pretrained model was and also on RL, or just a bit better.
+
+So we had very incremental progress while still calling it GPT-4, so people are sort of missing maybe roughly a little over an order of magnitude of progress from GPT-4 to the best version of GPT-4o, and they’re doing that comparison and missing a bunch of progress that happened in the meanwhile.
+
+Rob Wiblin: Yeah, it’s maybe easy to forget how irritating the original GPT-4 was to use.
+
+I mean, it was incredible given our expectations at the time — I was blown away — but it was very fiddly, it wasn’t very good at answering questions.
+
+It messed up in much more obvious ways than what it does now.
+
+But I guess it’s called the same product, so now you just feel it was always GPT-4, and you forget that people were so fussy about how you had to prompt it the exact right way and you had to have expert prompt engineers.
+
+And that has kind of fallen away as they’ve just gotten better at following instructions much more sensibly.
+
+Ryan Greenblatt: Yeah.
+
+As a concrete example, original GPT-4 could maybe do agentic tasks very poorly.
+
+Maybe it could do five- to 10-minute agentic tasks like half the time, like agentic software engineering tasks.
+
+And now GPT-4, it’s much more like an hour.
+
+So it’s really quite a large difference in terms of this downstream capability.
+
+So that’s some texture there.
+
+I think it would be really nice if someone did some really detailed analysis trying to map out all the qualitative improvements and how much effective compute was in.
+
+Maybe Epoch should do that, or someone else should do that.
+
+Rob Wiblin: Just to back up and talk about the Grok vs DeepSeek comparison and spell this out for people a little bit more clearly.
+
+You were saying people look at DeepSeek and they compare it with Grok 3 and say Grok is somewhat better, but it’s not radically better.
+
+And it looks like it was trained on 50 times as much compute, so what tiny returns we’re getting from scaling the compute input.
+
+But you’re saying this is a bit unfair, because I suppose DeepSeek has — because of I guess limitations on access to compute in China — been working a lot on algorithmic efficiency in order to get the absolute maximum juice out of the compute that they have available.
+
+And I guess Grok is in the opposite situation, where they’re trying to scale and train and grow incredibly quickly, and they have access to a tonne of compute.
+
+So they’re not worried about the efficient use of compute almost at all.
+
+And you’re saying if you did a more like-for-like comparison, in terms of the algorithmic efficiency of the training, then you would say Grok 3 was trained on maybe only 10 times the effective compute, so it’s not nearly so large a scaleup.
+
+And so the fact that the improvement seems on the incremental is actually closer to what we would have expected anyway, it’s not actually a sign that compute scaleup is not useful.
+
+Ryan Greenblatt: I mean, I don’t know.
+
+It’s definitely some evidence.
+
+And we should put some weight on no, it’s actually just 50x effective compute and this is what you get.
+
+And that would be I think lower than I would have predicted.
+
+So it’s an update there.
+
+But I think broadly speaking, yeah.
+
+It’s also worth noting that it’s not just that I think DeepSeek was more focused on efficiency.
+
+For example, I think Grok probably has worse algorithmic efficiency than for example OpenAI and DeepSeek do.
+
+My sense is they’re trailing somewhat in algorithmic efficiency but are somewhat ahead on scaling up to very large training runs, so they’re just in a somewhat different position.
+
+Whereas my sense is DeepSeek is maybe pretty competitive with OpenAI on algorithmic efficiency, at least at small scale.
+
+And then another thing that’s maybe an important factor, we don’t really know, is that DeepSeek could practice their training run a bunch of times, because they can do that small-scale training run a bunch.
+
+So it’s not just that they’re optimising for efficiency; it’s that if you can run the training run multiple times, you might have more signal — whereas if you’re scaling up to a new order of magnitude for the first time, maybe you just mess some stuff up.
+
+Rob Wiblin: Are there any other key pieces of evidence that bear on this timelines question?
+
+Ryan Greenblatt: One thing that I think is a pretty spooky fact is that we’re sort of entering this reasoning model regime where people are scaling up RL and outcomes-based tasks.
+
+Right now people have just started doing RL.
+
+I think original o1 and R1 are probably almost entirely trained on relatively narrow short tasks with not that much compute.
+
+We have some sense of what R1 was trained on, for example.
+
+It seems like it was trained on math problems, like sort of trivia or questions like GPQA questions, which are science questions.
+
+And it was trained on maybe competitive programming or short programming tasks.
+
+But it was not trained on things like software engineering — tasks that would take multiple steps — as far as we’re aware.
+
+Probably was only trained on literally single-step tasks.
+
+Plausible they didn’t ever do training that involved multiple steps, at least not as part of their main RL phase.
+
+So to the extent that’s true, you might think that there’s a bunch of low-hanging fruit to just scale up the RL paradigm and apply it to sort of agentic tasks.
+
+In addition to that, there’s also just scale up the compute way further.
+
+You can scale on the diversity of environments and you can also scale on the amount of compute.
+
+I think Epoch did an estimate where they thought the RL on top of DeepSeek-V3, which was the model R1 was based on, was about $1 million.
+
+A million dollars is chump change in the AI industry these days.
+
+So you could plausibly be scaling it up by over two orders of magnitude within the next year.
+
+Now, there might be difficulties in getting that scaling, I think there might be infrastructural difficulties, but in principle it’s possible.
+
+So to the extent that we saw big gains from one order of magnitude, I’m just like, man, algorithmic progress, a bit of tuning of this stuff, we might be seeing crazy stuff in the next year.
+
+Rob Wiblin: Sorry, o1 and o3 are also reasoning models that went through reinforcement learning.
+
+And I imagine OpenAI spent a lot more than $1 million on the RL for those models.
+
+So why does that suggest that?
+
+I mean, we don’t think o1 or o3 is radically better than R1.
+
+Ryan Greenblatt: So first of all, I actually don’t know that I think that o1 and o3 were trained with much more compute than R1.
+
+I think we don’t know.
+
+Some reasons why you might think it wasn’t trained with that much more compute: one thing is that I think it is actually legitimately hard to scale up RL on an infrastructure level, and they might not have the infrastructure to do that off the bat.
+
+The second thing is it might be hard to quickly scale up the number of environments, but there is ultimately a scalable way to do this.
+
+So it might be that there’s just a bunch of returns.
+
+The next thing is we did see a pretty big performance improvement from o1 to o3, which is evidence that, if that trend continues, that could be pretty fast.
+
+So we’re just seeing they’re RLing on relatively narrow domains, but within those relatively narrow domains, progress appears to be very fast.
+
+So to the extent that they can extend the domains they’re training on, that might be broader than that, we might be seeing relatively fast progress.
+
+So I think it’s unclear.
+
+To the extent that o3 is saturating out a bunch of the lower-hanging fruit on this paradigm — which might be true to some extent; certainly it’s pulling some of the low-hanging fruit — then this story would go away.
+
+But to the extent that we have a lot of greenfield ahead of us on RL, I think this is probably one of the more compelling stories for one-year timelines or things going very fast.
+
+To be clear: I don’t expect this.
+
+I think this is unlikely, but I think one route is that RL generalises better than you expect, it can be extended slightly further than you expect.
+
+And maybe at the end of the year you have almost automated research engineer level capability, maybe somewhat below that — and then things could go really crazy from there.
+
+Rob Wiblin: I see.
+
+You’re saying that’s not likely, but it’s a possibility.
+
+And if it does happen, this is kind of the pathway by which it would occur.
+
+Ryan Greenblatt: Yeah, I think the most foreseeable pathway would be this scaled-up RL in one year.
+
+And this argument was brought to my attention by Josh Clymer, a colleague of mine.
+
+So credit to him.
+
+Rob Wiblin: Is there anything more to say on this timelines question before we push on?
+
+Ryan Greenblatt: I think another source of scepticism is like, sure, maybe you can get these LLMs to be pretty smart and pretty good at these tasks, but aren’t they going to need a bunch of other properties in order to replace humans?
+
+You know, they need to be able to learn on the job.
+
+Humans, when they do tasks, they’re learning how to do the very task that they’re doing.
+
+And AIs have worse sample efficiency, so you can throw a lot of stuff in context and they can sort of learn how to do things better based on that, but it’s relatively shallow, it’s relatively weak.
+
+Another thing is that AIs currently have limited context length and might have trouble tracking context over very long projects.
+
+I think the effective context length might be much shorter than the actual context length because they can do retrieval across the entire context length, but they maybe can’t do a synthesis across it as easily — because I feel like when I do tasks, I get some like vibes, level sense, I get better intuitions.
+
+I get some overall vibe of where the project is going.
+
+And I think AIs maybe have trouble tracking all this context, even if you throw it all in.
+
+And maybe there’s routes around that, so I want to talk a bit about these structural factors.
+
+For this learning-on-the-job thing: for one thing, we can do research on how to make within-context sample efficiency better.
+
+One route to this is, rather than having this more shallow architecture where you’re processing all the tokens in parallel and they can sort of attend to each other… There’s some ways in which the transformer architecture is fundamentally shallow.
+
+I don’t know how much you want to get into the details of that, but you could change to an architecture that isn’t as fundamentally shallow.
+
+In particular, there’s been some recent papers on having I would say more of our current architecture, where you can process the activations in a more deep serial way, which might allow the AI to absorb the context, and have more of a gestalt sense, and learn from what’s going on faster over more and more context.
+
+Rob Wiblin: What do you mean by fundamentally shallow?
+
+Ryan Greenblatt: What I mean is that if you look at a token, the model is sort of producing some distribution of probabilities on the next token.
+
+It can only have so many serial steps, basically because you run each layer on every token.
+
+And at each layer, you can attend to all the previous layers, but you can’t attend to a previous token at a later layer.
+
+So if you imagine you have 60 layers, layer 10 at token 40 can attend to layers 9 and before on all the previous tokens, but cannot attend to layer 60 on token 39.
+
+So that means that if the AI was getting into some good insights towards the end of its layers, the earlier layers of later tokens can’t take that into account.
+
+And I mean, the capabilities people are on it, as always — or maybe not as always, but to some extent — and are looking into ways to change this.
+
+I think that the way we currently have to address this is that, while the AIs are shallow in this way, they are not shallow with respect to tokens.
+
+So if you have a reasoning model, yes, it’s shallow in that sense, but also it can produce natural language tokens that are sort of its updated thinking, and it can keep doing relatively deep computation via that.
+
+So it can solve math problems with 50 steps by having all the steps in natural language, even though it can’t do all the steps in this relatively more serially bottlenecked forward pass — that’s the term for the activations of the transformer which have this property.
+
+But you might be worried that natural language is not that good of a medium for doing thinking — I sort of have thoughts that aren’t in natural language — but I think you could in principle have a deeper architecture.
+
+And I expect people are working on this, and I think this poses a bunch of safety risks, because we have this nice property that we can look at the chain of thought and get some sense of what the AI is doing and have some confidence in that — at least potentially have some confidence in that — because the AI is sort of forced to use the chain of thought in order to get this serial reasoning to work.
+
+But if it was the case that all that reasoning was latent, we just lose that property, and now we’re in a much more dangerous regime where the AIs could be doing subversive reasoning that we wouldn’t even know about, or would have no way of knowing about, by default at least.
+
+Rob Wiblin: I didn’t totally follow that, but you said you would change how a forward pass occurs, such that it’s able to do more sophisticated reasoning within that, and that creates the possibility that it could engage in scheming before it’s actually outputting any tokens that we’re able to assess?
+
+Ryan Greenblatt: Yeah, that’s basically right.
+
+So basically you should imagine the transformer is not like a looped architecture, it’s not recurrent.
+
+So your brain is recurrent: you think some thoughts, you think some more thoughts, and it’s fully recurrent — including, as far as we know, recurrent state that we can’t vocalise very easily.
+
+Like I think people can do reasoning that they’re not able to vocalise, some of the reasoning they can vocalise.
+
+And I think right now transformers can do relatively limited non-vocalised reasoning, and then a lot of vocalised reasoning.
+
+So it might be that you can change the architecture — it would be a large change to the architecture — in a way that makes it so they can do a lot more of the non-vocalised reasoning and more dense reasoning.
+
+And there’s some papers demonstrating this, like the Coconut paper from Meta.
+
+I think all the existing papers are relatively weak sauce, not really getting that much — sorry to the authors of those papers, but that’s my sense.
+
+But it could be that you can drive this architecture forward, and I think people haven’t necessarily really tried that hard to get this to work because there were low-hanging fruit elsewhere.
+
+Rob Wiblin: Would this be very compute intensive to change the architecture in this way?
+
+Ryan Greenblatt: Actually the thing I just described very naively would use exactly the same amount of compute on generation.
+
+Because right now you have to do one token at a time, and you could just loop the activations without that.
+
+Now, it is more compute intensive on training if you’re applying gradient descent all the way through.
+
+It makes the computation graph for gradient descent more annoying to do gradient descent on for some structural reasons I don’t know if we should get into.
+
+But yeah, roughly speaking, I think it is more computationally expensive at training time and would be more computationally expensive if you’re reading something.
+
+There’s all these cursed technical reasons why this is true, but basically if you were to apply this sort of looping when reading, then you would only be able to read one token at a time.
+
+Whereas transformers can process a whole body of text in parallel, so transformers are extremely fast at reading.
+
+So you can make it so a transformer reads a document that’s like a million tokens long, I think in principle, if you’re willing to scale up the compute, in maybe like a minute or 30 seconds — which is very, very fast.
+
+And plausibly you could even do faster than that, because it basically is like reading the whole thing in parallel and there’s a smaller number of serial steps.
+
+But if it’s reading the tokens one at a time, and you have to do all the layers, then it would be the same as generation speed — generation speed in a single context is more like 100 tokens per second by default, though people have exhibited faster speeds.
+
+So there’s ways in which it’s costlier, but I think ultimately the costs are not that high, and a lot of these costs are already being borne by the reasoning paradigm.
+
+Rob Wiblin: All right.
+
+I’m curious to know: at the point that we actually are able to largely automate AI R&D, how do you think that process would play out?
+
+What would it look like?
+
+What are the different ways that it might play out?
+
+Ryan Greenblatt: I think there’s this big question, which is: suppose that the AI company has fully automated AI R&D, even the best research scientists don’t add much value.
+
+Maybe they add a tiny bit of value, but basically the company is fully automated.
+
+I think there’s been a historical view of people trying to do AI forecasting that you’ll get very fast progress at this point, because the AIs are automating R&D, it can run faster than it was when humans were doing it.
+
+Now there’s a question of how much faster.
+
+In addition to that, there’s a question of does the progress slow down?
+
+So it might be that the AIs are automating AI R&D, but they eat up a bunch of the low-hanging fruit, you have a limited labour supply, and the progress then slows down because you’re applying a lot of labour but you can only get so far.
+
+Another question is, do you run into a lot of bottlenecks on compute for experiments?
+
+So you have all these AI researchers, maybe way more than your human researchers, but maybe they don’t have much compute for experiments, and so they don’t have that much of an easy time yielding progress.
+
+There’s a question of like, how fast does it go initially?
+
+And does it slow down?
+
+In addition to that, it might be even not just that the progress continues at the same rate, it could be that progress speeds up.
+
+A way this could happen is you have your smart AI researchers, they do a bunch of algorithmic progress.
+
+You use that algorithmic progress to build a smarter AI, and that AI makes progress go even faster because you can do more labour at the same amount of compute.
+
+So even with a fixed amount of compute that the AI company has access to, progress could, in principle, go even faster and faster.
+
+Tom Davidson has done a bunch of modelling on this, on do we expect progress to speed up or slow down?
+
+And I’ll be stealing a bunch of stuff from him while talking about this.
+
+People have called this the intelligence explosion or the singularity of progress is speeding up.
+
+I think it’s important to note that my view is, even if progress is slowing down, it might be objectively very fast.
+
+It might be like you started at a high rate of progress and then it slows down over time.
+
+So one way of breaking this up is first we have to talk about the question of, how fast is progress initially?
+
+And then maybe we should talk about, does it speed up or does it slow down?
+
+And then from there we can be like, how much progress do we get, say, in the first year?
+
+Rob Wiblin: Yeah.
+
+What determines the initial speed at the point that you switch it on and are automating almost everything?
+
+Ryan Greenblatt: The very short answer is no one knows.
+
+The slightly longer answer is we can try to get some sense based on just having a sense of what algorithmic progress is driven by.
+
+So algorithmic progress in AI companies is driven by two main factors: labour — people working on it, people thinking of better algorithms, people implementing experiments — and compute, using compute for experiments.
+
+I’m going to separate out actually training the final model for now, so we’re just going to talk about this algorithmic progress.
+
+Historically algorithmic progress has maybe been going up about I think over 3x per year, including post-training.
+
+Maybe it’s been more like 4x or 5x per year.
+
+And when I say 4x or 5x, what do I mean?
+
+Like what units?
+
+It’s in terms of effective training compute: it’s like every year it’s as though you could train a model that’s four or five times bigger with the amount of compute you have.
+
+So that’s the initial rate of progress.
+
+Now what I’ll talk about is how much faster can the AI researchers make this happen?
+
+This is a bit of a tricky question to figure out because we have to answer the question of, if you make that so that there’s way more and higher quality labour, where do we go from there?
+
+Because we have these two inputs into production — labour and compute — and if we massively amp up the labour, do things just bottleneck in the compute, or can you push progress much faster?
+
+So I think a naive way to start to do the modelling is we have to be like, how much labour is there, how much AIs, how good are they, how fast?
+
+Rob Wiblin: The compute available for experiments might even decline because you now have to use your compute to run your AI researchers, right?
+
+Ryan Greenblatt: Yeah, for sure.
+
+I think this is probably a small factor, because — I mean, we have no idea — but my guess is that the optimum is, of the compute on algorithmic progress: a fifth on AI labourers, and four-fifths on running experiments.
+
+Something roughly like that.
+
+So if you’re imagining this amount of compute, then you have less compute to run experiments, but quantitatively it’s 80% as much compute, so not a big deal.
+
+So I think this is not that important of a part of the picture.
+
+And even if you’re imagining 50/50, that’s just a factor of two.
+
+So if you’re like, well, you’d spend all your compute running AI researchers, you have no compute for experiments, that’s just an unforced error.
+
+OK, so how many AI researchers?
+
+People have done various estimates of how many AI researchers do you expect at the point when you can first automate things?
+
+You definitely have to have enough researchers to automate everything, but for various reasons I think we expect that you’ll have more researchers than you needed to automate everything.
+
+Because at the first point you can start automating everything, you probably have way more labour at that same level of quality.
+
+I think inference time compute could make this different.
+
+It might be that inference time compute means that at the first time you can automate everything, you can barely automate everything.
+
+But I think this is not that likely to be durable.
+
+So the first time you can do this, probably you can radically reduce the cost pretty quickly, using stuff like we were talking earlier about distillation.
+
+So overall my sense is, I don’t know, I’ve done some kind of trashy estimates.
+
+I’ll try to go through one of them.
+
+Maybe we have just out of the box like the equivalent of 100 million human-equivalent labourers.
+
+Because we expect that we’re training on about like 10^28, 10^29 FLOP, which is roughly what we expect in the 2029, 2030 period to be available.
+
+And then if you just do that, you get a sense of how many tokens you’ll be able to generate, and then you try to do some rough conversion between tokens and human labour.
+
+Then OK, maybe it’s the case that you have 100 million AI labourers.
+
+That’s also taking into account things like the AIs do not sleep, they do not get tired, they can work 24/7, and the data centre can run 24/7.
+
+So maybe you have 100 million workers.
+
+But then maybe you got some of that with inference compute, so maybe we drop an order of magnitude because you got some of that on inference compute.
+
+And then to do full automation, I think you have to have near like Alec Radford quality — Alec Radford is a famous AI researcher who has many of the most important capabilities insights — or, you know, Ilya Sutskever or whatever.
+
+To get to this level of quality, maybe you have to spend even more inference compute.
+
+I think it’s useful to denominate in terms of units of top research scientists or top research engineers because I think that’ll make some of the conversions easier.
+
+Let’s say you have like a million Alec Radford equivalents in parallel.
+
+But then there’s another factor, which is the AIs can run faster.
+
+For example, they work at night, and that gives them some advantage over human labourers because they can do serially more experiments.
+
+So humans, because of the serial time, just get less done in a year, because they’re only working maybe a third of the time — or for the mortals, maybe a fourth of the time, and some people can push up to half of the time potentially.
+
+There’s some diminishing returns on focus in hours.
+
+And then they can also just run faster because they just spit out tokens faster.
+
+And there’s some ways to make this go further.
+
+So maybe my overall sense is that maybe they’re like 5x faster at each given point in time and then 3x faster due to running at all hours.
+
+That’s a 15x speedup.
+
+In addition to that, I think you maybe get another 2x speedup because some of the time you can run a dumber AI that’s much faster for some subtasks.
+
+And humans can’t do this as easily because it requires context switching.
+
+So in principle you could imagine having humans use a dumber AI for some subtasks very quickly and switching back and forth, but you can’t exchange my brain state with the brain state of the weaker AI.
+
+Whereas, for example with transformers, you can just totally feed the context to a weaker AI.
+
+You can train the weaker AI to work with the smarter AI.
+
+You can even do stuff like shove the activations of the smarter AI into the weaker AI and do all kinds of variable compute scaling things at runtime like this.
+
+So maybe that gets you another factor of two.
+
+So now we’re up to 30x speed.
+
+And to be clear, these speedups are going to take off.
+
+They’re going to shave off the number of parallel copies we have.
+
+And then I think you maybe get another factor of two from the AIs being better at coordinating than humans.
+
+So I talked about maybe they can interchange context with weaker AIs.
+
+Well, maybe they’re also just much better at coordinating across parallel tasks.
+
+Let’s think about this in terms of a speedup: they can take a task that maybe would be infeasible for humans to parallelise.
+
+Like sometimes, when you do an eight-hour software engineering task, you could in principle have five people work on it all in parallel, but you lose a lot on efficiency and maybe get no serial speedup because humans are so bad at coordinating.
+
+But maybe the AIs can have all the same context because they can fork off of the same point.
+
+So you start with some AI, you fork off of it.
+
+There’s a nice Dwarkesh article on all the structural advantages AIs might have, and it goes into this sort of thing.
+
+And because you can fork, maybe you get more speedup.
+
+Let’s say that’s another factor of two.
+
+Now we’re up to 60x speed, right?
+
+So we had our million AIs at 60x speed.
+
+Let’s make that 50x speed, sorry.
+
+So then we have 20,000 AIs in parallel instances, each running at 50x speed.
+
+And all of them are as good as the top research scientists, the top research engineers.
+
+Now, how much of a speedup is this over, let’s say, OpenAI?
+
+Maybe OpenAI, at the point when they’re building this AI, will have somewhere between 2,000 to 5,000 researchers.
+
+The number of researchers is growing over time.
+
+So naively we have 10x more parallel instances, but they’re also 50x faster.
+
+So then there’s some messy conversion between how much additional labour you’re putting in to what overall speedup you expect, taking into account the fact there’s compute bottlenecks and other things, and also the fact that there’s penalties for running in parallel.
+
+So you know, nine software engineers cannot make a thing happen that would have taken nine months in one month — you know, the same for the babies — Rob Wiblin: You can’t have nine women have one pregnancy in one month.
+
+Ryan Greenblatt: Yeah.
+
+I think a thing humans suffer from is parallelisation penalties, so the fact that the AIs run much faster means in some sense they suffer less from this.
+
+There’s more parallel copies by a factor of maybe 10 or so, so they’re eating some return on that, but you have also just straight-up 50x more speed and also more quality.
+
+And the quality pushes into the parallelism as well.
+
+So then I’m like, maybe we should really think of the OpenAI labour force as being as good as maybe like 5x or 10x fewer people that were better.
+
+So maybe it’s as though they had like 200 or 400 Alec Radfords or whatever.
+
+And some people think it’s even more extreme than this.
+
+And then if it’s like they have 200 or 400 Alec Radfords, and we have 20,000 Alec Radfords at 50x speed, I think intuitively it feels like things could get crazy.
+
+But the question is just how much does the compute bottleneck?
+
+And people disagree a lot on this.
+
+We really don’t know.
+
+No one has run the experiments that we would need to find out how big of a deal this is.
+
+We just have surveys and vibes and whatever.
+
+Rob Wiblin: What experiment would you run?
+
+Ryan Greenblatt: Here would be my favourite: Google is known for having a large number of different teams, and I think probably, at some point, someone messed up the compute allocation to some team, or there was some exogenous shock causing the compute allocation to some team to be lower than it was supposed to be or to be higher than it was supposed to be.
+
+And then you could look at the question of when that happened, how much did progress speed up or slow down?
+
+That would give you some sense of what the marginal production function looks like, what the marginal returns to compute look like.
+
+That would give us at least some sense of what’s going on.
+
+In the AI case we’re operating very far off of the human margin, because we have so much more labour.
+
+So the situation might be very structurally different, but that would give us some sense.
+
+I think my dream is that someone goes to GDM or whatever and scrounges up the data on all the natural experiments they must have been running, and does a very economist-style analysis on that and figures out what the local returns look like.
+
+That only tells us so much, because it’s only the returns around the current regime.
+
+I think even better than that might be things like having a small team of researchers who you give way less compute to.
+
+You know, if Google is really into running experiments, not just giving us data — I pick on Google just because that’s the example, but other companies could do this — they could take some of their researchers and split them into two groups or more groups, and have some of the researchers get way less compute, get more like the amount of compute we expect our AI researchers to have, for instance, and see how much slower they operate.
+
+If it’s way, way slower, that would give us a sense on the regimes.
+
+I think this is a trickier thing to understand partially because there might be adaptation time.
+
+So it might be like you put the humans in this regime with way less compute.
+
+Initially they’re way slower, but they sort of learn to work within those limits.
+
+And I think the AIs will have lots of time to learn to work within those limits because they’re running so much faster.
+
+Regardless, my sense is that the initial speedup, the instantaneous speedup of your AI researchers will be… When I take all these things into account and try to do the math on the production function, maybe I do something like a Cobb-Douglas production function with some factors and we try to have a parallelism penalty that we apply both to the humans and the AIs, and we normalise the labour force.
+
+There’s a bunch of messy stuff here.
+
+I think that the inside view, fully extrapolating from the current frontier econ model, spits out numbers like, depending on exactly how you do the estimate, I think maybe my favourite picks of the constants are around 50x faster.
+
+I think this is probably overestimating the speed.
+
+That’s 50x faster than the current rate of progress.
+
+The current rate of algorithm progress is somewhat over half an OoM per year.
+
+So naively that would get you some truly ungodly instantaneous rate of 25 OoMs per year.
+
+I think now I think people might be like, “Come on, the thing you’re saying, that’s ridiculous.” I think I’m like, yeah, the thing I’m saying, it’s a bit ridiculous.
+
+So maybe we want to discount this view of the instantaneous speedup a lot.
+
+So rather than having the equivalent of 50 years of progress, or one year of progress in one week, I’m like, maybe that’s too crazy, and then I end up dividing down to maybe it’s more like 20x rate of progress, maybe even a bit lower than that at the instantaneous speed, as sort of my median guess.
+
+And again, I think this is like wild speculation; we’re extrapolating from a regime that we don’t even understand to a wildly different regime.
+
+No one knows.
+
+So it could be much faster; it could be much slower.
+
+Or it can’t be that much faster, I guess.
+
+Rob Wiblin: So at the point that you fully automate it, it sounds like it could be blisteringly fast at that moment.
+
+But I guess one way of making this sound less crazy is you say it starts out incredibly fast and then starts flattening out quite quickly, so you only have one week of this level of blistering progress.
+
+I guess the alternative is it could go even faster — you were saying that is also a live possibility.
+
+Do you want to explain what evidence would bear on whether we expect it to slow down versus speed up?
+
+Ryan Greenblatt: Yeah.
+
+Another thing on that is I’ve been doing this instantaneous analysis, and I think people might be like, “Sure, maybe you would get that if you drop these in.
+
+But it’ll be more gradual in the leadup to this.” So for one thing, in short timelines, I think we should expect the gap between substantial acceleration (but not full automation) and full automation is small in calendar time.
+
+And if you’re expecting that the substantial automation speeds things up, then it’s even smaller in calendar time.
+
+So I think this instantaneous analysis is at least non-crazy.
+
+Regardless, there’s a question of, does it speed up or does it slow down?
+
+So if we had this 10x or 20x progress rate, then we’d be talking like the instantaneous rate is like five or 10 OoMs in one year — orders of magnitude of effective compute progress.
+
+Now, does it speed up or does it slow down?
+
+This analysis is even trickier.
+
+There’s a lot more factors.
+
+The basic story is: you have your AIs, they do a bunch of algorithmic research, they train a new AI, that new AI is smarter and better and more efficient (or some mixture of those attributes), that new AI does even faster algorithmic research.
+
+But the returns have also diminished, right?
+
+So returns have diminished, but also you have smarter AIs and you can get either superexponential progress, exactly exponential progress — exactly exponential progress is it continues at the same rate, so the progress was already exponential in effective compute — or you can have decaying progress.
+
+So the way that we try to get an estimate for this is we try to have a sense of… We’ve been dumping more and more human labour over time into things like computer vision, LLMs — and we can try to get a vague sense of, when we’ve been dumping in all those researchers, how much has that accelerated progress?
+
+And then we do a bunch of adjustments for the AI case.
+
+So maybe we have a conversion from dumping in AI labour to how much more effective compute that keeps getting you — which we also needed the same sort of analysis to get the initial speedup.
+
+And if we have that, then the question is, how much more labour does each effective compute get us?
+
+So each 10x of effective compute gets us more labour.
+
+It also gets us more capable labour, and then that can loop back in.
+
+So there’s a bunch of math here.
+
+And again, I think we have plausibly even more uncertainty on this component than the previous component.
+
+But I think the best estimates indicate that at least initially, progress will speed up rather than slow down.
+
+Probably.
+
+I mean, you can roll to disbelieve on this or whatever, but I think if you just do the naive analysis, you try to account for the factors — you try to account for the compute bottlenecks, you try to account for parallelism issues, you try to account for all this stuff — it turns out that it just makes the AIs more capable and smarter fast enough that — very roughly, on our very trashy models — we expect progress to speed up reasonably quickly.
+
+Rob Wiblin: So if this is right, we’re blowing past human level incredibly quickly into a totally superhuman regime in terms of just how capable these models are in general.
+
+Am I understanding right?
+
+Ryan Greenblatt: Well, it’s kind of complicated.
+
+So there’s a question of how many orders of magnitude of progress you get, and there’s a question of how much does it matter?
+
+So I’m throwing around this effective compute unit, and I think this has a problem of being a very econ-brain unit of analysis.
+
+People are like, “OK, come on, how much is an order of magnitude of effective compute even?
+
+How much does that matter?” We were talking about that earlier in the discussion about how much is an order of magnitude of effective compute between DeepSeek-V3 and Grok.
+
+And we also care about, does the qualitative trend continue?
+
+What is the right qualitative trend?
+
+How superhuman can things even get?
+
+This sort of thing.
+
+I want to spend a bit more time on one thing about the accelerating progress, which is that you should expect that the returns eventually must diminish.
+
+So another key factor is limits: progress can only go on for so long, right?
+
+You cannot get 100 OoMs of progress, because at some point — Rob Wiblin: The laws of physics bite.
+
+Ryan Greenblatt: Yeah, the laws of physics bite.
+
+And also more importantly, perhaps the amount of compute you have bites, right?
+
+So you only had so much compute.
+
+I’ve been talking about all this analysis on a fixed compute base.
+
+So here’s a naive bear case for efficiency: imagine that you got 10 OoMs of progress on algorithmic efficiency.
+
+As of now, that would naively imply you could train DeepSeek-V3 for… So 10 OoMs is a factor of 10 billion, and it was trained for $5 million, so that’s like less than a cent.
+
+Well, whatever.
+
+It’s very little, right?
+
+Yeah, a bit less than a cent.
+
+So like, OK, come on, are you going to be able to train DeepSeek-V3 for less than a cent?
+
+It’s like you’re doing seconds on an H100, less than seconds on an H100.
+
+I’m like, come on guys.
+
+How many parameters can that be?
+
+So in that same ballpark, it’s like, how many numbers can you even multiply?
+
+You can only have touched so many parameters, right?
+
+If you just do all this, I think you should be very sceptical.
+
+Now, one thing that’s worth noting is I think limits up might be different than limits down.
+
+So it might be that you can only make things so much more efficient, but you can make things scale better.
+
+So DeepSeek-V3 is maybe five orders of magnitude more efficient, four orders of magnitude more efficient, even in the limits.
+
+I think probably a little more than that, but somewhere around there.
+
+But maybe you can make DeepSeek-V3… You know, there’s some scaling trends.
+
+There’s a question of how good would DeepSeek-V3 be if we scaled it up by five orders of magnitude?
+
+Maybe we can, for DeepSeek-V3-level compute, go up five orders of magnitude on the DeepSeek-V3 scaling law.
+
+Does this make sense?
+
+This is a bit tricky.
+
+Rob Wiblin: No.
+
+Maybe explain that like I’m a bit of an idiot.
+
+Ryan Greenblatt: OK, OK.
+
+So for every model, there’s some way to naively scale this up both on RL and data and whatever.
+
+Now, there’s a bit of complexity around this, and it’s a bit of a tricky analysis, but we could say, how good would we have been if we took the DeepSeek-V3 algorithms, and we scaled them up five orders of magnitude, and adapted to that amount of compute, and didn’t mess up that training run?
+
+It might be the case that it’s much easier to replicate what we would have been able to do with five orders of magnitude more compute than DeepSeek-V3 than to make it five orders of magnitude more efficient.
+
+It’s a bit tricky to do anchoring, because a lot of the limits I’m defining in different ways, but minimally I think 10 orders of magnitude up on the DeepSeek-V3 efficiency — as in you’re doing with DeepSeek-V3 training compute as well as if you were doing 10 orders of magnitude more compute on those same algorithms — seems very plausible to me.
+
+Rob Wiblin: OK, what does that imply?
+
+Ryan Greenblatt: I think there’s a bunch of ways of doing the analysis.
+
+I’ll try to do a quick version of the analysis that’s very quick and dirty, but gets us something.
+
+So we trained our human-level AIs, or our AIs that are broadly at the level of top human research scientists, let’s say in 2029 or 2030.
+
+Maybe the training run was around like 10^28 FLOP, and we produce something at the level of humans.
+
+We have some very trashy estimates of human brain lifetime compute, like how much compute the human brain is using in a lifetime.
+
+Like if you had the algorithms of the human brain, and you were able to do that, how long would it take to train a human who’s as good as the best human scientists?
+
+And our sense is it’s around 10^24.
+
+So that’s four orders of magnitude of efficiency right there, because we trained something that was competitive with humans for more compute than humans.
+
+So four orders of magnitude on that, maybe it’s a bit less, but ballpark.
+
+Makes sense?
+
+Rob Wiblin: Not completely.
+
+It’s four orders of magnitude of what exactly?
+
+Ryan Greenblatt: So we were able to train something that’s as good as a human, but it required us to use four orders of magnitude more compute.
+
+And so you might think, at the very least, we can get to the point where we can train a human for 10^24 FLOP, or a human-level model.
+
+And then we have four orders of magnitude of room above that to expand.
+
+Rob Wiblin: Four orders of magnitude more to expand?
+
+Ryan Greenblatt: As in, imagine that we advanced the algorithm so we can now train a human for 10^24 FLOP.
+
+Now we have an additional four OoMs of scaling available to us.
+
+Rob Wiblin: OK.
+
+Because originally the training was so inefficient.
+
+Ryan Greenblatt: Yeah, that’s right.
+
+And an important thing here is that in shorter timelines we must be imagining we have more efficient algorithms — whereas in longer timelines, where more compute is required, presumably we have less efficient algorithms.
+
+There’s some interesting dynamics here.
+
+Rob Wiblin: Why is that?
+
+Ryan Greenblatt: Imagine that we produce full automation of an AI company in 2028, 2029, 2030: then we must be operating around like 10^28, 10^30 training runs.
+
+On the other hand, imagine we’re doing it in 2040 or 2045: plausibly we could be having quite a few more orders of magnitude of compute.
+
+I haven’t done the math, but it could be like four more orders of magnitude.
+
+I think like 2050 at least maybe you could get four more orders of magnitude of compute by you’ve scaled the fabs, you made them cheaper, you have new techniques, maybe you’re using optical computing and more speculative approaches.
+
+So if you’re training the human-level AIs for like 10^36 FLOP, then you have way more headroom.
+
+Rob Wiblin: I see.
+
+So we know that we can achieve the level of efficiency that the human brain has.
+
+And if it was taking 12 orders of magnitude more compute to reach the equivalent performance as a human, well then you have an enormous amount of potential algorithmic efficiency gain.
+
+Ryan Greenblatt: In the limit.
+
+Rob Wiblin: In the limit.
+
+OK, yeah.
+
+Ryan Greenblatt: Anyway, I think a reasonable objection here is: we don’t know what the human brain is doing; can we even produce that level of compute?
+
+Also, isn’t it the case that evolution did a huge amount of optimisation?
+
+Maybe that required a bunch of compute.
+
+And so even if in principle you could have the human algorithm — which is like the human genome — then finding the human genome itself would take a huge amount of research compute, because we have to run simulations equivalent to what evolution was.
+
+So this is some scepticism.
+
+I’m basically going to put this aside and not address it, and just be like, I’m sceptical.
+
+But I think it’s going to be somewhere in between this picture.
+
+But I don’t think that’s a huge discount.
+
+And there’s another thing, which is that we don’t think that humans are at the limit of efficiency.
+
+There’s many reasons why humans are inefficient: they have physical brains under a bunch of constraints, they can only do local training algorithms for structural reasons about propagation of information backward — so human brains basically can’t do backprop very directly and they can only do more local learning algorithms.
+
+So our current best local learning algorithms are much worse than SGD [stochastic gradient descent].
+
+Of course, evolution had more time optimising these local learning algorithms, so maybe that’s a big factor.
+
+Maybe that’s even like two orders of magnitude.
+
+And then there’s a bunch of other factors.
+
+Another thing is that, within humans, performance on the task of AI R&D varies wildly.
+
+There’s a huge variation between the median human and the best human on ability to do this.
+
+Some of that’s training; some of that’s genetics; some of that’s upbringing from things other than direct training, like training on other tasks.
+
+So maybe that gives us another bunch of headroom.
+
+So you can imagine making 300-IQ humans without having much bigger brains, but just by having more efficient brains — like with more of the mutations removed, possibly more than that.
+
+So that gets you some more.
+
+And there’s a long list of considerations like this.
+
+Things like, maybe the AIs are able to sync mind states more effectively, which gives them more coordination.
+
+Maybe they can generate much better training data.
+
+I’m going to miss some of these.
+
+But anyway, I think when we add all these up, my guess is a median of like nine OoMs up.
+
+We talked about the distinction between up and down.
+
+That’s also going to apply on humans.
+
+So maybe you can’t train a human for nine OoMs less FLOP — you can’t train a human for 10^15 FLOP, which would be like a second on an H100.
+
+But maybe you can train something that’s like nine OoMs better than a human with human-level compute.
+
+Rob Wiblin: I see.
+
+OK, that might be the most technical or challenging to follow half hour of the show.
+
+I was very happy to let you go, so people can get a sense of just how many moving pieces there are, and also how much thought has gone into this.
+
+It sounds like there are quite a lot of people trying to forecast this time and trying to sketch out the different plausible trajectories and the different factors that weigh on it.
+
+Is it possible to bring it back to something that someone with less technical understanding can grasp?
+
+Is the bottom line that people thought about it a lot, it’s quite hazy, there’s a lot of factors at play?
+
+It’s possible that at peak AI R&D, things could be moving very fast, and it is plausible that it could even speed up as the AIs get better.
+
+It’s also possible it could slow down.
+
+We should just be open to all of these different options?
+
+Ryan Greenblatt: I would have said surprisingly little time has been spent thinking about this, actually.
+
+As far as I can tell, maybe around four full-time-equivalent years have been spent very directly on trying to build these models to forecast takeoff and applying those models to forecast timelines — maybe even less than this.
+
+And there’s a bunch more work that Epoch has done on trends and other analysis that I’m pulling in, but this type of analysis I’m talking about, these takeoff dynamic analyses, I think maybe at this point it’s more like eight equivalent years.
+
+I was not pricing in a few Epoch papers.
+
+Maybe the Epoch people are going to call me out for underrating their hard work.
+
+But they’ve done a bunch of the background work of the statistics I’m pulling in and a lot of the trends I’m pulling in.
+
+But I think there hasn’t been that much work on the analysis here.
+
+So I’m like, come on, eight person years?
+
+This is maybe the most important question, one of the most important questions.
+
+I don’t expect us to get that much signal on it, but it does have a huge effect, and it is a very big disagreement.
+
+I think a lot of people are sort of expecting that progress peters out around human level, or it just is relatively slow or it’s mostly bottlenecked on compute.
+
+And the question of whether this is true or not makes a huge difference.
+
+One argument also that I didn’t mention there, which I sort of just brought up, was I was sort of imagining we just are just like flying through this human regime with no important discontinuity or kink around human level.
+
+But it could in principle be that we were able to get to the human level via sort of piggybacking or fast following on human behaviour.
+
+My guess is this isn’t that big of a factor, and it’s just like a one-time cost that’s not that big.
+
+But I think we shouldn’t get too much into that.
+
+Anyway, we had how fast is the initial speedup?
+
+Does it speed up or does it slow down?
+
+And we had what are the limits?
+
+Eventually it must slow down, right?
+
+So we have this model in which it maybe even initially is speeding up and it’s like continuing to speed up and it’s following this sort of hyperbolic trajectory where it’s going to infinity in finite time.
+
+Eventually that must end as you’re starting to near the limits.
+
+We don’t know when it starts to slow down.
+
+It’s going to slow down at some point.
+
+But I think the all-considered model is: things might be very fast, it could happen quite quickly.
+
+I think the estimates imply my median is maybe we’re hitting about five or six orders of magnitude of progress in a year of algorithmic progress.
+
+Rob Wiblin: And it’s a bit hard to know exactly what qualitative impact that will have on how smart the models will actually feel to us.
+
+Ryan Greenblatt: Yeah, for sure.
+
+That is another big source of uncertainty.
+
+I’ve been doing this very econ-brain analysis, where I put everything in these effective compute units, and I’m doing a bunch of quick conversions back and forth to labour supply to get a bunch of things.
+
+There’s a bunch of different ways of visualising this progress.
+
+I should also say there’s a few factors I’m neglecting, like you’re scaling up compute during this period and a bunch of other minor considerations.
+
+These are priced into my five or six OoMs of progress in a year.
+
+But I don’t think we should get too much into that.
+
+Regardless, I don’t know… I have this sort of intuitive-to-me model of initial rate, speedup/slowdown limits, and then limits affect, even if it’s initially speeding up, when it starts slowing down again.
+
+Does this model sort of make sense to you?
+
+Rob Wiblin: Yeah, I think that makes sense.
+
+Those are kind of the three big stylistic factors that you’re playing around with.
+
+Ryan Greenblatt: Yeah.
+
+And then there’s a bunch of tricky details about, suppose the limit is this many OoMs away.
+
+The factor of is it speeding up or is it slowing down, and how does that change over time, you might think it’s initially speeding up and the time at which that stops is very close to the end of the limits.
+
+Or could be that it’s more continuous across the limits, and this will have a big effect on how many orders of magnitude you get.
+
+But regardless, I think that’s the sort of intuitive model.
+
+I think people should play with this.
+
+I think playing with this sort of model is interesting.
+
+It’s pretty clear that this is both a simplified model and also has an insane number of moving parts that we have very little data to estimate.
+
+We’re sort of fitting this model in a massively extrapolated regime from trashy data.
+
+You know, what can we do?
+
+And including data as trashy as guessing how much more efficient you can be than the human brain.
+
+So as you were saying, we’re very uncertain and we have huge error bars.
+
+My view is you’re going to get some initial speedup and you’re also going to be able to pile in more compute.
+
+So maybe the 25th percentile is like you get somewhat faster than previous years of progress, or the 25th percentile is plausibly just barely faster than preexisting progress.
+
+And I think that like 80th or 75th percentile might be like completely insane.
+
+Rob Wiblin: So this is the question of, at the point that we are able to automate things, how much does it actually speed up what the company was doing?
+
+And you’re saying the 25th percentile of this is maybe it’s kind of just at roughly the same rate as it was before — but the 75th percentile, which is not even an extreme outcome, it’s radically speeding up the research.
+
+Ryan Greenblatt: Yeah.
+
+At least quickly.
+
+It might be that the initial speedup is not that high, but the speedup increases over time and diminishes relatively slowly.
+
+And also, I’ve been talking about this one-year timescale, but I think on a lot of the modelling most of the progress might happen in the first six months — because you’ve already started to hit this diminishing returns regime kind of quickly.
+
+Rob Wiblin: It’s like the faster you go, the sooner you start hitting limits.
+
+Ryan Greenblatt: Yeah, that’s right.
+
+And you know, it could go pretty different ways.
+
+Anyway, I’ve been saying six OoMs of progress: what does that even mean?
+
+What does this look like?
+
+Rob Wiblin: “OoM” is “order of magnitude” for anyone who didn’t pick that up but is still with us.
+
+Ryan Greenblatt: I’m sorry.
+
+I love OoM.
+
+What a good term.
+
+It’s one of my favourites.
+
+Rob Wiblin: Onomatopoeia.
+
+Ryan Greenblatt: Yeah, yeah, it’s great.
+
+Anyway, so six OoMs, how much is that?
+
+So it’s roughly two GPTs: there was broadly an OoM between GPT-2 and GPT-3 in terms of roughly 10x algorithmic progress and around 100x compute.
+
+Very roughly speaking, maybe a bit less than this.
+
+And something broadly similar between GPT-3 and GPT-4.
+
+So the naive qualitative model we can do is we can be like, how big was the GPT-3 to GPT-4 gap?
+
+And then we can be like, we have two of those gaps: two more GPTs.
+
+And then I’m like, what does that mean?
+
+I think the two GPTs analysis makes me feel more reassured.
+
+I’m like, two GPTs, is that even that bad?
+
+I mean, come on.
+
+I think another framing is how many years of AI progress is this?
+
+I think six OoMs is about five years of AI progress, very roughly speaking, maybe four.
+
+So it’s like going from, in 2020, we had just gotten GPT-2 XL to now.
+
+So it’s like the gap between — Rob Wiblin: But I guess it’s hard to know intuitively what that means, because GPT-2 was pretty useless for anything.
+
+Ryan Greenblatt: Or GPT-3 was pretty close.
+
+Yeah, so that’s pretty useless.
+
+I think perhaps the thing that we even have less grounding on is how much does progress above the human range mean?
+
+Like, at the point we’re starting this, the AIs are matching the best human professionals.
+
+Maybe they’re not quite as efficient, not quite as smart, but via various tricks and whatever, they can basically match human professionals.
+
+Now, how much further do you go?
+
+So there’s the GPTs.
+
+I think another notion is trying to convert from the GPTs to some IQ or some notion of that.
+
+People have wildly different intuitions here, but if we imagine that we were starting at maybe 150-IQ AIs, because they were able to automate everything… Again, IQ is kind of a trashy unit.
+
+Rob Wiblin: It feels like it wasn’t designed for this purpose too.
+
+Ryan Greenblatt: Oh no.
+
+Nothing was designed [for it].
+
+We’re abusing the shit out of these econ models also.
+
+I’ve been doing all this econ-style analysis on econ models that definitely weren’t designed with this regime in mind.
+
+And growth economics, which is the field that we’re pulling from, is just not that good of a field — sorry, no offence to the growth economists out there, but there’s just not that many people working on it, and we have a lot of uncertainty over a lot of things there.
+
+Anyway, so there’s the two GPTs.
+
+How many IQ points is that?
+
+This intuition makes me think maybe a GPT is a bit over 50 IQ points or something.
+
+And so we go from 150 to 250, and also we have many more parallel copies and they can run faster.
+
+These are some intuitions.
+
+Another intuition is how much better are they in terms of human professionals?
+
+Here’s a trend that I think is good to track: if you look at programming competitions, we’ve been seeing progress in terms of ranking on those programming competitions over 2024.
+
+At the start, maybe the AIs were like 20th percentile, roughly.
+
+And then they were at 50th percentile, and then I think o1 was like 75th, o1-preview was a bit over 90th percentile, and then o3 was 99.8th percentile or something.
+
+So there’s some relationship between orders of magnitude of compute or algorithmic progress and what rank ordering you have among human professionals.
+
+At the point when we’re starting this crazy stuff, maybe the AIs are broadly like hundredth or tenth best human professional rank ordering, and then we have these six orders of magnitude of progress.
+
+I think that there’s some conversion we could try to have between orders of magnitude and ranking — where it’s like every order of magnitude maybe means that you’re like 10x better on this ranking.
+
+So instead of being the thousandth best, you’re the hundredth best.
+
+My guess is it’s a bit over.
+
+Like an OoM of effective compute is somewhat more than an OoM of this sort of rank ordering.
+
+I think no one has done this analysis very carefully.
+
+Someone should do it.
+
+Suppose that it’s a little over an OoM, then maybe with our six OoMs, we get eight OOMs of rank ordering.
+
+Rob Wiblin: And so pretty soon you’re below one, right?
+
+Ryan Greenblatt: Yeah, you’re below one, so now we’re extrapolating this thing.
+
+One way to put this is we sort of quickly get to just human parity, and then maybe we have a bit more than six OoMs left still.
+
+Or say the literal best human parity, and then we have another six OoMs of progress.
+
+So it’s as big of a gap as going from the millionth best human at a thing — because million is six OoMs — to the best human at a thing.
+
+So it’s like we took the best human and we did the equivalent of going from the millionth best to the best.
+
+And that’s another qualitative intuition.
+
+I don’t know how much that tells you, but there’s some extrapolation there you can do.
+
+This is brazenly ripped from Daniel Kokotajlo’s way of thinking about the OoMs.
+
+Now, we also have uncertainty on this point.
+
+So I think if it’s more like each OoM is two OoMs, then it’s more like you’re over a billion x better than the best human professionals.
+
+Rob Wiblin: You’ve gone from the billionth best to the very best, and then you’ve made that leap again.
+
+Ryan Greenblatt: Yeah, that’s right.
+
+Which is quite a large gap.
+
+Importantly, I think that you can’t understand the billionth best in the human range because it doesn’t make sense to generalise out of a career.
+
+Like, who’s the billionth best person at software engineering?
+
+Rob Wiblin: This is a silly question.
+
+Ryan Greenblatt: This is a silly question.
+
+I think the millionth best person at software engineering is now at least somewhat meaningful.
+
+We can start working with that.
+
+And more niche human professions, it’s less meaningful.
+
+So I think we have this kind of insane gap from that.
+
+Another intuition I like is thinking about how big is the labour supply.
+
+So in a lot of the econ analysis I was doing earlier about does progress speed up or slow down, an important question was how much does each order of magnitude of effective compute get you in terms of more cognitive juice to throw at problems in terms of how much can you feed into the labour part of the production function?
+
+One way to do it is we can just be like, how good is an order of magnitude of compute relative to how many orders of magnitude of parallel workers is that equivalent to?
+
+My understanding is that our best available estimates are like every order of magnitude of effective compute is like two orders of magnitude of parallel workers.
+
+Rob Wiblin: And this is because having lots of people work in parallel is actually quite inefficient?
+
+Ryan Greenblatt: Yeah, the AIs are faster, more capable, and you get more parallel copies.
+
+So when you scale up effective compute, at least in the current paradigm, you have more efficient AIs that are smarter, potentially.
+
+So you can basically be scaling all these factors in parallel and you can be scaling whichever factor is most effective.
+
+Rob Wiblin: I see.
+
+So you get to allocate your compute budget between having more of them and having smarter ones in the most efficient combination.
+
+Ryan Greenblatt: Yeah.
+
+And you can sort of gear your training runs to be like, are we training a bigger model, or are we training a smaller model?
+
+There’s some tradeoffs between all these things that’s kind of complicated.
+
+There’s ways to trade off inference compute and training compute as well.
+
+But all considered, like I’m going to do denomination and parallel copies.
+
+So we started with like 20,000 geniuses running at 50x speed, and then we had six orders of magnitude — but we’re actually doubling that, so we have 12 orders of magnitude.
+
+That’s a trillion.
+
+So now we’re going to 20 quadrillion running at 50x speed.
+
+Now, I think this is perhaps a bit misleading because an important component is the parallelism bottlenecks.
+
+But if you are used to thinking in terms of human organisations, then I think you should think of 20 quadrillion humans running at 50x speed is right, and like the amount of stepping on toes is sort of analogous to that.
+
+And then in practice, maybe the thing I actually more expect is maybe it’s qualitatively closer to like a billion or 2 billion humans that are way smarter than humans.
+
+So like 250-IQ humans running at 100x speed.
+
+Probably my numbers are a bit sloppy, but I think that’s more like the intuition I expect.
+
+And then you could do the same in terms of the professionals.
+
+You have to be careful not to overcount.
+
+Part of the mechanism via which they’re much better at human professions is having more of them, so all these things are going to funge across, but maybe it’s as though you go from millionth best human to best human and then million above that.
+
+We sort of do the same extrapolation.
+
+Maybe it’s as though we have millions of them at least running at 100x speed, which is like, OK, this is fucking insane, right?
+
+For example, very quickly the AIs will do more cognitive progress on problems than has been applied in human history by huge margins.
+
+And very naively they’re running at 100x speed.
+
+So it’s like if there’s something that you could have done purely in the domain of cognition, like purely without access to the world, that would have taken humans 10 years — it would have taken a team of 100 humans 10 years: OK, boom, happens in a tenth of a year with just a tiny fraction of the labour supply.
+
+So I think we should start being like, what kinds of crazy technologies will be spit out of this process?
+
+There’s a bunch of things that I think could in principle be accelerated massively that we haven’t even tried that hard at.
+
+Effort has been spent on atomically precise manufacturing.
+
+Not that much effort has been spent on nanobots, nanosystems, whatever.
+
+I think Drexler, who originally thought about this, thought it was going to be very little labour, so thought that it might be very easy for humans to do, but very little effort has been applied.
+
+So it seems very plausible that you come out of this regime very quickly with like, you know, atomically precise manufacturing that allows for massively increasing the compute supply and all kinds of other crazy things.
+
+That’s like one example.
+
+I think emulated minds and a tonne of other things could happen pretty quickly.
+
+Rob Wiblin: To wrap up, it’d be good to do a bit of discussion of what you think are the highest priority things for the sorts of people who listen to this show to be working on, given your enormous distribution of predictions about different ways that things could run.
+
+On the technical side, what are some of the things that stand out to you as particularly neglected and useful?
+
+Ryan Greenblatt: I think more people should do control work relative to what’s going on.
+
+My colleague Buck is probably going to talk more about what that would look like, so I won’t go into too much detail there.
+
+I think that’s now a lot less neglected than it was, but still seems good to have more people working on.
+
+I think more people should spend their time thinking about and working on how would you train AIs that are wise and are able to make decisions that are better than the decisions we would make.
+
+Basically how would you get to a point where you have ruled out the models plotting against you?
+
+How would you make them be the AIs that you are happy to hand over to?
+
+This is a much more conceptually thorny area, and I’m planning on spending more time thinking about what research projects should be spun out of that.
+
+There’s a decent amount of work on what I would call “model internals” that people could work on.
+
+Maybe this is falling somewhat under control, but things like probing to make it so that we can detect if the models are taking misaligned actions.
+
+How would we do that?
+
+How would we know if it worked?
+
+This sort of thing.
+
+There’s some work on maybe decoding uninterpretable reasoning.
+
+Suppose models learn to reason steganographically in their chain of thought — Rob Wiblin: So this is that they’re scheming against you, but you can’t tell.
+
+It’s kind of encoded.
+
+Ryan Greenblatt: Yeah.
+
+Steganographically is they’re using different symbols and you don’t understand what’s going on.
+
+Or maybe it looks like gibberish to you.
+
+Maybe it looks like one thing, but actually is another thing.
+
+Or maybe it’s like they’re doing a lot of latent reasoning.
+
+We talked earlier about maybe models doing a lot of reasoning in a latent way rather than in natural language, and being able to decode that reasoning in some way, and trying to figure out some methods for training decoders on that that work somewhat and give us some sense of what the AI is actually thinking, I think could be pretty helpful.
+
+In addition to this, there’s a bunch of different work on demonstrating AIs are very capable now.
+
+I talked some about how I think there’s overhang in the level of capability that has been demonstrated.
+
+I think demonstrating that current systems are capable and future systems are very capable seems probably somewhat good at the margin, because I’m worried about situations where the world is not very prepared for what’s going on.
+
+So things like demonstrating high levels of autonomous cybercapability, which I think is a sweet spot of both being directly relevant to a lot of threat models people are already considering, and also is not that far from the scenarios that we’re worried about, which do involve a lot of autonomous cyber activity, and that is actually a key part of the threat model.
+
+So it maybe bridges this divide in a nice way.
+
+And especially focusing on what is the best demo that we will ever be able to achieve in this realm.
+
+Another big area that people should work on is what I would call model organisms: trying to produce empirical examples of a misaligned model to study how likely this is to arise and present evidence about that.
+
+So things like, does misalignment arise in XYZ circumstance?
+
+Does reward hacking emerge and how does it generalise?
+
+Things like the alignment faking paper and various continuations of that.
+
+I think part of the hope here is gathering evidence.
+
+Part of the hope here is just having something to iterate on with techniques.
+
+Even model organisms which aren’t very convincing to the world or maybe don’t produce any evidence about misalignment one way or another, if they’re analogous enough that we can experiment on them, that could be potentially very useful.
+
+Rob Wiblin: Because you can try to develop countermeasures that work in the model organism case that then hopefully will transfer?
+
+Ryan Greenblatt: Yeah.
+
+I think a key difficulty with alignment overall is normally we solve problems with empirical iteration.
+
+And to the extent that a lot of our alignment failures make our tests deceptive, then if we can build some way to get around that in advance — or just be ready to build it in the last minute, and then do a bunch of iterations in those kinds of cases — I think that could be pretty helpful.
+
+Rob Wiblin: OK, that was what seems most promising on the technical side.
+
+Are there things that stand out on governance or other angles?
+
+Ryan Greenblatt: Yeah, I think there’s a variety of different room for non-technical interventions that seem pretty good.
+
+It’s hard for me to have very strong views on these things, because I don’t spend that long thinking about it.
+
+There’s a bunch of work.
+
+We’ve gone through a lot of conceptual points here, and I think there’s room for people working on just figuring out all these details, trying to have a better understanding of takeoff dynamics, trying to have a better understanding of different considerations other than misalignment that might come up.
+
+Things like how worried should we be about human power grabs?
+
+How worried should we be about other issues?
+
+I think there’s some of that.
+
+I think there’s a decent amount of work on just acting as an intermediary between the very in-the-weeds technical AI safety and the world of policy, and trying to translate that to some extent.
+
+There’s a bunch of specific regulation that could potentially be good.
+
+I think making the EU Code of Practice better seems good.
+
+The EU AI Office is hiring, so you could work on that.
+
+I think there’s maybe other strategies for regulation that could actually be good.
+
+I think there’s some stuff related to making coordination more likely or assisting with coordination that could be pretty helpful.
+
+Things like improving the compute governance regime so that the US and China can verify various statements made about the current training process.
+
+I don’t have a strong view on how promising that is, but I think surprisingly few people are working on that, and that’s surprisingly uncoordinated.
+
+So maybe someone should get on that, because it could potentially be a pretty big deal.
+
+In addition to that, I think just having a lot of people in positions where they’re just trying to provide technical expertise; they’re in a position where they’re currently building skills, they’re currently getting ready to have more direct impact; and will later, as stuff gets crazier, be ready to do something then.
+
+Another one is just generic defence.
+
+So we talked earlier about AI takeover scenarios.
+
+A bunch of the AI takeover scenarios I was saying involve, for example, bioweapons.
+
+Just generically improving robustness to bioweapons seems like it helps some.
+
+It’s complicated the extent to which it helps, but I think it helps some.
+
+Similar for making the world more robust to AIs hacking stuff.
+
+I think it helps some.
+
+I think it’s probably less leveraged than other things, but interventions that steer more resources to those things seem good from a wide variety of perspectives and potentially different assumptions about misalignment.
+
+I think those things maybe make a lot of sense even with no misalignment risks at all, for example.
+
+Rob Wiblin: Yeah, I guess because misuse is also an issue.
+
+Ryan Greenblatt: Yeah.
+
+And in addition to that, there’s a bunch of different work on security that could be good.
+
+So some of the threat models I was discussing involve various outcomes, like the model exfiltrating itself.
+
+They involve the model being internally deployed in a rogue way, where it’s bypassing your security and potentially using a bunch of compute it’s not supposed to.
+
+I think pushing back the time at which these things happen via security mechanisms seems good.
+
+Also security to prevent human actors from stealing the model could potentially increase the probability that there is delay and increase the probability of less racing, more caution.
+
+Rob Wiblin: What are the priorities for your research over the next couple of months?
+
+Ryan Greenblatt: Right now I’m doing a decent amount of planning and conceptual work, and then the plan for that is to then spin off a bunch of projects.
+
+So I’m thinking through questions like: What should you do in this scenario where your responsible AI company is three months in the lead and there’s very low political will — what’s the full list of potential alignment measures that might be promising?
+
+What is the route you should take?
+
+How should people prioritise?
+
+And then trying to maybe make both concrete recommendations and also just figure out things at the margin, basically with the aim being that it just seems like Redwood has had reasonable luck just trying to make overall plans and then spinning off some insights from this.
+
+I think control came out of this.
+
+I’ve had some updates based on thinking this through more.
+
+That’s one thing.
+
+Then I’m working on some demonstrations, or trying to look into how big of a deal reward hacking is right now.
+
+Just recently we’ve seen RL work when it wasn’t really doing as much before, and wasn’t being scaled as far.
+
+So one natural question is: how much reward hacking are we getting?
+
+How egregious might that be?
+
+In what situations is it more or less egregious?
+
+There’s been some prior work on this, but I think now that this is really going quite far, we might expect that we potentially see very egregious reward hacking, and we might see threat models that are just driven purely by reward hacking all the way to very egregious outcomes.
+
+In principle, doing things like massively deluding humans or potentially trying to seize control of assets could potentially be generalised from reward hacking.
+
+There’s also stories via which reward hacking leads to very pernicious misalignment, because you started with an AI that was disobeying your instructions, and that sort of crystallised in some way that involves the AI conspiring against you, even if it’s not as directly for something that we potentially have as much control over as the oversight signal.
+
+Rob Wiblin: All right, well, you and your colleagues write quite a lot on the Alignment Forum and you have a Substack.
+
+What’s the address for that?
+
+Ryan Greenblatt: The Substack?
+
+redwoodresearch.substack.com.
+
+Our Substack does not have a short URL, I’m afraid.
+
+Rob Wiblin: So if you want to pull on some of the threads of the things you’ve talked about here, there’s a pretty high chance that there’s some article or blog post out there that you or a colleague have written that could elaborate a bit more.
+
+Ryan Greenblatt: For sure.
+
+Rob Wiblin: I guess it’s a huge to-do list that you laid out there.
+
+If there’s people in the audience who are able to help out with that, then I guess time is short.
+
+We could use all hands on deck to help push forward all of these agendas and hopefully make things go better.
+
+Ryan Greenblatt: For sure.
+
+Rob Wiblin: My guest today has been Ryan Greenblatt.
+
+Thanks so much for coming on The 80,000 Hours Podcast, Ryan.
+
+Ryan Greenblatt: Thanks for having me.
