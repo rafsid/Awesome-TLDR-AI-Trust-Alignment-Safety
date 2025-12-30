@@ -1,0 +1,5 @@
+Today's date is: {{Current Date}}
+Your instructions are in: PROMPT.md
+Your CORPUS is in: 
+Create the summary document in: 
+Kindly ensure to add and verify links in further reading section

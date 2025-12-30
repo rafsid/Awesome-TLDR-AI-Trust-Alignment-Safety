@@ -33,12 +33,47 @@ Vary explanation language based on concept difficulty:
 *   **Mandatory Quiz**: You must end the document with 3-5 **derivation-focused Socratic Questions**. These questions should NOT be simple recall ("What is X?") but instead force the reader to *synthesize* or *apply* information ("Why does X cause Y?" or "How would X change if Z?"). Answers should *not* be visible.
 
 ### E. The Path to Mastery (Curated Resources)
-*   **Mandatory "Further Reading"**: List 5+ high-impact resources. **DO NOT generate URLs.** Instead, provide:
-    *   The **exact title** of the resource (paper, blog post, documentation page).
-    *   A **search query** the reader can use to find it (e.g., `[Search: "Anthropic Constitutional AI" arxiv]`).
-    *   A one-line rationale for why it's essential.
-*   **Structure**: Guide the learner through "Before" (Foundations), "Current" (Deep Dive), and "After" (Advanced).
-*   **Why no URLs?**: LLMs hallucinate links. A web-capable agent will verify and insert real URLs in Step 2.
+
+> 🚨 **MANDATORY URL VERIFICATION VIA HTTP REQUEST** 🚨
+>
+> If you have access to ANY tool that can fetch URLs (curl, fetch, read_url, browser, computer_use, MCP, run_command, etc.), you **MUST** use it. **DO NOT SKIP THIS.**
+
+**REQUIRED WORKFLOW (for each URL):**
+1.  Identify 5+ resources that would help the reader master the CORPUS topic.
+2.  **SEARCH**: Use web search to find a candidate URL for each resource.
+3.  **FETCH**: Use `curl`, `fetch`, `read_url`, or equivalent to **actually request the URL**.
+4.  **CHECK RESPONSE**:
+    *   Did you get **HTTP 200 OK**? (Not 404, 403, 500, or redirect loops)
+    *   Does the page content **actually match** the expected resource? (Not a generic homepage or error page)
+5.  **INCLUDE OR REJECT**:
+    *   ✅ If HTTP 200 + content matches → Include the URL.
+    *   ❌ If 404/error OR content doesn't match → **DO NOT include**. Find an alternative or skip.
+
+**EXAMPLE VERIFICATION (pseudocode):**
+```
+# Step 1: Search for resource
+search("Anthropic Constitutional AI paper arxiv")
+# Step 2: Get candidate URL from search results
+url = "https://arxiv.org/abs/2212.08073"
+# Step 3: Fetch and verify
+response = curl(url) OR fetch(url) OR read_url(url)
+# Step 4: Check
+if response.status == 200 AND "Constitutional AI" in response.content:
+    # ✅ INCLUDE
+else:
+    # ❌ REJECT, find alternative
+```
+
+**FORMAT**: Each entry must be a **clickable markdown link** with a verified URL:
+```
+*   **Category**: [Exact Title](https://verified-url.com/path) - *One-line rationale.*
+```
+
+**STRICT RULES**:
+*   Resources MUST directly relate to the **exact topic** in the CORPUS.
+*   Every URL MUST be fetched and verified (HTTP 200 + content check) before inclusion.
+*   If you don't have URL fetching tools, state: "⚠️ Further Reading URLs could not be verified. Please validate manually."
+*   **Structure**: Foundations (Before) → Deep Dive (Current topic) → Advanced (After).
 
 ---
 
@@ -107,27 +142,28 @@ mindmap
 3.  ["What if" question connecting Concept 1 & 2]
 
 ## 📚 Further Reading (The Path to Mastery)
-*Short-circuit your learning curve with these high-signal resources.*
-*   **Foundations (Before)**: [Exact Title] `[Search: "search query"]` - *Why read this?*
-*   **Deep Dive (Current)**: [Exact Title] `[Search: "search query"]` - *Why read this?*
-*   **Future/Advanced (After)**: [Exact Title] `[Search: "search query"]` - *Why read this?*
-*   [Additional resources as needed...]
+*Short-circuit your learning curve with these verified resources.*
+*   **Foundations (Before)**: [Resource Title](https://verified-url.com) - *Why this matters.*
+*   **Deep Dive (Current)**: [Resource Title](https://verified-url.com) - *Directly covers the CORPUS topic.*
+*   **Future/Advanced (After)**: [Resource Title](https://verified-url.com) - *Where to go next.*
+*   [2+ additional verified resources]
+
+> ⚠️ All URLs above were verified via web search on [DATE].
 ```
 
 ---
 
-**Instruction (Step 1)**: Process the provided `CORPUS` and generate this summary. Leave Further Reading as search queries.
+## 5. Final Instruction
 
----
+**Generate the summary now.** Before submitting:
+1.  ✅ Verify the Mindmap covers all major concepts.
+2.  ✅ Verify Concrete Examples are relatable and human-scale.
+3.  ✅ Verify Active Recall questions require synthesis, not just recall.
+4.  ✅ **CRITICAL: Verify Further Reading**:
+    *   Did you **actually use your web search tool** for each URL?
+    *   Is every URL a **real, working link** (not generated from memory)?
+    *   Does each resource directly relate to the **exact CORPUS topic**?
+    *   If you don't have web search, did you add the disclaimer?
+5.  ✅ Verify no em-dashes or AI-tell phrases.
 
-## 5. Step 2: URL Verification (Agent-Only)
-
-> **This step is performed by a web-capable agent (e.g., Claude with tools, ChatGPT with browsing, or a human).**
-
-After Step 1 generates the summary:
-1.  For each `[Search: "..."]` query in Further Reading, perform a web search.
-2.  Find the **exact, verified URL** for the resource.
-3.  Replace the search query placeholder with a proper markdown link: `[Title](verified-url)`.
-4.  If a resource cannot be found, flag it or substitute with the closest verified alternative.
-
-**Final output**: A complete summary with all URLs verified and functional.
+**DO NOT SUBMIT** if Further Reading contains unverified URLs.
