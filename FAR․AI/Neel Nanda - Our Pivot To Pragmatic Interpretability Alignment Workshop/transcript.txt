@@ -1,0 +1,164 @@
+Source: https://www.youtube.com/watch?v=k93o4R145Os
+Transcribed: 2025-12-30 13:49:33
+Method: YouTube Transcript API
+==================================================
+
+I'm going to be talking about a pair of blog posts that I put out uh yesterday um on how my team is currently thinking about trying to have impact via interability work and how we pivoted to what I think of as a more pragmatic vision.
+
+Um I put these out at uh 4 a.m.
+
+yesterday, so I've largely delegated side creation to Nana Banana.
+
+Apologies and debates.
+
+Um all right so I want to first begin by talking about some case studies that I found pretty influential in my thoughts of how we should go about interpretability.
+
+My first is there's great work from anthropic interpretability on evaluation awareness in set 4.5.
+
+So when anthropic ran their misalignment evaluations on sets they observed that they seem to have magically solved alignment.
+
+Sonnet was just 0% misaligned.
+
+It was glorious.
+
+Um, unfortunately, uh, actually, Sonnet just realized when it was being tested and was just vastly better at doing this than previous models.
+
+Um, but they found that via incredibly stupid methods like taking the difference in activations between prompts like you're in a test and you are talking to a real user and you're subtracting this vector.
+
+They seem to be able to get on it to not think it was an evaluation.
+
+and they could go back to actually trying to apply their misalignment evaluations.
+
+And I really like this as a case study of what having impact with interpretability can look like.
+
+Um, and I think there's like a bunch of takeaways from here.
+
+The two I want to highlight right now is one, this kind of work only became possible very recently when we had much more capable models.
+
+we can just actually empirically study things like evaluation aware behavior in a way we just couldn't a year ago.
+
+And secondly, historically interpretability has been really excited about a bunch of things like ambitious reverse engineering and aiming for neare and that was all basically useless and the thing that worked was subtract the difference in activations on a single pair of props.
+
+Um, but I still think this is really impactful work and I think this has pretty important implications for what we should be doing.
+
+A second case study, my team spent most of 2024 in investigating this interpretability technique of sparse autoenccoders.
+
+And uh, this is a metaphorical representation of what the first half of 2024 felt like was just well, we kind of have this technique.
+
+We have some like kind of pretty mediocre metrics like how well can this reconstruct a model in an interpretable way.
+
+But this kind of is a number and we can kind of try to do better on this.
+
+But like is what we're doing really helping?
+
+Is this technique useful?
+
+I honestly don't think I learned that much in the first half of 2024.
+
+The thing that shifted was rather than asking, you know, was I on track to fully find an interpretable decomposition of this model, what can we do with this technique, trying to investigate proxy tasks, objective things that aren't necessarily the thing that I most care about, but which kind of track the longerterm things I hope to be able to do with these techniques, because, you know, ultimately I do this work because I want to be able to do useful things that matter with it.
+
+And strikingly um what we found when we started doing this is for tasks that look like I don't know what's happening in the system.
+
+Can I come up with hypothesis for why even if I didn't expect them sparse autoenccoders are actually pretty great.
+
+While for things that are more like I kind of know the concept I want.
+
+Can I detect or manipulate this concept?
+
+They just kind of lost to dumb things like steering vectors and linear probes.
+
+And um I think that this was just a way more productive way of trying to do research here.
+
+Um the broader extrapolation from this of how I try to approach research now is We don't have AGI yet, so this is kind of My best solution is start by thinking about what it would take to actually make this stuff go well.
+
+the theory of change.
+
+Identify some north star like make models believe they are not being tested that I want to succeed at identify some objective task that can be studied today a proxy task and then actually go and use that to give myself feedback on whether my research has produced any value whatsoever.
+
+And I think there's two key things this process gives us.
+
+Having an objective task is important for finding insights that are true.
+
+It's really really easy to fool yourself when doing research.
+
+And if you aren't if you don't have good grounding, this is just kind of a mess.
+
+But also, even if your insights are true, they're not necessarily useful.
+
+Which is why I'm not just saying find empirical tests.
+
+I'm saying find empirical tests that we actually believe are decent proxies towards the north stars that actually matter even if we can't test them yet.
+
+Like make future models, not think that they are being tested.
+
+This would be great.
+
+Um does this mean that we are doing applied interpretability now?
+
+No.
+
+I think that curiositydriven research can sometimes be incredibly powerful, but I think that we need to be somewhat careful and grounded about how we go about doing this.
+
+The approach that I've empirically found to work best um kind of preserves the explore your curiosity bit, but tries to ground it by strategically starting in a setting we think is fruitful.
+
+Um, for example, we've recently been doing some fun work looking at all of the RL training transcripts from Gemini 3.
+
+There a lot of weird stuff in there.
+
+If we just around and find out, I think cool stuff happens.
+
+Then go forth and follow your curiosity, but try to time box this.
+
+Check in after like some period of time.
+
+We aim for the aggressive two weeks.
+
+And at this point try to find some objective task that we think validates whether our curiosity has found something that is true and useful and if this hasn't either try a different approach on the same problem or just go try something else because research is large and there are many things you can be doing and most are not fruitful.
+
+You need a thing that helps you fail fast.
+
+Um, so trying to put this all together, our current flow looks something like start from all of the things that we think we could be doing to try to help AGI go well.
+
+Um, oh well, all the things we think we could be doing, filter for the things that we think are on the critical path to AGI going well.
+
+Filter for the things that not only do we think matter, but we also think are to the comparative advantage of interpretability researchers.
+
+a much broader question than just is this interpretability research and further filter for things that we think we can empirically study on today's models which in my opinion is a much larger set now than it was even a year ago because models just keep getting better and this means that we don't need to blindly fumble in the dark anymore.
+
+We can just get better empirical feedback.
+
+So what do I actually mean by the comparative advantage of interpretability researchers?
+
+This is kind of vague.
+
+Um, a few things that we found seem to be notable ways that my team and others in the community can add value.
+
+One, working with internals, even if we're not using this for interpretability at all.
+
+Things like steer a model to not think it's being tested is just really useful and has different strengths and weaknesses to the rest of ML in a way that means that the set of things that our portfolio of techniques can do is expanding.
+
+Secondly, deep investigation of what's going on with models.
+
+Even if this is not using mechanisms or even internals, I think that there's a bunch of general mindsets that are required to rigorously investigate what drives a model's behavior.
+
+And I think this underlies a lot of important questions um in safety.
+
+I think that interpretability has a bunch of tools, including tools for things like coming up with novel ideas for why a model did something we've been thought of, and also a lot of experience with the many pitfalls you run into when you try doing scientific investigations here and drown in the mountain of confounders you get when actually dealing with real world model behavior.
+
+Um, and I think that historically interpretability has got pretty anchored on some narrow theories of change like fully reverse engineer the model so we can say for sure there's no deception there.
+
+I think this is like pretty narrow.
+
+Um, read the post for a bunch of ideas, but one I'll call out science misalignment.
+
+I think it's plausible that at some point we catch a model doing something really sketchy.
+
+For example, um it puts some major security vulnerability in important u monitoring code, but this could just be that the model is confused and we're not going to get a proper response unless we can provide a rigorous case for what happened, why, and should we care.
+
+I think this is a really tractable interpretability problem, but quite different from what people have previously done.
+
+I also think that it's not a silver bullet.
+
+We're not going to solve safety entirely by ourselves, but there's a lot of ways we can help other areas.
+
+And um I will leave up this uh slide of common misconceptions and my counter arguments and come say hi at my poster half three if you want to chat more.
