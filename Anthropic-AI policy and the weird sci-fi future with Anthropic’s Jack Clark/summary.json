@@ -1,0 +1,18 @@
+{
+  "video_info": {
+    "url": "https://www.youtube.com/watch?v=b1-OuHWu88Y",
+    "local_path": "/Users/rafatsiddiqui/Downloads/Projects/Trust Safety Alignment/Anthropic-AI policy and the weird sci-fi future with Anthropic’s Jack Clark/AI_policy_and_the_weird_sci-fi_future_with_Anthropic’s_Jack_Clark/video/AI, policy, and the weird sci-fi future with Anthropic’s Jack Clark.mp4",
+    "audio_path": "/Users/rafatsiddiqui/Downloads/Projects/Trust Safety Alignment/Anthropic-AI policy and the weird sci-fi future with Anthropic’s Jack Clark/AI_policy_and_the_weird_sci-fi_future_with_Anthropic’s_Jack_Clark/video/AI, policy, and the weird sci-fi future with Anthropic’s Jack Clark.wav",
+    "duration": 0,
+    "language": "en",
+    "start_time": null,
+    "end_time": null
+  },
+  "total_segments": 531,
+  "processing_timestamp": "2025-12-30T15:40:56.244721",
+  "output_files": {
+    "transcription_json": "/Users/rafatsiddiqui/Downloads/Projects/Trust Safety Alignment/Anthropic-AI policy and the weird sci-fi future with Anthropic’s Jack Clark/AI_policy_and_the_weird_sci-fi_future_with_Anthropic’s_Jack_Clark/transcription.json",
+    "transcript_timestamped": "/Users/rafatsiddiqui/Downloads/Projects/Trust Safety Alignment/Anthropic-AI policy and the weird sci-fi future with Anthropic’s Jack Clark/AI_policy_and_the_weird_sci-fi_future_with_Anthropic’s_Jack_Clark/transcript_timestamped.txt",
+    "transcript_clean": "/Users/rafatsiddiqui/Downloads/Projects/Trust Safety Alignment/Anthropic-AI policy and the weird sci-fi future with Anthropic’s Jack Clark/AI_policy_and_the_weird_sci-fi_future_with_Anthropic’s_Jack_Clark/transcript_clean.txt"
+  }
+}

@@ -1,0 +1,534 @@
+Transcript for: https://www.youtube.com/watch?v=b1-OuHWu88Y
+==================================================
+
+[00:00 - 00:04]  Hello, and welcome to another conversation from Anthropic. My name's Stuart Ritchie.
+[00:04 - 00:10]  It's my job to talk to our researchers and our other staff about what they're thinking about AI.
+[00:10 - 00:16]  Today, I'm here with Jack Clark, who's one of our co-founders and also our head of policy.
+[00:17 - 00:23]  And you might know him from his newsletter, Import AI, which is a really useful and opinionated
+[00:23 - 00:27]  weekly summary of what's been happening in AI. So thanks very much for doing this, Jack.
+[00:27 - 00:33]  Um, before we start, can you just tell us a bit about your background and kind of how you
+[00:33 - 00:37]  got to where you are now? Yeah, I have a bit of a strange background,
+[00:37 - 00:42]  and I took a very tangled path to get here. I started out life as a kind of technical
+[00:42 - 00:47]  journalist, and I treated journalism a bit like method acting. So anything I wrote about,
+[00:47 - 00:52]  I tried to understand. So when I wrote about databases, I taught myself SQL. When I wrote
+[00:52 - 00:57]  about like computer chips, I learned about semiconductor manufacturing. And at some
+[00:57 - 00:57]  point, I started to learn about AI. And I started to learn about AI. And I started to learn about
+[00:57 - 00:57]  AI. And at some point, I started to learn about AI. And at some point, I started to learn about AI. And I
+[00:57 - 01:03]  became obsessed with data centers. And I started this series called the Clark side of the cloud.
+[01:04 - 01:09]  I used to tour data centers around Europe and the rest of the world, right, really into it. Yeah.
+[01:09 - 01:15]  And I remember at some point in about 2010, I realized that someone like Google was going to
+[01:15 - 01:19]  use machine learning on all of these data centers. And they built all of these computers,
+[01:19 - 01:23]  and we're going to do something with it. So I moved to America to cover what was then the very
+[01:23 - 01:27]  nascent field of AI, called myself the world's only neural network,
+[01:27 - 01:36]  reporter, which was easy to do in 2012. And then I joined OpenAI in 2016. And very quickly became
+[01:36 - 01:40]  obsessed with policy, because I realized how important this was going to become,
+[01:40 - 01:45]  and how little people in policy knew about it. I've been working on that ever since.
+[01:45 - 01:50]  Right. And now you're the, you know, our head of policy, as I mentioned, we're in London today.
+[01:51 - 01:56]  Yesterday, you were at the Labour Party conference. For any international people,
+[01:56 - 01:57]  Labour are the...
+[01:57 - 02:01]  Current governing party of the UK. And you were talking at their conference,
+[02:01 - 02:04]  they've just come into government. Presumably, they have a million people
+[02:04 - 02:07]  telling them that this is the priority, this is the priority, this is the priority.
+[02:08 - 02:12]  What was, you know, they had an AI event. So obviously, they're thinking about AI to some
+[02:12 - 02:16]  extent. What's your impression of how they're thinking about AI? To what extent do they
+[02:16 - 02:20]  care about this stuff? Yeah, it's been really striking to see them constantly mention AI
+[02:20 - 02:25]  in their bucket of technologies or things that are going to help grow the British economy.
+[02:25 - 02:26]  So the Labour Party,
+[02:27 - 02:32]  those who are here know is is kind of obsessed with how we get Britain growing again. And they've
+[02:32 - 02:37]  identified AI as one of the key things to do. They've also inherited this thing called the AI
+[02:37 - 02:42]  Safety Institute, which was started by a conservative government. And is
+[02:42 - 02:47]  like a national asset, you know, anthropic has done pre deployment testing with the AC.
+[02:47 - 02:50]  So what was striking to me as the UK government is currently
+[02:51 - 02:56]  thinking about how to kind of build on the legacy of its political predecessors, which is unusual,
+[02:56 - 02:56]  usually, you watch your own part of the country during this program. But there are sorts of things
+[02:56 - 02:57]  that have been done for us fill them in. Basically, they're like strongest shortly after the 1850s,
+[02:57 - 02:58]  and rip all of this stuff up.
+[02:59 - 03:00]  But they've actually come in,
+[03:00 - 03:02]  are aware of how valuable the AC is,
+[03:03 - 03:05]  and are trying to think about how to make more of it.
+[03:05 - 03:07]  And can I just be clear?
+[03:07 - 03:10]  The AI Safety Institute, A-I-S-I, is pronounced AC.
+[03:11 - 03:11]  Yeah.
+[03:11 - 03:14]  And that's opposed to the one in the US,
+[03:14 - 03:17]  which is called AC in Washington.
+[03:18 - 03:20]  It's called USAC or ACDC.
+[03:21 - 03:24]  Yeah, I was leading you towards that.
+[03:24 - 03:27]  But no part of the US government has sanctioned it.
+[03:27 - 03:27]  Right.
+[03:28 - 03:28]  Yes, exactly.
+[03:29 - 03:30]  So, and then, you know,
+[03:31 - 03:33]  our previous Prime Minister, Rishi Sunak,
+[03:33 - 03:35]  talks a lot about AI safety.
+[03:36 - 03:37]  That was one of his big things.
+[03:38 - 03:41]  The Labour Party have inherited the AI Safety Institute.
+[03:41 - 03:43]  To what extent are they worried about AI safety
+[03:43 - 03:46]  as opposed to AI as a tool to help grow the economy?
+[03:46 - 03:49]  So in my conversations, they care about AI safety
+[03:49 - 03:52]  insofar as they care about protecting the public
+[03:52 - 03:55]  from things that could, you know, cause harm
+[03:55 - 03:56]  to kind of life and limb,
+[03:56 - 03:57]  was a phrase.
+[03:57 - 03:59]  It was a phrase used by one of the MPs I was speaking to.
+[03:59 - 03:59]  Right.
+[03:59 - 04:01]  So in this, they're going to be similar
+[04:01 - 04:04]  to the US government and others who focus on
+[04:04 - 04:07]  kind of catastrophic risks like bio or cyber.
+[04:07 - 04:10]  But beyond that, my general sense is they want to
+[04:10 - 04:13]  deal with some aspect of safety,
+[04:13 - 04:15]  but also just think about how to utilise AI
+[04:15 - 04:18]  and how to get the kind of British government
+[04:18 - 04:20]  working better using AI technology as well.
+[04:20 - 04:25]  Do you consider it that they're thinking of the safety risks
+[04:25 - 04:26]  in the way that you might think about the risks of, you know, the AI?
+[04:26 - 04:26]  in the way that you might think about the risks of, you know, the AI?
+[04:26 - 04:27]  Yeah.
+[04:27 - 04:28]  So I think that there are risks that we can talk about
+[04:28 - 04:30]  the risks of social media or other technologies
+[04:30 - 04:34]  that have come before rather than these kind of novel
+[04:34 - 04:35]  and potentially much scarier risks
+[04:35 - 04:38]  that we often talk about when it comes to generative AI.
+[04:38 - 04:39]  Yeah.
+[04:39 - 04:40]  I mean, they're two months in.
+[04:40 - 04:43]  I think there'll be some period of education.
+[04:43 - 04:45]  Right now, I think they're being inundated with information
+[04:45 - 04:46]  about this.
+[04:46 - 04:48]  And I didn't choose to make yesterday my
+[04:48 - 04:51]  let's open the briefcase on all of the scariest things
+[04:51 - 04:52]  we can imagine, talk.
+[04:52 - 04:55]  I was mostly like, let's talk about how to make sure
+[04:55 - 04:56]  that the AC like, you know, like the internet is safe.
+[04:56 - 04:56]  Yeah.
+[04:56 - 05:00]  continues to thrive because we think that that's ultimately useful for safety and then we're going
+[05:00 - 05:05]  to get to some of the weirder risks in a while right right makes sense when it comes to the
+[05:05 - 05:11]  economic aspect of this um uh you know as you said the labor party have talked about uh growth
+[05:11 - 05:17]  constantly since they were uh since they were elected um uh we're seeing pieces coming out
+[05:17 - 05:23]  talking about the foundations of the uk economy needing you know fundamental uh uh fixes do you
+[05:23 - 05:28]  see ai yourself as a big part of that i mean what's the sort of picture of how ai could help
+[05:28 - 05:34]  boost the uk and indeed other economies well you know when we deploy ai systems today one of the
+[05:34 - 05:40]  main things we see is that businesses have a load of uh paper plumbing inside them most businesses
+[05:40 - 05:45]  are actually like collections of processes that like help you go from something like a customer
+[05:45 - 05:49]  talking to you to some action like selling them something or dealing with a complaint and a lot
+[05:49 - 05:53]  of where language models and kind of these powerful systems are being used to help you
+[05:53 - 05:59]  is in that inner kind of glue of a business governments are giant bureaucracies full of paper
+[05:59 - 06:05]  and so i think actually a lot of what people are most excited about is the kind of back office
+[06:05 - 06:10]  aspects how do we get things like you know the paper that's produced in the nhs to sort of flow
+[06:10 - 06:15]  more effectively through the system how do we handle constituency responses for mps who are
+[06:15 - 06:20]  inundated with their constituents needs and need a better system for kind of filtering and
+[06:20 - 06:22]  analyzing them and generally
+[06:22 - 06:22]  you
+[06:23 - 06:29]  ai you know holds this promise of taking a load of the stuff that is around us and making it kind
+[06:29 - 06:34]  of be something that we can actually handle appropriately as humans and pay proper attention
+[06:34 - 06:40]  to by using these generative systems to kind of read and classify and understand this kind of
+[06:40 - 06:45]  mountain of paper around us you've said that uh and this really struck me when you made this point
+[06:45 - 06:52]  that even if we don't get the sort of progress in ai that we often talk about scaling laws uh
+[06:52 - 06:53]  that we don't get the sort of progress in ai that we often talk about scaling laws uh that we don't
+[06:53 - 07:10]  even feel like distancing ourselves um over time we don't get any benefits uh because oftentimes
+[07:10 - 07:15]  time and data are grey right so again you know what you have really been talking about with with
+[07:15 - 07:18]  AI is all about systemic change and the world doesn't know that yet and we've just got a 2016
+[07:18 - 07:20]  bull Node and something might be huge for AI but but if you get something that does have a lot more
+[07:20 - 07:21]  2019 about order control we don't even say that at that time and you could see it movement is
+[07:21 - 07:21]  going away if so how are you going to highlight yourladio'sстаточно За lying na yourlalit
+[07:21 - 07:22]  hey y'all anyway take care of you thank you very much
+[07:22 - 07:22]  main journey Moit
+[07:22 - 07:23]  to the second one just because we've got to get even more into the um now that además in organizing the
+[07:23 - 07:27]  efficiency refinement from there and just have this basic new thing. And then you'd still build
+[07:27 - 07:31]  factories around the assumption of electricity existing. So rather than hanging light bulbs in
+[07:31 - 07:35]  them, you'd be building production lines on the assumption they had access to something like
+[07:35 - 07:42]  electricity or something like this. So AI, it just has a huge way to go in terms of being integrated
+[07:42 - 07:47]  into the economy and sort of building new and exciting businesses. And if we stopped everything
+[07:47 - 07:53]  today, some teenager somewhere is going to find a completely mind-blowing use for Claude or any of
+[07:53 - 07:58]  these other systems that we'd never anticipated. And there'll be tens to hundreds of those in our
+[07:58 - 08:03]  future. Right. Yeah. We've got all these developers out there that are working on using Claude and
+[08:03 - 08:08]  coming up with all these amazing ideas. Yeah, that makes sense. But of course, it's not stopping.
+[08:09 - 08:15]  There's no indication as far as I'm aware that this is stopping or even really slowing down.
+[08:16 - 08:17]  And of course,
+[08:17 - 08:23]  a lot of people talk about AIs as just being, people talk about stochastic parrots. So they're
+[08:23 - 08:27]  just repeating things that they've previously learned, but in a kind of jumbled up random way,
+[08:27 - 08:34]  or just being these kind of inert next token predictors. There's nothing interesting going
+[08:34 - 08:38]  on in there. But one of the things that you talk about quite a lot in your newsletter and elsewhere
+[08:38 - 08:43]  is that these are much more than that. These models are much more than that. I'm just going
+[08:43 - 08:46]  to read a quote from your blog a few weeks ago.
+[08:47 - 08:51]  The AI's are creative mirrors, machine spirits of the human unconscious,
+[08:52 - 08:56]  value simulacras. We're not dealing with calculators here. We're not dealing with
+[08:56 - 08:59]  simple tools. We're dealing with vast high dimensional artifacts that encode within
+[08:59 - 09:03]  themselves the culture on which they've been trained and can reflect this culture back.
+[09:04 - 09:09]  Can you talk a little bit about, it might sound quite boring. It might sound like some new piece
+[09:09 - 09:12]  of sales software if we're talking about how it might boost the economy. But when you put it in
+[09:12 - 09:15]  the terms that I've just used, it's much bigger than that.
+[09:15 - 09:15]  Yeah. I mean, I don't know if it's the same thing. I don't know if it's the same thing. I don't know
+[09:15 - 09:15]  if it's the same thing. I don't know if it's the same thing. I don't know if it's the same thing. I don't know if it's the same thing.
+[09:15 - 09:20]  Yeah. I mean, a hammer doesn't have any instincts on which nail it wants to hit.
+[09:20 - 09:25]  And these AI systems we've built have a kind of artificial intuition. And that's really spooky
+[09:25 - 09:32]  and strange. We've never really built tools before that understand something of the human world and
+[09:32 - 09:38]  have some of those instincts inherited from it. So with these AI systems, they have values within
+[09:38 - 09:44]  them. They have some level of creativity. And when we look at the sorts of patterns they uncover or
+[09:44 - 09:45]  the insights they have, they're not just the same. They're not just the same. They're not just the
+[09:45 - 09:45]  same. They're not just the same. They're not just the same. They're not just the same. They're not
+[09:45 - 09:47]  the same. They're not just the same things they have. They display what many, many,
+[09:47 - 09:54]  many kind of reasonable people would describe as creativity or intuition.
+[09:54 - 09:59]  Now, sometimes it's not very good, but we still have a hammer that's being created,
+[09:59 - 10:04]  which is wild and is something that is very, very unusual. And so the frame with which I'm
+[10:04 - 10:10]  trying to sort of talk to policymakers is this isn't like a technology. This is much
+[10:10 - 10:15]  more. And I said this to the UN Security Council last year. And I've kind of been expanding this
+[10:15 - 10:15]  idea a little bit. Why? Because that's not adaptability, sure.
+[10:15 - 10:20]  idea recently, it's much more like we've figured out a way to simulate some aspect of people
+[10:20 - 10:26]  and to extend some aspect of how countries work. And it's like these AI systems are like these
+[10:26 - 10:32]  silicon countries which we're importing into the world of all of these incredible capabilities.
+[10:32 - 10:37]  And that's never happened before. Let's stick on that metaphor of silicon countries,
+[10:37 - 10:45]  because you've got a way of thinking about AIs as the rogue state theory of AIs. And this is
+[10:45 - 10:50]  going beyond the effects in one particular country. And it's the way of thinking about how
+[10:50 - 10:56]  AIs will work in the world and how governments should think about AIs. Can you talk us through
+[10:56 - 11:02]  the rogue state theory of AIs? So this idea, I've been talking to governments about AI for a long
+[11:02 - 11:07]  time. And I found myself in these different conversations, first about self-driving cars,
+[11:07 - 11:13]  and then about computer vision capabilities, and then about what does AlphaGo mean, or like
+[11:13 - 11:15]  reinforcement learning systems, and now language models.
+[11:15 - 11:21]  But if you look around the world over that time, it hasn't been the individual technologies that
+[11:21 - 11:26]  have mattered. It's been the arrival of this kind of utility scale type of computing that's
+[11:26 - 11:33]  mattered. And it's also the emergence of new systems that everyone needs to kind of study
+[11:33 - 11:38]  and reckon with in a much more holistic way than like a single part of government. And so I've
+[11:38 - 11:43]  started to say to governments, you should think of AI systems as kind of like countries that are
+[11:43 - 11:45]  arriving into the world and misaligned.
+[11:45 - 11:51]  AI systems is like rogue states. So, you know, the reason why this analogy feels helpful is that
+[11:51 - 11:56]  when you talk to governments about safety, you might talk about bioweapons, or you might talk
+[11:56 - 12:01]  about cyber risk, or you might talk about, you know, phishing. Well, all of those have different
+[12:01 - 12:06]  parts of government set up to respond to it. But if you talk to government and say, AI systems are
+[12:06 - 12:13]  like a new country that's doing bad stuff that you do not understand, it requires them to think much
+[12:13 - 12:15]  more holistically about how they deal with it. And I think that's a really good idea.
+[12:15 - 12:21]  And it means that you can say to them, you need a whole of government response to AI systems,
+[12:21 - 12:25]  which actually like sounds a lot more sensible if you think of it like a country instead of a
+[12:25 - 12:25]  technology.
+[12:25 - 12:32]  And there's other analogies too. We spend a lot of time in Anthropic working on
+[12:32 - 12:36]  interpretability. So we're trying to look into the models and work out how they work because
+[12:36 - 12:39]  nobody actually knows how they work. Nobody can tell you exactly why
+[12:41 - 12:44]  Claude or GPT-4 or any of these models actually produces the
+[12:45 - 12:48]  response that they do. And so there's a kind of, the equivalent there is kind of
+[12:48 - 12:54]  Kremlinology, right? It's kind of like trying to guess what's going on inside and work out
+[12:54 - 12:57]  in order to try and have some level of predictability, I guess.
+[12:57 - 13:02]  Yeah. In the same way that our interpretability team is trying to work out just how do language
+[13:02 - 13:07]  models work? What are the systems by which language models make decisions? How do we take
+[13:07 - 13:12]  like input information into a language model and look at all of the internal deliberation that goes
+[13:12 - 13:13]  on and look at an output? Well, the C++ is a very good example of that. And so I think that's a good
+[13:13 - 13:13]  way to look at it. And so I think that's a good way to look at it. And so I think that's a good way to
+[13:13 - 13:13]  look at it. And so I think that's a good way to look at it. And so I think that's a good way to look at it.
+[13:13 - 13:21]  Well, the CIA does the same thing about North Korea or like Iran. In some sense, we're grappling
+[13:21 - 13:27]  with a similar class of problem. AI systems are opaque and we desperately want to understand them
+[13:27 - 13:32]  because they have immense value and also some potential for risk. Countries are opaque and you
+[13:32 - 13:37]  spend a lot of time understanding them and their potential for risk. And rogue states are opaque
+[13:37 - 13:43]  and are risky. And we actually like respond to these things in similar ways. I mean, I wonder
+[13:43 - 13:43]  if that analysis is true. I mean, I think it's true. I think it's true. I think it's true. I
+[13:43 - 13:44]  think it's true. I think it's true. I think it's true. I think it's true. I think it's true. I
+[13:44 - 13:44]  think it's true. I think it's true. I mean, I think it's true. I think it's true. I think it's true.
+[13:44 - 13:49]  How confident should that analogy make us? Because I can't think of that many countries that
+[13:49 - 13:54]  we would consider as rogue states that are now completely aligned, right? There's maybe a
+[13:54 - 13:58]  handful of countries that are considered, you know, unambiguously rogue states. I'm not sure
+[13:58 - 14:03]  how well we've done, like as an international community to bring them back into the fold.
+[14:03 - 14:09]  Well, you know, we had the kind of disintegration of Russia at the end of the Cold War and we had
+[14:09 - 14:13]  a lot of Eastern European countries which have now been somewhat integrated into a
+[14:13 - 14:13]  broader economy, and unfortunately, there has been a high chance that we've just pretty much
+[14:13 - 14:18]  economy they changed their value systems they gained institutions they gained the ability to
+[14:18 - 14:22]  integrate into our world and kind of trade within it and even to some extent this happened with
+[14:22 - 14:27]  russia but obviously now we're that that pendulum has gone back in the opposite direction but i
+[14:27 - 14:32]  think that it also i hope points to a kind of inherent optimism here which is that in some way
+[14:32 - 14:39]  ai systems may be easier to deal with than countries um because countries kind of run on
+[14:39 - 14:45]  on human time and have fewer points of intervention ai systems run on machine time
+[14:45 - 14:49]  and have more points of intervention this is both like a challenge from a safety perspective
+[14:49 - 14:54]  but also it makes me think that we can build kind of technocratic means of understanding
+[14:54 - 15:00]  these systems and also understanding how we can trust them and how we can develop confidence in
+[15:00 - 15:05]  them and the technology is evolving faster than the kind of countries in the world around us so
+[15:05 - 15:09]  i think we can bring them into the fold sooner rather than later let me pick
+[15:09 - 15:12]  up on something you just mentioned you talked about machine time being different from human
+[15:12 - 15:17]  time now machine time uh is something that you've you've talked about recently because you you said
+[15:17 - 15:23]  it again a quote from what you wrote in import ai the best argument for ai risk is about the speed
+[15:23 - 15:28]  of human thought versus the speed of machine thought so there's a recent paper from uh caltech
+[15:28 - 15:33]  researchers where they point out so humans think really slowly compared to the rate at which we
+[15:33 - 15:38]  take in information from the world humans think about 10 bits per second um whereas our sensory
+[15:38 - 15:39]  inputs are about 10 bits per second and so we can't really tell the difference between the
+[15:39 - 15:40]  speed of human thought versus the speed of human thought the speed of human thought is about one gigabyte
+[15:40 - 15:46]  future ais are going to think extremely fast can you sketch out why you know what the kind of threat
+[15:46 - 15:52]  model is for why this makes them such a threat i mean even in our our world around us it's really
+[15:52 - 15:57]  difficult to catch a fly or a mosquito they're faster than you they're more agile they operate
+[15:57 - 16:03]  on like a faster clock rate than you i've never tried to catch a hummingbird but similarly yeah
+[16:04 - 16:08]  less less likely something you want to catch also yeah yeah but i think that there's
+[16:08 - 16:10]  There's something really persuasive about this argument.
+[16:10 - 16:30]  And as someone who I think came to the notion of AI safety later than some of our colleagues at Anthropic and almost plays the role of like an internal skeptic about some of these ideas, I found this to be a really convincingly useful frame because it's the same problem we encounter in policy.
+[16:30 - 16:34]  Like how are policymakers meant to respond to a technology evolving this rapidly?
+[16:34 - 16:39]  Well, how are people meant to respond to a point technology that's moving like much, much faster than them?
+[16:39 - 16:41]  It's really, really, really challenging.
+[16:41 - 16:51]  You know, if you're walking around and you were trying to solve the problems created by cars and you couldn't move as fast as them, it'd be quite challenging.
+[16:53 - 16:55]  It's also just maybe just to expand this a bit.
+[16:55 - 17:03]  Like one of the things that we see in military conflict today is countries spend a huge amount of time thinking.
+[17:04 - 17:08]  About their cycle time, their so-called OODA loop, you know, the observe, orient, decide, act loop.
+[17:08 - 17:18]  It's all about helping their individual soldiers, groups of soldiers, things like artillery, things like air response, move faster.
+[17:18 - 17:21]  And whoever has a faster OODA loop tends to win.
+[17:21 - 17:25]  And that's just humans competing with one another within the same magnitude of time.
+[17:25 - 17:32]  So why would we expect to be successful in some kind of conflict with a machine system moving 10 times faster than us?
+[17:32 - 17:34]  When the history of like.
+[17:34 - 17:37]  Human military doctrine says you pretty much always lose.
+[17:37 - 17:45]  It's I think it's a really good way of thinking about it, because if you if you say to people, you know, this is going to be much more intelligent than the most intelligent human.
+[17:45 - 17:46]  I think that's quite hard to picture.
+[17:46 - 17:49]  Whereas if you think, well, it's faster.
+[17:49 - 17:52]  Yeah. How quickly does how quickly does Claude produce text?
+[17:52 - 17:53]  Look at how quickly that happens.
+[17:54 - 18:01]  Imagine if it's performing actions or some sort of agentic actions at vastly quicker speeds than we could, I suppose.
+[18:02 - 18:04]  I mean, given to the extent to which.
+[18:04 - 18:05]  Intelligence is based on speed.
+[18:05 - 18:07]  I guess we're talking about the same thing here.
+[18:07 - 18:11]  We're sort of, you know, that's just one way of being really intelligent is to be able to do things really quickly.
+[18:11 - 18:13]  So, I mean, what's the response to this?
+[18:13 - 18:18]  Do we set a speed limit for how fast AIs can work?
+[18:18 - 18:25]  I mean, what's the kind of the answer to this other than, you know, trying to align these very fast thinkers to our values?
+[18:25 - 18:32]  I mean, some of what we're doing at Anthropic with the responsible scaling policy and other approaches for the product, I think holds a lesson.
+[18:32 - 18:32]  Like.
+[18:32 - 18:33]  We can't.
+[18:33 - 18:39]  At human speed, classify everything, but our trust and safety filters pick up.
+[18:39 - 18:45]  But we can train language model based classifiers to look at those and tie into an enforcement process.
+[18:45 - 18:46]  So what are we doing here?
+[18:46 - 18:54]  We're training kind of very specific purpose machines to intervene against the other fast moving machine when it does something that's kind of off base.
+[18:54 - 19:03]  So there's definitely a part of this which involves building a load of specific kind of AI tooling to further improve kind of safety.
+[19:03 - 19:10]  We're also going to, as you said, need to arrive at some notion of what appropriate interface speeds look like.
+[19:10 - 19:14]  This could be something like the rate at which AI systems can take actions.
+[19:14 - 19:17]  It could be the rate at which they can generate text.
+[19:17 - 19:30]  I mean, the really basic level, it could just be the rate at which we allow the kind of API of an of a semi independent AI agent to take in information and output information where you can put some artificial limiter on that.
+[19:30 - 19:32]  None of these are like silver bullets, but they all get up.
+[19:32 - 19:32]  A problem.
+[19:32 - 19:33]  Yeah.
+[19:33 - 19:41]  And I think that's the real problem, which is you're trying to constrain this thing that moves faster than you into your kind of subjective universe, which is all by the way, everything we're talking about is really weird.
+[19:42 - 19:49]  I think we started the conversation and I was like, oh, yes, these things are like going to help with like back end bureaucracy, which is true.
+[19:49 - 19:55]  But we're talking about like very fast moving machine intelligences that have all of these weird properties.
+[19:55 - 19:55]  Yeah.
+[19:55 - 20:01]  That have all these abilities to potentially do things like develop motivations and things that we didn't expect all at light speed.
+[20:02 - 20:02]  Yeah.
+[20:02 - 20:02]  Or behind our back.
+[20:02 - 20:06]  But it's also great at summarization and coding.
+[20:06 - 20:06]  Right.
+[20:07 - 20:07]  Yeah, exactly.
+[20:07 - 20:10]  Both of these are true, which is just a wildly confusing part about the problem.
+[20:10 - 20:11]  Totally.
+[20:11 - 20:11]  It's a very weird thing.
+[20:11 - 20:18]  Let's talk about one weird aspect of the world of AI, actually, because, you know, we have our safety procedures that we work on.
+[20:18 - 20:23]  We have our safety researchers and so on, which you can hear a lot about on our website.
+[20:23 - 20:27]  And, you know, we have other, you know, a whole bunch of stuff online for people to read about this.
+[20:27 - 20:32]  But there's also a whole world out there of a sort of strange community of.
+[20:32 - 20:37]  Often anonymous researchers who are kind of pushing these AIs to their limits.
+[20:37 - 20:42]  Sometimes they're doing things like getting the AIs to talk to each other and having all these very strange conversations.
+[20:43 - 20:49]  Sometimes they're trying to jailbreak the models to, you know, see really what they can do without the safety procedures that are put in place.
+[20:50 - 20:52]  You often interact with these kind of anonymous people.
+[20:53 - 20:53]  How's that?
+[20:53 - 20:56]  And they have great names like Janus and Pliny the Promptor.
+[20:56 - 20:57]  Yeah.
+[20:58 - 21:02]  I think the most cyberpunk thing about the time we're living in is for.
+[21:02 - 21:12]  There are semi anonymous people online who have actually talked to some of these AI systems for thousands of hours, possibly more than almost anyone who works at any of the labs.
+[21:12 - 21:18]  Even though we have some people that love talking to Claude, you have people outside that have really specialized in this.
+[21:19 - 21:24]  And I think that what we're seeing is is is kind of science through art.
+[21:24 - 21:29]  Like, I think some of this some of this stuff is is science that we can use known techniques for.
+[21:30 - 21:32]  Some of it looks more like kind of.
+[21:32 - 21:40]  Play and theater and psychology all wrapped into one being done by by these people who kind of have a vision and and a slightly like off consensus.
+[21:40 - 21:49]  And I think that when I when I look about experimentation, it to me is some of the most convincing evidence that we're dealing with truly strange technology.
+[21:50 - 21:57]  And I'm not going to be able to make strong claims about the different personalities that like Claude or Gemini or chat GPT have.
+[21:58 - 22:00]  It's hard to know how to evaluate them.
+[22:00 - 22:02]  But you can look at the work of these.
+[22:02 - 22:04]  People and you clearly see differences.
+[22:04 - 22:05]  You have to reconcile these things.
+[22:05 - 22:12]  So I view these as like pointers to science and larger amounts of science that other groups will do.
+[22:12 - 22:14]  And these are kind of the explorers on the on the frontier.
+[22:15 - 22:15]  Right. Right.
+[22:15 - 22:21]  Right. And they might be seeing some of the results of our character training for Claude.
+[22:21 - 22:25]  Whenever a new Claude comes up, they play with it and they're like, oh, it's personality has changed in this way.
+[22:25 - 22:29]  And, you know, you and I maybe need to be careful and put all of this stuff in air quotes.
+[22:29 - 22:32]  But to them, it's just a completely natural way of speaking about the systems.
+[22:32 - 22:36]  Because they've got their own, you know, their own exploratory method.
+[22:36 - 22:42]  Right. They're really living in a sci-fi novel where people talk to droids every day or whatever it is.
+[22:42 - 22:43]  And they're having conversations with them.
+[22:43 - 22:46]  And they can have a business card that says, like, Jack Clark, machine psychologist.
+[22:47 - 22:48]  Exactly.
+[22:48 - 22:48]  Great name.
+[22:49 - 22:50]  Yeah, it's remarkable.
+[22:51 - 22:55]  And actually talking about, you know, science through art and science fiction and so on.
+[22:56 - 22:58]  This is what you do every week in your newsletter, right?
+[22:58 - 23:02]  You write at the end of the newsletter tech tales.
+[23:02 - 23:10]  You call them, which are sometimes long, sometimes short stories, creative writing about the weird future of AI.
+[23:11 - 23:16]  Can you talk about why you decided to do that and your process of how you think about these things?
+[23:17 - 23:21]  So I'll make a very obscure reference here, but it'll in a roundabout way get us there.
+[23:22 - 23:23]  There's this band called Jawbreaker.
+[23:24 - 23:24]  Do you know them?
+[23:24 - 23:26]  I couldn't tell you any of their songs.
+[23:26 - 23:28]  I'm aware of the band.
+[23:28 - 23:29]  Yeah, we have a song called Accident Pro.
+[23:30 - 23:30]  Depressing song.
+[23:31 - 23:32]  I think about alcoholism.
+[23:32 - 23:35]  But it has a phrase in it, which has always stayed with me, which is,
+[23:36 - 23:37]  my fiction beats the hell out of my truth.
+[23:38 - 23:46]  And it's something about how the stories we tell are often, like, truer than how we might just factually describe the things we experience.
+[23:46 - 23:55]  And I write these stories because I'm trying to sort of reckon with the AI stuff happening around us by imagining situations involving it.
+[23:55 - 23:57]  And a lot of the stories are based on specific technologies.
+[23:58 - 24:01]  I also think that the stories probably hold...
+[24:02 - 24:08]  more truth about what I am feeling working at these AI labs than the newsletter themselves.
+[24:08 - 24:17]  And so something I've started doing, which is wonderfully recursive, is I feed all these stories into Claude, and I ask it to guess questions about the author writing the stories.
+[24:18 - 24:20]  And it's really, really strange.
+[24:20 - 24:26]  Claude, successively, more advanced versions of Claude have started to really nail my personality by reading my fiction.
+[24:26 - 24:29]  And also I ask Claude, like, what's going on at the lab?
+[24:29 - 24:32]  And sometimes it's like told stories about...
+[24:32 - 24:37]  None of which is written in the stories, but which have been unnervingly true to things I've experienced at Anthropic.
+[24:37 - 24:40]  Right, inferring it from the mood of what you've written.
+[24:40 - 24:43]  And also just, you know, I think...
+[24:45 - 24:49]  I think that it's also a way to try and reckon with the actual strangeness.
+[24:49 - 24:58]  Like, it's not really appropriate in a policy context to say, we're dealing with, like, an alien mind here that's, like, looking at us.
+[24:58 - 24:58]  Right, yeah.
+[24:58 - 24:59]  But I can write a short story about that.
+[24:59 - 25:01]  And it goes to the same inbox.
+[25:01 - 25:03]  And the same inbox is for factual stuff.
+[25:03 - 25:07]  So I'm sort of like, here's your, like, serving of weird that I've smuggled in at the end.
+[25:07 - 25:13]  And, you know, I saw that at least one of the stories within a few weeks actually did become real.
+[25:13 - 25:18]  You had the story about this AI sort of collapsing into this strange amnesia.
+[25:18 - 25:24]  And then a company that had a model report described exactly the thing that you were talking about.
+[25:24 - 25:25]  Yeah, yeah.
+[25:25 - 25:28]  I think that was Noose Research, and they had a new model.
+[25:28 - 25:31]  And at a certain parameter point, it would start to...
+[25:31 - 25:35]  display something that looks a bit like situational awareness and discomfort.
+[25:35 - 25:39]  And I theorized this in a story I wrote called The Id Point.
+[25:39 - 25:40]  Very strange.
+[25:40 - 25:41]  Yeah, yeah.
+[25:41 - 25:47]  One other thing is I wrote a story last year called Replay Grief about a guy talking to his wife.
+[25:47 - 25:51]  But through the course of the story, it turns out he's not really talking to his wife.
+[25:51 - 25:54]  He's talking to a language model simulating her after she died.
+[25:54 - 25:55]  Sad story.
+[25:55 - 25:56]  Oh, yeah.
+[25:56 - 25:57]  I'm a cheerful guy.
+[25:57 - 25:59]  I guess I get my sadness out this way.
+[25:59 - 26:00]  But a few months later...
+[26:00 - 26:01]  Yeah.
+[26:01 - 26:05]  ...there was an op-ed in the New York Times about a woman whose partner had died,
+[26:05 - 26:09]  and she'd fed all of his writings into a language model and was talking to him.
+[26:09 - 26:11]  And I just found this really spooky.
+[26:11 - 26:12]  Uncanny.
+[26:12 - 26:14]  I was like, oh, all of this stuff is happening in the world, too.
+[26:14 - 26:15]  Yeah, yeah, totally.
+[26:15 - 26:20]  And some other things which you talk about where you talk about things like the AI,
+[26:20 - 26:24]  the automated AI scientist that generates hundreds of scientific papers.
+[26:24 - 26:30]  And a phrase that struck me is you talked about these new developments being written by the joyfully insane.
+[26:30 - 26:31]  Yeah.
+[26:31 - 26:35]  So it's like just the world has become a vastly stranger place.
+[26:35 - 26:36]  Yeah.
+[26:36 - 26:38]  And we're just talking about it as if it's just normal.
+[26:38 - 26:41]  Oh, by the way, I've got an automated scientist that can do hundreds of papers a week now.
+[26:41 - 26:42]  Yeah.
+[26:42 - 26:47]  Although I was the kid in San Francisco recently who was a University of Waterloo graduate,
+[26:47 - 26:49]  and he decided to build a nuclear fuser.
+[26:49 - 26:51]  He'd never done hardware stuff in his life.
+[26:51 - 26:52]  He did it using Claude.
+[26:52 - 26:53]  Using Claude.
+[26:53 - 26:54]  I saw that, yeah.
+[26:54 - 26:55]  About two weeks, very matter of fact.
+[26:55 - 26:59]  And he's like, yeah, this AI, this AI brain in the sky helped me build a nuclear fuser that's in my bedroom.
+[26:59 - 27:00]  Which is crazy.
+[27:00 - 27:01]  Yeah.
+[27:01 - 27:02]  Because it's like crazy stuff that's happening.
+[27:02 - 27:03]  Yeah, totally.
+[27:03 - 27:04]  And it's happening right in front of our eyes.
+[27:04 - 27:05]  Yeah.
+[27:05 - 27:13]  And I suspect more of it will, you know, more and more and more of this is going to happen as the models become smarter and they start being used for, you know, more purposes.
+[27:13 - 27:27]  I think there's an important point to kind of linger here on about policy, though, which is, and it speaks both to the value of this technology and some of the risks, which is, you know, the blocker on human flourishing so often is, you know, the risk.
+[27:27 - 27:28]  Yeah.
+[27:29 - 27:35]  I think the risk is, is, is access to education or access to advisors, access to people with time.
+[27:35 - 27:40]  These AI systems are truly useful, like didactic engines.
+[27:40 - 27:41]  And that's a lot of the uses we see.
+[27:41 - 27:54]  We see people using them to kind of answer mundane questions, using them to help them with basic things, using them to educate themselves, using them to study scientific papers, using them to learn languages, you name it.
+[27:54 - 27:57]  And when I talk to kind of policy makers, I'm trying to impress on them.
+[27:57 - 27:58]  But this is.
+[27:58 - 28:07]  Like an amazing social utility in the same way that, you know, YouTube means there's huge amounts of educational content available online or Khan Academy or what have you.
+[28:07 - 28:23]  It's also where some of the kind of risks that we work in kind of come from, like frequently risky things don't happen in the world because the number of people that wanted to do the bad thing were small in number and had access to almost no knowledgeable advisors.
+[28:23 - 28:25]  And it's one of the things that AI changes.
+[28:25 - 28:27]  And so, you know, sometimes I think people.
+[28:27 - 28:33]  Talk about anthropic as though we're, you know, doomers or what have you.
+[28:33 - 28:44]  But the position I always hold is that the if we want to get all of the benefits of this technology, we need to reckon with the fact that it can provide like differential acceleration to bad people as well as good people.
+[28:44 - 28:47]  And that challenge is just innately hard to deal with.
+[28:47 - 28:52]  But we can't we can't just ignore it because because the models are getting better and better and better.
+[28:52 - 28:56]  And they continue to be some number of insane people in the world that want to cause harm.
+[28:56 - 28:58]  We need to reckon with this intersection.
+[28:58 - 29:06]  There's a kind of a weird dynamic where you almost feel as if the people who are saying that there's no risk in these technologies almost don't really believe that they're that powerful.
+[29:06 - 29:15]  They almost don't believe that there could be loads of good things as well, because you have if you accept that there are good things, there have to be bad effects with these models, too.
+[29:15 - 29:19]  Right. So you're almost like denying the the power of these models.
+[29:19 - 29:24]  The best take I heard on this recently was someone who noted that today's like accelerationists are actually tech experts.
+[29:24 - 29:25]  Right. So you're almost like denying the power of these models.
+[29:25 - 29:26]  The best take I heard on this recently was someone who noted that today's like accelerationists are actually tech experts.
+[29:26 - 29:27]  I mean, we've seen this traditionally on everywhere.
+[29:27 - 29:28]  The best take I heard on this recently was someone who noted that today's like accelerationists are actually technological pessimists.
+[29:28 - 29:29]  Right. Right.
+[29:29 - 29:32]  Because they think it just accelerates a little further from where it is today and then stops.
+[29:32 - 29:42]  I think if you are a true accelerationists you kind of reckon with shock and awe and some small amount of dread at the implications of what happens if this stuff keeps getting keeps sort of getting better and better and another story I sort of tell policymakers is like look if we're wrong.
+[29:42 - 29:43]  The best take is someone who noted that today's like accelerationists are actually technological pessimists.
+[29:43 - 29:48]  and better. And another story I sort of tell policymakers is like, look, if we're wrong,
+[29:49 - 29:53]  and as you said at the start of the conversation, if this technology kind of hits a wall and we just
+[29:53 - 29:57]  stop it today, great, we're going to get loads and loads of benefits and some probably small
+[29:57 - 30:03]  amount of risk and we'll manage. If we're right, we're going to need kind of new institutions,
+[30:04 - 30:07]  new systems of government, and we're going to need to reckon with both vast abundance
+[30:07 - 30:12]  and the potential of vast threat. So I guess let's hope that we're right.
+[30:12 - 30:13]  Yeah, yeah.
+[30:14 - 30:19]  Or hope that we're wrong. That part still feels like one of the kind of least clear aspects of
+[30:19 - 30:19]  this.
+[30:19 - 30:27]  Yeah, absolutely. Let's return to a policy question. In the upcoming year, we've got
+[30:27 - 30:34]  various summits coming up. Governments are kind of grappling with AI in different ways. Some are
+[30:34 - 30:38]  more worried than others about the safety stuff. Some are more convinced that this could be an
+[30:38 - 30:41]  economic benefit and so on.
+[30:41 - 30:46]  You're, you know, very in touch with the policy world. What do you think is coming up in the next
+[30:46 - 30:46]  year or so?
+[30:47 - 30:53]  So it's going to be a really busy, busy year. And also, let's not forget that us and the other labs
+[30:53 - 30:57]  are going to produce better AI systems during the coming year. It's kind of assumed, but it's
+[30:57 - 31:03]  worth stating that the systems will get better. We have the continuation of the safety summits.
+[31:03 - 31:09]  There was Bletchley Park in 2023. Then there was Seoul in Korea this year. There will be the French
+[31:09 - 31:11]  summit coming up in February. There will be the French summit coming up in February. There will be
+[31:11 - 31:15]  the French summit in February next year. That's where countries are going to convene to think about
+[31:15 - 31:21]  safety and AI systems and coordination about them. There is the small matter of the presidential
+[31:21 - 31:22]  election in the US.
+[31:22 - 31:23]  Yep, yep.
+[31:23 - 31:24]  So we're going to end up-
+[31:24 - 31:25]  Policy concern, yeah, I guess.
+[31:25 - 31:27]  Small policy differences between the two candidates currently.
+[31:28 - 31:30]  Yep, yep, yep, yep, yep.
+[31:30 - 31:37]  And what that's going to lead to is a new administration. Every administration thinks
+[31:37 - 31:40]  about getting stuff done in the first 100 days.
+[31:41 - 31:46]  So January, February, March, we can expect whichever administration is in place to make
+[31:46 - 31:52]  some moves on AI, which could be quite impactful. And finally, we have the European Union has the
+[31:52 - 31:57]  AI Act, which is coming into force and is going to go into kind of implementation mode next year.
+[31:57 - 32:04]  So that means AI companies, including Anthropic, will, by this time next year, have actually fallen
+[32:04 - 32:11]  under some degree of regulation in Europe. And as part of that, the EU and the AI office and the
+[32:11 - 32:16]  European Commission is going to have to figure out what kind of testing and evaluation and everything else means.
+[32:16 - 32:23]  And yeah, presumably working with governments, with their safety institutes and so on.
+[32:23 - 32:40]  And also, let me just unspool a few other things. You know, there's the AI Safety Institute we've spoken about here, but there's one being stood up in Canada, there's one being stood up in Japan, there's one being stood up in like, many other countries. I'm not even sure I can name all of them because some of them are private and known only to me, but there's lots of them.
+[32:40 - 32:40]  Right, right.
+[32:40 - 32:41]  So there's going to be very, very many of them.
+[32:41 - 32:41]  Right, right. So there's going to be very, very many of them.
+[32:41 - 33:11]  Right, right.
+[33:11 - 33:41]  So there's going to be very, very many of them.
+[33:41 - 33:53]  Is there one thing that you tend to say? I mean, you're deploying the various metaphors and you're talking about how these systems work. What's the kind of one thing that you try and get across to everyone to really grab their attention on this issue?
+[33:53 - 34:11]  I always say, you know, what the leaders of these companies are saying, what, you know, Dario and Sam and Demis are all saying, when they talk about artificial general intelligence, it's not a marketing term. It's a general thing that they believe in.
+[34:11 - 34:23]  Right, right.
+[34:23 - 34:37]  Right, right.
+[34:37 - 34:41]  Right, right.
+[34:41 - 35:11]  Right, right.
+[35:11 - 35:11]  Right, right.
+[35:11 - 35:41]  Right, right.
+[35:41 - 36:10]  Right, right.
+[36:11 - 36:40]  Right, right.
+[36:41 - 36:52]  Right, right.
+[36:52 - 36:53]  Right, right.
+[36:53 - 36:53]  Right.
+[36:53 - 36:53]  Yeah.
+[36:53 - 37:05]  And, you know, when you talk about AI being the競D unit with Boeing and that is the vast majority is an AI looking weapon for you, right?
+[37:05 - 37:09]  Yeah, so, you know, we see, you know, an an escape plan to culard apps just to fit in.
+[37:09 - 37:10]  Right, right.
+[37:10 - 37:10]  Here's how we, you know, we're just starting with AI horsepower.
+[37:10 - 37:10]  Okay.
+[37:10 - 37:10]  Here's how we, you know, we're just starting with AI horsepower.
+[37:11 - 37:15]  this can do so much stuff. And I think, you know, we can help by pointing people in the right
+[37:15 - 37:20]  direction. We have lots of ideas for people and so on. But yeah, the real, you know, amazing uses
+[37:20 - 37:24]  are going to come from incredibly creative humans thinking of cool things to do with these.
+[37:24 - 37:30]  And one straightforward idea is just spend almost 10 years writing 350 short stories,
+[37:30 - 37:34]  and then ask God what it thinks of them. That's like an easy thing to get started with today.
+[37:34 - 37:39]  There you go. There's your way to start with AI. Exactly. I mean, who knows what the world
+[37:39 - 37:44]  might look like in 10 years after this. Jack, thank you so much for talking to me today.
+[37:44 - 37:44]  Thanks very much.
+[37:45 - 37:51]  It's been a great pleasure. And you can find out more on anthropic.com, but also on Jack's
+[37:51 - 37:53]  substack, which is what's the name?
+[37:53 - 37:55]  ImportAI.substack.com.
+[37:55 - 37:59]  That's the one. Thank you so much for watching, and I'll see you in the next one.
