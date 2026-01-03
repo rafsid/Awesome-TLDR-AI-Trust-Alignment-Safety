@@ -61,7 +61,7 @@ MIT
 *Built with cognitive science principles for researchers who want to learn faster.*
 
 
-* Top Conferences - Call for Papers 2026/2027 (updated as on 03-Jan-2026)
+* Top Conferences - Call for Papers 2026/2027 (updated as on 03-Jan-2026); Source - Claude-Sonnet-4.5
 
 | Year | Conference | Full Name | Type/Focus | Abstract Deadline | Paper Deadline | Conference Dates | Location | Status | Relevance to Safety Research |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
