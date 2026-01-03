@@ -62,6 +62,7 @@ MIT
 
 
 * Top Conferences - Call for Papers 2026/2027 (updated as on 03-Jan-2026)
+
 | Year | Conference | Full Name | Type/Focus | Abstract Deadline | Paper Deadline | Conference Dates | Location | Status | Relevance to Safety Research |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 2026 | AAAI | Association for the Advancement of AI | General AI | 2025-07-25 | 2025-08-01 | 2026-01-20 to 2026-01-27 | Singapore | CLOSED | SafeAI workshop co-located |
